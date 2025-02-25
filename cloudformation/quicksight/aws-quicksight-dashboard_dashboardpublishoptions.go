@@ -58,7 +58,7 @@ type Dashboard_DashboardPublishOptions struct {
 	// VisualMenuOption AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-visualmenuoption
-	VisualMenuOption *Dashboard_VisualMenuOption `json:"VisualMenuOption,omitempty"`
+	VisualMenuOption interface{} `json:"VisualMenuOption,omitempty"`
 
 	// VisualPublishOptions AWS CloudFormation Property
 	// Required: false

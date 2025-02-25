@@ -15,6 +15,11 @@ type Domain_CustomFileSystemConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html#cfn-sagemaker-domain-customfilesystemconfig-efsfilesystemconfig
 	EFSFileSystemConfig *Domain_EFSFileSystemConfig `json:"EFSFileSystemConfig,omitempty"`
 
+	// FSxLustreFileSystemConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customfilesystemconfig.html#cfn-sagemaker-domain-customfilesystemconfig-fsxlustrefilesystemconfig
+	FSxLustreFileSystemConfig *Domain_FSxLustreFileSystemConfig `json:"FSxLustreFileSystemConfig,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

@@ -16,9 +16,9 @@ type CisScanConfiguration_CisTargets struct {
 	AccountIds []string `json:"AccountIds"`
 
 	// TargetResourceTags AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-targetresourcetags
-	TargetResourceTags interface{} `json:"TargetResourceTags,omitempty"`
+	TargetResourceTags interface{} `json:"TargetResourceTags"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

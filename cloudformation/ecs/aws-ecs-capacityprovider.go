@@ -15,9 +15,9 @@ import (
 type CapacityProvider struct {
 
 	// AutoScalingGroupProvider AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-autoscalinggroupprovider
-	AutoScalingGroupProvider *CapacityProvider_AutoScalingGroupProvider `json:"AutoScalingGroupProvider"`
+	AutoScalingGroupProvider *CapacityProvider_AutoScalingGroupProvider `json:"AutoScalingGroupProvider,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false

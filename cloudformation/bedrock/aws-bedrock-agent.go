@@ -18,6 +18,16 @@ type Agent struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-actiongroups
 	ActionGroups []Agent_AgentActionGroup `json:"ActionGroups,omitempty"`
 
+	// AgentCollaboration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaboration
+	AgentCollaboration *string `json:"AgentCollaboration,omitempty"`
+
+	// AgentCollaborators AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentcollaborators
+	AgentCollaborators []Agent_AgentCollaborator `json:"AgentCollaborators,omitempty"`
+
 	// AgentName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-agentname
@@ -32,6 +42,11 @@ type Agent struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-autoprepare
 	AutoPrepare *bool `json:"AutoPrepare,omitempty"`
+
+	// CustomOrchestration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-customorchestration
+	CustomOrchestration *Agent_CustomOrchestration `json:"CustomOrchestration,omitempty"`
 
 	// CustomerEncryptionKeyArn AWS CloudFormation Property
 	// Required: false
@@ -48,6 +63,11 @@ type Agent struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-foundationmodel
 	FoundationModel *string `json:"FoundationModel,omitempty"`
 
+	// GuardrailConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-guardrailconfiguration
+	GuardrailConfiguration *Agent_GuardrailConfiguration `json:"GuardrailConfiguration,omitempty"`
+
 	// IdleSessionTTLInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-idlesessionttlinseconds
@@ -62,6 +82,16 @@ type Agent struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-knowledgebases
 	KnowledgeBases []Agent_AgentKnowledgeBase `json:"KnowledgeBases,omitempty"`
+
+	// MemoryConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-memoryconfiguration
+	MemoryConfiguration *Agent_MemoryConfiguration `json:"MemoryConfiguration,omitempty"`
+
+	// OrchestrationType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-orchestrationtype
+	OrchestrationType *string `json:"OrchestrationType,omitempty"`
 
 	// PromptOverrideConfiguration AWS CloudFormation Property
 	// Required: false

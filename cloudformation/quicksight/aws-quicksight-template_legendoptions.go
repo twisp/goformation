@@ -25,10 +25,15 @@ type Template_LegendOptions struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-legendoptions.html#cfn-quicksight-template-legendoptions-title
 	Title *Template_LabelOptions `json:"Title,omitempty"`
 
+	// ValueFontConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-legendoptions.html#cfn-quicksight-template-legendoptions-valuefontconfiguration
+	ValueFontConfiguration *Template_FontConfiguration `json:"ValueFontConfiguration,omitempty"`
+
 	// Visibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-legendoptions.html#cfn-quicksight-template-legendoptions-visibility
-	Visibility *string `json:"Visibility,omitempty"`
+	Visibility interface{} `json:"Visibility,omitempty"`
 
 	// Width AWS CloudFormation Property
 	// Required: false

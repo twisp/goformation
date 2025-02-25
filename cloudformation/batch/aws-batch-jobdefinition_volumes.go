@@ -9,11 +9,10 @@ import (
 // JobDefinition_Volumes AWS CloudFormation Resource (AWS::Batch::JobDefinition.Volumes)
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html
 type JobDefinition_Volumes struct {
-
 	// EfsVolumeConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html#cfn-batch-jobdefinition-volumes-efsvolumeconfiguration
-	EfsVolumeConfiguration *JobDefinition_EfsVolumeConfiguration `json:"EfsVolumeConfiguration,omitempty"`
+	// EfsVolumeConfiguration *JobDefinition_EfsVolumeConfiguration `json:"EfsVolumeConfiguration,omitempty"`
 
 	// Host AWS CloudFormation Property
 	// Required: false

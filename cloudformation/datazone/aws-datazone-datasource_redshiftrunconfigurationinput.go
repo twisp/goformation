@@ -16,14 +16,14 @@ type DataSource_RedshiftRunConfigurationInput struct {
 	DataAccessRole *string `json:"DataAccessRole,omitempty"`
 
 	// RedshiftCredentialConfiguration AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftrunconfigurationinput.html#cfn-datazone-datasource-redshiftrunconfigurationinput-redshiftcredentialconfiguration
-	RedshiftCredentialConfiguration *DataSource_RedshiftCredentialConfiguration `json:"RedshiftCredentialConfiguration"`
+	RedshiftCredentialConfiguration *DataSource_RedshiftCredentialConfiguration `json:"RedshiftCredentialConfiguration,omitempty"`
 
 	// RedshiftStorage AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-redshiftrunconfigurationinput.html#cfn-datazone-datasource-redshiftrunconfigurationinput-redshiftstorage
-	RedshiftStorage *DataSource_RedshiftStorage `json:"RedshiftStorage"`
+	RedshiftStorage *DataSource_RedshiftStorage `json:"RedshiftStorage,omitempty"`
 
 	// RelationalFilterConfigurations AWS CloudFormation Property
 	// Required: true

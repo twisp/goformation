@@ -34,9 +34,9 @@ type SubscriptionTarget struct {
 	EnvironmentIdentifier string `json:"EnvironmentIdentifier"`
 
 	// ManageAccessRole AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-subscriptiontarget.html#cfn-datazone-subscriptiontarget-manageaccessrole
-	ManageAccessRole string `json:"ManageAccessRole"`
+	ManageAccessRole *string `json:"ManageAccessRole,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

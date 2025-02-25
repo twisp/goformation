@@ -28,7 +28,7 @@ type Template_LineChartMarkerStyleSettings struct {
 	// MarkerVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-linechartmarkerstylesettings.html#cfn-quicksight-template-linechartmarkerstylesettings-markervisibility
-	MarkerVisibility *string `json:"MarkerVisibility,omitempty"`
+	MarkerVisibility interface{} `json:"MarkerVisibility,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

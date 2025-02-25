@@ -67,7 +67,7 @@ type Server struct {
 	// Protocols AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-protocols
-	Protocols []Server_Protocol `json:"Protocols,omitempty"`
+	Protocols []string `json:"Protocols,omitempty"`
 
 	// S3StorageOptions AWS CloudFormation Property
 	// Required: false
@@ -82,7 +82,7 @@ type Server struct {
 	// StructuredLogDestinations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-structuredlogdestinations
-	StructuredLogDestinations []Server_StructuredLogDestination `json:"StructuredLogDestinations,omitempty"`
+	StructuredLogDestinations []string `json:"StructuredLogDestinations,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

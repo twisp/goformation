@@ -18,6 +18,11 @@ type Topic struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-awsaccountid
 	AwsAccountId *string `json:"AwsAccountId,omitempty"`
 
+	// ConfigOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-configoptions
+	ConfigOptions *Topic_TopicConfigOptions `json:"ConfigOptions,omitempty"`
+
 	// DataSets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-datasets
@@ -27,6 +32,11 @@ type Topic struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-description
 	Description *string `json:"Description,omitempty"`
+
+	// FolderArns AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-folderarns
+	FolderArns []string `json:"FolderArns,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false

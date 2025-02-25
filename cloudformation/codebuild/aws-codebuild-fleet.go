@@ -19,6 +19,11 @@ type Fleet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-basecapacity
 	BaseCapacity *int `json:"BaseCapacity,omitempty"`
 
+	// ComputeConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration
+	ComputeConfiguration *Fleet_ComputeConfiguration `json:"ComputeConfiguration,omitempty"`
+
 	// ComputeType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computetype
@@ -29,10 +34,40 @@ type Fleet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-environmenttype
 	EnvironmentType *string `json:"EnvironmentType,omitempty"`
 
+	// FleetProxyConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration
+	FleetProxyConfiguration *Fleet_ProxyConfiguration `json:"FleetProxyConfiguration,omitempty"`
+
+	// FleetServiceRole AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetservicerole
+	FleetServiceRole *string `json:"FleetServiceRole,omitempty"`
+
+	// FleetVpcConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig
+	FleetVpcConfig *Fleet_VpcConfig `json:"FleetVpcConfig,omitempty"`
+
+	// ImageId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-imageid
+	ImageId *string `json:"ImageId,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-name
 	Name *string `json:"Name,omitempty"`
+
+	// OverflowBehavior AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-overflowbehavior
+	OverflowBehavior *string `json:"OverflowBehavior,omitempty"`
+
+	// ScalingConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration
+	ScalingConfiguration *Fleet_ScalingConfigurationInput `json:"ScalingConfiguration,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

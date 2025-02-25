@@ -13,7 +13,7 @@ type Template_FunnelChartDataLabelOptions struct {
 	// CategoryLabelVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-funnelchartdatalabeloptions.html#cfn-quicksight-template-funnelchartdatalabeloptions-categorylabelvisibility
-	CategoryLabelVisibility *string `json:"CategoryLabelVisibility,omitempty"`
+	CategoryLabelVisibility interface{} `json:"CategoryLabelVisibility,omitempty"`
 
 	// LabelColor AWS CloudFormation Property
 	// Required: false
@@ -33,7 +33,7 @@ type Template_FunnelChartDataLabelOptions struct {
 	// MeasureLabelVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-funnelchartdatalabeloptions.html#cfn-quicksight-template-funnelchartdatalabeloptions-measurelabelvisibility
-	MeasureLabelVisibility *string `json:"MeasureLabelVisibility,omitempty"`
+	MeasureLabelVisibility interface{} `json:"MeasureLabelVisibility,omitempty"`
 
 	// Position AWS CloudFormation Property
 	// Required: false
@@ -43,7 +43,7 @@ type Template_FunnelChartDataLabelOptions struct {
 	// Visibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-funnelchartdatalabeloptions.html#cfn-quicksight-template-funnelchartdatalabeloptions-visibility
-	Visibility *string `json:"Visibility,omitempty"`
+	Visibility interface{} `json:"Visibility,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

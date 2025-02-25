@@ -23,7 +23,7 @@ type DataSet_S3Source struct {
 	// UploadSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-s3source.html#cfn-quicksight-dataset-s3source-uploadsettings
-	UploadSettings *DataSet_UploadSettings `json:"UploadSettings,omitempty"`
+	UploadSettings interface{} `json:"UploadSettings,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

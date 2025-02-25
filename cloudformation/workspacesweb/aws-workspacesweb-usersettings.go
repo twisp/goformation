@@ -34,6 +34,11 @@ type UserSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-customermanagedkey
 	CustomerManagedKey *string `json:"CustomerManagedKey,omitempty"`
 
+	// DeepLinkAllowed AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-deeplinkallowed
+	DeepLinkAllowed *string `json:"DeepLinkAllowed,omitempty"`
+
 	// DisconnectTimeoutInMinutes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-disconnecttimeoutinminutes
@@ -63,6 +68,11 @@ type UserSettings struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// ToolbarConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-toolbarconfiguration
+	ToolbarConfiguration *UserSettings_ToolbarConfiguration `json:"ToolbarConfiguration,omitempty"`
 
 	// UploadAllowed AWS CloudFormation Property
 	// Required: true

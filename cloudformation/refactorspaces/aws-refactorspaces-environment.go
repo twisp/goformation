@@ -20,14 +20,14 @@ type Environment struct {
 	Description *string `json:"Description,omitempty"`
 
 	// Name AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-environment.html#cfn-refactorspaces-environment-name
-	Name string `json:"Name"`
+	Name *string `json:"Name,omitempty"`
 
 	// NetworkFabricType AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-environment.html#cfn-refactorspaces-environment-networkfabrictype
-	NetworkFabricType string `json:"NetworkFabricType"`
+	NetworkFabricType *string `json:"NetworkFabricType,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

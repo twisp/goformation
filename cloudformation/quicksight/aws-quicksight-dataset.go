@@ -54,6 +54,11 @@ type DataSet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-fieldfolders
 	FieldFolders map[string]DataSet_FieldFolder `json:"FieldFolders,omitempty"`
 
+	// FolderArns AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-folderarns
+	FolderArns []string `json:"FolderArns,omitempty"`
+
 	// ImportMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-importmode
@@ -73,6 +78,11 @@ type DataSet struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-name
 	Name *string `json:"Name,omitempty"`
+
+	// PerformanceConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-performanceconfiguration
+	PerformanceConfiguration *DataSet_PerformanceConfiguration `json:"PerformanceConfiguration,omitempty"`
 
 	// Permissions AWS CloudFormation Property
 	// Required: false

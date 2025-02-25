@@ -15,9 +15,9 @@ import (
 type ResolverRule struct {
 
 	// DomainName AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-domainname
-	DomainName string `json:"DomainName"`
+	DomainName *string `json:"DomainName,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false

@@ -43,7 +43,7 @@ type Template_SubtotalOptions struct {
 	// TotalsVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-subtotaloptions.html#cfn-quicksight-template-subtotaloptions-totalsvisibility
-	TotalsVisibility *string `json:"TotalsVisibility,omitempty"`
+	TotalsVisibility interface{} `json:"TotalsVisibility,omitempty"`
 
 	// ValueCellStyle AWS CloudFormation Property
 	// Required: false

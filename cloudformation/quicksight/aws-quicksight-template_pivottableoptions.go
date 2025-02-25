@@ -18,7 +18,7 @@ type Template_PivotTableOptions struct {
 	// CollapsedRowDimensionsVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottableoptions.html#cfn-quicksight-template-pivottableoptions-collapsedrowdimensionsvisibility
-	CollapsedRowDimensionsVisibility *string `json:"CollapsedRowDimensionsVisibility,omitempty"`
+	CollapsedRowDimensionsVisibility interface{} `json:"CollapsedRowDimensionsVisibility,omitempty"`
 
 	// ColumnHeaderStyle AWS CloudFormation Property
 	// Required: false
@@ -28,7 +28,7 @@ type Template_PivotTableOptions struct {
 	// ColumnNamesVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottableoptions.html#cfn-quicksight-template-pivottableoptions-columnnamesvisibility
-	ColumnNamesVisibility *string `json:"ColumnNamesVisibility,omitempty"`
+	ColumnNamesVisibility interface{} `json:"ColumnNamesVisibility,omitempty"`
 
 	// DefaultCellWidth AWS CloudFormation Property
 	// Required: false
@@ -68,12 +68,12 @@ type Template_PivotTableOptions struct {
 	// SingleMetricVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottableoptions.html#cfn-quicksight-template-pivottableoptions-singlemetricvisibility
-	SingleMetricVisibility *string `json:"SingleMetricVisibility,omitempty"`
+	SingleMetricVisibility interface{} `json:"SingleMetricVisibility,omitempty"`
 
 	// ToggleButtonsVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottableoptions.html#cfn-quicksight-template-pivottableoptions-togglebuttonsvisibility
-	ToggleButtonsVisibility *string `json:"ToggleButtonsVisibility,omitempty"`
+	ToggleButtonsVisibility interface{} `json:"ToggleButtonsVisibility,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -29,6 +29,11 @@ type VerifiedAccessTrustProvider struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-devicetrustprovidertype
 	DeviceTrustProviderType *string `json:"DeviceTrustProviderType,omitempty"`
 
+	// NativeApplicationOidcOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-nativeapplicationoidcoptions
+	NativeApplicationOidcOptions *VerifiedAccessTrustProvider_NativeApplicationOidcOptions `json:"NativeApplicationOidcOptions,omitempty"`
+
 	// OidcOptions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html#cfn-ec2-verifiedaccesstrustprovider-oidcoptions

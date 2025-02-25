@@ -14,9 +14,9 @@ import (
 type Application struct {
 
 	// Definition AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-application.html#cfn-m2-application-definition
-	Definition *Application_Definition `json:"Definition"`
+	Definition *Application_Definition `json:"Definition,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false

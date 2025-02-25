@@ -20,6 +20,11 @@ type Connection_AuthParameters struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-authparameters.html#cfn-events-connection-authparameters-basicauthparameters
 	BasicAuthParameters *Connection_BasicAuthParameters `json:"BasicAuthParameters,omitempty"`
 
+	// ConnectivityParameters AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-authparameters.html#cfn-events-connection-authparameters-connectivityparameters
+	ConnectivityParameters *Connection_ConnectivityParameters `json:"ConnectivityParameters,omitempty"`
+
 	// InvocationHttpParameters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-authparameters.html#cfn-events-connection-authparameters-invocationhttpparameters

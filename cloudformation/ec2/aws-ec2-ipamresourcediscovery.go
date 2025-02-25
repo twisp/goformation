@@ -24,6 +24,11 @@ type IPAMResourceDiscovery struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-operatingregions
 	OperatingRegions []IPAMResourceDiscovery_IpamOperatingRegion `json:"OperatingRegions,omitempty"`
 
+	// OrganizationalUnitExclusions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-organizationalunitexclusions
+	OrganizationalUnitExclusions []IPAMResourceDiscovery_IpamResourceDiscoveryOrganizationalUnitExclusion `json:"OrganizationalUnitExclusions,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html#cfn-ec2-ipamresourcediscovery-tags

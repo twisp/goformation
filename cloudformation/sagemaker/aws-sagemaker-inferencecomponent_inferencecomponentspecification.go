@@ -10,10 +10,15 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html
 type InferenceComponent_InferenceComponentSpecification struct {
 
+	// BaseInferenceComponentName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-baseinferencecomponentname
+	BaseInferenceComponentName *string `json:"BaseInferenceComponentName,omitempty"`
+
 	// ComputeResourceRequirements AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-computeresourcerequirements
-	ComputeResourceRequirements *InferenceComponent_InferenceComponentComputeResourceRequirements `json:"ComputeResourceRequirements"`
+	ComputeResourceRequirements *InferenceComponent_InferenceComponentComputeResourceRequirements `json:"ComputeResourceRequirements,omitempty"`
 
 	// Container AWS CloudFormation Property
 	// Required: false

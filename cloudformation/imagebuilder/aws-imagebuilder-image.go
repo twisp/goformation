@@ -49,9 +49,9 @@ type Image struct {
 	ImageTestsConfiguration *Image_ImageTestsConfiguration `json:"ImageTestsConfiguration,omitempty"`
 
 	// InfrastructureConfigurationArn AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-infrastructureconfigurationarn
-	InfrastructureConfigurationArn string `json:"InfrastructureConfigurationArn"`
+	InfrastructureConfigurationArn *string `json:"InfrastructureConfigurationArn,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

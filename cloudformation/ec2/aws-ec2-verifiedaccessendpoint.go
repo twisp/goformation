@@ -15,14 +15,19 @@ import (
 type VerifiedAccessEndpoint struct {
 
 	// ApplicationDomain AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-applicationdomain
-	ApplicationDomain string `json:"ApplicationDomain"`
+	ApplicationDomain *string `json:"ApplicationDomain,omitempty"`
 
 	// AttachmentType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-attachmenttype
 	AttachmentType string `json:"AttachmentType"`
+
+	// CidrOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-cidroptions
+	CidrOptions *VerifiedAccessEndpoint_CidrOptions `json:"CidrOptions,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
@@ -30,14 +35,14 @@ type VerifiedAccessEndpoint struct {
 	Description *string `json:"Description,omitempty"`
 
 	// DomainCertificateArn AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-domaincertificatearn
-	DomainCertificateArn string `json:"DomainCertificateArn"`
+	DomainCertificateArn *string `json:"DomainCertificateArn,omitempty"`
 
 	// EndpointDomainPrefix AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-endpointdomainprefix
-	EndpointDomainPrefix string `json:"EndpointDomainPrefix"`
+	EndpointDomainPrefix *string `json:"EndpointDomainPrefix,omitempty"`
 
 	// EndpointType AWS CloudFormation Property
 	// Required: true
@@ -63,6 +68,11 @@ type VerifiedAccessEndpoint struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-policyenabled
 	PolicyEnabled *bool `json:"PolicyEnabled,omitempty"`
+
+	// RdsOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html#cfn-ec2-verifiedaccessendpoint-rdsoptions
+	RdsOptions *VerifiedAccessEndpoint_RdsOptions `json:"RdsOptions,omitempty"`
 
 	// SecurityGroupIds AWS CloudFormation Property
 	// Required: false

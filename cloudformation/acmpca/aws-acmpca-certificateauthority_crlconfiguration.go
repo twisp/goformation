@@ -15,15 +15,25 @@ type CertificateAuthority_CrlConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-crldistributionpointextensionconfiguration
 	CrlDistributionPointExtensionConfiguration *CertificateAuthority_CrlDistributionPointExtensionConfiguration `json:"CrlDistributionPointExtensionConfiguration,omitempty"`
 
+	// CrlType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-crltype
+	CrlType *string `json:"CrlType,omitempty"`
+
 	// CustomCname AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-customcname
 	CustomCname *string `json:"CustomCname,omitempty"`
 
-	// Enabled AWS CloudFormation Property
+	// CustomPath AWS CloudFormation Property
 	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-custompath
+	CustomPath *string `json:"CustomPath,omitempty"`
+
+	// Enabled AWS CloudFormation Property
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-enabled
-	Enabled *bool `json:"Enabled,omitempty"`
+	Enabled bool `json:"Enabled"`
 
 	// ExpirationInDays AWS CloudFormation Property
 	// Required: false

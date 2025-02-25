@@ -45,9 +45,9 @@ type Schema struct {
 	Registry *Schema_Registry `json:"Registry,omitempty"`
 
 	// SchemaDefinition AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-schemadefinition
-	SchemaDefinition string `json:"SchemaDefinition"`
+	SchemaDefinition *string `json:"SchemaDefinition,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

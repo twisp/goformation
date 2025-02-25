@@ -19,10 +19,35 @@ type LocationSMB struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-agentarns
 	AgentArns []string `json:"AgentArns"`
 
+	// AuthenticationType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-authenticationtype
+	AuthenticationType *string `json:"AuthenticationType,omitempty"`
+
+	// DnsIpAddresses AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-dnsipaddresses
+	DnsIpAddresses []string `json:"DnsIpAddresses,omitempty"`
+
 	// Domain AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-domain
 	Domain *string `json:"Domain,omitempty"`
+
+	// KerberosKeytab AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberoskeytab
+	KerberosKeytab *string `json:"KerberosKeytab,omitempty"`
+
+	// KerberosKrb5Conf AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberoskrb5conf
+	KerberosKrb5Conf *string `json:"KerberosKrb5Conf,omitempty"`
+
+	// KerberosPrincipal AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-kerberosprincipal
+	KerberosPrincipal *string `json:"KerberosPrincipal,omitempty"`
 
 	// MountOptions AWS CloudFormation Property
 	// Required: false
@@ -50,9 +75,9 @@ type LocationSMB struct {
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// User AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-user
-	User string `json:"User"`
+	User *string `json:"User,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

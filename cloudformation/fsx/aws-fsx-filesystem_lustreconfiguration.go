@@ -45,6 +45,11 @@ type FileSystem_LustreConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-drivecachetype
 	DriveCacheType *string `json:"DriveCacheType,omitempty"`
 
+	// EfaEnabled AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-efaenabled
+	EfaEnabled *bool `json:"EfaEnabled,omitempty"`
+
 	// ExportPath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-exportpath
@@ -59,6 +64,11 @@ type FileSystem_LustreConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize
 	ImportedFileChunkSize *int `json:"ImportedFileChunkSize,omitempty"`
+
+	// MetadataConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-metadataconfiguration
+	MetadataConfiguration *FileSystem_MetadataConfiguration `json:"MetadataConfiguration,omitempty"`
 
 	// PerUnitStorageThroughput AWS CloudFormation Property
 	// Required: false

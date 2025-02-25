@@ -20,6 +20,11 @@ type Application_MonitoringConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-managedpersistencemonitoringconfiguration
 	ManagedPersistenceMonitoringConfiguration *Application_ManagedPersistenceMonitoringConfiguration `json:"ManagedPersistenceMonitoringConfiguration,omitempty"`
 
+	// PrometheusMonitoringConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-prometheusmonitoringconfiguration
+	PrometheusMonitoringConfiguration *Application_PrometheusMonitoringConfiguration `json:"PrometheusMonitoringConfiguration,omitempty"`
+
 	// S3MonitoringConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-monitoringconfiguration.html#cfn-emrserverless-application-monitoringconfiguration-s3monitoringconfiguration

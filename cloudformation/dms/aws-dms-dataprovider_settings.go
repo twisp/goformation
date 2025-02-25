@@ -10,10 +10,25 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html
 type DataProvider_Settings struct {
 
+	// DocDbSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-docdbsettings
+	DocDbSettings *DataProvider_DocDbSettings `json:"DocDbSettings,omitempty"`
+
+	// MariaDbSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-mariadbsettings
+	MariaDbSettings *DataProvider_MariaDbSettings `json:"MariaDbSettings,omitempty"`
+
 	// MicrosoftSqlServerSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-microsoftsqlserversettings
 	MicrosoftSqlServerSettings *DataProvider_MicrosoftSqlServerSettings `json:"MicrosoftSqlServerSettings,omitempty"`
+
+	// MongoDbSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-mongodbsettings
+	MongoDbSettings *DataProvider_MongoDbSettings `json:"MongoDbSettings,omitempty"`
 
 	// MySqlSettings AWS CloudFormation Property
 	// Required: false
@@ -29,6 +44,11 @@ type DataProvider_Settings struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings
 	PostgreSqlSettings *DataProvider_PostgreSqlSettings `json:"PostgreSqlSettings,omitempty"`
+
+	// RedshiftSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-redshiftsettings
+	RedshiftSettings *DataProvider_RedshiftSettings `json:"RedshiftSettings,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

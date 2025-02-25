@@ -28,6 +28,11 @@ type ExperimentTemplate struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentoptions
 	ExperimentOptions *ExperimentTemplate_ExperimentTemplateExperimentOptions `json:"ExperimentOptions,omitempty"`
 
+	// ExperimentReportConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration
+	ExperimentReportConfiguration *ExperimentTemplate_ExperimentTemplateExperimentReportConfiguration `json:"ExperimentReportConfiguration,omitempty"`
+
 	// LogConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-logconfiguration

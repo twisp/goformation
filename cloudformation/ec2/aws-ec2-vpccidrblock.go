@@ -38,6 +38,11 @@ type VPCCidrBlock struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblock
 	Ipv6CidrBlock *string `json:"Ipv6CidrBlock,omitempty"`
 
+	// Ipv6CidrBlockNetworkBorderGroup AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblocknetworkbordergroup
+	Ipv6CidrBlockNetworkBorderGroup *string `json:"Ipv6CidrBlockNetworkBorderGroup,omitempty"`
+
 	// Ipv6IpamPoolId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6ipampoolid

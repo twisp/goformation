@@ -13,6 +13,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html
 type DirectoryBucket struct {
 
+	// BucketEncryption AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-bucketencryption
+	BucketEncryption *DirectoryBucket_BucketEncryption `json:"BucketEncryption,omitempty"`
+
 	// BucketName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-bucketname
@@ -22,6 +27,11 @@ type DirectoryBucket struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-dataredundancy
 	DataRedundancy string `json:"DataRedundancy"`
+
+	// LifecycleConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-lifecycleconfiguration
+	LifecycleConfiguration *DirectoryBucket_LifecycleConfiguration `json:"LifecycleConfiguration,omitempty"`
 
 	// LocationName AWS CloudFormation Property
 	// Required: true

@@ -19,6 +19,11 @@ type Channel struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html#cfn-ivs-channel-authorized
 	Authorized *bool `json:"Authorized,omitempty"`
 
+	// ContainerFormat AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html#cfn-ivs-channel-containerformat
+	ContainerFormat *string `json:"ContainerFormat,omitempty"`
+
 	// InsecureIngest AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html#cfn-ivs-channel-insecureingest
@@ -28,6 +33,11 @@ type Channel struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html#cfn-ivs-channel-latencymode
 	LatencyMode *string `json:"LatencyMode,omitempty"`
+
+	// MultitrackInputConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html#cfn-ivs-channel-multitrackinputconfiguration
+	MultitrackInputConfiguration *Channel_MultitrackInputConfiguration `json:"MultitrackInputConfiguration,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false

@@ -90,6 +90,11 @@ type Template_Visual struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-visual.html#cfn-quicksight-template-visual-pivottablevisual
 	PivotTableVisual *Template_PivotTableVisual `json:"PivotTableVisual,omitempty"`
 
+	// PluginVisual AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-visual.html#cfn-quicksight-template-visual-pluginvisual
+	PluginVisual *Template_PluginVisual `json:"PluginVisual,omitempty"`
+
 	// RadarChartVisual AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-visual.html#cfn-quicksight-template-visual-radarchartvisual

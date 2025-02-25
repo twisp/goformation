@@ -34,9 +34,9 @@ type KnowledgeBase struct {
 	RoleArn string `json:"RoleArn"`
 
 	// StorageConfiguration AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration
-	StorageConfiguration *KnowledgeBase_StorageConfiguration `json:"StorageConfiguration"`
+	StorageConfiguration *KnowledgeBase_StorageConfiguration `json:"StorageConfiguration,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

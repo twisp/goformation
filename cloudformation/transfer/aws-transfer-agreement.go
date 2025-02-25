@@ -29,6 +29,11 @@ type Agreement struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-description
 	Description *string `json:"Description,omitempty"`
 
+	// EnforceMessageSigning AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-enforcemessagesigning
+	EnforceMessageSigning *string `json:"EnforceMessageSigning,omitempty"`
+
 	// LocalProfileId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-localprofileid
@@ -38,6 +43,11 @@ type Agreement struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-partnerprofileid
 	PartnerProfileId string `json:"PartnerProfileId"`
+
+	// PreserveFilename AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-preservefilename
+	PreserveFilename *string `json:"PreserveFilename,omitempty"`
 
 	// ServerId AWS CloudFormation Property
 	// Required: true

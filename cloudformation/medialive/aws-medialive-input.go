@@ -23,6 +23,11 @@ type Input struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-inputdevices
 	InputDevices []Input_InputDeviceSettings `json:"InputDevices,omitempty"`
 
+	// InputNetworkLocation AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-inputnetworklocation
+	InputNetworkLocation *string `json:"InputNetworkLocation,omitempty"`
+
 	// InputSecurityGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-inputsecuritygroups
@@ -32,6 +37,11 @@ type Input struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-mediaconnectflows
 	MediaConnectFlows []Input_MediaConnectFlowRequest `json:"MediaConnectFlows,omitempty"`
+
+	// MulticastSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings
+	MulticastSettings *Input_MulticastSettingsCreateRequest `json:"MulticastSettings,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
@@ -47,6 +57,11 @@ type Input struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sources
 	Sources []Input_InputSourceRequest `json:"Sources,omitempty"`
+
+	// SrtSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-srtsettings
+	SrtSettings *Input_SrtSettingsRequest `json:"SrtSettings,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

@@ -23,6 +23,11 @@ type DataSource struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-configuration
 	Configuration *DataSource_DataSourceConfigurationInput `json:"Configuration,omitempty"`
 
+	// ConnectionIdentifier AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-connectionidentifier
+	ConnectionIdentifier *string `json:"ConnectionIdentifier,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-description
@@ -39,9 +44,9 @@ type DataSource struct {
 	EnableSetting *string `json:"EnableSetting,omitempty"`
 
 	// EnvironmentIdentifier AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-datasource.html#cfn-datazone-datasource-environmentidentifier
-	EnvironmentIdentifier string `json:"EnvironmentIdentifier"`
+	EnvironmentIdentifier *string `json:"EnvironmentIdentifier,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

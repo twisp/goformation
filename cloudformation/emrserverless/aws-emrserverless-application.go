@@ -39,6 +39,11 @@ type Application struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-initialcapacity
 	InitialCapacity []Application_InitialCapacityConfigKeyValuePair `json:"InitialCapacity,omitempty"`
 
+	// InteractiveConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-interactiveconfiguration
+	InteractiveConfiguration *Application_InteractiveConfiguration `json:"InteractiveConfiguration,omitempty"`
+
 	// MaximumCapacity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-maximumcapacity
@@ -68,6 +73,11 @@ type Application struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-runtimeconfiguration
 	RuntimeConfiguration []Application_ConfigurationObject `json:"RuntimeConfiguration,omitempty"`
+
+	// SchedulerConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html#cfn-emrserverless-application-schedulerconfiguration
+	SchedulerConfiguration *Application_SchedulerConfiguration `json:"SchedulerConfiguration,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

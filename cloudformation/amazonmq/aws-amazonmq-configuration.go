@@ -19,9 +19,9 @@ type Configuration struct {
 	AuthenticationStrategy *string `json:"AuthenticationStrategy,omitempty"`
 
 	// Data AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-data
-	Data string `json:"Data"`
+	Data *string `json:"Data,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
@@ -34,9 +34,9 @@ type Configuration struct {
 	EngineType string `json:"EngineType"`
 
 	// EngineVersion AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-engineversion
-	EngineVersion string `json:"EngineVersion"`
+	EngineVersion *string `json:"EngineVersion,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

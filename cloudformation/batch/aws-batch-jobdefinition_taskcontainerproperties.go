@@ -48,7 +48,7 @@ type JobDefinition_TaskContainerProperties struct {
 	// MountPoints AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-mountpoints
-	MountPoints []JobDefinition_MountPoints `json:"MountPoints,omitempty"`
+	MountPoints []JobDefinition_MountPoint `json:"MountPoints,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false

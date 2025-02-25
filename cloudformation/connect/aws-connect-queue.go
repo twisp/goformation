@@ -44,6 +44,11 @@ type Queue struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundcallerconfig
 	OutboundCallerConfig *Queue_OutboundCallerConfig `json:"OutboundCallerConfig,omitempty"`
 
+	// OutboundEmailConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-outboundemailconfig
+	OutboundEmailConfig *Queue_OutboundEmailConfig `json:"OutboundEmailConfig,omitempty"`
+
 	// QuickConnectArns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-queue.html#cfn-connect-queue-quickconnectarns

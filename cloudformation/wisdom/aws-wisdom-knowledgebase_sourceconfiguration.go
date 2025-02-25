@@ -11,9 +11,14 @@ import (
 type KnowledgeBase_SourceConfiguration struct {
 
 	// AppIntegrations AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-sourceconfiguration.html#cfn-wisdom-knowledgebase-sourceconfiguration-appintegrations
-	AppIntegrations *KnowledgeBase_AppIntegrationsConfiguration `json:"AppIntegrations"`
+	AppIntegrations *KnowledgeBase_AppIntegrationsConfiguration `json:"AppIntegrations,omitempty"`
+
+	// ManagedSourceConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-sourceconfiguration.html#cfn-wisdom-knowledgebase-sourceconfiguration-managedsourceconfiguration
+	ManagedSourceConfiguration *KnowledgeBase_ManagedSourceConfiguration `json:"ManagedSourceConfiguration,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

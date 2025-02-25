@@ -10,15 +10,25 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html
 type KnowledgeBase_KnowledgeBaseConfiguration struct {
 
+	// KendraKnowledgeBaseConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-kendraknowledgebaseconfiguration
+	KendraKnowledgeBaseConfiguration *KnowledgeBase_KendraKnowledgeBaseConfiguration `json:"KendraKnowledgeBaseConfiguration,omitempty"`
+
+	// SqlKnowledgeBaseConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-sqlknowledgebaseconfiguration
+	SqlKnowledgeBaseConfiguration *KnowledgeBase_SqlKnowledgeBaseConfiguration `json:"SqlKnowledgeBaseConfiguration,omitempty"`
+
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-type
 	Type string `json:"Type"`
 
 	// VectorKnowledgeBaseConfiguration AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-vectorknowledgebaseconfiguration
-	VectorKnowledgeBaseConfiguration *KnowledgeBase_VectorKnowledgeBaseConfiguration `json:"VectorKnowledgeBaseConfiguration"`
+	VectorKnowledgeBaseConfiguration *KnowledgeBase_VectorKnowledgeBaseConfiguration `json:"VectorKnowledgeBaseConfiguration,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -13,6 +13,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html
 type Channel struct {
 
+	// AnywhereSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings
+	AnywhereSettings *Channel_AnywhereSettings `json:"AnywhereSettings,omitempty"`
+
 	// CdiInputSpecification AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-cdiinputspecification
@@ -23,10 +28,20 @@ type Channel struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-channelclass
 	ChannelClass *string `json:"ChannelClass,omitempty"`
 
+	// ChannelEngineVersion AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-channelengineversion
+	ChannelEngineVersion *Channel_ChannelEngineVersionRequest `json:"ChannelEngineVersion,omitempty"`
+
 	// Destinations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-destinations
 	Destinations []Channel_OutputDestination `json:"Destinations,omitempty"`
+
+	// DryRun AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-dryrun
+	DryRun *bool `json:"DryRun,omitempty"`
 
 	// EncoderSettings AWS CloudFormation Property
 	// Required: false

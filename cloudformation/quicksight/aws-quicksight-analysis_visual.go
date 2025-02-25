@@ -75,6 +75,11 @@ type Analysis_Visual struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-visual.html#cfn-quicksight-analysis-visual-kpivisual
 	KPIVisual *Analysis_KPIVisual `json:"KPIVisual,omitempty"`
 
+	// LayerMapVisual AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-visual.html#cfn-quicksight-analysis-visual-layermapvisual
+	LayerMapVisual *Analysis_LayerMapVisual `json:"LayerMapVisual,omitempty"`
+
 	// LineChartVisual AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-visual.html#cfn-quicksight-analysis-visual-linechartvisual
@@ -89,6 +94,11 @@ type Analysis_Visual struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-visual.html#cfn-quicksight-analysis-visual-pivottablevisual
 	PivotTableVisual *Analysis_PivotTableVisual `json:"PivotTableVisual,omitempty"`
+
+	// PluginVisual AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-visual.html#cfn-quicksight-analysis-visual-pluginvisual
+	PluginVisual *Analysis_PluginVisual `json:"PluginVisual,omitempty"`
 
 	// RadarChartVisual AWS CloudFormation Property
 	// Required: false

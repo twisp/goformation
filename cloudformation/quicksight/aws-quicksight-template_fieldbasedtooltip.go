@@ -13,7 +13,7 @@ type Template_FieldBasedTooltip struct {
 	// AggregationVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-fieldbasedtooltip.html#cfn-quicksight-template-fieldbasedtooltip-aggregationvisibility
-	AggregationVisibility *string `json:"AggregationVisibility,omitempty"`
+	AggregationVisibility interface{} `json:"AggregationVisibility,omitempty"`
 
 	// TooltipFields AWS CloudFormation Property
 	// Required: false

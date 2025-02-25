@@ -14,10 +14,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html
 type Collaboration struct {
 
+	// AnalyticsEngine AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-analyticsengine
+	AnalyticsEngine *string `json:"AnalyticsEngine,omitempty"`
+
 	// CreatorDisplayName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatordisplayname
 	CreatorDisplayName string `json:"CreatorDisplayName"`
+
+	// CreatorMLMemberAbilities AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatormlmemberabilities
+	CreatorMLMemberAbilities *Collaboration_MLMemberAbilities `json:"CreatorMLMemberAbilities,omitempty"`
 
 	// CreatorMemberAbilities AWS CloudFormation Property
 	// Required: true

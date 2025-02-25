@@ -13,7 +13,7 @@ type Template_ScrollBarOptions struct {
 	// Visibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-scrollbaroptions.html#cfn-quicksight-template-scrollbaroptions-visibility
-	Visibility *string `json:"Visibility,omitempty"`
+	Visibility interface{} `json:"Visibility,omitempty"`
 
 	// VisibleRange AWS CloudFormation Property
 	// Required: false

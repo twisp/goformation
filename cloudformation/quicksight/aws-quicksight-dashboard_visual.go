@@ -75,6 +75,11 @@ type Dashboard_Visual struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-visual.html#cfn-quicksight-dashboard-visual-kpivisual
 	KPIVisual *Dashboard_KPIVisual `json:"KPIVisual,omitempty"`
 
+	// LayerMapVisual AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-visual.html#cfn-quicksight-dashboard-visual-layermapvisual
+	LayerMapVisual *Dashboard_LayerMapVisual `json:"LayerMapVisual,omitempty"`
+
 	// LineChartVisual AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-visual.html#cfn-quicksight-dashboard-visual-linechartvisual
@@ -89,6 +94,11 @@ type Dashboard_Visual struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-visual.html#cfn-quicksight-dashboard-visual-pivottablevisual
 	PivotTableVisual *Dashboard_PivotTableVisual `json:"PivotTableVisual,omitempty"`
+
+	// PluginVisual AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-visual.html#cfn-quicksight-dashboard-visual-pluginvisual
+	PluginVisual *Dashboard_PluginVisual `json:"PluginVisual,omitempty"`
 
 	// RadarChartVisual AWS CloudFormation Property
 	// Required: false

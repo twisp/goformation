@@ -64,10 +64,20 @@ type DBCluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-kmskeyid
 	KmsKeyId *string `json:"KmsKeyId,omitempty"`
 
+	// ManageMasterUserPassword AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-managemasteruserpassword
+	ManageMasterUserPassword *bool `json:"ManageMasterUserPassword,omitempty"`
+
 	// MasterUserPassword AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-masteruserpassword
 	MasterUserPassword *string `json:"MasterUserPassword,omitempty"`
+
+	// MasterUserSecretKmsKeyId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-masterusersecretkmskeyid
+	MasterUserSecretKmsKeyId *string `json:"MasterUserSecretKmsKeyId,omitempty"`
 
 	// MasterUsername AWS CloudFormation Property
 	// Required: false
@@ -98,6 +108,16 @@ type DBCluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-restoretype
 	RestoreType *string `json:"RestoreType,omitempty"`
+
+	// RotateMasterUserPassword AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-rotatemasteruserpassword
+	RotateMasterUserPassword *bool `json:"RotateMasterUserPassword,omitempty"`
+
+	// ServerlessV2ScalingConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration
+	ServerlessV2ScalingConfiguration *DBCluster_ServerlessV2ScalingConfiguration `json:"ServerlessV2ScalingConfiguration,omitempty"`
 
 	// SnapshotIdentifier AWS CloudFormation Property
 	// Required: false

@@ -16,10 +16,12 @@ import (
 	"github.com/awslabs/goformation/v7/cloudformation/appintegrations"
 	"github.com/awslabs/goformation/v7/cloudformation/applicationautoscaling"
 	"github.com/awslabs/goformation/v7/cloudformation/applicationinsights"
+	"github.com/awslabs/goformation/v7/cloudformation/applicationsignals"
 	"github.com/awslabs/goformation/v7/cloudformation/appmesh"
 	"github.com/awslabs/goformation/v7/cloudformation/apprunner"
 	"github.com/awslabs/goformation/v7/cloudformation/appstream"
 	"github.com/awslabs/goformation/v7/cloudformation/appsync"
+	"github.com/awslabs/goformation/v7/cloudformation/apptest"
 	"github.com/awslabs/goformation/v7/cloudformation/aps"
 	"github.com/awslabs/goformation/v7/cloudformation/arczonalshift"
 	"github.com/awslabs/goformation/v7/cloudformation/ask"
@@ -63,6 +65,7 @@ import (
 	"github.com/awslabs/goformation/v7/cloudformation/config"
 	"github.com/awslabs/goformation/v7/cloudformation/connect"
 	"github.com/awslabs/goformation/v7/cloudformation/connectcampaigns"
+	"github.com/awslabs/goformation/v7/cloudformation/connectcampaignsv2"
 	"github.com/awslabs/goformation/v7/cloudformation/controltower"
 	"github.com/awslabs/goformation/v7/cloudformation/cur"
 	"github.com/awslabs/goformation/v7/cloudformation/customerprofiles"
@@ -119,8 +122,8 @@ import (
 	"github.com/awslabs/goformation/v7/cloudformation/inspector"
 	"github.com/awslabs/goformation/v7/cloudformation/inspectorv2"
 	"github.com/awslabs/goformation/v7/cloudformation/internetmonitor"
+	"github.com/awslabs/goformation/v7/cloudformation/invoicing"
 	"github.com/awslabs/goformation/v7/cloudformation/iot"
-	"github.com/awslabs/goformation/v7/cloudformation/iot1click"
 	"github.com/awslabs/goformation/v7/cloudformation/iotanalytics"
 	"github.com/awslabs/goformation/v7/cloudformation/iotcoredeviceadvisor"
 	"github.com/awslabs/goformation/v7/cloudformation/iotevents"
@@ -143,6 +146,7 @@ import (
 	"github.com/awslabs/goformation/v7/cloudformation/kms"
 	"github.com/awslabs/goformation/v7/cloudformation/lakeformation"
 	"github.com/awslabs/goformation/v7/cloudformation/lambda"
+	"github.com/awslabs/goformation/v7/cloudformation/launchwizard"
 	"github.com/awslabs/goformation/v7/cloudformation/lex"
 	"github.com/awslabs/goformation/v7/cloudformation/licensemanager"
 	"github.com/awslabs/goformation/v7/cloudformation/lightsail"
@@ -168,7 +172,8 @@ import (
 	"github.com/awslabs/goformation/v7/cloudformation/neptunegraph"
 	"github.com/awslabs/goformation/v7/cloudformation/networkfirewall"
 	"github.com/awslabs/goformation/v7/cloudformation/networkmanager"
-	"github.com/awslabs/goformation/v7/cloudformation/nimblestudio"
+	"github.com/awslabs/goformation/v7/cloudformation/notifications"
+	"github.com/awslabs/goformation/v7/cloudformation/notificationscontacts"
 	"github.com/awslabs/goformation/v7/cloudformation/oam"
 	"github.com/awslabs/goformation/v7/cloudformation/omics"
 	"github.com/awslabs/goformation/v7/cloudformation/opensearchserverless"
@@ -180,14 +185,18 @@ import (
 	"github.com/awslabs/goformation/v7/cloudformation/panorama"
 	"github.com/awslabs/goformation/v7/cloudformation/paymentcryptography"
 	"github.com/awslabs/goformation/v7/cloudformation/pcaconnectorad"
+	"github.com/awslabs/goformation/v7/cloudformation/pcaconnectorscep"
+	"github.com/awslabs/goformation/v7/cloudformation/pcs"
 	"github.com/awslabs/goformation/v7/cloudformation/personalize"
 	"github.com/awslabs/goformation/v7/cloudformation/pinpoint"
 	"github.com/awslabs/goformation/v7/cloudformation/pinpointemail"
 	"github.com/awslabs/goformation/v7/cloudformation/pipes"
 	"github.com/awslabs/goformation/v7/cloudformation/proton"
+	"github.com/awslabs/goformation/v7/cloudformation/qbusiness"
 	"github.com/awslabs/goformation/v7/cloudformation/qldb"
 	"github.com/awslabs/goformation/v7/cloudformation/quicksight"
 	"github.com/awslabs/goformation/v7/cloudformation/ram"
+	"github.com/awslabs/goformation/v7/cloudformation/rbin"
 	"github.com/awslabs/goformation/v7/cloudformation/rds"
 	"github.com/awslabs/goformation/v7/cloudformation/redshift"
 	"github.com/awslabs/goformation/v7/cloudformation/redshiftserverless"
@@ -208,6 +217,7 @@ import (
 	"github.com/awslabs/goformation/v7/cloudformation/s3express"
 	"github.com/awslabs/goformation/v7/cloudformation/s3objectlambda"
 	"github.com/awslabs/goformation/v7/cloudformation/s3outposts"
+	"github.com/awslabs/goformation/v7/cloudformation/s3tables"
 	"github.com/awslabs/goformation/v7/cloudformation/sagemaker"
 	"github.com/awslabs/goformation/v7/cloudformation/scheduler"
 	"github.com/awslabs/goformation/v7/cloudformation/sdb"
@@ -227,6 +237,7 @@ import (
 	"github.com/awslabs/goformation/v7/cloudformation/ssm"
 	"github.com/awslabs/goformation/v7/cloudformation/ssmcontacts"
 	"github.com/awslabs/goformation/v7/cloudformation/ssmincidents"
+	"github.com/awslabs/goformation/v7/cloudformation/ssmquicksetup"
 	"github.com/awslabs/goformation/v7/cloudformation/sso"
 	"github.com/awslabs/goformation/v7/cloudformation/stepfunctions"
 	"github.com/awslabs/goformation/v7/cloudformation/supportapp"
@@ -252,1266 +263,1392 @@ import (
 // AllResources fetches an iterable map all CloudFormation and SAM resources
 func AllResources() map[string]Resource {
 	return map[string]Resource{
-		"AWS::ACMPCA::Certificate":                                         &acmpca.Certificate{},
-		"AWS::ACMPCA::CertificateAuthority":                                &acmpca.CertificateAuthority{},
-		"AWS::ACMPCA::CertificateAuthorityActivation":                      &acmpca.CertificateAuthorityActivation{},
-		"AWS::ACMPCA::Permission":                                          &acmpca.Permission{},
-		"AWS::APS::RuleGroupsNamespace":                                    &aps.RuleGroupsNamespace{},
-		"AWS::APS::Scraper":                                                &aps.Scraper{},
-		"AWS::APS::Workspace":                                              &aps.Workspace{},
-		"AWS::ARCZonalShift::ZonalAutoshiftConfiguration":                  &arczonalshift.ZonalAutoshiftConfiguration{},
-		"AWS::AccessAnalyzer::Analyzer":                                    &accessanalyzer.Analyzer{},
-		"AWS::AmazonMQ::Broker":                                            &amazonmq.Broker{},
-		"AWS::AmazonMQ::Configuration":                                     &amazonmq.Configuration{},
-		"AWS::AmazonMQ::ConfigurationAssociation":                          &amazonmq.ConfigurationAssociation{},
-		"AWS::Amplify::App":                                                &amplify.App{},
-		"AWS::Amplify::Branch":                                             &amplify.Branch{},
-		"AWS::Amplify::Domain":                                             &amplify.Domain{},
-		"AWS::AmplifyUIBuilder::Component":                                 &amplifyuibuilder.Component{},
-		"AWS::AmplifyUIBuilder::Form":                                      &amplifyuibuilder.Form{},
-		"AWS::AmplifyUIBuilder::Theme":                                     &amplifyuibuilder.Theme{},
-		"AWS::ApiGateway::Account":                                         &apigateway.Account{},
-		"AWS::ApiGateway::ApiKey":                                          &apigateway.ApiKey{},
-		"AWS::ApiGateway::Authorizer":                                      &apigateway.Authorizer{},
-		"AWS::ApiGateway::BasePathMapping":                                 &apigateway.BasePathMapping{},
-		"AWS::ApiGateway::ClientCertificate":                               &apigateway.ClientCertificate{},
-		"AWS::ApiGateway::Deployment":                                      &apigateway.Deployment{},
-		"AWS::ApiGateway::DocumentationPart":                               &apigateway.DocumentationPart{},
-		"AWS::ApiGateway::DocumentationVersion":                            &apigateway.DocumentationVersion{},
-		"AWS::ApiGateway::DomainName":                                      &apigateway.DomainName{},
-		"AWS::ApiGateway::GatewayResponse":                                 &apigateway.GatewayResponse{},
-		"AWS::ApiGateway::Method":                                          &apigateway.Method{},
-		"AWS::ApiGateway::Model":                                           &apigateway.Model{},
-		"AWS::ApiGateway::RequestValidator":                                &apigateway.RequestValidator{},
-		"AWS::ApiGateway::Resource":                                        &apigateway.Resource{},
-		"AWS::ApiGateway::RestApi":                                         &apigateway.RestApi{},
-		"AWS::ApiGateway::Stage":                                           &apigateway.Stage{},
-		"AWS::ApiGateway::UsagePlan":                                       &apigateway.UsagePlan{},
-		"AWS::ApiGateway::UsagePlanKey":                                    &apigateway.UsagePlanKey{},
-		"AWS::ApiGateway::VpcLink":                                         &apigateway.VpcLink{},
-		"AWS::ApiGatewayV2::Api":                                           &apigatewayv2.Api{},
-		"AWS::ApiGatewayV2::ApiGatewayManagedOverrides":                    &apigatewayv2.ApiGatewayManagedOverrides{},
-		"AWS::ApiGatewayV2::ApiMapping":                                    &apigatewayv2.ApiMapping{},
-		"AWS::ApiGatewayV2::Authorizer":                                    &apigatewayv2.Authorizer{},
-		"AWS::ApiGatewayV2::Deployment":                                    &apigatewayv2.Deployment{},
-		"AWS::ApiGatewayV2::DomainName":                                    &apigatewayv2.DomainName{},
-		"AWS::ApiGatewayV2::Integration":                                   &apigatewayv2.Integration{},
-		"AWS::ApiGatewayV2::IntegrationResponse":                           &apigatewayv2.IntegrationResponse{},
-		"AWS::ApiGatewayV2::Model":                                         &apigatewayv2.Model{},
-		"AWS::ApiGatewayV2::Route":                                         &apigatewayv2.Route{},
-		"AWS::ApiGatewayV2::RouteResponse":                                 &apigatewayv2.RouteResponse{},
-		"AWS::ApiGatewayV2::Stage":                                         &apigatewayv2.Stage{},
-		"AWS::ApiGatewayV2::VpcLink":                                       &apigatewayv2.VpcLink{},
-		"AWS::AppConfig::Application":                                      &appconfig.Application{},
-		"AWS::AppConfig::ConfigurationProfile":                             &appconfig.ConfigurationProfile{},
-		"AWS::AppConfig::Deployment":                                       &appconfig.Deployment{},
-		"AWS::AppConfig::DeploymentStrategy":                               &appconfig.DeploymentStrategy{},
-		"AWS::AppConfig::Environment":                                      &appconfig.Environment{},
-		"AWS::AppConfig::Extension":                                        &appconfig.Extension{},
-		"AWS::AppConfig::ExtensionAssociation":                             &appconfig.ExtensionAssociation{},
-		"AWS::AppConfig::HostedConfigurationVersion":                       &appconfig.HostedConfigurationVersion{},
-		"AWS::AppFlow::Connector":                                          &appflow.Connector{},
-		"AWS::AppFlow::ConnectorProfile":                                   &appflow.ConnectorProfile{},
-		"AWS::AppFlow::Flow":                                               &appflow.Flow{},
-		"AWS::AppIntegrations::Application":                                &appintegrations.Application{},
-		"AWS::AppIntegrations::DataIntegration":                            &appintegrations.DataIntegration{},
-		"AWS::AppIntegrations::EventIntegration":                           &appintegrations.EventIntegration{},
-		"AWS::AppMesh::GatewayRoute":                                       &appmesh.GatewayRoute{},
-		"AWS::AppMesh::Mesh":                                               &appmesh.Mesh{},
-		"AWS::AppMesh::Route":                                              &appmesh.Route{},
-		"AWS::AppMesh::VirtualGateway":                                     &appmesh.VirtualGateway{},
-		"AWS::AppMesh::VirtualNode":                                        &appmesh.VirtualNode{},
-		"AWS::AppMesh::VirtualRouter":                                      &appmesh.VirtualRouter{},
-		"AWS::AppMesh::VirtualService":                                     &appmesh.VirtualService{},
-		"AWS::AppRunner::AutoScalingConfiguration":                         &apprunner.AutoScalingConfiguration{},
-		"AWS::AppRunner::ObservabilityConfiguration":                       &apprunner.ObservabilityConfiguration{},
-		"AWS::AppRunner::Service":                                          &apprunner.Service{},
-		"AWS::AppRunner::VpcConnector":                                     &apprunner.VpcConnector{},
-		"AWS::AppRunner::VpcIngressConnection":                             &apprunner.VpcIngressConnection{},
-		"AWS::AppStream::AppBlock":                                         &appstream.AppBlock{},
-		"AWS::AppStream::AppBlockBuilder":                                  &appstream.AppBlockBuilder{},
-		"AWS::AppStream::Application":                                      &appstream.Application{},
-		"AWS::AppStream::ApplicationEntitlementAssociation":                &appstream.ApplicationEntitlementAssociation{},
-		"AWS::AppStream::ApplicationFleetAssociation":                      &appstream.ApplicationFleetAssociation{},
-		"AWS::AppStream::DirectoryConfig":                                  &appstream.DirectoryConfig{},
-		"AWS::AppStream::Entitlement":                                      &appstream.Entitlement{},
-		"AWS::AppStream::Fleet":                                            &appstream.Fleet{},
-		"AWS::AppStream::ImageBuilder":                                     &appstream.ImageBuilder{},
-		"AWS::AppStream::Stack":                                            &appstream.Stack{},
-		"AWS::AppStream::StackFleetAssociation":                            &appstream.StackFleetAssociation{},
-		"AWS::AppStream::StackUserAssociation":                             &appstream.StackUserAssociation{},
-		"AWS::AppStream::User":                                             &appstream.User{},
-		"AWS::AppSync::ApiCache":                                           &appsync.ApiCache{},
-		"AWS::AppSync::ApiKey":                                             &appsync.ApiKey{},
-		"AWS::AppSync::DataSource":                                         &appsync.DataSource{},
-		"AWS::AppSync::DomainName":                                         &appsync.DomainName{},
-		"AWS::AppSync::DomainNameApiAssociation":                           &appsync.DomainNameApiAssociation{},
-		"AWS::AppSync::FunctionConfiguration":                              &appsync.FunctionConfiguration{},
-		"AWS::AppSync::GraphQLApi":                                         &appsync.GraphQLApi{},
-		"AWS::AppSync::GraphQLSchema":                                      &appsync.GraphQLSchema{},
-		"AWS::AppSync::Resolver":                                           &appsync.Resolver{},
-		"AWS::AppSync::SourceApiAssociation":                               &appsync.SourceApiAssociation{},
-		"AWS::ApplicationAutoScaling::ScalableTarget":                      &applicationautoscaling.ScalableTarget{},
-		"AWS::ApplicationAutoScaling::ScalingPolicy":                       &applicationautoscaling.ScalingPolicy{},
-		"AWS::ApplicationInsights::Application":                            &applicationinsights.Application{},
-		"AWS::Athena::CapacityReservation":                                 &athena.CapacityReservation{},
-		"AWS::Athena::DataCatalog":                                         &athena.DataCatalog{},
-		"AWS::Athena::NamedQuery":                                          &athena.NamedQuery{},
-		"AWS::Athena::PreparedStatement":                                   &athena.PreparedStatement{},
-		"AWS::Athena::WorkGroup":                                           &athena.WorkGroup{},
-		"AWS::AuditManager::Assessment":                                    &auditmanager.Assessment{},
-		"AWS::AutoScaling::AutoScalingGroup":                               &autoscaling.AutoScalingGroup{},
-		"AWS::AutoScaling::LaunchConfiguration":                            &autoscaling.LaunchConfiguration{},
-		"AWS::AutoScaling::LifecycleHook":                                  &autoscaling.LifecycleHook{},
-		"AWS::AutoScaling::ScalingPolicy":                                  &autoscaling.ScalingPolicy{},
-		"AWS::AutoScaling::ScheduledAction":                                &autoscaling.ScheduledAction{},
-		"AWS::AutoScaling::WarmPool":                                       &autoscaling.WarmPool{},
-		"AWS::AutoScalingPlans::ScalingPlan":                               &autoscalingplans.ScalingPlan{},
-		"AWS::B2BI::Capability":                                            &b2bi.Capability{},
-		"AWS::B2BI::Partnership":                                           &b2bi.Partnership{},
-		"AWS::B2BI::Profile":                                               &b2bi.Profile{},
-		"AWS::B2BI::Transformer":                                           &b2bi.Transformer{},
-		"AWS::BCMDataExports::Export":                                      &bcmdataexports.Export{},
-		"AWS::Backup::BackupPlan":                                          &backup.BackupPlan{},
-		"AWS::Backup::BackupSelection":                                     &backup.BackupSelection{},
-		"AWS::Backup::BackupVault":                                         &backup.BackupVault{},
-		"AWS::Backup::Framework":                                           &backup.Framework{},
-		"AWS::Backup::ReportPlan":                                          &backup.ReportPlan{},
-		"AWS::Backup::RestoreTestingPlan":                                  &backup.RestoreTestingPlan{},
-		"AWS::Backup::RestoreTestingSelection":                             &backup.RestoreTestingSelection{},
-		"AWS::BackupGateway::Hypervisor":                                   &backupgateway.Hypervisor{},
-		"AWS::Batch::ComputeEnvironment":                                   &batch.ComputeEnvironment{},
-		"AWS::Batch::JobDefinition":                                        &batch.JobDefinition{},
-		"AWS::Batch::JobQueue":                                             &batch.JobQueue{},
-		"AWS::Batch::SchedulingPolicy":                                     &batch.SchedulingPolicy{},
-		"AWS::Bedrock::Agent":                                              &bedrock.Agent{},
-		"AWS::Bedrock::AgentAlias":                                         &bedrock.AgentAlias{},
-		"AWS::Bedrock::DataSource":                                         &bedrock.DataSource{},
-		"AWS::Bedrock::Guardrail":                                          &bedrock.Guardrail{},
-		"AWS::Bedrock::KnowledgeBase":                                      &bedrock.KnowledgeBase{},
-		"AWS::BillingConductor::BillingGroup":                              &billingconductor.BillingGroup{},
-		"AWS::BillingConductor::CustomLineItem":                            &billingconductor.CustomLineItem{},
-		"AWS::BillingConductor::PricingPlan":                               &billingconductor.PricingPlan{},
-		"AWS::BillingConductor::PricingRule":                               &billingconductor.PricingRule{},
-		"AWS::Budgets::Budget":                                             &budgets.Budget{},
-		"AWS::Budgets::BudgetsAction":                                      &budgets.BudgetsAction{},
-		"AWS::CDK::Metadata":                                               &cdk.Metadata{},
-		"AWS::CE::AnomalyMonitor":                                          &ce.AnomalyMonitor{},
-		"AWS::CE::AnomalySubscription":                                     &ce.AnomalySubscription{},
-		"AWS::CE::CostCategory":                                            &ce.CostCategory{},
-		"AWS::CUR::ReportDefinition":                                       &cur.ReportDefinition{},
-		"AWS::Cassandra::Keyspace":                                         &cassandra.Keyspace{},
-		"AWS::Cassandra::Table":                                            &cassandra.Table{},
-		"AWS::CertificateManager::Account":                                 &certificatemanager.Account{},
-		"AWS::CertificateManager::Certificate":                             &certificatemanager.Certificate{},
-		"AWS::Chatbot::MicrosoftTeamsChannelConfiguration":                 &chatbot.MicrosoftTeamsChannelConfiguration{},
-		"AWS::Chatbot::SlackChannelConfiguration":                          &chatbot.SlackChannelConfiguration{},
-		"AWS::CleanRooms::AnalysisTemplate":                                &cleanrooms.AnalysisTemplate{},
-		"AWS::CleanRooms::Collaboration":                                   &cleanrooms.Collaboration{},
-		"AWS::CleanRooms::ConfiguredTable":                                 &cleanrooms.ConfiguredTable{},
-		"AWS::CleanRooms::ConfiguredTableAssociation":                      &cleanrooms.ConfiguredTableAssociation{},
-		"AWS::CleanRooms::Membership":                                      &cleanrooms.Membership{},
-		"AWS::CleanRooms::PrivacyBudgetTemplate":                           &cleanrooms.PrivacyBudgetTemplate{},
-		"AWS::CleanRoomsML::TrainingDataset":                               &cleanroomsml.TrainingDataset{},
-		"AWS::Cloud9::EnvironmentEC2":                                      &cloud9.EnvironmentEC2{},
-		"AWS::CloudFormation::CustomResource":                              &cloudformation.CustomResource{},
-		"AWS::CloudFormation::HookDefaultVersion":                          &cloudformation.HookDefaultVersion{},
-		"AWS::CloudFormation::HookTypeConfig":                              &cloudformation.HookTypeConfig{},
-		"AWS::CloudFormation::HookVersion":                                 &cloudformation.HookVersion{},
-		"AWS::CloudFormation::Macro":                                       &cloudformation.Macro{},
-		"AWS::CloudFormation::ModuleDefaultVersion":                        &cloudformation.ModuleDefaultVersion{},
-		"AWS::CloudFormation::ModuleVersion":                               &cloudformation.ModuleVersion{},
-		"AWS::CloudFormation::PublicTypeVersion":                           &cloudformation.PublicTypeVersion{},
-		"AWS::CloudFormation::Publisher":                                   &cloudformation.Publisher{},
-		"AWS::CloudFormation::ResourceDefaultVersion":                      &cloudformation.ResourceDefaultVersion{},
-		"AWS::CloudFormation::ResourceVersion":                             &cloudformation.ResourceVersion{},
-		"AWS::CloudFormation::Stack":                                       &cloudformation.Stack{},
-		"AWS::CloudFormation::StackSet":                                    &cloudformation.StackSet{},
-		"AWS::CloudFormation::TypeActivation":                              &cloudformation.TypeActivation{},
-		"AWS::CloudFormation::WaitCondition":                               &cloudformation.WaitCondition{},
-		"AWS::CloudFormation::WaitConditionHandle":                         &cloudformation.WaitConditionHandle{},
-		"AWS::CloudFront::CachePolicy":                                     &cloudfront.CachePolicy{},
-		"AWS::CloudFront::CloudFrontOriginAccessIdentity":                  &cloudfront.CloudFrontOriginAccessIdentity{},
-		"AWS::CloudFront::ContinuousDeploymentPolicy":                      &cloudfront.ContinuousDeploymentPolicy{},
-		"AWS::CloudFront::Distribution":                                    &cloudfront.Distribution{},
-		"AWS::CloudFront::Function":                                        &cloudfront.Function{},
-		"AWS::CloudFront::KeyGroup":                                        &cloudfront.KeyGroup{},
-		"AWS::CloudFront::KeyValueStore":                                   &cloudfront.KeyValueStore{},
-		"AWS::CloudFront::MonitoringSubscription":                          &cloudfront.MonitoringSubscription{},
-		"AWS::CloudFront::OriginAccessControl":                             &cloudfront.OriginAccessControl{},
-		"AWS::CloudFront::OriginRequestPolicy":                             &cloudfront.OriginRequestPolicy{},
-		"AWS::CloudFront::PublicKey":                                       &cloudfront.PublicKey{},
-		"AWS::CloudFront::RealtimeLogConfig":                               &cloudfront.RealtimeLogConfig{},
-		"AWS::CloudFront::ResponseHeadersPolicy":                           &cloudfront.ResponseHeadersPolicy{},
-		"AWS::CloudFront::StreamingDistribution":                           &cloudfront.StreamingDistribution{},
-		"AWS::CloudTrail::Channel":                                         &cloudtrail.Channel{},
-		"AWS::CloudTrail::EventDataStore":                                  &cloudtrail.EventDataStore{},
-		"AWS::CloudTrail::ResourcePolicy":                                  &cloudtrail.ResourcePolicy{},
-		"AWS::CloudTrail::Trail":                                           &cloudtrail.Trail{},
-		"AWS::CloudWatch::Alarm":                                           &cloudwatch.Alarm{},
-		"AWS::CloudWatch::AnomalyDetector":                                 &cloudwatch.AnomalyDetector{},
-		"AWS::CloudWatch::CompositeAlarm":                                  &cloudwatch.CompositeAlarm{},
-		"AWS::CloudWatch::Dashboard":                                       &cloudwatch.Dashboard{},
-		"AWS::CloudWatch::InsightRule":                                     &cloudwatch.InsightRule{},
-		"AWS::CloudWatch::MetricStream":                                    &cloudwatch.MetricStream{},
-		"AWS::CodeArtifact::Domain":                                        &codeartifact.Domain{},
-		"AWS::CodeArtifact::PackageGroup":                                  &codeartifact.PackageGroup{},
-		"AWS::CodeArtifact::Repository":                                    &codeartifact.Repository{},
-		"AWS::CodeBuild::Fleet":                                            &codebuild.Fleet{},
-		"AWS::CodeBuild::Project":                                          &codebuild.Project{},
-		"AWS::CodeBuild::ReportGroup":                                      &codebuild.ReportGroup{},
-		"AWS::CodeBuild::SourceCredential":                                 &codebuild.SourceCredential{},
-		"AWS::CodeCommit::Repository":                                      &codecommit.Repository{},
-		"AWS::CodeConnections::Connection":                                 &codeconnections.Connection{},
-		"AWS::CodeDeploy::Application":                                     &codedeploy.Application{},
-		"AWS::CodeDeploy::DeploymentConfig":                                &codedeploy.DeploymentConfig{},
-		"AWS::CodeDeploy::DeploymentGroup":                                 &codedeploy.DeploymentGroup{},
-		"AWS::CodeGuruProfiler::ProfilingGroup":                            &codeguruprofiler.ProfilingGroup{},
-		"AWS::CodeGuruReviewer::RepositoryAssociation":                     &codegurureviewer.RepositoryAssociation{},
-		"AWS::CodePipeline::CustomActionType":                              &codepipeline.CustomActionType{},
-		"AWS::CodePipeline::Pipeline":                                      &codepipeline.Pipeline{},
-		"AWS::CodePipeline::Webhook":                                       &codepipeline.Webhook{},
-		"AWS::CodeStar::GitHubRepository":                                  &codestar.GitHubRepository{},
-		"AWS::CodeStarConnections::Connection":                             &codestarconnections.Connection{},
-		"AWS::CodeStarConnections::RepositoryLink":                         &codestarconnections.RepositoryLink{},
-		"AWS::CodeStarConnections::SyncConfiguration":                      &codestarconnections.SyncConfiguration{},
-		"AWS::CodeStarNotifications::NotificationRule":                     &codestarnotifications.NotificationRule{},
-		"AWS::Cognito::IdentityPool":                                       &cognito.IdentityPool{},
-		"AWS::Cognito::IdentityPoolPrincipalTag":                           &cognito.IdentityPoolPrincipalTag{},
-		"AWS::Cognito::IdentityPoolRoleAttachment":                         &cognito.IdentityPoolRoleAttachment{},
-		"AWS::Cognito::LogDeliveryConfiguration":                           &cognito.LogDeliveryConfiguration{},
-		"AWS::Cognito::UserPool":                                           &cognito.UserPool{},
-		"AWS::Cognito::UserPoolClient":                                     &cognito.UserPoolClient{},
-		"AWS::Cognito::UserPoolDomain":                                     &cognito.UserPoolDomain{},
-		"AWS::Cognito::UserPoolGroup":                                      &cognito.UserPoolGroup{},
-		"AWS::Cognito::UserPoolIdentityProvider":                           &cognito.UserPoolIdentityProvider{},
-		"AWS::Cognito::UserPoolResourceServer":                             &cognito.UserPoolResourceServer{},
-		"AWS::Cognito::UserPoolRiskConfigurationAttachment":                &cognito.UserPoolRiskConfigurationAttachment{},
-		"AWS::Cognito::UserPoolUICustomizationAttachment":                  &cognito.UserPoolUICustomizationAttachment{},
-		"AWS::Cognito::UserPoolUser":                                       &cognito.UserPoolUser{},
-		"AWS::Cognito::UserPoolUserToGroupAttachment":                      &cognito.UserPoolUserToGroupAttachment{},
-		"AWS::Comprehend::DocumentClassifier":                              &comprehend.DocumentClassifier{},
-		"AWS::Comprehend::Flywheel":                                        &comprehend.Flywheel{},
-		"AWS::Config::AggregationAuthorization":                            &config.AggregationAuthorization{},
-		"AWS::Config::ConfigRule":                                          &config.ConfigRule{},
-		"AWS::Config::ConfigurationAggregator":                             &config.ConfigurationAggregator{},
-		"AWS::Config::ConfigurationRecorder":                               &config.ConfigurationRecorder{},
-		"AWS::Config::ConformancePack":                                     &config.ConformancePack{},
-		"AWS::Config::DeliveryChannel":                                     &config.DeliveryChannel{},
-		"AWS::Config::OrganizationConfigRule":                              &config.OrganizationConfigRule{},
-		"AWS::Config::OrganizationConformancePack":                         &config.OrganizationConformancePack{},
-		"AWS::Config::RemediationConfiguration":                            &config.RemediationConfiguration{},
-		"AWS::Config::StoredQuery":                                         &config.StoredQuery{},
-		"AWS::Connect::ApprovedOrigin":                                     &connect.ApprovedOrigin{},
-		"AWS::Connect::ContactFlow":                                        &connect.ContactFlow{},
-		"AWS::Connect::ContactFlowModule":                                  &connect.ContactFlowModule{},
-		"AWS::Connect::EvaluationForm":                                     &connect.EvaluationForm{},
-		"AWS::Connect::HoursOfOperation":                                   &connect.HoursOfOperation{},
-		"AWS::Connect::Instance":                                           &connect.Instance{},
-		"AWS::Connect::InstanceStorageConfig":                              &connect.InstanceStorageConfig{},
-		"AWS::Connect::IntegrationAssociation":                             &connect.IntegrationAssociation{},
-		"AWS::Connect::PhoneNumber":                                        &connect.PhoneNumber{},
-		"AWS::Connect::PredefinedAttribute":                                &connect.PredefinedAttribute{},
-		"AWS::Connect::Prompt":                                             &connect.Prompt{},
-		"AWS::Connect::Queue":                                              &connect.Queue{},
-		"AWS::Connect::QuickConnect":                                       &connect.QuickConnect{},
-		"AWS::Connect::RoutingProfile":                                     &connect.RoutingProfile{},
-		"AWS::Connect::Rule":                                               &connect.Rule{},
-		"AWS::Connect::SecurityKey":                                        &connect.SecurityKey{},
-		"AWS::Connect::SecurityProfile":                                    &connect.SecurityProfile{},
-		"AWS::Connect::TaskTemplate":                                       &connect.TaskTemplate{},
-		"AWS::Connect::TrafficDistributionGroup":                           &connect.TrafficDistributionGroup{},
-		"AWS::Connect::User":                                               &connect.User{},
-		"AWS::Connect::UserHierarchyGroup":                                 &connect.UserHierarchyGroup{},
-		"AWS::Connect::View":                                               &connect.View{},
-		"AWS::Connect::ViewVersion":                                        &connect.ViewVersion{},
-		"AWS::ConnectCampaigns::Campaign":                                  &connectcampaigns.Campaign{},
-		"AWS::ControlTower::EnabledBaseline":                               &controltower.EnabledBaseline{},
-		"AWS::ControlTower::EnabledControl":                                &controltower.EnabledControl{},
-		"AWS::ControlTower::LandingZone":                                   &controltower.LandingZone{},
-		"AWS::CustomerProfiles::CalculatedAttributeDefinition":             &customerprofiles.CalculatedAttributeDefinition{},
-		"AWS::CustomerProfiles::Domain":                                    &customerprofiles.Domain{},
-		"AWS::CustomerProfiles::EventStream":                               &customerprofiles.EventStream{},
-		"AWS::CustomerProfiles::Integration":                               &customerprofiles.Integration{},
-		"AWS::CustomerProfiles::ObjectType":                                &customerprofiles.ObjectType{},
-		"AWS::DAX::Cluster":                                                &dax.Cluster{},
-		"AWS::DAX::ParameterGroup":                                         &dax.ParameterGroup{},
-		"AWS::DAX::SubnetGroup":                                            &dax.SubnetGroup{},
-		"AWS::DLM::LifecyclePolicy":                                        &dlm.LifecyclePolicy{},
-		"AWS::DMS::Certificate":                                            &dms.Certificate{},
-		"AWS::DMS::DataProvider":                                           &dms.DataProvider{},
-		"AWS::DMS::Endpoint":                                               &dms.Endpoint{},
-		"AWS::DMS::EventSubscription":                                      &dms.EventSubscription{},
-		"AWS::DMS::InstanceProfile":                                        &dms.InstanceProfile{},
-		"AWS::DMS::MigrationProject":                                       &dms.MigrationProject{},
-		"AWS::DMS::ReplicationConfig":                                      &dms.ReplicationConfig{},
-		"AWS::DMS::ReplicationInstance":                                    &dms.ReplicationInstance{},
-		"AWS::DMS::ReplicationSubnetGroup":                                 &dms.ReplicationSubnetGroup{},
-		"AWS::DMS::ReplicationTask":                                        &dms.ReplicationTask{},
-		"AWS::DataBrew::Dataset":                                           &databrew.Dataset{},
-		"AWS::DataBrew::Job":                                               &databrew.Job{},
-		"AWS::DataBrew::Project":                                           &databrew.Project{},
-		"AWS::DataBrew::Recipe":                                            &databrew.Recipe{},
-		"AWS::DataBrew::Ruleset":                                           &databrew.Ruleset{},
-		"AWS::DataBrew::Schedule":                                          &databrew.Schedule{},
-		"AWS::DataPipeline::Pipeline":                                      &datapipeline.Pipeline{},
-		"AWS::DataSync::Agent":                                             &datasync.Agent{},
-		"AWS::DataSync::LocationAzureBlob":                                 &datasync.LocationAzureBlob{},
-		"AWS::DataSync::LocationEFS":                                       &datasync.LocationEFS{},
-		"AWS::DataSync::LocationFSxLustre":                                 &datasync.LocationFSxLustre{},
-		"AWS::DataSync::LocationFSxONTAP":                                  &datasync.LocationFSxONTAP{},
-		"AWS::DataSync::LocationFSxOpenZFS":                                &datasync.LocationFSxOpenZFS{},
-		"AWS::DataSync::LocationFSxWindows":                                &datasync.LocationFSxWindows{},
-		"AWS::DataSync::LocationHDFS":                                      &datasync.LocationHDFS{},
-		"AWS::DataSync::LocationNFS":                                       &datasync.LocationNFS{},
-		"AWS::DataSync::LocationObjectStorage":                             &datasync.LocationObjectStorage{},
-		"AWS::DataSync::LocationS3":                                        &datasync.LocationS3{},
-		"AWS::DataSync::LocationSMB":                                       &datasync.LocationSMB{},
-		"AWS::DataSync::StorageSystem":                                     &datasync.StorageSystem{},
-		"AWS::DataSync::Task":                                              &datasync.Task{},
-		"AWS::DataZone::DataSource":                                        &datazone.DataSource{},
-		"AWS::DataZone::Domain":                                            &datazone.Domain{},
-		"AWS::DataZone::Environment":                                       &datazone.Environment{},
-		"AWS::DataZone::EnvironmentBlueprintConfiguration":                 &datazone.EnvironmentBlueprintConfiguration{},
-		"AWS::DataZone::EnvironmentProfile":                                &datazone.EnvironmentProfile{},
-		"AWS::DataZone::Project":                                           &datazone.Project{},
-		"AWS::DataZone::SubscriptionTarget":                                &datazone.SubscriptionTarget{},
-		"AWS::Deadline::Farm":                                              &deadline.Farm{},
-		"AWS::Deadline::Fleet":                                             &deadline.Fleet{},
-		"AWS::Deadline::LicenseEndpoint":                                   &deadline.LicenseEndpoint{},
-		"AWS::Deadline::MeteredProduct":                                    &deadline.MeteredProduct{},
-		"AWS::Deadline::Queue":                                             &deadline.Queue{},
-		"AWS::Deadline::QueueEnvironment":                                  &deadline.QueueEnvironment{},
-		"AWS::Deadline::QueueFleetAssociation":                             &deadline.QueueFleetAssociation{},
-		"AWS::Deadline::StorageProfile":                                    &deadline.StorageProfile{},
-		"AWS::Detective::Graph":                                            &detective.Graph{},
-		"AWS::Detective::MemberInvitation":                                 &detective.MemberInvitation{},
-		"AWS::Detective::OrganizationAdmin":                                &detective.OrganizationAdmin{},
-		"AWS::DevOpsGuru::LogAnomalyDetectionIntegration":                  &devopsguru.LogAnomalyDetectionIntegration{},
-		"AWS::DevOpsGuru::NotificationChannel":                             &devopsguru.NotificationChannel{},
-		"AWS::DevOpsGuru::ResourceCollection":                              &devopsguru.ResourceCollection{},
-		"AWS::DirectoryService::MicrosoftAD":                               &directoryservice.MicrosoftAD{},
-		"AWS::DirectoryService::SimpleAD":                                  &directoryservice.SimpleAD{},
-		"AWS::DocDB::DBCluster":                                            &docdb.DBCluster{},
-		"AWS::DocDB::DBClusterParameterGroup":                              &docdb.DBClusterParameterGroup{},
-		"AWS::DocDB::DBInstance":                                           &docdb.DBInstance{},
-		"AWS::DocDB::DBSubnetGroup":                                        &docdb.DBSubnetGroup{},
-		"AWS::DocDB::EventSubscription":                                    &docdb.EventSubscription{},
-		"AWS::DocDBElastic::Cluster":                                       &docdbelastic.Cluster{},
-		"AWS::DynamoDB::GlobalTable":                                       &dynamodb.GlobalTable{},
-		"AWS::DynamoDB::Table":                                             &dynamodb.Table{},
-		"AWS::EC2::CapacityReservation":                                    &ec2.CapacityReservation{},
-		"AWS::EC2::CapacityReservationFleet":                               &ec2.CapacityReservationFleet{},
-		"AWS::EC2::CarrierGateway":                                         &ec2.CarrierGateway{},
-		"AWS::EC2::ClientVpnAuthorizationRule":                             &ec2.ClientVpnAuthorizationRule{},
-		"AWS::EC2::ClientVpnEndpoint":                                      &ec2.ClientVpnEndpoint{},
-		"AWS::EC2::ClientVpnRoute":                                         &ec2.ClientVpnRoute{},
-		"AWS::EC2::ClientVpnTargetNetworkAssociation":                      &ec2.ClientVpnTargetNetworkAssociation{},
-		"AWS::EC2::CustomerGateway":                                        &ec2.CustomerGateway{},
-		"AWS::EC2::DHCPOptions":                                            &ec2.DHCPOptions{},
-		"AWS::EC2::EC2Fleet":                                               &ec2.EC2Fleet{},
-		"AWS::EC2::EIP":                                                    &ec2.EIP{},
-		"AWS::EC2::EIPAssociation":                                         &ec2.EIPAssociation{},
-		"AWS::EC2::EgressOnlyInternetGateway":                              &ec2.EgressOnlyInternetGateway{},
-		"AWS::EC2::EnclaveCertificateIamRoleAssociation":                   &ec2.EnclaveCertificateIamRoleAssociation{},
-		"AWS::EC2::FlowLog":                                                &ec2.FlowLog{},
-		"AWS::EC2::GatewayRouteTableAssociation":                           &ec2.GatewayRouteTableAssociation{},
-		"AWS::EC2::Host":                                                   &ec2.Host{},
-		"AWS::EC2::IPAM":                                                   &ec2.IPAM{},
-		"AWS::EC2::IPAMAllocation":                                         &ec2.IPAMAllocation{},
-		"AWS::EC2::IPAMPool":                                               &ec2.IPAMPool{},
-		"AWS::EC2::IPAMPoolCidr":                                           &ec2.IPAMPoolCidr{},
-		"AWS::EC2::IPAMResourceDiscovery":                                  &ec2.IPAMResourceDiscovery{},
-		"AWS::EC2::IPAMResourceDiscoveryAssociation":                       &ec2.IPAMResourceDiscoveryAssociation{},
-		"AWS::EC2::IPAMScope":                                              &ec2.IPAMScope{},
-		"AWS::EC2::Instance":                                               &ec2.Instance{},
-		"AWS::EC2::InstanceConnectEndpoint":                                &ec2.InstanceConnectEndpoint{},
-		"AWS::EC2::InternetGateway":                                        &ec2.InternetGateway{},
-		"AWS::EC2::KeyPair":                                                &ec2.KeyPair{},
-		"AWS::EC2::LaunchTemplate":                                         &ec2.LaunchTemplate{},
-		"AWS::EC2::LocalGatewayRoute":                                      &ec2.LocalGatewayRoute{},
-		"AWS::EC2::LocalGatewayRouteTable":                                 &ec2.LocalGatewayRouteTable{},
-		"AWS::EC2::LocalGatewayRouteTableVPCAssociation":                   &ec2.LocalGatewayRouteTableVPCAssociation{},
-		"AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation": &ec2.LocalGatewayRouteTableVirtualInterfaceGroupAssociation{},
-		"AWS::EC2::NatGateway":                                             &ec2.NatGateway{},
-		"AWS::EC2::NetworkAcl":                                             &ec2.NetworkAcl{},
-		"AWS::EC2::NetworkAclEntry":                                        &ec2.NetworkAclEntry{},
-		"AWS::EC2::NetworkInsightsAccessScope":                             &ec2.NetworkInsightsAccessScope{},
-		"AWS::EC2::NetworkInsightsAccessScopeAnalysis":                     &ec2.NetworkInsightsAccessScopeAnalysis{},
-		"AWS::EC2::NetworkInsightsAnalysis":                                &ec2.NetworkInsightsAnalysis{},
-		"AWS::EC2::NetworkInsightsPath":                                    &ec2.NetworkInsightsPath{},
-		"AWS::EC2::NetworkInterface":                                       &ec2.NetworkInterface{},
-		"AWS::EC2::NetworkInterfaceAttachment":                             &ec2.NetworkInterfaceAttachment{},
-		"AWS::EC2::NetworkInterfacePermission":                             &ec2.NetworkInterfacePermission{},
-		"AWS::EC2::NetworkPerformanceMetricSubscription":                   &ec2.NetworkPerformanceMetricSubscription{},
-		"AWS::EC2::PlacementGroup":                                         &ec2.PlacementGroup{},
-		"AWS::EC2::PrefixList":                                             &ec2.PrefixList{},
-		"AWS::EC2::Route":                                                  &ec2.Route{},
-		"AWS::EC2::RouteTable":                                             &ec2.RouteTable{},
-		"AWS::EC2::SecurityGroup":                                          &ec2.SecurityGroup{},
-		"AWS::EC2::SecurityGroupEgress":                                    &ec2.SecurityGroupEgress{},
-		"AWS::EC2::SecurityGroupIngress":                                   &ec2.SecurityGroupIngress{},
-		"AWS::EC2::SnapshotBlockPublicAccess":                              &ec2.SnapshotBlockPublicAccess{},
-		"AWS::EC2::SpotFleet":                                              &ec2.SpotFleet{},
-		"AWS::EC2::Subnet":                                                 &ec2.Subnet{},
-		"AWS::EC2::SubnetCidrBlock":                                        &ec2.SubnetCidrBlock{},
-		"AWS::EC2::SubnetNetworkAclAssociation":                            &ec2.SubnetNetworkAclAssociation{},
-		"AWS::EC2::SubnetRouteTableAssociation":                            &ec2.SubnetRouteTableAssociation{},
-		"AWS::EC2::TrafficMirrorFilter":                                    &ec2.TrafficMirrorFilter{},
-		"AWS::EC2::TrafficMirrorFilterRule":                                &ec2.TrafficMirrorFilterRule{},
-		"AWS::EC2::TrafficMirrorSession":                                   &ec2.TrafficMirrorSession{},
-		"AWS::EC2::TrafficMirrorTarget":                                    &ec2.TrafficMirrorTarget{},
-		"AWS::EC2::TransitGateway":                                         &ec2.TransitGateway{},
-		"AWS::EC2::TransitGatewayAttachment":                               &ec2.TransitGatewayAttachment{},
-		"AWS::EC2::TransitGatewayConnect":                                  &ec2.TransitGatewayConnect{},
-		"AWS::EC2::TransitGatewayMulticastDomain":                          &ec2.TransitGatewayMulticastDomain{},
-		"AWS::EC2::TransitGatewayMulticastDomainAssociation":               &ec2.TransitGatewayMulticastDomainAssociation{},
-		"AWS::EC2::TransitGatewayMulticastGroupMember":                     &ec2.TransitGatewayMulticastGroupMember{},
-		"AWS::EC2::TransitGatewayMulticastGroupSource":                     &ec2.TransitGatewayMulticastGroupSource{},
-		"AWS::EC2::TransitGatewayPeeringAttachment":                        &ec2.TransitGatewayPeeringAttachment{},
-		"AWS::EC2::TransitGatewayRoute":                                    &ec2.TransitGatewayRoute{},
-		"AWS::EC2::TransitGatewayRouteTable":                               &ec2.TransitGatewayRouteTable{},
-		"AWS::EC2::TransitGatewayRouteTableAssociation":                    &ec2.TransitGatewayRouteTableAssociation{},
-		"AWS::EC2::TransitGatewayRouteTablePropagation":                    &ec2.TransitGatewayRouteTablePropagation{},
-		"AWS::EC2::TransitGatewayVpcAttachment":                            &ec2.TransitGatewayVpcAttachment{},
-		"AWS::EC2::VPC":                                                    &ec2.VPC{},
-		"AWS::EC2::VPCCidrBlock":                                           &ec2.VPCCidrBlock{},
-		"AWS::EC2::VPCDHCPOptionsAssociation":                              &ec2.VPCDHCPOptionsAssociation{},
-		"AWS::EC2::VPCEndpoint":                                            &ec2.VPCEndpoint{},
-		"AWS::EC2::VPCEndpointConnectionNotification":                      &ec2.VPCEndpointConnectionNotification{},
-		"AWS::EC2::VPCEndpointService":                                     &ec2.VPCEndpointService{},
-		"AWS::EC2::VPCEndpointServicePermissions":                          &ec2.VPCEndpointServicePermissions{},
-		"AWS::EC2::VPCGatewayAttachment":                                   &ec2.VPCGatewayAttachment{},
-		"AWS::EC2::VPCPeeringConnection":                                   &ec2.VPCPeeringConnection{},
-		"AWS::EC2::VPNConnection":                                          &ec2.VPNConnection{},
-		"AWS::EC2::VPNConnectionRoute":                                     &ec2.VPNConnectionRoute{},
-		"AWS::EC2::VPNGateway":                                             &ec2.VPNGateway{},
-		"AWS::EC2::VPNGatewayRoutePropagation":                             &ec2.VPNGatewayRoutePropagation{},
-		"AWS::EC2::VerifiedAccessEndpoint":                                 &ec2.VerifiedAccessEndpoint{},
-		"AWS::EC2::VerifiedAccessGroup":                                    &ec2.VerifiedAccessGroup{},
-		"AWS::EC2::VerifiedAccessInstance":                                 &ec2.VerifiedAccessInstance{},
-		"AWS::EC2::VerifiedAccessTrustProvider":                            &ec2.VerifiedAccessTrustProvider{},
-		"AWS::EC2::Volume":                                                 &ec2.Volume{},
-		"AWS::EC2::VolumeAttachment":                                       &ec2.VolumeAttachment{},
-		"AWS::ECR::PublicRepository":                                       &ecr.PublicRepository{},
-		"AWS::ECR::PullThroughCacheRule":                                   &ecr.PullThroughCacheRule{},
-		"AWS::ECR::RegistryPolicy":                                         &ecr.RegistryPolicy{},
-		"AWS::ECR::ReplicationConfiguration":                               &ecr.ReplicationConfiguration{},
-		"AWS::ECR::Repository":                                             &ecr.Repository{},
-		"AWS::ECR::RepositoryCreationTemplate":                             &ecr.RepositoryCreationTemplate{},
-		"AWS::ECS::CapacityProvider":                                       &ecs.CapacityProvider{},
-		"AWS::ECS::Cluster":                                                &ecs.Cluster{},
-		"AWS::ECS::ClusterCapacityProviderAssociations":                    &ecs.ClusterCapacityProviderAssociations{},
-		"AWS::ECS::PrimaryTaskSet":                                         &ecs.PrimaryTaskSet{},
-		"AWS::ECS::Service":                                                &ecs.Service{},
-		"AWS::ECS::TaskDefinition":                                         &ecs.TaskDefinition{},
-		"AWS::ECS::TaskSet":                                                &ecs.TaskSet{},
-		"AWS::EFS::AccessPoint":                                            &efs.AccessPoint{},
-		"AWS::EFS::FileSystem":                                             &efs.FileSystem{},
-		"AWS::EFS::MountTarget":                                            &efs.MountTarget{},
-		"AWS::EKS::AccessEntry":                                            &eks.AccessEntry{},
-		"AWS::EKS::Addon":                                                  &eks.Addon{},
-		"AWS::EKS::Cluster":                                                &eks.Cluster{},
-		"AWS::EKS::FargateProfile":                                         &eks.FargateProfile{},
-		"AWS::EKS::IdentityProviderConfig":                                 &eks.IdentityProviderConfig{},
-		"AWS::EKS::Nodegroup":                                              &eks.Nodegroup{},
-		"AWS::EKS::PodIdentityAssociation":                                 &eks.PodIdentityAssociation{},
-		"AWS::EMR::Cluster":                                                &emr.Cluster{},
-		"AWS::EMR::InstanceFleetConfig":                                    &emr.InstanceFleetConfig{},
-		"AWS::EMR::InstanceGroupConfig":                                    &emr.InstanceGroupConfig{},
-		"AWS::EMR::SecurityConfiguration":                                  &emr.SecurityConfiguration{},
-		"AWS::EMR::Step":                                                   &emr.Step{},
-		"AWS::EMR::Studio":                                                 &emr.Studio{},
-		"AWS::EMR::StudioSessionMapping":                                   &emr.StudioSessionMapping{},
-		"AWS::EMR::WALWorkspace":                                           &emr.WALWorkspace{},
-		"AWS::EMRContainers::VirtualCluster":                               &emrcontainers.VirtualCluster{},
-		"AWS::EMRServerless::Application":                                  &emrserverless.Application{},
-		"AWS::ElastiCache::CacheCluster":                                   &elasticache.CacheCluster{},
-		"AWS::ElastiCache::GlobalReplicationGroup":                         &elasticache.GlobalReplicationGroup{},
-		"AWS::ElastiCache::ParameterGroup":                                 &elasticache.ParameterGroup{},
-		"AWS::ElastiCache::ReplicationGroup":                               &elasticache.ReplicationGroup{},
-		"AWS::ElastiCache::SecurityGroup":                                  &elasticache.SecurityGroup{},
-		"AWS::ElastiCache::SecurityGroupIngress":                           &elasticache.SecurityGroupIngress{},
-		"AWS::ElastiCache::ServerlessCache":                                &elasticache.ServerlessCache{},
-		"AWS::ElastiCache::SubnetGroup":                                    &elasticache.SubnetGroup{},
-		"AWS::ElastiCache::User":                                           &elasticache.User{},
-		"AWS::ElastiCache::UserGroup":                                      &elasticache.UserGroup{},
-		"AWS::ElasticBeanstalk::Application":                               &elasticbeanstalk.Application{},
-		"AWS::ElasticBeanstalk::ApplicationVersion":                        &elasticbeanstalk.ApplicationVersion{},
-		"AWS::ElasticBeanstalk::ConfigurationTemplate":                     &elasticbeanstalk.ConfigurationTemplate{},
-		"AWS::ElasticBeanstalk::Environment":                               &elasticbeanstalk.Environment{},
-		"AWS::ElasticLoadBalancing::LoadBalancer":                          &elasticloadbalancing.LoadBalancer{},
-		"AWS::ElasticLoadBalancingV2::Listener":                            &elasticloadbalancingv2.Listener{},
-		"AWS::ElasticLoadBalancingV2::ListenerCertificate":                 &elasticloadbalancingv2.ListenerCertificate{},
-		"AWS::ElasticLoadBalancingV2::ListenerRule":                        &elasticloadbalancingv2.ListenerRule{},
-		"AWS::ElasticLoadBalancingV2::LoadBalancer":                        &elasticloadbalancingv2.LoadBalancer{},
-		"AWS::ElasticLoadBalancingV2::TargetGroup":                         &elasticloadbalancingv2.TargetGroup{},
-		"AWS::ElasticLoadBalancingV2::TrustStore":                          &elasticloadbalancingv2.TrustStore{},
-		"AWS::ElasticLoadBalancingV2::TrustStoreRevocation":                &elasticloadbalancingv2.TrustStoreRevocation{},
-		"AWS::Elasticsearch::Domain":                                       &elasticsearch.Domain{},
-		"AWS::EntityResolution::IdMappingWorkflow":                         &entityresolution.IdMappingWorkflow{},
-		"AWS::EntityResolution::IdNamespace":                               &entityresolution.IdNamespace{},
-		"AWS::EntityResolution::MatchingWorkflow":                          &entityresolution.MatchingWorkflow{},
-		"AWS::EntityResolution::PolicyStatement":                           &entityresolution.PolicyStatement{},
-		"AWS::EntityResolution::SchemaMapping":                             &entityresolution.SchemaMapping{},
-		"AWS::EventSchemas::Discoverer":                                    &eventschemas.Discoverer{},
-		"AWS::EventSchemas::Registry":                                      &eventschemas.Registry{},
-		"AWS::EventSchemas::RegistryPolicy":                                &eventschemas.RegistryPolicy{},
-		"AWS::EventSchemas::Schema":                                        &eventschemas.Schema{},
-		"AWS::Events::ApiDestination":                                      &events.ApiDestination{},
-		"AWS::Events::Archive":                                             &events.Archive{},
-		"AWS::Events::Connection":                                          &events.Connection{},
-		"AWS::Events::Endpoint":                                            &events.Endpoint{},
-		"AWS::Events::EventBus":                                            &events.EventBus{},
-		"AWS::Events::EventBusPolicy":                                      &events.EventBusPolicy{},
-		"AWS::Events::Rule":                                                &events.Rule{},
-		"AWS::Evidently::Experiment":                                       &evidently.Experiment{},
-		"AWS::Evidently::Feature":                                          &evidently.Feature{},
-		"AWS::Evidently::Launch":                                           &evidently.Launch{},
-		"AWS::Evidently::Project":                                          &evidently.Project{},
-		"AWS::Evidently::Segment":                                          &evidently.Segment{},
-		"AWS::FIS::ExperimentTemplate":                                     &fis.ExperimentTemplate{},
-		"AWS::FIS::TargetAccountConfiguration":                             &fis.TargetAccountConfiguration{},
-		"AWS::FMS::NotificationChannel":                                    &fms.NotificationChannel{},
-		"AWS::FMS::Policy":                                                 &fms.Policy{},
-		"AWS::FMS::ResourceSet":                                            &fms.ResourceSet{},
-		"AWS::FSx::DataRepositoryAssociation":                              &fsx.DataRepositoryAssociation{},
-		"AWS::FSx::FileSystem":                                             &fsx.FileSystem{},
-		"AWS::FSx::Snapshot":                                               &fsx.Snapshot{},
-		"AWS::FSx::StorageVirtualMachine":                                  &fsx.StorageVirtualMachine{},
-		"AWS::FSx::Volume":                                                 &fsx.Volume{},
-		"AWS::FinSpace::Environment":                                       &finspace.Environment{},
-		"AWS::Forecast::Dataset":                                           &forecast.Dataset{},
-		"AWS::Forecast::DatasetGroup":                                      &forecast.DatasetGroup{},
-		"AWS::FraudDetector::Detector":                                     &frauddetector.Detector{},
-		"AWS::FraudDetector::EntityType":                                   &frauddetector.EntityType{},
-		"AWS::FraudDetector::EventType":                                    &frauddetector.EventType{},
-		"AWS::FraudDetector::Label":                                        &frauddetector.Label{},
-		"AWS::FraudDetector::List":                                         &frauddetector.List{},
-		"AWS::FraudDetector::Outcome":                                      &frauddetector.Outcome{},
-		"AWS::FraudDetector::Variable":                                     &frauddetector.Variable{},
-		"AWS::GameLift::Alias":                                             &gamelift.Alias{},
-		"AWS::GameLift::Build":                                             &gamelift.Build{},
-		"AWS::GameLift::ContainerGroupDefinition":                          &gamelift.ContainerGroupDefinition{},
-		"AWS::GameLift::Fleet":                                             &gamelift.Fleet{},
-		"AWS::GameLift::GameServerGroup":                                   &gamelift.GameServerGroup{},
-		"AWS::GameLift::GameSessionQueue":                                  &gamelift.GameSessionQueue{},
-		"AWS::GameLift::Location":                                          &gamelift.Location{},
-		"AWS::GameLift::MatchmakingConfiguration":                          &gamelift.MatchmakingConfiguration{},
-		"AWS::GameLift::MatchmakingRuleSet":                                &gamelift.MatchmakingRuleSet{},
-		"AWS::GameLift::Script":                                            &gamelift.Script{},
-		"AWS::GlobalAccelerator::Accelerator":                              &globalaccelerator.Accelerator{},
-		"AWS::GlobalAccelerator::CrossAccountAttachment":                   &globalaccelerator.CrossAccountAttachment{},
-		"AWS::GlobalAccelerator::EndpointGroup":                            &globalaccelerator.EndpointGroup{},
-		"AWS::GlobalAccelerator::Listener":                                 &globalaccelerator.Listener{},
-		"AWS::Glue::Classifier":                                            &glue.Classifier{},
-		"AWS::Glue::Connection":                                            &glue.Connection{},
-		"AWS::Glue::Crawler":                                               &glue.Crawler{},
-		"AWS::Glue::CustomEntityType":                                      &glue.CustomEntityType{},
-		"AWS::Glue::DataCatalogEncryptionSettings":                         &glue.DataCatalogEncryptionSettings{},
-		"AWS::Glue::DataQualityRuleset":                                    &glue.DataQualityRuleset{},
-		"AWS::Glue::Database":                                              &glue.Database{},
-		"AWS::Glue::DevEndpoint":                                           &glue.DevEndpoint{},
-		"AWS::Glue::Job":                                                   &glue.Job{},
-		"AWS::Glue::MLTransform":                                           &glue.MLTransform{},
-		"AWS::Glue::Partition":                                             &glue.Partition{},
-		"AWS::Glue::Registry":                                              &glue.Registry{},
-		"AWS::Glue::Schema":                                                &glue.Schema{},
-		"AWS::Glue::SchemaVersion":                                         &glue.SchemaVersion{},
-		"AWS::Glue::SchemaVersionMetadata":                                 &glue.SchemaVersionMetadata{},
-		"AWS::Glue::SecurityConfiguration":                                 &glue.SecurityConfiguration{},
-		"AWS::Glue::Table":                                                 &glue.Table{},
-		"AWS::Glue::TableOptimizer":                                        &glue.TableOptimizer{},
-		"AWS::Glue::Trigger":                                               &glue.Trigger{},
-		"AWS::Glue::Workflow":                                              &glue.Workflow{},
-		"AWS::Grafana::Workspace":                                          &grafana.Workspace{},
-		"AWS::Greengrass::ConnectorDefinition":                             &greengrass.ConnectorDefinition{},
-		"AWS::Greengrass::ConnectorDefinitionVersion":                      &greengrass.ConnectorDefinitionVersion{},
-		"AWS::Greengrass::CoreDefinition":                                  &greengrass.CoreDefinition{},
-		"AWS::Greengrass::CoreDefinitionVersion":                           &greengrass.CoreDefinitionVersion{},
-		"AWS::Greengrass::DeviceDefinition":                                &greengrass.DeviceDefinition{},
-		"AWS::Greengrass::DeviceDefinitionVersion":                         &greengrass.DeviceDefinitionVersion{},
-		"AWS::Greengrass::FunctionDefinition":                              &greengrass.FunctionDefinition{},
-		"AWS::Greengrass::FunctionDefinitionVersion":                       &greengrass.FunctionDefinitionVersion{},
-		"AWS::Greengrass::Group":                                           &greengrass.Group{},
-		"AWS::Greengrass::GroupVersion":                                    &greengrass.GroupVersion{},
-		"AWS::Greengrass::LoggerDefinition":                                &greengrass.LoggerDefinition{},
-		"AWS::Greengrass::LoggerDefinitionVersion":                         &greengrass.LoggerDefinitionVersion{},
-		"AWS::Greengrass::ResourceDefinition":                              &greengrass.ResourceDefinition{},
-		"AWS::Greengrass::ResourceDefinitionVersion":                       &greengrass.ResourceDefinitionVersion{},
-		"AWS::Greengrass::SubscriptionDefinition":                          &greengrass.SubscriptionDefinition{},
-		"AWS::Greengrass::SubscriptionDefinitionVersion":                   &greengrass.SubscriptionDefinitionVersion{},
-		"AWS::GreengrassV2::ComponentVersion":                              &greengrassv2.ComponentVersion{},
-		"AWS::GreengrassV2::Deployment":                                    &greengrassv2.Deployment{},
-		"AWS::GroundStation::Config":                                       &groundstation.Config{},
-		"AWS::GroundStation::DataflowEndpointGroup":                        &groundstation.DataflowEndpointGroup{},
-		"AWS::GroundStation::MissionProfile":                               &groundstation.MissionProfile{},
-		"AWS::GuardDuty::Detector":                                         &guardduty.Detector{},
-		"AWS::GuardDuty::Filter":                                           &guardduty.Filter{},
-		"AWS::GuardDuty::IPSet":                                            &guardduty.IPSet{},
-		"AWS::GuardDuty::Master":                                           &guardduty.Master{},
-		"AWS::GuardDuty::Member":                                           &guardduty.Member{},
-		"AWS::GuardDuty::ThreatIntelSet":                                   &guardduty.ThreatIntelSet{},
-		"AWS::HealthImaging::Datastore":                                    &healthimaging.Datastore{},
-		"AWS::HealthLake::FHIRDatastore":                                   &healthlake.FHIRDatastore{},
-		"AWS::IAM::AccessKey":                                              &iam.AccessKey{},
-		"AWS::IAM::Group":                                                  &iam.Group{},
-		"AWS::IAM::GroupPolicy":                                            &iam.GroupPolicy{},
-		"AWS::IAM::InstanceProfile":                                        &iam.InstanceProfile{},
-		"AWS::IAM::ManagedPolicy":                                          &iam.ManagedPolicy{},
-		"AWS::IAM::OIDCProvider":                                           &iam.OIDCProvider{},
-		"AWS::IAM::Policy":                                                 &iam.Policy{},
-		"AWS::IAM::Role":                                                   &iam.Role{},
-		"AWS::IAM::RolePolicy":                                             &iam.RolePolicy{},
-		"AWS::IAM::SAMLProvider":                                           &iam.SAMLProvider{},
-		"AWS::IAM::ServerCertificate":                                      &iam.ServerCertificate{},
-		"AWS::IAM::ServiceLinkedRole":                                      &iam.ServiceLinkedRole{},
-		"AWS::IAM::User":                                                   &iam.User{},
-		"AWS::IAM::UserPolicy":                                             &iam.UserPolicy{},
-		"AWS::IAM::UserToGroupAddition":                                    &iam.UserToGroupAddition{},
-		"AWS::IAM::VirtualMFADevice":                                       &iam.VirtualMFADevice{},
-		"AWS::IVS::Channel":                                                &ivs.Channel{},
-		"AWS::IVS::EncoderConfiguration":                                   &ivs.EncoderConfiguration{},
-		"AWS::IVS::PlaybackKeyPair":                                        &ivs.PlaybackKeyPair{},
-		"AWS::IVS::PlaybackRestrictionPolicy":                              &ivs.PlaybackRestrictionPolicy{},
-		"AWS::IVS::RecordingConfiguration":                                 &ivs.RecordingConfiguration{},
-		"AWS::IVS::Stage":                                                  &ivs.Stage{},
-		"AWS::IVS::StorageConfiguration":                                   &ivs.StorageConfiguration{},
-		"AWS::IVS::StreamKey":                                              &ivs.StreamKey{},
-		"AWS::IVSChat::LoggingConfiguration":                               &ivschat.LoggingConfiguration{},
-		"AWS::IVSChat::Room":                                               &ivschat.Room{},
-		"AWS::IdentityStore::Group":                                        &identitystore.Group{},
-		"AWS::IdentityStore::GroupMembership":                              &identitystore.GroupMembership{},
-		"AWS::ImageBuilder::Component":                                     &imagebuilder.Component{},
-		"AWS::ImageBuilder::ContainerRecipe":                               &imagebuilder.ContainerRecipe{},
-		"AWS::ImageBuilder::DistributionConfiguration":                     &imagebuilder.DistributionConfiguration{},
-		"AWS::ImageBuilder::Image":                                         &imagebuilder.Image{},
-		"AWS::ImageBuilder::ImagePipeline":                                 &imagebuilder.ImagePipeline{},
-		"AWS::ImageBuilder::ImageRecipe":                                   &imagebuilder.ImageRecipe{},
-		"AWS::ImageBuilder::InfrastructureConfiguration":                   &imagebuilder.InfrastructureConfiguration{},
-		"AWS::ImageBuilder::LifecyclePolicy":                               &imagebuilder.LifecyclePolicy{},
-		"AWS::ImageBuilder::Workflow":                                      &imagebuilder.Workflow{},
-		"AWS::Inspector::AssessmentTarget":                                 &inspector.AssessmentTarget{},
-		"AWS::Inspector::AssessmentTemplate":                               &inspector.AssessmentTemplate{},
-		"AWS::Inspector::ResourceGroup":                                    &inspector.ResourceGroup{},
-		"AWS::InspectorV2::CisScanConfiguration":                           &inspectorv2.CisScanConfiguration{},
-		"AWS::InspectorV2::Filter":                                         &inspectorv2.Filter{},
-		"AWS::InternetMonitor::Monitor":                                    &internetmonitor.Monitor{},
-		"AWS::IoT1Click::Device":                                           &iot1click.Device{},
-		"AWS::IoT1Click::Placement":                                        &iot1click.Placement{},
-		"AWS::IoT1Click::Project":                                          &iot1click.Project{},
-		"AWS::IoT::AccountAuditConfiguration":                              &iot.AccountAuditConfiguration{},
-		"AWS::IoT::Authorizer":                                             &iot.Authorizer{},
-		"AWS::IoT::BillingGroup":                                           &iot.BillingGroup{},
-		"AWS::IoT::CACertificate":                                          &iot.CACertificate{},
-		"AWS::IoT::Certificate":                                            &iot.Certificate{},
-		"AWS::IoT::CertificateProvider":                                    &iot.CertificateProvider{},
-		"AWS::IoT::CustomMetric":                                           &iot.CustomMetric{},
-		"AWS::IoT::Dimension":                                              &iot.Dimension{},
-		"AWS::IoT::DomainConfiguration":                                    &iot.DomainConfiguration{},
-		"AWS::IoT::FleetMetric":                                            &iot.FleetMetric{},
-		"AWS::IoT::JobTemplate":                                            &iot.JobTemplate{},
-		"AWS::IoT::Logging":                                                &iot.Logging{},
-		"AWS::IoT::MitigationAction":                                       &iot.MitigationAction{},
-		"AWS::IoT::Policy":                                                 &iot.Policy{},
-		"AWS::IoT::PolicyPrincipalAttachment":                              &iot.PolicyPrincipalAttachment{},
-		"AWS::IoT::ProvisioningTemplate":                                   &iot.ProvisioningTemplate{},
-		"AWS::IoT::ResourceSpecificLogging":                                &iot.ResourceSpecificLogging{},
-		"AWS::IoT::RoleAlias":                                              &iot.RoleAlias{},
-		"AWS::IoT::ScheduledAudit":                                         &iot.ScheduledAudit{},
-		"AWS::IoT::SecurityProfile":                                        &iot.SecurityProfile{},
-		"AWS::IoT::SoftwarePackage":                                        &iot.SoftwarePackage{},
-		"AWS::IoT::SoftwarePackageVersion":                                 &iot.SoftwarePackageVersion{},
-		"AWS::IoT::Thing":                                                  &iot.Thing{},
-		"AWS::IoT::ThingGroup":                                             &iot.ThingGroup{},
-		"AWS::IoT::ThingPrincipalAttachment":                               &iot.ThingPrincipalAttachment{},
-		"AWS::IoT::ThingType":                                              &iot.ThingType{},
-		"AWS::IoT::TopicRule":                                              &iot.TopicRule{},
-		"AWS::IoT::TopicRuleDestination":                                   &iot.TopicRuleDestination{},
-		"AWS::IoTAnalytics::Channel":                                       &iotanalytics.Channel{},
-		"AWS::IoTAnalytics::Dataset":                                       &iotanalytics.Dataset{},
-		"AWS::IoTAnalytics::Datastore":                                     &iotanalytics.Datastore{},
-		"AWS::IoTAnalytics::Pipeline":                                      &iotanalytics.Pipeline{},
-		"AWS::IoTCoreDeviceAdvisor::SuiteDefinition":                       &iotcoredeviceadvisor.SuiteDefinition{},
-		"AWS::IoTEvents::AlarmModel":                                       &iotevents.AlarmModel{},
-		"AWS::IoTEvents::DetectorModel":                                    &iotevents.DetectorModel{},
-		"AWS::IoTEvents::Input":                                            &iotevents.Input{},
-		"AWS::IoTFleetHub::Application":                                    &iotfleethub.Application{},
-		"AWS::IoTFleetWise::Campaign":                                      &iotfleetwise.Campaign{},
-		"AWS::IoTFleetWise::DecoderManifest":                               &iotfleetwise.DecoderManifest{},
-		"AWS::IoTFleetWise::Fleet":                                         &iotfleetwise.Fleet{},
-		"AWS::IoTFleetWise::ModelManifest":                                 &iotfleetwise.ModelManifest{},
-		"AWS::IoTFleetWise::SignalCatalog":                                 &iotfleetwise.SignalCatalog{},
-		"AWS::IoTFleetWise::Vehicle":                                       &iotfleetwise.Vehicle{},
-		"AWS::IoTSiteWise::AccessPolicy":                                   &iotsitewise.AccessPolicy{},
-		"AWS::IoTSiteWise::Asset":                                          &iotsitewise.Asset{},
-		"AWS::IoTSiteWise::AssetModel":                                     &iotsitewise.AssetModel{},
-		"AWS::IoTSiteWise::Dashboard":                                      &iotsitewise.Dashboard{},
-		"AWS::IoTSiteWise::Gateway":                                        &iotsitewise.Gateway{},
-		"AWS::IoTSiteWise::Portal":                                         &iotsitewise.Portal{},
-		"AWS::IoTSiteWise::Project":                                        &iotsitewise.Project{},
-		"AWS::IoTThingsGraph::FlowTemplate":                                &iotthingsgraph.FlowTemplate{},
-		"AWS::IoTTwinMaker::ComponentType":                                 &iottwinmaker.ComponentType{},
-		"AWS::IoTTwinMaker::Entity":                                        &iottwinmaker.Entity{},
-		"AWS::IoTTwinMaker::Scene":                                         &iottwinmaker.Scene{},
-		"AWS::IoTTwinMaker::SyncJob":                                       &iottwinmaker.SyncJob{},
-		"AWS::IoTTwinMaker::Workspace":                                     &iottwinmaker.Workspace{},
-		"AWS::IoTWireless::Destination":                                    &iotwireless.Destination{},
-		"AWS::IoTWireless::DeviceProfile":                                  &iotwireless.DeviceProfile{},
-		"AWS::IoTWireless::FuotaTask":                                      &iotwireless.FuotaTask{},
-		"AWS::IoTWireless::MulticastGroup":                                 &iotwireless.MulticastGroup{},
-		"AWS::IoTWireless::NetworkAnalyzerConfiguration":                   &iotwireless.NetworkAnalyzerConfiguration{},
-		"AWS::IoTWireless::PartnerAccount":                                 &iotwireless.PartnerAccount{},
-		"AWS::IoTWireless::ServiceProfile":                                 &iotwireless.ServiceProfile{},
-		"AWS::IoTWireless::TaskDefinition":                                 &iotwireless.TaskDefinition{},
-		"AWS::IoTWireless::WirelessDevice":                                 &iotwireless.WirelessDevice{},
-		"AWS::IoTWireless::WirelessDeviceImportTask":                       &iotwireless.WirelessDeviceImportTask{},
-		"AWS::IoTWireless::WirelessGateway":                                &iotwireless.WirelessGateway{},
-		"AWS::KMS::Alias":                                                  &kms.Alias{},
-		"AWS::KMS::Key":                                                    &kms.Key{},
-		"AWS::KMS::ReplicaKey":                                             &kms.ReplicaKey{},
-		"AWS::KafkaConnect::Connector":                                     &kafkaconnect.Connector{},
-		"AWS::KafkaConnect::CustomPlugin":                                  &kafkaconnect.CustomPlugin{},
-		"AWS::KafkaConnect::WorkerConfiguration":                           &kafkaconnect.WorkerConfiguration{},
-		"AWS::Kendra::DataSource":                                          &kendra.DataSource{},
-		"AWS::Kendra::Faq":                                                 &kendra.Faq{},
-		"AWS::Kendra::Index":                                               &kendra.Index{},
-		"AWS::KendraRanking::ExecutionPlan":                                &kendraranking.ExecutionPlan{},
-		"AWS::Kinesis::Stream":                                             &kinesis.Stream{},
-		"AWS::Kinesis::StreamConsumer":                                     &kinesis.StreamConsumer{},
-		"AWS::KinesisAnalytics::Application":                               &kinesisanalytics.Application{},
-		"AWS::KinesisAnalytics::ApplicationOutput":                         &kinesisanalytics.ApplicationOutput{},
-		"AWS::KinesisAnalytics::ApplicationReferenceDataSource":            &kinesisanalytics.ApplicationReferenceDataSource{},
-		"AWS::KinesisAnalyticsV2::Application":                             &kinesisanalyticsv2.Application{},
-		"AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption":      &kinesisanalyticsv2.ApplicationCloudWatchLoggingOption{},
-		"AWS::KinesisAnalyticsV2::ApplicationOutput":                       &kinesisanalyticsv2.ApplicationOutput{},
-		"AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource":          &kinesisanalyticsv2.ApplicationReferenceDataSource{},
-		"AWS::KinesisFirehose::DeliveryStream":                             &kinesisfirehose.DeliveryStream{},
-		"AWS::KinesisVideo::SignalingChannel":                              &kinesisvideo.SignalingChannel{},
-		"AWS::KinesisVideo::Stream":                                        &kinesisvideo.Stream{},
-		"AWS::LakeFormation::DataCellsFilter":                              &lakeformation.DataCellsFilter{},
-		"AWS::LakeFormation::DataLakeSettings":                             &lakeformation.DataLakeSettings{},
-		"AWS::LakeFormation::Permissions":                                  &lakeformation.Permissions{},
-		"AWS::LakeFormation::PrincipalPermissions":                         &lakeformation.PrincipalPermissions{},
-		"AWS::LakeFormation::Resource":                                     &lakeformation.Resource{},
-		"AWS::LakeFormation::Tag":                                          &lakeformation.Tag{},
-		"AWS::LakeFormation::TagAssociation":                               &lakeformation.TagAssociation{},
-		"AWS::Lambda::Alias":                                               &lambda.Alias{},
-		"AWS::Lambda::CodeSigningConfig":                                   &lambda.CodeSigningConfig{},
-		"AWS::Lambda::EventInvokeConfig":                                   &lambda.EventInvokeConfig{},
-		"AWS::Lambda::EventSourceMapping":                                  &lambda.EventSourceMapping{},
-		"AWS::Lambda::Function":                                            &lambda.Function{},
-		"AWS::Lambda::LayerVersion":                                        &lambda.LayerVersion{},
-		"AWS::Lambda::LayerVersionPermission":                              &lambda.LayerVersionPermission{},
-		"AWS::Lambda::Permission":                                          &lambda.Permission{},
-		"AWS::Lambda::Url":                                                 &lambda.Url{},
-		"AWS::Lambda::Version":                                             &lambda.Version{},
-		"AWS::Lex::Bot":                                                    &lex.Bot{},
-		"AWS::Lex::BotAlias":                                               &lex.BotAlias{},
-		"AWS::Lex::BotVersion":                                             &lex.BotVersion{},
-		"AWS::Lex::ResourcePolicy":                                         &lex.ResourcePolicy{},
-		"AWS::LicenseManager::Grant":                                       &licensemanager.Grant{},
-		"AWS::LicenseManager::License":                                     &licensemanager.License{},
-		"AWS::Lightsail::Alarm":                                            &lightsail.Alarm{},
-		"AWS::Lightsail::Bucket":                                           &lightsail.Bucket{},
-		"AWS::Lightsail::Certificate":                                      &lightsail.Certificate{},
-		"AWS::Lightsail::Container":                                        &lightsail.Container{},
-		"AWS::Lightsail::Database":                                         &lightsail.Database{},
-		"AWS::Lightsail::Disk":                                             &lightsail.Disk{},
-		"AWS::Lightsail::Distribution":                                     &lightsail.Distribution{},
-		"AWS::Lightsail::Instance":                                         &lightsail.Instance{},
-		"AWS::Lightsail::LoadBalancer":                                     &lightsail.LoadBalancer{},
-		"AWS::Lightsail::LoadBalancerTlsCertificate":                       &lightsail.LoadBalancerTlsCertificate{},
-		"AWS::Lightsail::StaticIp":                                         &lightsail.StaticIp{},
-		"AWS::Location::APIKey":                                            &location.APIKey{},
-		"AWS::Location::GeofenceCollection":                                &location.GeofenceCollection{},
-		"AWS::Location::Map":                                               &location.Map{},
-		"AWS::Location::PlaceIndex":                                        &location.PlaceIndex{},
-		"AWS::Location::RouteCalculator":                                   &location.RouteCalculator{},
-		"AWS::Location::Tracker":                                           &location.Tracker{},
-		"AWS::Location::TrackerConsumer":                                   &location.TrackerConsumer{},
-		"AWS::Logs::AccountPolicy":                                         &logs.AccountPolicy{},
-		"AWS::Logs::Delivery":                                              &logs.Delivery{},
-		"AWS::Logs::DeliveryDestination":                                   &logs.DeliveryDestination{},
-		"AWS::Logs::DeliverySource":                                        &logs.DeliverySource{},
-		"AWS::Logs::Destination":                                           &logs.Destination{},
-		"AWS::Logs::LogAnomalyDetector":                                    &logs.LogAnomalyDetector{},
-		"AWS::Logs::LogGroup":                                              &logs.LogGroup{},
-		"AWS::Logs::LogStream":                                             &logs.LogStream{},
-		"AWS::Logs::MetricFilter":                                          &logs.MetricFilter{},
-		"AWS::Logs::QueryDefinition":                                       &logs.QueryDefinition{},
-		"AWS::Logs::ResourcePolicy":                                        &logs.ResourcePolicy{},
-		"AWS::Logs::SubscriptionFilter":                                    &logs.SubscriptionFilter{},
-		"AWS::LookoutEquipment::InferenceScheduler":                        &lookoutequipment.InferenceScheduler{},
-		"AWS::LookoutMetrics::Alert":                                       &lookoutmetrics.Alert{},
-		"AWS::LookoutMetrics::AnomalyDetector":                             &lookoutmetrics.AnomalyDetector{},
-		"AWS::LookoutVision::Project":                                      &lookoutvision.Project{},
-		"AWS::M2::Application":                                             &m2.Application{},
-		"AWS::M2::Environment":                                             &m2.Environment{},
-		"AWS::MSK::BatchScramSecret":                                       &msk.BatchScramSecret{},
-		"AWS::MSK::Cluster":                                                &msk.Cluster{},
-		"AWS::MSK::ClusterPolicy":                                          &msk.ClusterPolicy{},
-		"AWS::MSK::Configuration":                                          &msk.Configuration{},
-		"AWS::MSK::Replicator":                                             &msk.Replicator{},
-		"AWS::MSK::ServerlessCluster":                                      &msk.ServerlessCluster{},
-		"AWS::MSK::VpcConnection":                                          &msk.VpcConnection{},
-		"AWS::MWAA::Environment":                                           &mwaa.Environment{},
-		"AWS::Macie::AllowList":                                            &macie.AllowList{},
-		"AWS::Macie::CustomDataIdentifier":                                 &macie.CustomDataIdentifier{},
-		"AWS::Macie::FindingsFilter":                                       &macie.FindingsFilter{},
-		"AWS::Macie::Session":                                              &macie.Session{},
-		"AWS::ManagedBlockchain::Accessor":                                 &managedblockchain.Accessor{},
-		"AWS::ManagedBlockchain::Member":                                   &managedblockchain.Member{},
-		"AWS::ManagedBlockchain::Node":                                     &managedblockchain.Node{},
-		"AWS::MediaConnect::Bridge":                                        &mediaconnect.Bridge{},
-		"AWS::MediaConnect::BridgeOutput":                                  &mediaconnect.BridgeOutput{},
-		"AWS::MediaConnect::BridgeSource":                                  &mediaconnect.BridgeSource{},
-		"AWS::MediaConnect::Flow":                                          &mediaconnect.Flow{},
-		"AWS::MediaConnect::FlowEntitlement":                               &mediaconnect.FlowEntitlement{},
-		"AWS::MediaConnect::FlowOutput":                                    &mediaconnect.FlowOutput{},
-		"AWS::MediaConnect::FlowSource":                                    &mediaconnect.FlowSource{},
-		"AWS::MediaConnect::FlowVpcInterface":                              &mediaconnect.FlowVpcInterface{},
-		"AWS::MediaConnect::Gateway":                                       &mediaconnect.Gateway{},
-		"AWS::MediaConvert::JobTemplate":                                   &mediaconvert.JobTemplate{},
-		"AWS::MediaConvert::Preset":                                        &mediaconvert.Preset{},
-		"AWS::MediaConvert::Queue":                                         &mediaconvert.Queue{},
-		"AWS::MediaLive::Channel":                                          &medialive.Channel{},
-		"AWS::MediaLive::Input":                                            &medialive.Input{},
-		"AWS::MediaLive::InputSecurityGroup":                               &medialive.InputSecurityGroup{},
-		"AWS::MediaLive::Multiplex":                                        &medialive.Multiplex{},
-		"AWS::MediaLive::Multiplexprogram":                                 &medialive.Multiplexprogram{},
-		"AWS::MediaPackage::Asset":                                         &mediapackage.Asset{},
-		"AWS::MediaPackage::Channel":                                       &mediapackage.Channel{},
-		"AWS::MediaPackage::OriginEndpoint":                                &mediapackage.OriginEndpoint{},
-		"AWS::MediaPackage::PackagingConfiguration":                        &mediapackage.PackagingConfiguration{},
-		"AWS::MediaPackage::PackagingGroup":                                &mediapackage.PackagingGroup{},
-		"AWS::MediaPackageV2::Channel":                                     &mediapackagev2.Channel{},
-		"AWS::MediaPackageV2::ChannelGroup":                                &mediapackagev2.ChannelGroup{},
-		"AWS::MediaPackageV2::ChannelPolicy":                               &mediapackagev2.ChannelPolicy{},
-		"AWS::MediaPackageV2::OriginEndpoint":                              &mediapackagev2.OriginEndpoint{},
-		"AWS::MediaPackageV2::OriginEndpointPolicy":                        &mediapackagev2.OriginEndpointPolicy{},
-		"AWS::MediaStore::Container":                                       &mediastore.Container{},
-		"AWS::MediaTailor::Channel":                                        &mediatailor.Channel{},
-		"AWS::MediaTailor::ChannelPolicy":                                  &mediatailor.ChannelPolicy{},
-		"AWS::MediaTailor::LiveSource":                                     &mediatailor.LiveSource{},
-		"AWS::MediaTailor::PlaybackConfiguration":                          &mediatailor.PlaybackConfiguration{},
-		"AWS::MediaTailor::SourceLocation":                                 &mediatailor.SourceLocation{},
-		"AWS::MediaTailor::VodSource":                                      &mediatailor.VodSource{},
-		"AWS::MemoryDB::ACL":                                               &memorydb.ACL{},
-		"AWS::MemoryDB::Cluster":                                           &memorydb.Cluster{},
-		"AWS::MemoryDB::ParameterGroup":                                    &memorydb.ParameterGroup{},
-		"AWS::MemoryDB::SubnetGroup":                                       &memorydb.SubnetGroup{},
-		"AWS::MemoryDB::User":                                              &memorydb.User{},
-		"AWS::Neptune::DBCluster":                                          &neptune.DBCluster{},
-		"AWS::Neptune::DBClusterParameterGroup":                            &neptune.DBClusterParameterGroup{},
-		"AWS::Neptune::DBInstance":                                         &neptune.DBInstance{},
-		"AWS::Neptune::DBParameterGroup":                                   &neptune.DBParameterGroup{},
-		"AWS::Neptune::DBSubnetGroup":                                      &neptune.DBSubnetGroup{},
-		"AWS::NeptuneGraph::Graph":                                         &neptunegraph.Graph{},
-		"AWS::NeptuneGraph::PrivateGraphEndpoint":                          &neptunegraph.PrivateGraphEndpoint{},
-		"AWS::NetworkFirewall::Firewall":                                   &networkfirewall.Firewall{},
-		"AWS::NetworkFirewall::FirewallPolicy":                             &networkfirewall.FirewallPolicy{},
-		"AWS::NetworkFirewall::LoggingConfiguration":                       &networkfirewall.LoggingConfiguration{},
-		"AWS::NetworkFirewall::RuleGroup":                                  &networkfirewall.RuleGroup{},
-		"AWS::NetworkFirewall::TLSInspectionConfiguration":                 &networkfirewall.TLSInspectionConfiguration{},
-		"AWS::NetworkManager::ConnectAttachment":                           &networkmanager.ConnectAttachment{},
-		"AWS::NetworkManager::ConnectPeer":                                 &networkmanager.ConnectPeer{},
-		"AWS::NetworkManager::CoreNetwork":                                 &networkmanager.CoreNetwork{},
-		"AWS::NetworkManager::CustomerGatewayAssociation":                  &networkmanager.CustomerGatewayAssociation{},
-		"AWS::NetworkManager::Device":                                      &networkmanager.Device{},
-		"AWS::NetworkManager::GlobalNetwork":                               &networkmanager.GlobalNetwork{},
-		"AWS::NetworkManager::Link":                                        &networkmanager.Link{},
-		"AWS::NetworkManager::LinkAssociation":                             &networkmanager.LinkAssociation{},
-		"AWS::NetworkManager::Site":                                        &networkmanager.Site{},
-		"AWS::NetworkManager::SiteToSiteVpnAttachment":                     &networkmanager.SiteToSiteVpnAttachment{},
-		"AWS::NetworkManager::TransitGatewayPeering":                       &networkmanager.TransitGatewayPeering{},
-		"AWS::NetworkManager::TransitGatewayRegistration":                  &networkmanager.TransitGatewayRegistration{},
-		"AWS::NetworkManager::TransitGatewayRouteTableAttachment":          &networkmanager.TransitGatewayRouteTableAttachment{},
-		"AWS::NetworkManager::VpcAttachment":                               &networkmanager.VpcAttachment{},
-		"AWS::NimbleStudio::LaunchProfile":                                 &nimblestudio.LaunchProfile{},
-		"AWS::NimbleStudio::StreamingImage":                                &nimblestudio.StreamingImage{},
-		"AWS::NimbleStudio::Studio":                                        &nimblestudio.Studio{},
-		"AWS::NimbleStudio::StudioComponent":                               &nimblestudio.StudioComponent{},
-		"AWS::OSIS::Pipeline":                                              &osis.Pipeline{},
-		"AWS::Oam::Link":                                                   &oam.Link{},
-		"AWS::Oam::Sink":                                                   &oam.Sink{},
-		"AWS::Omics::AnnotationStore":                                      &omics.AnnotationStore{},
-		"AWS::Omics::ReferenceStore":                                       &omics.ReferenceStore{},
-		"AWS::Omics::RunGroup":                                             &omics.RunGroup{},
-		"AWS::Omics::SequenceStore":                                        &omics.SequenceStore{},
-		"AWS::Omics::VariantStore":                                         &omics.VariantStore{},
-		"AWS::Omics::Workflow":                                             &omics.Workflow{},
-		"AWS::OpenSearchServerless::AccessPolicy":                          &opensearchserverless.AccessPolicy{},
-		"AWS::OpenSearchServerless::Collection":                            &opensearchserverless.Collection{},
-		"AWS::OpenSearchServerless::LifecyclePolicy":                       &opensearchserverless.LifecyclePolicy{},
-		"AWS::OpenSearchServerless::SecurityConfig":                        &opensearchserverless.SecurityConfig{},
-		"AWS::OpenSearchServerless::SecurityPolicy":                        &opensearchserverless.SecurityPolicy{},
-		"AWS::OpenSearchServerless::VpcEndpoint":                           &opensearchserverless.VpcEndpoint{},
-		"AWS::OpenSearchService::Domain":                                   &opensearchservice.Domain{},
-		"AWS::OpsWorks::App":                                               &opsworks.App{},
-		"AWS::OpsWorks::ElasticLoadBalancerAttachment":                     &opsworks.ElasticLoadBalancerAttachment{},
-		"AWS::OpsWorks::Instance":                                          &opsworks.Instance{},
-		"AWS::OpsWorks::Layer":                                             &opsworks.Layer{},
-		"AWS::OpsWorks::Stack":                                             &opsworks.Stack{},
-		"AWS::OpsWorks::UserProfile":                                       &opsworks.UserProfile{},
-		"AWS::OpsWorks::Volume":                                            &opsworks.Volume{},
-		"AWS::OpsWorksCM::Server":                                          &opsworkscm.Server{},
-		"AWS::Organizations::Account":                                      &organizations.Account{},
-		"AWS::Organizations::Organization":                                 &organizations.Organization{},
-		"AWS::Organizations::OrganizationalUnit":                           &organizations.OrganizationalUnit{},
-		"AWS::Organizations::Policy":                                       &organizations.Policy{},
-		"AWS::Organizations::ResourcePolicy":                               &organizations.ResourcePolicy{},
-		"AWS::PCAConnectorAD::Connector":                                   &pcaconnectorad.Connector{},
-		"AWS::PCAConnectorAD::DirectoryRegistration":                       &pcaconnectorad.DirectoryRegistration{},
-		"AWS::PCAConnectorAD::ServicePrincipalName":                        &pcaconnectorad.ServicePrincipalName{},
-		"AWS::PCAConnectorAD::Template":                                    &pcaconnectorad.Template{},
-		"AWS::PCAConnectorAD::TemplateGroupAccessControlEntry":             &pcaconnectorad.TemplateGroupAccessControlEntry{},
-		"AWS::Panorama::ApplicationInstance":                               &panorama.ApplicationInstance{},
-		"AWS::Panorama::Package":                                           &panorama.Package{},
-		"AWS::Panorama::PackageVersion":                                    &panorama.PackageVersion{},
-		"AWS::PaymentCryptography::Alias":                                  &paymentcryptography.Alias{},
-		"AWS::PaymentCryptography::Key":                                    &paymentcryptography.Key{},
-		"AWS::Personalize::Dataset":                                        &personalize.Dataset{},
-		"AWS::Personalize::DatasetGroup":                                   &personalize.DatasetGroup{},
-		"AWS::Personalize::Schema":                                         &personalize.Schema{},
-		"AWS::Personalize::Solution":                                       &personalize.Solution{},
-		"AWS::Pinpoint::ADMChannel":                                        &pinpoint.ADMChannel{},
-		"AWS::Pinpoint::APNSChannel":                                       &pinpoint.APNSChannel{},
-		"AWS::Pinpoint::APNSSandboxChannel":                                &pinpoint.APNSSandboxChannel{},
-		"AWS::Pinpoint::APNSVoipChannel":                                   &pinpoint.APNSVoipChannel{},
-		"AWS::Pinpoint::APNSVoipSandboxChannel":                            &pinpoint.APNSVoipSandboxChannel{},
-		"AWS::Pinpoint::App":                                               &pinpoint.App{},
-		"AWS::Pinpoint::ApplicationSettings":                               &pinpoint.ApplicationSettings{},
-		"AWS::Pinpoint::BaiduChannel":                                      &pinpoint.BaiduChannel{},
-		"AWS::Pinpoint::Campaign":                                          &pinpoint.Campaign{},
-		"AWS::Pinpoint::EmailChannel":                                      &pinpoint.EmailChannel{},
-		"AWS::Pinpoint::EmailTemplate":                                     &pinpoint.EmailTemplate{},
-		"AWS::Pinpoint::EventStream":                                       &pinpoint.EventStream{},
-		"AWS::Pinpoint::GCMChannel":                                        &pinpoint.GCMChannel{},
-		"AWS::Pinpoint::InAppTemplate":                                     &pinpoint.InAppTemplate{},
-		"AWS::Pinpoint::PushTemplate":                                      &pinpoint.PushTemplate{},
-		"AWS::Pinpoint::SMSChannel":                                        &pinpoint.SMSChannel{},
-		"AWS::Pinpoint::Segment":                                           &pinpoint.Segment{},
-		"AWS::Pinpoint::SmsTemplate":                                       &pinpoint.SmsTemplate{},
-		"AWS::Pinpoint::VoiceChannel":                                      &pinpoint.VoiceChannel{},
-		"AWS::PinpointEmail::ConfigurationSet":                             &pinpointemail.ConfigurationSet{},
-		"AWS::PinpointEmail::ConfigurationSetEventDestination":             &pinpointemail.ConfigurationSetEventDestination{},
-		"AWS::PinpointEmail::DedicatedIpPool":                              &pinpointemail.DedicatedIpPool{},
-		"AWS::PinpointEmail::Identity":                                     &pinpointemail.Identity{},
-		"AWS::Pipes::Pipe":                                                 &pipes.Pipe{},
-		"AWS::Proton::EnvironmentAccountConnection":                        &proton.EnvironmentAccountConnection{},
-		"AWS::Proton::EnvironmentTemplate":                                 &proton.EnvironmentTemplate{},
-		"AWS::Proton::ServiceTemplate":                                     &proton.ServiceTemplate{},
-		"AWS::QLDB::Ledger":                                                &qldb.Ledger{},
-		"AWS::QLDB::Stream":                                                &qldb.Stream{},
-		"AWS::QuickSight::Analysis":                                        &quicksight.Analysis{},
-		"AWS::QuickSight::Dashboard":                                       &quicksight.Dashboard{},
-		"AWS::QuickSight::DataSet":                                         &quicksight.DataSet{},
-		"AWS::QuickSight::DataSource":                                      &quicksight.DataSource{},
-		"AWS::QuickSight::RefreshSchedule":                                 &quicksight.RefreshSchedule{},
-		"AWS::QuickSight::Template":                                        &quicksight.Template{},
-		"AWS::QuickSight::Theme":                                           &quicksight.Theme{},
-		"AWS::QuickSight::Topic":                                           &quicksight.Topic{},
-		"AWS::QuickSight::VPCConnection":                                   &quicksight.VPCConnection{},
-		"AWS::RAM::Permission":                                             &ram.Permission{},
-		"AWS::RAM::ResourceShare":                                          &ram.ResourceShare{},
-		"AWS::RDS::CustomDBEngineVersion":                                  &rds.CustomDBEngineVersion{},
-		"AWS::RDS::DBCluster":                                              &rds.DBCluster{},
-		"AWS::RDS::DBClusterParameterGroup":                                &rds.DBClusterParameterGroup{},
-		"AWS::RDS::DBInstance":                                             &rds.DBInstance{},
-		"AWS::RDS::DBParameterGroup":                                       &rds.DBParameterGroup{},
-		"AWS::RDS::DBProxy":                                                &rds.DBProxy{},
-		"AWS::RDS::DBProxyEndpoint":                                        &rds.DBProxyEndpoint{},
-		"AWS::RDS::DBProxyTargetGroup":                                     &rds.DBProxyTargetGroup{},
-		"AWS::RDS::DBSecurityGroup":                                        &rds.DBSecurityGroup{},
-		"AWS::RDS::DBSecurityGroupIngress":                                 &rds.DBSecurityGroupIngress{},
-		"AWS::RDS::DBSubnetGroup":                                          &rds.DBSubnetGroup{},
-		"AWS::RDS::EventSubscription":                                      &rds.EventSubscription{},
-		"AWS::RDS::GlobalCluster":                                          &rds.GlobalCluster{},
-		"AWS::RDS::Integration":                                            &rds.Integration{},
-		"AWS::RDS::OptionGroup":                                            &rds.OptionGroup{},
-		"AWS::RUM::AppMonitor":                                             &rum.AppMonitor{},
-		"AWS::Redshift::Cluster":                                           &redshift.Cluster{},
-		"AWS::Redshift::ClusterParameterGroup":                             &redshift.ClusterParameterGroup{},
-		"AWS::Redshift::ClusterSecurityGroup":                              &redshift.ClusterSecurityGroup{},
-		"AWS::Redshift::ClusterSecurityGroupIngress":                       &redshift.ClusterSecurityGroupIngress{},
-		"AWS::Redshift::ClusterSubnetGroup":                                &redshift.ClusterSubnetGroup{},
-		"AWS::Redshift::EndpointAccess":                                    &redshift.EndpointAccess{},
-		"AWS::Redshift::EndpointAuthorization":                             &redshift.EndpointAuthorization{},
-		"AWS::Redshift::EventSubscription":                                 &redshift.EventSubscription{},
-		"AWS::Redshift::ScheduledAction":                                   &redshift.ScheduledAction{},
-		"AWS::RedshiftServerless::Namespace":                               &redshiftserverless.Namespace{},
-		"AWS::RedshiftServerless::Workgroup":                               &redshiftserverless.Workgroup{},
-		"AWS::RefactorSpaces::Application":                                 &refactorspaces.Application{},
-		"AWS::RefactorSpaces::Environment":                                 &refactorspaces.Environment{},
-		"AWS::RefactorSpaces::Route":                                       &refactorspaces.Route{},
-		"AWS::RefactorSpaces::Service":                                     &refactorspaces.Service{},
-		"AWS::Rekognition::Collection":                                     &rekognition.Collection{},
-		"AWS::Rekognition::Project":                                        &rekognition.Project{},
-		"AWS::Rekognition::StreamProcessor":                                &rekognition.StreamProcessor{},
-		"AWS::ResilienceHub::App":                                          &resiliencehub.App{},
-		"AWS::ResilienceHub::ResiliencyPolicy":                             &resiliencehub.ResiliencyPolicy{},
-		"AWS::ResourceExplorer2::DefaultViewAssociation":                   &resourceexplorer2.DefaultViewAssociation{},
-		"AWS::ResourceExplorer2::Index":                                    &resourceexplorer2.Index{},
-		"AWS::ResourceExplorer2::View":                                     &resourceexplorer2.View{},
-		"AWS::ResourceGroups::Group":                                       &resourcegroups.Group{},
-		"AWS::RoboMaker::Fleet":                                            &robomaker.Fleet{},
-		"AWS::RoboMaker::Robot":                                            &robomaker.Robot{},
-		"AWS::RoboMaker::RobotApplication":                                 &robomaker.RobotApplication{},
-		"AWS::RoboMaker::RobotApplicationVersion":                          &robomaker.RobotApplicationVersion{},
-		"AWS::RoboMaker::SimulationApplication":                            &robomaker.SimulationApplication{},
-		"AWS::RoboMaker::SimulationApplicationVersion":                     &robomaker.SimulationApplicationVersion{},
-		"AWS::RolesAnywhere::CRL":                                          &rolesanywhere.CRL{},
-		"AWS::RolesAnywhere::Profile":                                      &rolesanywhere.Profile{},
-		"AWS::RolesAnywhere::TrustAnchor":                                  &rolesanywhere.TrustAnchor{},
-		"AWS::Route53::CidrCollection":                                     &route53.CidrCollection{},
-		"AWS::Route53::DNSSEC":                                             &route53.DNSSEC{},
-		"AWS::Route53::HealthCheck":                                        &route53.HealthCheck{},
-		"AWS::Route53::HostedZone":                                         &route53.HostedZone{},
-		"AWS::Route53::KeySigningKey":                                      &route53.KeySigningKey{},
-		"AWS::Route53::RecordSet":                                          &route53.RecordSet{},
-		"AWS::Route53::RecordSetGroup":                                     &route53.RecordSetGroup{},
-		"AWS::Route53Profiles::Profile":                                    &route53profiles.Profile{},
-		"AWS::Route53Profiles::ProfileAssociation":                         &route53profiles.ProfileAssociation{},
-		"AWS::Route53Profiles::ProfileResourceAssociation":                 &route53profiles.ProfileResourceAssociation{},
-		"AWS::Route53RecoveryControl::Cluster":                             &route53recoverycontrol.Cluster{},
-		"AWS::Route53RecoveryControl::ControlPanel":                        &route53recoverycontrol.ControlPanel{},
-		"AWS::Route53RecoveryControl::RoutingControl":                      &route53recoverycontrol.RoutingControl{},
-		"AWS::Route53RecoveryControl::SafetyRule":                          &route53recoverycontrol.SafetyRule{},
-		"AWS::Route53RecoveryReadiness::Cell":                              &route53recoveryreadiness.Cell{},
-		"AWS::Route53RecoveryReadiness::ReadinessCheck":                    &route53recoveryreadiness.ReadinessCheck{},
-		"AWS::Route53RecoveryReadiness::RecoveryGroup":                     &route53recoveryreadiness.RecoveryGroup{},
-		"AWS::Route53RecoveryReadiness::ResourceSet":                       &route53recoveryreadiness.ResourceSet{},
-		"AWS::Route53Resolver::FirewallDomainList":                         &route53resolver.FirewallDomainList{},
-		"AWS::Route53Resolver::FirewallRuleGroup":                          &route53resolver.FirewallRuleGroup{},
-		"AWS::Route53Resolver::FirewallRuleGroupAssociation":               &route53resolver.FirewallRuleGroupAssociation{},
-		"AWS::Route53Resolver::OutpostResolver":                            &route53resolver.OutpostResolver{},
-		"AWS::Route53Resolver::ResolverConfig":                             &route53resolver.ResolverConfig{},
-		"AWS::Route53Resolver::ResolverDNSSECConfig":                       &route53resolver.ResolverDNSSECConfig{},
-		"AWS::Route53Resolver::ResolverEndpoint":                           &route53resolver.ResolverEndpoint{},
-		"AWS::Route53Resolver::ResolverQueryLoggingConfig":                 &route53resolver.ResolverQueryLoggingConfig{},
-		"AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation":      &route53resolver.ResolverQueryLoggingConfigAssociation{},
-		"AWS::Route53Resolver::ResolverRule":                               &route53resolver.ResolverRule{},
-		"AWS::Route53Resolver::ResolverRuleAssociation":                    &route53resolver.ResolverRuleAssociation{},
-		"AWS::S3::AccessGrant":                                             &s3.AccessGrant{},
-		"AWS::S3::AccessGrantsInstance":                                    &s3.AccessGrantsInstance{},
-		"AWS::S3::AccessGrantsLocation":                                    &s3.AccessGrantsLocation{},
-		"AWS::S3::AccessPoint":                                             &s3.AccessPoint{},
-		"AWS::S3::Bucket":                                                  &s3.Bucket{},
-		"AWS::S3::BucketPolicy":                                            &s3.BucketPolicy{},
-		"AWS::S3::MultiRegionAccessPoint":                                  &s3.MultiRegionAccessPoint{},
-		"AWS::S3::MultiRegionAccessPointPolicy":                            &s3.MultiRegionAccessPointPolicy{},
-		"AWS::S3::StorageLens":                                             &s3.StorageLens{},
-		"AWS::S3::StorageLensGroup":                                        &s3.StorageLensGroup{},
-		"AWS::S3Express::BucketPolicy":                                     &s3express.BucketPolicy{},
-		"AWS::S3Express::DirectoryBucket":                                  &s3express.DirectoryBucket{},
-		"AWS::S3ObjectLambda::AccessPoint":                                 &s3objectlambda.AccessPoint{},
-		"AWS::S3ObjectLambda::AccessPointPolicy":                           &s3objectlambda.AccessPointPolicy{},
-		"AWS::S3Outposts::AccessPoint":                                     &s3outposts.AccessPoint{},
-		"AWS::S3Outposts::Bucket":                                          &s3outposts.Bucket{},
-		"AWS::S3Outposts::BucketPolicy":                                    &s3outposts.BucketPolicy{},
-		"AWS::S3Outposts::Endpoint":                                        &s3outposts.Endpoint{},
-		"AWS::SDB::Domain":                                                 &sdb.Domain{},
-		"AWS::SES::ConfigurationSet":                                       &ses.ConfigurationSet{},
-		"AWS::SES::ConfigurationSetEventDestination":                       &ses.ConfigurationSetEventDestination{},
-		"AWS::SES::ContactList":                                            &ses.ContactList{},
-		"AWS::SES::DedicatedIpPool":                                        &ses.DedicatedIpPool{},
-		"AWS::SES::EmailIdentity":                                          &ses.EmailIdentity{},
-		"AWS::SES::ReceiptFilter":                                          &ses.ReceiptFilter{},
-		"AWS::SES::ReceiptRule":                                            &ses.ReceiptRule{},
-		"AWS::SES::ReceiptRuleSet":                                         &ses.ReceiptRuleSet{},
-		"AWS::SES::Template":                                               &ses.Template{},
-		"AWS::SES::VdmAttributes":                                          &ses.VdmAttributes{},
-		"AWS::SNS::Subscription":                                           &sns.Subscription{},
-		"AWS::SNS::Topic":                                                  &sns.Topic{},
-		"AWS::SNS::TopicInlinePolicy":                                      &sns.TopicInlinePolicy{},
-		"AWS::SNS::TopicPolicy":                                            &sns.TopicPolicy{},
-		"AWS::SQS::Queue":                                                  &sqs.Queue{},
-		"AWS::SQS::QueueInlinePolicy":                                      &sqs.QueueInlinePolicy{},
-		"AWS::SQS::QueuePolicy":                                            &sqs.QueuePolicy{},
-		"AWS::SSM::Association":                                            &ssm.Association{},
-		"AWS::SSM::Document":                                               &ssm.Document{},
-		"AWS::SSM::MaintenanceWindow":                                      &ssm.MaintenanceWindow{},
-		"AWS::SSM::MaintenanceWindowTarget":                                &ssm.MaintenanceWindowTarget{},
-		"AWS::SSM::MaintenanceWindowTask":                                  &ssm.MaintenanceWindowTask{},
-		"AWS::SSM::Parameter":                                              &ssm.Parameter{},
-		"AWS::SSM::PatchBaseline":                                          &ssm.PatchBaseline{},
-		"AWS::SSM::ResourceDataSync":                                       &ssm.ResourceDataSync{},
-		"AWS::SSM::ResourcePolicy":                                         &ssm.ResourcePolicy{},
-		"AWS::SSMContacts::Contact":                                        &ssmcontacts.Contact{},
-		"AWS::SSMContacts::ContactChannel":                                 &ssmcontacts.ContactChannel{},
-		"AWS::SSMContacts::Plan":                                           &ssmcontacts.Plan{},
-		"AWS::SSMContacts::Rotation":                                       &ssmcontacts.Rotation{},
-		"AWS::SSMIncidents::ReplicationSet":                                &ssmincidents.ReplicationSet{},
-		"AWS::SSMIncidents::ResponsePlan":                                  &ssmincidents.ResponsePlan{},
-		"AWS::SSO::Assignment":                                             &sso.Assignment{},
-		"AWS::SSO::InstanceAccessControlAttributeConfiguration":            &sso.InstanceAccessControlAttributeConfiguration{},
-		"AWS::SSO::PermissionSet":                                          &sso.PermissionSet{},
-		"AWS::SageMaker::App":                                              &sagemaker.App{},
-		"AWS::SageMaker::AppImageConfig":                                   &sagemaker.AppImageConfig{},
-		"AWS::SageMaker::CodeRepository":                                   &sagemaker.CodeRepository{},
-		"AWS::SageMaker::DataQualityJobDefinition":                         &sagemaker.DataQualityJobDefinition{},
-		"AWS::SageMaker::Device":                                           &sagemaker.Device{},
-		"AWS::SageMaker::DeviceFleet":                                      &sagemaker.DeviceFleet{},
-		"AWS::SageMaker::Domain":                                           &sagemaker.Domain{},
-		"AWS::SageMaker::Endpoint":                                         &sagemaker.Endpoint{},
-		"AWS::SageMaker::EndpointConfig":                                   &sagemaker.EndpointConfig{},
-		"AWS::SageMaker::FeatureGroup":                                     &sagemaker.FeatureGroup{},
-		"AWS::SageMaker::Image":                                            &sagemaker.Image{},
-		"AWS::SageMaker::ImageVersion":                                     &sagemaker.ImageVersion{},
-		"AWS::SageMaker::InferenceComponent":                               &sagemaker.InferenceComponent{},
-		"AWS::SageMaker::InferenceExperiment":                              &sagemaker.InferenceExperiment{},
-		"AWS::SageMaker::Model":                                            &sagemaker.Model{},
-		"AWS::SageMaker::ModelBiasJobDefinition":                           &sagemaker.ModelBiasJobDefinition{},
-		"AWS::SageMaker::ModelCard":                                        &sagemaker.ModelCard{},
-		"AWS::SageMaker::ModelExplainabilityJobDefinition":                 &sagemaker.ModelExplainabilityJobDefinition{},
-		"AWS::SageMaker::ModelPackage":                                     &sagemaker.ModelPackage{},
-		"AWS::SageMaker::ModelPackageGroup":                                &sagemaker.ModelPackageGroup{},
-		"AWS::SageMaker::ModelQualityJobDefinition":                        &sagemaker.ModelQualityJobDefinition{},
-		"AWS::SageMaker::MonitoringSchedule":                               &sagemaker.MonitoringSchedule{},
-		"AWS::SageMaker::NotebookInstance":                                 &sagemaker.NotebookInstance{},
-		"AWS::SageMaker::NotebookInstanceLifecycleConfig":                  &sagemaker.NotebookInstanceLifecycleConfig{},
-		"AWS::SageMaker::Pipeline":                                         &sagemaker.Pipeline{},
-		"AWS::SageMaker::Project":                                          &sagemaker.Project{},
-		"AWS::SageMaker::Space":                                            &sagemaker.Space{},
-		"AWS::SageMaker::UserProfile":                                      &sagemaker.UserProfile{},
-		"AWS::SageMaker::Workteam":                                         &sagemaker.Workteam{},
-		"AWS::Scheduler::Schedule":                                         &scheduler.Schedule{},
-		"AWS::Scheduler::ScheduleGroup":                                    &scheduler.ScheduleGroup{},
-		"AWS::SecretsManager::ResourcePolicy":                              &secretsmanager.ResourcePolicy{},
-		"AWS::SecretsManager::RotationSchedule":                            &secretsmanager.RotationSchedule{},
-		"AWS::SecretsManager::Secret":                                      &secretsmanager.Secret{},
-		"AWS::SecretsManager::SecretTargetAttachment":                      &secretsmanager.SecretTargetAttachment{},
-		"AWS::SecurityHub::AutomationRule":                                 &securityhub.AutomationRule{},
-		"AWS::SecurityHub::DelegatedAdmin":                                 &securityhub.DelegatedAdmin{},
-		"AWS::SecurityHub::Hub":                                            &securityhub.Hub{},
-		"AWS::SecurityHub::Insight":                                        &securityhub.Insight{},
-		"AWS::SecurityHub::ProductSubscription":                            &securityhub.ProductSubscription{},
-		"AWS::SecurityHub::Standard":                                       &securityhub.Standard{},
-		"AWS::SecurityLake::AwsLogSource":                                  &securitylake.AwsLogSource{},
-		"AWS::SecurityLake::DataLake":                                      &securitylake.DataLake{},
-		"AWS::SecurityLake::Subscriber":                                    &securitylake.Subscriber{},
-		"AWS::Serverless::Api":                                             &serverless.Api{},
-		"AWS::Serverless::Application":                                     &serverless.Application{},
-		"AWS::Serverless::Function":                                        &serverless.Function{},
-		"AWS::Serverless::HttpApi":                                         &serverless.HttpApi{},
-		"AWS::Serverless::LayerVersion":                                    &serverless.LayerVersion{},
-		"AWS::Serverless::SimpleTable":                                     &serverless.SimpleTable{},
-		"AWS::Serverless::StateMachine":                                    &serverless.StateMachine{},
-		"AWS::ServiceCatalog::AcceptedPortfolioShare":                      &servicecatalog.AcceptedPortfolioShare{},
-		"AWS::ServiceCatalog::CloudFormationProduct":                       &servicecatalog.CloudFormationProduct{},
-		"AWS::ServiceCatalog::CloudFormationProvisionedProduct":            &servicecatalog.CloudFormationProvisionedProduct{},
-		"AWS::ServiceCatalog::LaunchNotificationConstraint":                &servicecatalog.LaunchNotificationConstraint{},
-		"AWS::ServiceCatalog::LaunchRoleConstraint":                        &servicecatalog.LaunchRoleConstraint{},
-		"AWS::ServiceCatalog::LaunchTemplateConstraint":                    &servicecatalog.LaunchTemplateConstraint{},
-		"AWS::ServiceCatalog::Portfolio":                                   &servicecatalog.Portfolio{},
-		"AWS::ServiceCatalog::PortfolioPrincipalAssociation":               &servicecatalog.PortfolioPrincipalAssociation{},
-		"AWS::ServiceCatalog::PortfolioProductAssociation":                 &servicecatalog.PortfolioProductAssociation{},
-		"AWS::ServiceCatalog::PortfolioShare":                              &servicecatalog.PortfolioShare{},
-		"AWS::ServiceCatalog::ResourceUpdateConstraint":                    &servicecatalog.ResourceUpdateConstraint{},
-		"AWS::ServiceCatalog::ServiceAction":                               &servicecatalog.ServiceAction{},
-		"AWS::ServiceCatalog::ServiceActionAssociation":                    &servicecatalog.ServiceActionAssociation{},
-		"AWS::ServiceCatalog::StackSetConstraint":                          &servicecatalog.StackSetConstraint{},
-		"AWS::ServiceCatalog::TagOption":                                   &servicecatalog.TagOption{},
-		"AWS::ServiceCatalog::TagOptionAssociation":                        &servicecatalog.TagOptionAssociation{},
-		"AWS::ServiceCatalogAppRegistry::Application":                      &servicecatalogappregistry.Application{},
-		"AWS::ServiceCatalogAppRegistry::AttributeGroup":                   &servicecatalogappregistry.AttributeGroup{},
-		"AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation":        &servicecatalogappregistry.AttributeGroupAssociation{},
-		"AWS::ServiceCatalogAppRegistry::ResourceAssociation":              &servicecatalogappregistry.ResourceAssociation{},
-		"AWS::ServiceDiscovery::HttpNamespace":                             &servicediscovery.HttpNamespace{},
-		"AWS::ServiceDiscovery::Instance":                                  &servicediscovery.Instance{},
-		"AWS::ServiceDiscovery::PrivateDnsNamespace":                       &servicediscovery.PrivateDnsNamespace{},
-		"AWS::ServiceDiscovery::PublicDnsNamespace":                        &servicediscovery.PublicDnsNamespace{},
-		"AWS::ServiceDiscovery::Service":                                   &servicediscovery.Service{},
-		"AWS::Shield::DRTAccess":                                           &shield.DRTAccess{},
-		"AWS::Shield::ProactiveEngagement":                                 &shield.ProactiveEngagement{},
-		"AWS::Shield::Protection":                                          &shield.Protection{},
-		"AWS::Shield::ProtectionGroup":                                     &shield.ProtectionGroup{},
-		"AWS::Signer::ProfilePermission":                                   &signer.ProfilePermission{},
-		"AWS::Signer::SigningProfile":                                      &signer.SigningProfile{},
-		"AWS::SimSpaceWeaver::Simulation":                                  &simspaceweaver.Simulation{},
-		"AWS::StepFunctions::Activity":                                     &stepfunctions.Activity{},
-		"AWS::StepFunctions::StateMachine":                                 &stepfunctions.StateMachine{},
-		"AWS::StepFunctions::StateMachineAlias":                            &stepfunctions.StateMachineAlias{},
-		"AWS::StepFunctions::StateMachineVersion":                          &stepfunctions.StateMachineVersion{},
-		"AWS::SupportApp::AccountAlias":                                    &supportapp.AccountAlias{},
-		"AWS::SupportApp::SlackChannelConfiguration":                       &supportapp.SlackChannelConfiguration{},
-		"AWS::SupportApp::SlackWorkspaceConfiguration":                     &supportapp.SlackWorkspaceConfiguration{},
-		"AWS::Synthetics::Canary":                                          &synthetics.Canary{},
-		"AWS::Synthetics::Group":                                           &synthetics.Group{},
-		"AWS::SystemsManagerSAP::Application":                              &systemsmanagersap.Application{},
-		"AWS::Timestream::Database":                                        &timestream.Database{},
-		"AWS::Timestream::InfluxDBInstance":                                &timestream.InfluxDBInstance{},
-		"AWS::Timestream::ScheduledQuery":                                  &timestream.ScheduledQuery{},
-		"AWS::Timestream::Table":                                           &timestream.Table{},
-		"AWS::Transfer::Agreement":                                         &transfer.Agreement{},
-		"AWS::Transfer::Certificate":                                       &transfer.Certificate{},
-		"AWS::Transfer::Connector":                                         &transfer.Connector{},
-		"AWS::Transfer::Profile":                                           &transfer.Profile{},
-		"AWS::Transfer::Server":                                            &transfer.Server{},
-		"AWS::Transfer::User":                                              &transfer.User{},
-		"AWS::Transfer::Workflow":                                          &transfer.Workflow{},
-		"AWS::VerifiedPermissions::IdentitySource":                         &verifiedpermissions.IdentitySource{},
-		"AWS::VerifiedPermissions::Policy":                                 &verifiedpermissions.Policy{},
-		"AWS::VerifiedPermissions::PolicyStore":                            &verifiedpermissions.PolicyStore{},
-		"AWS::VerifiedPermissions::PolicyTemplate":                         &verifiedpermissions.PolicyTemplate{},
-		"AWS::VoiceID::Domain":                                             &voiceid.Domain{},
-		"AWS::VpcLattice::AccessLogSubscription":                           &vpclattice.AccessLogSubscription{},
-		"AWS::VpcLattice::AuthPolicy":                                      &vpclattice.AuthPolicy{},
-		"AWS::VpcLattice::Listener":                                        &vpclattice.Listener{},
-		"AWS::VpcLattice::ResourcePolicy":                                  &vpclattice.ResourcePolicy{},
-		"AWS::VpcLattice::Rule":                                            &vpclattice.Rule{},
-		"AWS::VpcLattice::Service":                                         &vpclattice.Service{},
-		"AWS::VpcLattice::ServiceNetwork":                                  &vpclattice.ServiceNetwork{},
-		"AWS::VpcLattice::ServiceNetworkServiceAssociation":                &vpclattice.ServiceNetworkServiceAssociation{},
-		"AWS::VpcLattice::ServiceNetworkVpcAssociation":                    &vpclattice.ServiceNetworkVpcAssociation{},
-		"AWS::VpcLattice::TargetGroup":                                     &vpclattice.TargetGroup{},
-		"AWS::WAF::ByteMatchSet":                                           &waf.ByteMatchSet{},
-		"AWS::WAF::IPSet":                                                  &waf.IPSet{},
-		"AWS::WAF::Rule":                                                   &waf.Rule{},
-		"AWS::WAF::SizeConstraintSet":                                      &waf.SizeConstraintSet{},
-		"AWS::WAF::SqlInjectionMatchSet":                                   &waf.SqlInjectionMatchSet{},
-		"AWS::WAF::WebACL":                                                 &waf.WebACL{},
-		"AWS::WAF::XssMatchSet":                                            &waf.XssMatchSet{},
-		"AWS::WAFRegional::ByteMatchSet":                                   &wafregional.ByteMatchSet{},
-		"AWS::WAFRegional::GeoMatchSet":                                    &wafregional.GeoMatchSet{},
-		"AWS::WAFRegional::IPSet":                                          &wafregional.IPSet{},
-		"AWS::WAFRegional::RateBasedRule":                                  &wafregional.RateBasedRule{},
-		"AWS::WAFRegional::RegexPatternSet":                                &wafregional.RegexPatternSet{},
-		"AWS::WAFRegional::Rule":                                           &wafregional.Rule{},
-		"AWS::WAFRegional::SizeConstraintSet":                              &wafregional.SizeConstraintSet{},
-		"AWS::WAFRegional::SqlInjectionMatchSet":                           &wafregional.SqlInjectionMatchSet{},
-		"AWS::WAFRegional::WebACL":                                         &wafregional.WebACL{},
-		"AWS::WAFRegional::WebACLAssociation":                              &wafregional.WebACLAssociation{},
-		"AWS::WAFRegional::XssMatchSet":                                    &wafregional.XssMatchSet{},
-		"AWS::WAFv2::IPSet":                                                &wafv2.IPSet{},
-		"AWS::WAFv2::LoggingConfiguration":                                 &wafv2.LoggingConfiguration{},
-		"AWS::WAFv2::RegexPatternSet":                                      &wafv2.RegexPatternSet{},
-		"AWS::WAFv2::RuleGroup":                                            &wafv2.RuleGroup{},
-		"AWS::WAFv2::WebACL":                                               &wafv2.WebACL{},
-		"AWS::WAFv2::WebACLAssociation":                                    &wafv2.WebACLAssociation{},
-		"AWS::Wisdom::Assistant":                                           &wisdom.Assistant{},
-		"AWS::Wisdom::AssistantAssociation":                                &wisdom.AssistantAssociation{},
-		"AWS::Wisdom::KnowledgeBase":                                       &wisdom.KnowledgeBase{},
-		"AWS::WorkSpaces::ConnectionAlias":                                 &workspaces.ConnectionAlias{},
-		"AWS::WorkSpaces::Workspace":                                       &workspaces.Workspace{},
-		"AWS::WorkSpacesThinClient::Environment":                           &workspacesthinclient.Environment{},
-		"AWS::WorkSpacesWeb::BrowserSettings":                              &workspacesweb.BrowserSettings{},
-		"AWS::WorkSpacesWeb::IdentityProvider":                             &workspacesweb.IdentityProvider{},
-		"AWS::WorkSpacesWeb::IpAccessSettings":                             &workspacesweb.IpAccessSettings{},
-		"AWS::WorkSpacesWeb::NetworkSettings":                              &workspacesweb.NetworkSettings{},
-		"AWS::WorkSpacesWeb::Portal":                                       &workspacesweb.Portal{},
-		"AWS::WorkSpacesWeb::TrustStore":                                   &workspacesweb.TrustStore{},
-		"AWS::WorkSpacesWeb::UserAccessLoggingSettings":                    &workspacesweb.UserAccessLoggingSettings{},
-		"AWS::WorkSpacesWeb::UserSettings":                                 &workspacesweb.UserSettings{},
-		"AWS::XRay::Group":                                                 &xray.Group{},
-		"AWS::XRay::ResourcePolicy":                                        &xray.ResourcePolicy{},
-		"AWS::XRay::SamplingRule":                                          &xray.SamplingRule{},
-		"Alexa::ASK::Skill":                                                &ask.Skill{},
-		"Api":                                                              &global.Api{},
-		"Function":                                                         &global.Function{},
-		"HttpApi":                                                          &global.HttpApi{},
-		"SimpleTable":                                                      &global.SimpleTable{},
+		"AWS::ACMPCA::Certificate":                                            &acmpca.Certificate{},
+		"AWS::ACMPCA::CertificateAuthority":                                   &acmpca.CertificateAuthority{},
+		"AWS::ACMPCA::CertificateAuthorityActivation":                         &acmpca.CertificateAuthorityActivation{},
+		"AWS::ACMPCA::Permission":                                             &acmpca.Permission{},
+		"AWS::APS::RuleGroupsNamespace":                                       &aps.RuleGroupsNamespace{},
+		"AWS::APS::Scraper":                                                   &aps.Scraper{},
+		"AWS::APS::Workspace":                                                 &aps.Workspace{},
+		"AWS::ARCZonalShift::AutoshiftObserverNotificationStatus":             &arczonalshift.AutoshiftObserverNotificationStatus{},
+		"AWS::ARCZonalShift::ZonalAutoshiftConfiguration":                     &arczonalshift.ZonalAutoshiftConfiguration{},
+		"AWS::AccessAnalyzer::Analyzer":                                       &accessanalyzer.Analyzer{},
+		"AWS::AmazonMQ::Broker":                                               &amazonmq.Broker{},
+		"AWS::AmazonMQ::Configuration":                                        &amazonmq.Configuration{},
+		"AWS::AmazonMQ::ConfigurationAssociation":                             &amazonmq.ConfigurationAssociation{},
+		"AWS::Amplify::App":                                                   &amplify.App{},
+		"AWS::Amplify::Branch":                                                &amplify.Branch{},
+		"AWS::Amplify::Domain":                                                &amplify.Domain{},
+		"AWS::AmplifyUIBuilder::Component":                                    &amplifyuibuilder.Component{},
+		"AWS::AmplifyUIBuilder::Form":                                         &amplifyuibuilder.Form{},
+		"AWS::AmplifyUIBuilder::Theme":                                        &amplifyuibuilder.Theme{},
+		"AWS::ApiGateway::Account":                                            &apigateway.Account{},
+		"AWS::ApiGateway::ApiKey":                                             &apigateway.ApiKey{},
+		"AWS::ApiGateway::Authorizer":                                         &apigateway.Authorizer{},
+		"AWS::ApiGateway::BasePathMapping":                                    &apigateway.BasePathMapping{},
+		"AWS::ApiGateway::BasePathMappingV2":                                  &apigateway.BasePathMappingV2{},
+		"AWS::ApiGateway::ClientCertificate":                                  &apigateway.ClientCertificate{},
+		"AWS::ApiGateway::Deployment":                                         &apigateway.Deployment{},
+		"AWS::ApiGateway::DocumentationPart":                                  &apigateway.DocumentationPart{},
+		"AWS::ApiGateway::DocumentationVersion":                               &apigateway.DocumentationVersion{},
+		"AWS::ApiGateway::DomainName":                                         &apigateway.DomainName{},
+		"AWS::ApiGateway::DomainNameAccessAssociation":                        &apigateway.DomainNameAccessAssociation{},
+		"AWS::ApiGateway::DomainNameV2":                                       &apigateway.DomainNameV2{},
+		"AWS::ApiGateway::GatewayResponse":                                    &apigateway.GatewayResponse{},
+		"AWS::ApiGateway::Method":                                             &apigateway.Method{},
+		"AWS::ApiGateway::Model":                                              &apigateway.Model{},
+		"AWS::ApiGateway::RequestValidator":                                   &apigateway.RequestValidator{},
+		"AWS::ApiGateway::Resource":                                           &apigateway.Resource{},
+		"AWS::ApiGateway::RestApi":                                            &apigateway.RestApi{},
+		"AWS::ApiGateway::Stage":                                              &apigateway.Stage{},
+		"AWS::ApiGateway::UsagePlan":                                          &apigateway.UsagePlan{},
+		"AWS::ApiGateway::UsagePlanKey":                                       &apigateway.UsagePlanKey{},
+		"AWS::ApiGateway::VpcLink":                                            &apigateway.VpcLink{},
+		"AWS::ApiGatewayV2::Api":                                              &apigatewayv2.Api{},
+		"AWS::ApiGatewayV2::ApiGatewayManagedOverrides":                       &apigatewayv2.ApiGatewayManagedOverrides{},
+		"AWS::ApiGatewayV2::ApiMapping":                                       &apigatewayv2.ApiMapping{},
+		"AWS::ApiGatewayV2::Authorizer":                                       &apigatewayv2.Authorizer{},
+		"AWS::ApiGatewayV2::Deployment":                                       &apigatewayv2.Deployment{},
+		"AWS::ApiGatewayV2::DomainName":                                       &apigatewayv2.DomainName{},
+		"AWS::ApiGatewayV2::Integration":                                      &apigatewayv2.Integration{},
+		"AWS::ApiGatewayV2::IntegrationResponse":                              &apigatewayv2.IntegrationResponse{},
+		"AWS::ApiGatewayV2::Model":                                            &apigatewayv2.Model{},
+		"AWS::ApiGatewayV2::Route":                                            &apigatewayv2.Route{},
+		"AWS::ApiGatewayV2::RouteResponse":                                    &apigatewayv2.RouteResponse{},
+		"AWS::ApiGatewayV2::Stage":                                            &apigatewayv2.Stage{},
+		"AWS::ApiGatewayV2::VpcLink":                                          &apigatewayv2.VpcLink{},
+		"AWS::AppConfig::Application":                                         &appconfig.Application{},
+		"AWS::AppConfig::ConfigurationProfile":                                &appconfig.ConfigurationProfile{},
+		"AWS::AppConfig::Deployment":                                          &appconfig.Deployment{},
+		"AWS::AppConfig::DeploymentStrategy":                                  &appconfig.DeploymentStrategy{},
+		"AWS::AppConfig::Environment":                                         &appconfig.Environment{},
+		"AWS::AppConfig::Extension":                                           &appconfig.Extension{},
+		"AWS::AppConfig::ExtensionAssociation":                                &appconfig.ExtensionAssociation{},
+		"AWS::AppConfig::HostedConfigurationVersion":                          &appconfig.HostedConfigurationVersion{},
+		"AWS::AppFlow::Connector":                                             &appflow.Connector{},
+		"AWS::AppFlow::ConnectorProfile":                                      &appflow.ConnectorProfile{},
+		"AWS::AppFlow::Flow":                                                  &appflow.Flow{},
+		"AWS::AppIntegrations::Application":                                   &appintegrations.Application{},
+		"AWS::AppIntegrations::DataIntegration":                               &appintegrations.DataIntegration{},
+		"AWS::AppIntegrations::EventIntegration":                              &appintegrations.EventIntegration{},
+		"AWS::AppMesh::GatewayRoute":                                          &appmesh.GatewayRoute{},
+		"AWS::AppMesh::Mesh":                                                  &appmesh.Mesh{},
+		"AWS::AppMesh::Route":                                                 &appmesh.Route{},
+		"AWS::AppMesh::VirtualGateway":                                        &appmesh.VirtualGateway{},
+		"AWS::AppMesh::VirtualNode":                                           &appmesh.VirtualNode{},
+		"AWS::AppMesh::VirtualRouter":                                         &appmesh.VirtualRouter{},
+		"AWS::AppMesh::VirtualService":                                        &appmesh.VirtualService{},
+		"AWS::AppRunner::AutoScalingConfiguration":                            &apprunner.AutoScalingConfiguration{},
+		"AWS::AppRunner::ObservabilityConfiguration":                          &apprunner.ObservabilityConfiguration{},
+		"AWS::AppRunner::Service":                                             &apprunner.Service{},
+		"AWS::AppRunner::VpcConnector":                                        &apprunner.VpcConnector{},
+		"AWS::AppRunner::VpcIngressConnection":                                &apprunner.VpcIngressConnection{},
+		"AWS::AppStream::AppBlock":                                            &appstream.AppBlock{},
+		"AWS::AppStream::AppBlockBuilder":                                     &appstream.AppBlockBuilder{},
+		"AWS::AppStream::Application":                                         &appstream.Application{},
+		"AWS::AppStream::ApplicationEntitlementAssociation":                   &appstream.ApplicationEntitlementAssociation{},
+		"AWS::AppStream::ApplicationFleetAssociation":                         &appstream.ApplicationFleetAssociation{},
+		"AWS::AppStream::DirectoryConfig":                                     &appstream.DirectoryConfig{},
+		"AWS::AppStream::Entitlement":                                         &appstream.Entitlement{},
+		"AWS::AppStream::Fleet":                                               &appstream.Fleet{},
+		"AWS::AppStream::ImageBuilder":                                        &appstream.ImageBuilder{},
+		"AWS::AppStream::Stack":                                               &appstream.Stack{},
+		"AWS::AppStream::StackFleetAssociation":                               &appstream.StackFleetAssociation{},
+		"AWS::AppStream::StackUserAssociation":                                &appstream.StackUserAssociation{},
+		"AWS::AppStream::User":                                                &appstream.User{},
+		"AWS::AppSync::Api":                                                   &appsync.Api{},
+		"AWS::AppSync::ApiCache":                                              &appsync.ApiCache{},
+		"AWS::AppSync::ApiKey":                                                &appsync.ApiKey{},
+		"AWS::AppSync::ChannelNamespace":                                      &appsync.ChannelNamespace{},
+		"AWS::AppSync::DataSource":                                            &appsync.DataSource{},
+		"AWS::AppSync::DomainName":                                            &appsync.DomainName{},
+		"AWS::AppSync::DomainNameApiAssociation":                              &appsync.DomainNameApiAssociation{},
+		"AWS::AppSync::FunctionConfiguration":                                 &appsync.FunctionConfiguration{},
+		"AWS::AppSync::GraphQLApi":                                            &appsync.GraphQLApi{},
+		"AWS::AppSync::GraphQLSchema":                                         &appsync.GraphQLSchema{},
+		"AWS::AppSync::Resolver":                                              &appsync.Resolver{},
+		"AWS::AppSync::SourceApiAssociation":                                  &appsync.SourceApiAssociation{},
+		"AWS::AppTest::TestCase":                                              &apptest.TestCase{},
+		"AWS::ApplicationAutoScaling::ScalableTarget":                         &applicationautoscaling.ScalableTarget{},
+		"AWS::ApplicationAutoScaling::ScalingPolicy":                          &applicationautoscaling.ScalingPolicy{},
+		"AWS::ApplicationInsights::Application":                               &applicationinsights.Application{},
+		"AWS::ApplicationSignals::ServiceLevelObjective":                      &applicationsignals.ServiceLevelObjective{},
+		"AWS::Athena::CapacityReservation":                                    &athena.CapacityReservation{},
+		"AWS::Athena::DataCatalog":                                            &athena.DataCatalog{},
+		"AWS::Athena::NamedQuery":                                             &athena.NamedQuery{},
+		"AWS::Athena::PreparedStatement":                                      &athena.PreparedStatement{},
+		"AWS::Athena::WorkGroup":                                              &athena.WorkGroup{},
+		"AWS::AuditManager::Assessment":                                       &auditmanager.Assessment{},
+		"AWS::AutoScaling::AutoScalingGroup":                                  &autoscaling.AutoScalingGroup{},
+		"AWS::AutoScaling::LaunchConfiguration":                               &autoscaling.LaunchConfiguration{},
+		"AWS::AutoScaling::LifecycleHook":                                     &autoscaling.LifecycleHook{},
+		"AWS::AutoScaling::ScalingPolicy":                                     &autoscaling.ScalingPolicy{},
+		"AWS::AutoScaling::ScheduledAction":                                   &autoscaling.ScheduledAction{},
+		"AWS::AutoScaling::WarmPool":                                          &autoscaling.WarmPool{},
+		"AWS::AutoScalingPlans::ScalingPlan":                                  &autoscalingplans.ScalingPlan{},
+		"AWS::B2BI::Capability":                                               &b2bi.Capability{},
+		"AWS::B2BI::Partnership":                                              &b2bi.Partnership{},
+		"AWS::B2BI::Profile":                                                  &b2bi.Profile{},
+		"AWS::B2BI::Transformer":                                              &b2bi.Transformer{},
+		"AWS::BCMDataExports::Export":                                         &bcmdataexports.Export{},
+		"AWS::Backup::BackupPlan":                                             &backup.BackupPlan{},
+		"AWS::Backup::BackupSelection":                                        &backup.BackupSelection{},
+		"AWS::Backup::BackupVault":                                            &backup.BackupVault{},
+		"AWS::Backup::Framework":                                              &backup.Framework{},
+		"AWS::Backup::LogicallyAirGappedBackupVault":                          &backup.LogicallyAirGappedBackupVault{},
+		"AWS::Backup::ReportPlan":                                             &backup.ReportPlan{},
+		"AWS::Backup::RestoreTestingPlan":                                     &backup.RestoreTestingPlan{},
+		"AWS::Backup::RestoreTestingSelection":                                &backup.RestoreTestingSelection{},
+		"AWS::BackupGateway::Hypervisor":                                      &backupgateway.Hypervisor{},
+		"AWS::Batch::ComputeEnvironment":                                      &batch.ComputeEnvironment{},
+		"AWS::Batch::JobDefinition":                                           &batch.JobDefinition{},
+		"AWS::Batch::JobQueue":                                                &batch.JobQueue{},
+		"AWS::Batch::SchedulingPolicy":                                        &batch.SchedulingPolicy{},
+		"AWS::Bedrock::Agent":                                                 &bedrock.Agent{},
+		"AWS::Bedrock::AgentAlias":                                            &bedrock.AgentAlias{},
+		"AWS::Bedrock::ApplicationInferenceProfile":                           &bedrock.ApplicationInferenceProfile{},
+		"AWS::Bedrock::DataSource":                                            &bedrock.DataSource{},
+		"AWS::Bedrock::Flow":                                                  &bedrock.Flow{},
+		"AWS::Bedrock::FlowAlias":                                             &bedrock.FlowAlias{},
+		"AWS::Bedrock::FlowVersion":                                           &bedrock.FlowVersion{},
+		"AWS::Bedrock::Guardrail":                                             &bedrock.Guardrail{},
+		"AWS::Bedrock::GuardrailVersion":                                      &bedrock.GuardrailVersion{},
+		"AWS::Bedrock::KnowledgeBase":                                         &bedrock.KnowledgeBase{},
+		"AWS::Bedrock::Prompt":                                                &bedrock.Prompt{},
+		"AWS::Bedrock::PromptVersion":                                         &bedrock.PromptVersion{},
+		"AWS::BillingConductor::BillingGroup":                                 &billingconductor.BillingGroup{},
+		"AWS::BillingConductor::CustomLineItem":                               &billingconductor.CustomLineItem{},
+		"AWS::BillingConductor::PricingPlan":                                  &billingconductor.PricingPlan{},
+		"AWS::BillingConductor::PricingRule":                                  &billingconductor.PricingRule{},
+		"AWS::Budgets::Budget":                                                &budgets.Budget{},
+		"AWS::Budgets::BudgetsAction":                                         &budgets.BudgetsAction{},
+		"AWS::CDK::Metadata":                                                  &cdk.Metadata{},
+		"AWS::CE::AnomalyMonitor":                                             &ce.AnomalyMonitor{},
+		"AWS::CE::AnomalySubscription":                                        &ce.AnomalySubscription{},
+		"AWS::CE::CostCategory":                                               &ce.CostCategory{},
+		"AWS::CUR::ReportDefinition":                                          &cur.ReportDefinition{},
+		"AWS::Cassandra::Keyspace":                                            &cassandra.Keyspace{},
+		"AWS::Cassandra::Table":                                               &cassandra.Table{},
+		"AWS::Cassandra::Type":                                                &cassandra.Type{},
+		"AWS::CertificateManager::Account":                                    &certificatemanager.Account{},
+		"AWS::CertificateManager::Certificate":                                &certificatemanager.Certificate{},
+		"AWS::Chatbot::CustomAction":                                          &chatbot.CustomAction{},
+		"AWS::Chatbot::MicrosoftTeamsChannelConfiguration":                    &chatbot.MicrosoftTeamsChannelConfiguration{},
+		"AWS::Chatbot::SlackChannelConfiguration":                             &chatbot.SlackChannelConfiguration{},
+		"AWS::CleanRooms::AnalysisTemplate":                                   &cleanrooms.AnalysisTemplate{},
+		"AWS::CleanRooms::Collaboration":                                      &cleanrooms.Collaboration{},
+		"AWS::CleanRooms::ConfiguredTable":                                    &cleanrooms.ConfiguredTable{},
+		"AWS::CleanRooms::ConfiguredTableAssociation":                         &cleanrooms.ConfiguredTableAssociation{},
+		"AWS::CleanRooms::IdMappingTable":                                     &cleanrooms.IdMappingTable{},
+		"AWS::CleanRooms::IdNamespaceAssociation":                             &cleanrooms.IdNamespaceAssociation{},
+		"AWS::CleanRooms::Membership":                                         &cleanrooms.Membership{},
+		"AWS::CleanRooms::PrivacyBudgetTemplate":                              &cleanrooms.PrivacyBudgetTemplate{},
+		"AWS::CleanRoomsML::TrainingDataset":                                  &cleanroomsml.TrainingDataset{},
+		"AWS::Cloud9::EnvironmentEC2":                                         &cloud9.EnvironmentEC2{},
+		"AWS::CloudFormation::CustomResource":                                 &cloudformation.CustomResource{},
+		"AWS::CloudFormation::GuardHook":                                      &cloudformation.GuardHook{},
+		"AWS::CloudFormation::HookDefaultVersion":                             &cloudformation.HookDefaultVersion{},
+		"AWS::CloudFormation::HookTypeConfig":                                 &cloudformation.HookTypeConfig{},
+		"AWS::CloudFormation::HookVersion":                                    &cloudformation.HookVersion{},
+		"AWS::CloudFormation::LambdaHook":                                     &cloudformation.LambdaHook{},
+		"AWS::CloudFormation::Macro":                                          &cloudformation.Macro{},
+		"AWS::CloudFormation::ModuleDefaultVersion":                           &cloudformation.ModuleDefaultVersion{},
+		"AWS::CloudFormation::ModuleVersion":                                  &cloudformation.ModuleVersion{},
+		"AWS::CloudFormation::PublicTypeVersion":                              &cloudformation.PublicTypeVersion{},
+		"AWS::CloudFormation::Publisher":                                      &cloudformation.Publisher{},
+		"AWS::CloudFormation::ResourceDefaultVersion":                         &cloudformation.ResourceDefaultVersion{},
+		"AWS::CloudFormation::ResourceVersion":                                &cloudformation.ResourceVersion{},
+		"AWS::CloudFormation::Stack":                                          &cloudformation.Stack{},
+		"AWS::CloudFormation::StackSet":                                       &cloudformation.StackSet{},
+		"AWS::CloudFormation::TypeActivation":                                 &cloudformation.TypeActivation{},
+		"AWS::CloudFormation::WaitCondition":                                  &cloudformation.WaitCondition{},
+		"AWS::CloudFormation::WaitConditionHandle":                            &cloudformation.WaitConditionHandle{},
+		"AWS::CloudFront::AnycastIpList":                                      &cloudfront.AnycastIpList{},
+		"AWS::CloudFront::CachePolicy":                                        &cloudfront.CachePolicy{},
+		"AWS::CloudFront::CloudFrontOriginAccessIdentity":                     &cloudfront.CloudFrontOriginAccessIdentity{},
+		"AWS::CloudFront::ContinuousDeploymentPolicy":                         &cloudfront.ContinuousDeploymentPolicy{},
+		"AWS::CloudFront::Distribution":                                       &cloudfront.Distribution{},
+		"AWS::CloudFront::Function":                                           &cloudfront.Function{},
+		"AWS::CloudFront::KeyGroup":                                           &cloudfront.KeyGroup{},
+		"AWS::CloudFront::KeyValueStore":                                      &cloudfront.KeyValueStore{},
+		"AWS::CloudFront::MonitoringSubscription":                             &cloudfront.MonitoringSubscription{},
+		"AWS::CloudFront::OriginAccessControl":                                &cloudfront.OriginAccessControl{},
+		"AWS::CloudFront::OriginRequestPolicy":                                &cloudfront.OriginRequestPolicy{},
+		"AWS::CloudFront::PublicKey":                                          &cloudfront.PublicKey{},
+		"AWS::CloudFront::RealtimeLogConfig":                                  &cloudfront.RealtimeLogConfig{},
+		"AWS::CloudFront::ResponseHeadersPolicy":                              &cloudfront.ResponseHeadersPolicy{},
+		"AWS::CloudFront::StreamingDistribution":                              &cloudfront.StreamingDistribution{},
+		"AWS::CloudFront::VpcOrigin":                                          &cloudfront.VpcOrigin{},
+		"AWS::CloudTrail::Channel":                                            &cloudtrail.Channel{},
+		"AWS::CloudTrail::Dashboard":                                          &cloudtrail.Dashboard{},
+		"AWS::CloudTrail::EventDataStore":                                     &cloudtrail.EventDataStore{},
+		"AWS::CloudTrail::ResourcePolicy":                                     &cloudtrail.ResourcePolicy{},
+		"AWS::CloudTrail::Trail":                                              &cloudtrail.Trail{},
+		"AWS::CloudWatch::Alarm":                                              &cloudwatch.Alarm{},
+		"AWS::CloudWatch::AnomalyDetector":                                    &cloudwatch.AnomalyDetector{},
+		"AWS::CloudWatch::CompositeAlarm":                                     &cloudwatch.CompositeAlarm{},
+		"AWS::CloudWatch::Dashboard":                                          &cloudwatch.Dashboard{},
+		"AWS::CloudWatch::InsightRule":                                        &cloudwatch.InsightRule{},
+		"AWS::CloudWatch::MetricStream":                                       &cloudwatch.MetricStream{},
+		"AWS::CodeArtifact::Domain":                                           &codeartifact.Domain{},
+		"AWS::CodeArtifact::PackageGroup":                                     &codeartifact.PackageGroup{},
+		"AWS::CodeArtifact::Repository":                                       &codeartifact.Repository{},
+		"AWS::CodeBuild::Fleet":                                               &codebuild.Fleet{},
+		"AWS::CodeBuild::Project":                                             &codebuild.Project{},
+		"AWS::CodeBuild::ReportGroup":                                         &codebuild.ReportGroup{},
+		"AWS::CodeBuild::SourceCredential":                                    &codebuild.SourceCredential{},
+		"AWS::CodeCommit::Repository":                                         &codecommit.Repository{},
+		"AWS::CodeConnections::Connection":                                    &codeconnections.Connection{},
+		"AWS::CodeDeploy::Application":                                        &codedeploy.Application{},
+		"AWS::CodeDeploy::DeploymentConfig":                                   &codedeploy.DeploymentConfig{},
+		"AWS::CodeDeploy::DeploymentGroup":                                    &codedeploy.DeploymentGroup{},
+		"AWS::CodeGuruProfiler::ProfilingGroup":                               &codeguruprofiler.ProfilingGroup{},
+		"AWS::CodeGuruReviewer::RepositoryAssociation":                        &codegurureviewer.RepositoryAssociation{},
+		"AWS::CodePipeline::CustomActionType":                                 &codepipeline.CustomActionType{},
+		"AWS::CodePipeline::Pipeline":                                         &codepipeline.Pipeline{},
+		"AWS::CodePipeline::Webhook":                                          &codepipeline.Webhook{},
+		"AWS::CodeStar::GitHubRepository":                                     &codestar.GitHubRepository{},
+		"AWS::CodeStarConnections::Connection":                                &codestarconnections.Connection{},
+		"AWS::CodeStarConnections::RepositoryLink":                            &codestarconnections.RepositoryLink{},
+		"AWS::CodeStarConnections::SyncConfiguration":                         &codestarconnections.SyncConfiguration{},
+		"AWS::CodeStarNotifications::NotificationRule":                        &codestarnotifications.NotificationRule{},
+		"AWS::Cognito::IdentityPool":                                          &cognito.IdentityPool{},
+		"AWS::Cognito::IdentityPoolPrincipalTag":                              &cognito.IdentityPoolPrincipalTag{},
+		"AWS::Cognito::IdentityPoolRoleAttachment":                            &cognito.IdentityPoolRoleAttachment{},
+		"AWS::Cognito::LogDeliveryConfiguration":                              &cognito.LogDeliveryConfiguration{},
+		"AWS::Cognito::ManagedLoginBranding":                                  &cognito.ManagedLoginBranding{},
+		"AWS::Cognito::UserPool":                                              &cognito.UserPool{},
+		"AWS::Cognito::UserPoolClient":                                        &cognito.UserPoolClient{},
+		"AWS::Cognito::UserPoolDomain":                                        &cognito.UserPoolDomain{},
+		"AWS::Cognito::UserPoolGroup":                                         &cognito.UserPoolGroup{},
+		"AWS::Cognito::UserPoolIdentityProvider":                              &cognito.UserPoolIdentityProvider{},
+		"AWS::Cognito::UserPoolResourceServer":                                &cognito.UserPoolResourceServer{},
+		"AWS::Cognito::UserPoolRiskConfigurationAttachment":                   &cognito.UserPoolRiskConfigurationAttachment{},
+		"AWS::Cognito::UserPoolUICustomizationAttachment":                     &cognito.UserPoolUICustomizationAttachment{},
+		"AWS::Cognito::UserPoolUser":                                          &cognito.UserPoolUser{},
+		"AWS::Cognito::UserPoolUserToGroupAttachment":                         &cognito.UserPoolUserToGroupAttachment{},
+		"AWS::Comprehend::DocumentClassifier":                                 &comprehend.DocumentClassifier{},
+		"AWS::Comprehend::Flywheel":                                           &comprehend.Flywheel{},
+		"AWS::Config::AggregationAuthorization":                               &config.AggregationAuthorization{},
+		"AWS::Config::ConfigRule":                                             &config.ConfigRule{},
+		"AWS::Config::ConfigurationAggregator":                                &config.ConfigurationAggregator{},
+		"AWS::Config::ConfigurationRecorder":                                  &config.ConfigurationRecorder{},
+		"AWS::Config::ConformancePack":                                        &config.ConformancePack{},
+		"AWS::Config::DeliveryChannel":                                        &config.DeliveryChannel{},
+		"AWS::Config::OrganizationConfigRule":                                 &config.OrganizationConfigRule{},
+		"AWS::Config::OrganizationConformancePack":                            &config.OrganizationConformancePack{},
+		"AWS::Config::RemediationConfiguration":                               &config.RemediationConfiguration{},
+		"AWS::Config::StoredQuery":                                            &config.StoredQuery{},
+		"AWS::Connect::AgentStatus":                                           &connect.AgentStatus{},
+		"AWS::Connect::ApprovedOrigin":                                        &connect.ApprovedOrigin{},
+		"AWS::Connect::ContactFlow":                                           &connect.ContactFlow{},
+		"AWS::Connect::ContactFlowModule":                                     &connect.ContactFlowModule{},
+		"AWS::Connect::ContactFlowVersion":                                    &connect.ContactFlowVersion{},
+		"AWS::Connect::EmailAddress":                                          &connect.EmailAddress{},
+		"AWS::Connect::EvaluationForm":                                        &connect.EvaluationForm{},
+		"AWS::Connect::HoursOfOperation":                                      &connect.HoursOfOperation{},
+		"AWS::Connect::Instance":                                              &connect.Instance{},
+		"AWS::Connect::InstanceStorageConfig":                                 &connect.InstanceStorageConfig{},
+		"AWS::Connect::IntegrationAssociation":                                &connect.IntegrationAssociation{},
+		"AWS::Connect::PhoneNumber":                                           &connect.PhoneNumber{},
+		"AWS::Connect::PredefinedAttribute":                                   &connect.PredefinedAttribute{},
+		"AWS::Connect::Prompt":                                                &connect.Prompt{},
+		"AWS::Connect::Queue":                                                 &connect.Queue{},
+		"AWS::Connect::QuickConnect":                                          &connect.QuickConnect{},
+		"AWS::Connect::RoutingProfile":                                        &connect.RoutingProfile{},
+		"AWS::Connect::Rule":                                                  &connect.Rule{},
+		"AWS::Connect::SecurityKey":                                           &connect.SecurityKey{},
+		"AWS::Connect::SecurityProfile":                                       &connect.SecurityProfile{},
+		"AWS::Connect::TaskTemplate":                                          &connect.TaskTemplate{},
+		"AWS::Connect::TrafficDistributionGroup":                              &connect.TrafficDistributionGroup{},
+		"AWS::Connect::User":                                                  &connect.User{},
+		"AWS::Connect::UserHierarchyGroup":                                    &connect.UserHierarchyGroup{},
+		"AWS::Connect::UserHierarchyStructure":                                &connect.UserHierarchyStructure{},
+		"AWS::Connect::View":                                                  &connect.View{},
+		"AWS::Connect::ViewVersion":                                           &connect.ViewVersion{},
+		"AWS::ConnectCampaigns::Campaign":                                     &connectcampaigns.Campaign{},
+		"AWS::ConnectCampaignsV2::Campaign":                                   &connectcampaignsv2.Campaign{},
+		"AWS::ControlTower::EnabledBaseline":                                  &controltower.EnabledBaseline{},
+		"AWS::ControlTower::EnabledControl":                                   &controltower.EnabledControl{},
+		"AWS::ControlTower::LandingZone":                                      &controltower.LandingZone{},
+		"AWS::CustomerProfiles::CalculatedAttributeDefinition":                &customerprofiles.CalculatedAttributeDefinition{},
+		"AWS::CustomerProfiles::Domain":                                       &customerprofiles.Domain{},
+		"AWS::CustomerProfiles::EventStream":                                  &customerprofiles.EventStream{},
+		"AWS::CustomerProfiles::EventTrigger":                                 &customerprofiles.EventTrigger{},
+		"AWS::CustomerProfiles::Integration":                                  &customerprofiles.Integration{},
+		"AWS::CustomerProfiles::ObjectType":                                   &customerprofiles.ObjectType{},
+		"AWS::CustomerProfiles::SegmentDefinition":                            &customerprofiles.SegmentDefinition{},
+		"AWS::DAX::Cluster":                                                   &dax.Cluster{},
+		"AWS::DAX::ParameterGroup":                                            &dax.ParameterGroup{},
+		"AWS::DAX::SubnetGroup":                                               &dax.SubnetGroup{},
+		"AWS::DLM::LifecyclePolicy":                                           &dlm.LifecyclePolicy{},
+		"AWS::DMS::Certificate":                                               &dms.Certificate{},
+		"AWS::DMS::DataMigration":                                             &dms.DataMigration{},
+		"AWS::DMS::DataProvider":                                              &dms.DataProvider{},
+		"AWS::DMS::Endpoint":                                                  &dms.Endpoint{},
+		"AWS::DMS::EventSubscription":                                         &dms.EventSubscription{},
+		"AWS::DMS::InstanceProfile":                                           &dms.InstanceProfile{},
+		"AWS::DMS::MigrationProject":                                          &dms.MigrationProject{},
+		"AWS::DMS::ReplicationConfig":                                         &dms.ReplicationConfig{},
+		"AWS::DMS::ReplicationInstance":                                       &dms.ReplicationInstance{},
+		"AWS::DMS::ReplicationSubnetGroup":                                    &dms.ReplicationSubnetGroup{},
+		"AWS::DMS::ReplicationTask":                                           &dms.ReplicationTask{},
+		"AWS::DataBrew::Dataset":                                              &databrew.Dataset{},
+		"AWS::DataBrew::Job":                                                  &databrew.Job{},
+		"AWS::DataBrew::Project":                                              &databrew.Project{},
+		"AWS::DataBrew::Recipe":                                               &databrew.Recipe{},
+		"AWS::DataBrew::Ruleset":                                              &databrew.Ruleset{},
+		"AWS::DataBrew::Schedule":                                             &databrew.Schedule{},
+		"AWS::DataPipeline::Pipeline":                                         &datapipeline.Pipeline{},
+		"AWS::DataSync::Agent":                                                &datasync.Agent{},
+		"AWS::DataSync::LocationAzureBlob":                                    &datasync.LocationAzureBlob{},
+		"AWS::DataSync::LocationEFS":                                          &datasync.LocationEFS{},
+		"AWS::DataSync::LocationFSxLustre":                                    &datasync.LocationFSxLustre{},
+		"AWS::DataSync::LocationFSxONTAP":                                     &datasync.LocationFSxONTAP{},
+		"AWS::DataSync::LocationFSxOpenZFS":                                   &datasync.LocationFSxOpenZFS{},
+		"AWS::DataSync::LocationFSxWindows":                                   &datasync.LocationFSxWindows{},
+		"AWS::DataSync::LocationHDFS":                                         &datasync.LocationHDFS{},
+		"AWS::DataSync::LocationNFS":                                          &datasync.LocationNFS{},
+		"AWS::DataSync::LocationObjectStorage":                                &datasync.LocationObjectStorage{},
+		"AWS::DataSync::LocationS3":                                           &datasync.LocationS3{},
+		"AWS::DataSync::LocationSMB":                                          &datasync.LocationSMB{},
+		"AWS::DataSync::StorageSystem":                                        &datasync.StorageSystem{},
+		"AWS::DataSync::Task":                                                 &datasync.Task{},
+		"AWS::DataZone::DataSource":                                           &datazone.DataSource{},
+		"AWS::DataZone::Domain":                                               &datazone.Domain{},
+		"AWS::DataZone::Environment":                                          &datazone.Environment{},
+		"AWS::DataZone::EnvironmentActions":                                   &datazone.EnvironmentActions{},
+		"AWS::DataZone::EnvironmentBlueprintConfiguration":                    &datazone.EnvironmentBlueprintConfiguration{},
+		"AWS::DataZone::EnvironmentProfile":                                   &datazone.EnvironmentProfile{},
+		"AWS::DataZone::GroupProfile":                                         &datazone.GroupProfile{},
+		"AWS::DataZone::Project":                                              &datazone.Project{},
+		"AWS::DataZone::ProjectMembership":                                    &datazone.ProjectMembership{},
+		"AWS::DataZone::SubscriptionTarget":                                   &datazone.SubscriptionTarget{},
+		"AWS::DataZone::UserProfile":                                          &datazone.UserProfile{},
+		"AWS::Deadline::Farm":                                                 &deadline.Farm{},
+		"AWS::Deadline::Fleet":                                                &deadline.Fleet{},
+		"AWS::Deadline::LicenseEndpoint":                                      &deadline.LicenseEndpoint{},
+		"AWS::Deadline::Limit":                                                &deadline.Limit{},
+		"AWS::Deadline::MeteredProduct":                                       &deadline.MeteredProduct{},
+		"AWS::Deadline::Monitor":                                              &deadline.Monitor{},
+		"AWS::Deadline::Queue":                                                &deadline.Queue{},
+		"AWS::Deadline::QueueEnvironment":                                     &deadline.QueueEnvironment{},
+		"AWS::Deadline::QueueFleetAssociation":                                &deadline.QueueFleetAssociation{},
+		"AWS::Deadline::QueueLimitAssociation":                                &deadline.QueueLimitAssociation{},
+		"AWS::Deadline::StorageProfile":                                       &deadline.StorageProfile{},
+		"AWS::Detective::Graph":                                               &detective.Graph{},
+		"AWS::Detective::MemberInvitation":                                    &detective.MemberInvitation{},
+		"AWS::Detective::OrganizationAdmin":                                   &detective.OrganizationAdmin{},
+		"AWS::DevOpsGuru::LogAnomalyDetectionIntegration":                     &devopsguru.LogAnomalyDetectionIntegration{},
+		"AWS::DevOpsGuru::NotificationChannel":                                &devopsguru.NotificationChannel{},
+		"AWS::DevOpsGuru::ResourceCollection":                                 &devopsguru.ResourceCollection{},
+		"AWS::DirectoryService::MicrosoftAD":                                  &directoryservice.MicrosoftAD{},
+		"AWS::DirectoryService::SimpleAD":                                     &directoryservice.SimpleAD{},
+		"AWS::DocDB::DBCluster":                                               &docdb.DBCluster{},
+		"AWS::DocDB::DBClusterParameterGroup":                                 &docdb.DBClusterParameterGroup{},
+		"AWS::DocDB::DBInstance":                                              &docdb.DBInstance{},
+		"AWS::DocDB::DBSubnetGroup":                                           &docdb.DBSubnetGroup{},
+		"AWS::DocDB::EventSubscription":                                       &docdb.EventSubscription{},
+		"AWS::DocDBElastic::Cluster":                                          &docdbelastic.Cluster{},
+		"AWS::DynamoDB::GlobalTable":                                          &dynamodb.GlobalTable{},
+		"AWS::DynamoDB::Table":                                                &dynamodb.Table{},
+		"AWS::EC2::CapacityReservation":                                       &ec2.CapacityReservation{},
+		"AWS::EC2::CapacityReservationFleet":                                  &ec2.CapacityReservationFleet{},
+		"AWS::EC2::CarrierGateway":                                            &ec2.CarrierGateway{},
+		"AWS::EC2::ClientVpnAuthorizationRule":                                &ec2.ClientVpnAuthorizationRule{},
+		"AWS::EC2::ClientVpnEndpoint":                                         &ec2.ClientVpnEndpoint{},
+		"AWS::EC2::ClientVpnRoute":                                            &ec2.ClientVpnRoute{},
+		"AWS::EC2::ClientVpnTargetNetworkAssociation":                         &ec2.ClientVpnTargetNetworkAssociation{},
+		"AWS::EC2::CustomerGateway":                                           &ec2.CustomerGateway{},
+		"AWS::EC2::DHCPOptions":                                               &ec2.DHCPOptions{},
+		"AWS::EC2::EC2Fleet":                                                  &ec2.EC2Fleet{},
+		"AWS::EC2::EIP":                                                       &ec2.EIP{},
+		"AWS::EC2::EIPAssociation":                                            &ec2.EIPAssociation{},
+		"AWS::EC2::EgressOnlyInternetGateway":                                 &ec2.EgressOnlyInternetGateway{},
+		"AWS::EC2::EnclaveCertificateIamRoleAssociation":                      &ec2.EnclaveCertificateIamRoleAssociation{},
+		"AWS::EC2::FlowLog":                                                   &ec2.FlowLog{},
+		"AWS::EC2::GatewayRouteTableAssociation":                              &ec2.GatewayRouteTableAssociation{},
+		"AWS::EC2::Host":                                                      &ec2.Host{},
+		"AWS::EC2::IPAM":                                                      &ec2.IPAM{},
+		"AWS::EC2::IPAMAllocation":                                            &ec2.IPAMAllocation{},
+		"AWS::EC2::IPAMPool":                                                  &ec2.IPAMPool{},
+		"AWS::EC2::IPAMPoolCidr":                                              &ec2.IPAMPoolCidr{},
+		"AWS::EC2::IPAMResourceDiscovery":                                     &ec2.IPAMResourceDiscovery{},
+		"AWS::EC2::IPAMResourceDiscoveryAssociation":                          &ec2.IPAMResourceDiscoveryAssociation{},
+		"AWS::EC2::IPAMScope":                                                 &ec2.IPAMScope{},
+		"AWS::EC2::Instance":                                                  &ec2.Instance{},
+		"AWS::EC2::InstanceConnectEndpoint":                                   &ec2.InstanceConnectEndpoint{},
+		"AWS::EC2::InternetGateway":                                           &ec2.InternetGateway{},
+		"AWS::EC2::KeyPair":                                                   &ec2.KeyPair{},
+		"AWS::EC2::LaunchTemplate":                                            &ec2.LaunchTemplate{},
+		"AWS::EC2::LocalGatewayRoute":                                         &ec2.LocalGatewayRoute{},
+		"AWS::EC2::LocalGatewayRouteTable":                                    &ec2.LocalGatewayRouteTable{},
+		"AWS::EC2::LocalGatewayRouteTableVPCAssociation":                      &ec2.LocalGatewayRouteTableVPCAssociation{},
+		"AWS::EC2::LocalGatewayRouteTableVirtualInterfaceGroupAssociation":    &ec2.LocalGatewayRouteTableVirtualInterfaceGroupAssociation{},
+		"AWS::EC2::NatGateway":                                                &ec2.NatGateway{},
+		"AWS::EC2::NetworkAcl":                                                &ec2.NetworkAcl{},
+		"AWS::EC2::NetworkAclEntry":                                           &ec2.NetworkAclEntry{},
+		"AWS::EC2::NetworkInsightsAccessScope":                                &ec2.NetworkInsightsAccessScope{},
+		"AWS::EC2::NetworkInsightsAccessScopeAnalysis":                        &ec2.NetworkInsightsAccessScopeAnalysis{},
+		"AWS::EC2::NetworkInsightsAnalysis":                                   &ec2.NetworkInsightsAnalysis{},
+		"AWS::EC2::NetworkInsightsPath":                                       &ec2.NetworkInsightsPath{},
+		"AWS::EC2::NetworkInterface":                                          &ec2.NetworkInterface{},
+		"AWS::EC2::NetworkInterfaceAttachment":                                &ec2.NetworkInterfaceAttachment{},
+		"AWS::EC2::NetworkInterfacePermission":                                &ec2.NetworkInterfacePermission{},
+		"AWS::EC2::NetworkPerformanceMetricSubscription":                      &ec2.NetworkPerformanceMetricSubscription{},
+		"AWS::EC2::PlacementGroup":                                            &ec2.PlacementGroup{},
+		"AWS::EC2::PrefixList":                                                &ec2.PrefixList{},
+		"AWS::EC2::Route":                                                     &ec2.Route{},
+		"AWS::EC2::RouteTable":                                                &ec2.RouteTable{},
+		"AWS::EC2::SecurityGroup":                                             &ec2.SecurityGroup{},
+		"AWS::EC2::SecurityGroupEgress":                                       &ec2.SecurityGroupEgress{},
+		"AWS::EC2::SecurityGroupIngress":                                      &ec2.SecurityGroupIngress{},
+		"AWS::EC2::SecurityGroupVpcAssociation":                               &ec2.SecurityGroupVpcAssociation{},
+		"AWS::EC2::SnapshotBlockPublicAccess":                                 &ec2.SnapshotBlockPublicAccess{},
+		"AWS::EC2::SpotFleet":                                                 &ec2.SpotFleet{},
+		"AWS::EC2::Subnet":                                                    &ec2.Subnet{},
+		"AWS::EC2::SubnetCidrBlock":                                           &ec2.SubnetCidrBlock{},
+		"AWS::EC2::SubnetNetworkAclAssociation":                               &ec2.SubnetNetworkAclAssociation{},
+		"AWS::EC2::SubnetRouteTableAssociation":                               &ec2.SubnetRouteTableAssociation{},
+		"AWS::EC2::TrafficMirrorFilter":                                       &ec2.TrafficMirrorFilter{},
+		"AWS::EC2::TrafficMirrorFilterRule":                                   &ec2.TrafficMirrorFilterRule{},
+		"AWS::EC2::TrafficMirrorSession":                                      &ec2.TrafficMirrorSession{},
+		"AWS::EC2::TrafficMirrorTarget":                                       &ec2.TrafficMirrorTarget{},
+		"AWS::EC2::TransitGateway":                                            &ec2.TransitGateway{},
+		"AWS::EC2::TransitGatewayAttachment":                                  &ec2.TransitGatewayAttachment{},
+		"AWS::EC2::TransitGatewayConnect":                                     &ec2.TransitGatewayConnect{},
+		"AWS::EC2::TransitGatewayMulticastDomain":                             &ec2.TransitGatewayMulticastDomain{},
+		"AWS::EC2::TransitGatewayMulticastDomainAssociation":                  &ec2.TransitGatewayMulticastDomainAssociation{},
+		"AWS::EC2::TransitGatewayMulticastGroupMember":                        &ec2.TransitGatewayMulticastGroupMember{},
+		"AWS::EC2::TransitGatewayMulticastGroupSource":                        &ec2.TransitGatewayMulticastGroupSource{},
+		"AWS::EC2::TransitGatewayPeeringAttachment":                           &ec2.TransitGatewayPeeringAttachment{},
+		"AWS::EC2::TransitGatewayRoute":                                       &ec2.TransitGatewayRoute{},
+		"AWS::EC2::TransitGatewayRouteTable":                                  &ec2.TransitGatewayRouteTable{},
+		"AWS::EC2::TransitGatewayRouteTableAssociation":                       &ec2.TransitGatewayRouteTableAssociation{},
+		"AWS::EC2::TransitGatewayRouteTablePropagation":                       &ec2.TransitGatewayRouteTablePropagation{},
+		"AWS::EC2::TransitGatewayVpcAttachment":                               &ec2.TransitGatewayVpcAttachment{},
+		"AWS::EC2::VPC":                                                       &ec2.VPC{},
+		"AWS::EC2::VPCBlockPublicAccessExclusion":                             &ec2.VPCBlockPublicAccessExclusion{},
+		"AWS::EC2::VPCBlockPublicAccessOptions":                               &ec2.VPCBlockPublicAccessOptions{},
+		"AWS::EC2::VPCCidrBlock":                                              &ec2.VPCCidrBlock{},
+		"AWS::EC2::VPCDHCPOptionsAssociation":                                 &ec2.VPCDHCPOptionsAssociation{},
+		"AWS::EC2::VPCEndpoint":                                               &ec2.VPCEndpoint{},
+		"AWS::EC2::VPCEndpointConnectionNotification":                         &ec2.VPCEndpointConnectionNotification{},
+		"AWS::EC2::VPCEndpointService":                                        &ec2.VPCEndpointService{},
+		"AWS::EC2::VPCEndpointServicePermissions":                             &ec2.VPCEndpointServicePermissions{},
+		"AWS::EC2::VPCGatewayAttachment":                                      &ec2.VPCGatewayAttachment{},
+		"AWS::EC2::VPCPeeringConnection":                                      &ec2.VPCPeeringConnection{},
+		"AWS::EC2::VPNConnection":                                             &ec2.VPNConnection{},
+		"AWS::EC2::VPNConnectionRoute":                                        &ec2.VPNConnectionRoute{},
+		"AWS::EC2::VPNGateway":                                                &ec2.VPNGateway{},
+		"AWS::EC2::VPNGatewayRoutePropagation":                                &ec2.VPNGatewayRoutePropagation{},
+		"AWS::EC2::VerifiedAccessEndpoint":                                    &ec2.VerifiedAccessEndpoint{},
+		"AWS::EC2::VerifiedAccessGroup":                                       &ec2.VerifiedAccessGroup{},
+		"AWS::EC2::VerifiedAccessInstance":                                    &ec2.VerifiedAccessInstance{},
+		"AWS::EC2::VerifiedAccessTrustProvider":                               &ec2.VerifiedAccessTrustProvider{},
+		"AWS::EC2::Volume":                                                    &ec2.Volume{},
+		"AWS::EC2::VolumeAttachment":                                          &ec2.VolumeAttachment{},
+		"AWS::ECR::PublicRepository":                                          &ecr.PublicRepository{},
+		"AWS::ECR::PullThroughCacheRule":                                      &ecr.PullThroughCacheRule{},
+		"AWS::ECR::RegistryPolicy":                                            &ecr.RegistryPolicy{},
+		"AWS::ECR::ReplicationConfiguration":                                  &ecr.ReplicationConfiguration{},
+		"AWS::ECR::Repository":                                                &ecr.Repository{},
+		"AWS::ECR::RepositoryCreationTemplate":                                &ecr.RepositoryCreationTemplate{},
+		"AWS::ECS::CapacityProvider":                                          &ecs.CapacityProvider{},
+		"AWS::ECS::Cluster":                                                   &ecs.Cluster{},
+		"AWS::ECS::ClusterCapacityProviderAssociations":                       &ecs.ClusterCapacityProviderAssociations{},
+		"AWS::ECS::PrimaryTaskSet":                                            &ecs.PrimaryTaskSet{},
+		"AWS::ECS::Service":                                                   &ecs.Service{},
+		"AWS::ECS::TaskDefinition":                                            &ecs.TaskDefinition{},
+		"AWS::ECS::TaskSet":                                                   &ecs.TaskSet{},
+		"AWS::EFS::AccessPoint":                                               &efs.AccessPoint{},
+		"AWS::EFS::FileSystem":                                                &efs.FileSystem{},
+		"AWS::EFS::MountTarget":                                               &efs.MountTarget{},
+		"AWS::EKS::AccessEntry":                                               &eks.AccessEntry{},
+		"AWS::EKS::Addon":                                                     &eks.Addon{},
+		"AWS::EKS::Cluster":                                                   &eks.Cluster{},
+		"AWS::EKS::FargateProfile":                                            &eks.FargateProfile{},
+		"AWS::EKS::IdentityProviderConfig":                                    &eks.IdentityProviderConfig{},
+		"AWS::EKS::Nodegroup":                                                 &eks.Nodegroup{},
+		"AWS::EKS::PodIdentityAssociation":                                    &eks.PodIdentityAssociation{},
+		"AWS::EMR::Cluster":                                                   &emr.Cluster{},
+		"AWS::EMR::InstanceFleetConfig":                                       &emr.InstanceFleetConfig{},
+		"AWS::EMR::InstanceGroupConfig":                                       &emr.InstanceGroupConfig{},
+		"AWS::EMR::SecurityConfiguration":                                     &emr.SecurityConfiguration{},
+		"AWS::EMR::Step":                                                      &emr.Step{},
+		"AWS::EMR::Studio":                                                    &emr.Studio{},
+		"AWS::EMR::StudioSessionMapping":                                      &emr.StudioSessionMapping{},
+		"AWS::EMR::WALWorkspace":                                              &emr.WALWorkspace{},
+		"AWS::EMRContainers::VirtualCluster":                                  &emrcontainers.VirtualCluster{},
+		"AWS::EMRServerless::Application":                                     &emrserverless.Application{},
+		"AWS::ElastiCache::CacheCluster":                                      &elasticache.CacheCluster{},
+		"AWS::ElastiCache::GlobalReplicationGroup":                            &elasticache.GlobalReplicationGroup{},
+		"AWS::ElastiCache::ParameterGroup":                                    &elasticache.ParameterGroup{},
+		"AWS::ElastiCache::ReplicationGroup":                                  &elasticache.ReplicationGroup{},
+		"AWS::ElastiCache::SecurityGroup":                                     &elasticache.SecurityGroup{},
+		"AWS::ElastiCache::SecurityGroupIngress":                              &elasticache.SecurityGroupIngress{},
+		"AWS::ElastiCache::ServerlessCache":                                   &elasticache.ServerlessCache{},
+		"AWS::ElastiCache::SubnetGroup":                                       &elasticache.SubnetGroup{},
+		"AWS::ElastiCache::User":                                              &elasticache.User{},
+		"AWS::ElastiCache::UserGroup":                                         &elasticache.UserGroup{},
+		"AWS::ElasticBeanstalk::Application":                                  &elasticbeanstalk.Application{},
+		"AWS::ElasticBeanstalk::ApplicationVersion":                           &elasticbeanstalk.ApplicationVersion{},
+		"AWS::ElasticBeanstalk::ConfigurationTemplate":                        &elasticbeanstalk.ConfigurationTemplate{},
+		"AWS::ElasticBeanstalk::Environment":                                  &elasticbeanstalk.Environment{},
+		"AWS::ElasticLoadBalancing::LoadBalancer":                             &elasticloadbalancing.LoadBalancer{},
+		"AWS::ElasticLoadBalancingV2::Listener":                               &elasticloadbalancingv2.Listener{},
+		"AWS::ElasticLoadBalancingV2::ListenerCertificate":                    &elasticloadbalancingv2.ListenerCertificate{},
+		"AWS::ElasticLoadBalancingV2::ListenerRule":                           &elasticloadbalancingv2.ListenerRule{},
+		"AWS::ElasticLoadBalancingV2::LoadBalancer":                           &elasticloadbalancingv2.LoadBalancer{},
+		"AWS::ElasticLoadBalancingV2::TargetGroup":                            &elasticloadbalancingv2.TargetGroup{},
+		"AWS::ElasticLoadBalancingV2::TrustStore":                             &elasticloadbalancingv2.TrustStore{},
+		"AWS::ElasticLoadBalancingV2::TrustStoreRevocation":                   &elasticloadbalancingv2.TrustStoreRevocation{},
+		"AWS::Elasticsearch::Domain":                                          &elasticsearch.Domain{},
+		"AWS::EntityResolution::IdMappingWorkflow":                            &entityresolution.IdMappingWorkflow{},
+		"AWS::EntityResolution::IdNamespace":                                  &entityresolution.IdNamespace{},
+		"AWS::EntityResolution::MatchingWorkflow":                             &entityresolution.MatchingWorkflow{},
+		"AWS::EntityResolution::PolicyStatement":                              &entityresolution.PolicyStatement{},
+		"AWS::EntityResolution::SchemaMapping":                                &entityresolution.SchemaMapping{},
+		"AWS::EventSchemas::Discoverer":                                       &eventschemas.Discoverer{},
+		"AWS::EventSchemas::Registry":                                         &eventschemas.Registry{},
+		"AWS::EventSchemas::RegistryPolicy":                                   &eventschemas.RegistryPolicy{},
+		"AWS::EventSchemas::Schema":                                           &eventschemas.Schema{},
+		"AWS::Events::ApiDestination":                                         &events.ApiDestination{},
+		"AWS::Events::Archive":                                                &events.Archive{},
+		"AWS::Events::Connection":                                             &events.Connection{},
+		"AWS::Events::Endpoint":                                               &events.Endpoint{},
+		"AWS::Events::EventBus":                                               &events.EventBus{},
+		"AWS::Events::EventBusPolicy":                                         &events.EventBusPolicy{},
+		"AWS::Events::Rule":                                                   &events.Rule{},
+		"AWS::Evidently::Experiment":                                          &evidently.Experiment{},
+		"AWS::Evidently::Feature":                                             &evidently.Feature{},
+		"AWS::Evidently::Launch":                                              &evidently.Launch{},
+		"AWS::Evidently::Project":                                             &evidently.Project{},
+		"AWS::Evidently::Segment":                                             &evidently.Segment{},
+		"AWS::FIS::ExperimentTemplate":                                        &fis.ExperimentTemplate{},
+		"AWS::FIS::TargetAccountConfiguration":                                &fis.TargetAccountConfiguration{},
+		"AWS::FMS::NotificationChannel":                                       &fms.NotificationChannel{},
+		"AWS::FMS::Policy":                                                    &fms.Policy{},
+		"AWS::FMS::ResourceSet":                                               &fms.ResourceSet{},
+		"AWS::FSx::DataRepositoryAssociation":                                 &fsx.DataRepositoryAssociation{},
+		"AWS::FSx::FileSystem":                                                &fsx.FileSystem{},
+		"AWS::FSx::Snapshot":                                                  &fsx.Snapshot{},
+		"AWS::FSx::StorageVirtualMachine":                                     &fsx.StorageVirtualMachine{},
+		"AWS::FSx::Volume":                                                    &fsx.Volume{},
+		"AWS::FinSpace::Environment":                                          &finspace.Environment{},
+		"AWS::Forecast::Dataset":                                              &forecast.Dataset{},
+		"AWS::Forecast::DatasetGroup":                                         &forecast.DatasetGroup{},
+		"AWS::FraudDetector::Detector":                                        &frauddetector.Detector{},
+		"AWS::FraudDetector::EntityType":                                      &frauddetector.EntityType{},
+		"AWS::FraudDetector::EventType":                                       &frauddetector.EventType{},
+		"AWS::FraudDetector::Label":                                           &frauddetector.Label{},
+		"AWS::FraudDetector::List":                                            &frauddetector.List{},
+		"AWS::FraudDetector::Outcome":                                         &frauddetector.Outcome{},
+		"AWS::FraudDetector::Variable":                                        &frauddetector.Variable{},
+		"AWS::GameLift::Alias":                                                &gamelift.Alias{},
+		"AWS::GameLift::Build":                                                &gamelift.Build{},
+		"AWS::GameLift::ContainerFleet":                                       &gamelift.ContainerFleet{},
+		"AWS::GameLift::ContainerGroupDefinition":                             &gamelift.ContainerGroupDefinition{},
+		"AWS::GameLift::Fleet":                                                &gamelift.Fleet{},
+		"AWS::GameLift::GameServerGroup":                                      &gamelift.GameServerGroup{},
+		"AWS::GameLift::GameSessionQueue":                                     &gamelift.GameSessionQueue{},
+		"AWS::GameLift::Location":                                             &gamelift.Location{},
+		"AWS::GameLift::MatchmakingConfiguration":                             &gamelift.MatchmakingConfiguration{},
+		"AWS::GameLift::MatchmakingRuleSet":                                   &gamelift.MatchmakingRuleSet{},
+		"AWS::GameLift::Script":                                               &gamelift.Script{},
+		"AWS::GlobalAccelerator::Accelerator":                                 &globalaccelerator.Accelerator{},
+		"AWS::GlobalAccelerator::CrossAccountAttachment":                      &globalaccelerator.CrossAccountAttachment{},
+		"AWS::GlobalAccelerator::EndpointGroup":                               &globalaccelerator.EndpointGroup{},
+		"AWS::GlobalAccelerator::Listener":                                    &globalaccelerator.Listener{},
+		"AWS::Glue::Classifier":                                               &glue.Classifier{},
+		"AWS::Glue::Connection":                                               &glue.Connection{},
+		"AWS::Glue::Crawler":                                                  &glue.Crawler{},
+		"AWS::Glue::CustomEntityType":                                         &glue.CustomEntityType{},
+		"AWS::Glue::DataCatalogEncryptionSettings":                            &glue.DataCatalogEncryptionSettings{},
+		"AWS::Glue::DataQualityRuleset":                                       &glue.DataQualityRuleset{},
+		"AWS::Glue::Database":                                                 &glue.Database{},
+		"AWS::Glue::DevEndpoint":                                              &glue.DevEndpoint{},
+		"AWS::Glue::Job":                                                      &glue.Job{},
+		"AWS::Glue::MLTransform":                                              &glue.MLTransform{},
+		"AWS::Glue::Partition":                                                &glue.Partition{},
+		"AWS::Glue::Registry":                                                 &glue.Registry{},
+		"AWS::Glue::Schema":                                                   &glue.Schema{},
+		"AWS::Glue::SchemaVersion":                                            &glue.SchemaVersion{},
+		"AWS::Glue::SchemaVersionMetadata":                                    &glue.SchemaVersionMetadata{},
+		"AWS::Glue::SecurityConfiguration":                                    &glue.SecurityConfiguration{},
+		"AWS::Glue::Table":                                                    &glue.Table{},
+		"AWS::Glue::TableOptimizer":                                           &glue.TableOptimizer{},
+		"AWS::Glue::Trigger":                                                  &glue.Trigger{},
+		"AWS::Glue::UsageProfile":                                             &glue.UsageProfile{},
+		"AWS::Glue::Workflow":                                                 &glue.Workflow{},
+		"AWS::Grafana::Workspace":                                             &grafana.Workspace{},
+		"AWS::Greengrass::ConnectorDefinition":                                &greengrass.ConnectorDefinition{},
+		"AWS::Greengrass::ConnectorDefinitionVersion":                         &greengrass.ConnectorDefinitionVersion{},
+		"AWS::Greengrass::CoreDefinition":                                     &greengrass.CoreDefinition{},
+		"AWS::Greengrass::CoreDefinitionVersion":                              &greengrass.CoreDefinitionVersion{},
+		"AWS::Greengrass::DeviceDefinition":                                   &greengrass.DeviceDefinition{},
+		"AWS::Greengrass::DeviceDefinitionVersion":                            &greengrass.DeviceDefinitionVersion{},
+		"AWS::Greengrass::FunctionDefinition":                                 &greengrass.FunctionDefinition{},
+		"AWS::Greengrass::FunctionDefinitionVersion":                          &greengrass.FunctionDefinitionVersion{},
+		"AWS::Greengrass::Group":                                              &greengrass.Group{},
+		"AWS::Greengrass::GroupVersion":                                       &greengrass.GroupVersion{},
+		"AWS::Greengrass::LoggerDefinition":                                   &greengrass.LoggerDefinition{},
+		"AWS::Greengrass::LoggerDefinitionVersion":                            &greengrass.LoggerDefinitionVersion{},
+		"AWS::Greengrass::ResourceDefinition":                                 &greengrass.ResourceDefinition{},
+		"AWS::Greengrass::ResourceDefinitionVersion":                          &greengrass.ResourceDefinitionVersion{},
+		"AWS::Greengrass::SubscriptionDefinition":                             &greengrass.SubscriptionDefinition{},
+		"AWS::Greengrass::SubscriptionDefinitionVersion":                      &greengrass.SubscriptionDefinitionVersion{},
+		"AWS::GreengrassV2::ComponentVersion":                                 &greengrassv2.ComponentVersion{},
+		"AWS::GreengrassV2::Deployment":                                       &greengrassv2.Deployment{},
+		"AWS::GroundStation::Config":                                          &groundstation.Config{},
+		"AWS::GroundStation::DataflowEndpointGroup":                           &groundstation.DataflowEndpointGroup{},
+		"AWS::GroundStation::MissionProfile":                                  &groundstation.MissionProfile{},
+		"AWS::GuardDuty::Detector":                                            &guardduty.Detector{},
+		"AWS::GuardDuty::Filter":                                              &guardduty.Filter{},
+		"AWS::GuardDuty::IPSet":                                               &guardduty.IPSet{},
+		"AWS::GuardDuty::MalwareProtectionPlan":                               &guardduty.MalwareProtectionPlan{},
+		"AWS::GuardDuty::Master":                                              &guardduty.Master{},
+		"AWS::GuardDuty::Member":                                              &guardduty.Member{},
+		"AWS::GuardDuty::ThreatIntelSet":                                      &guardduty.ThreatIntelSet{},
+		"AWS::HealthImaging::Datastore":                                       &healthimaging.Datastore{},
+		"AWS::HealthLake::FHIRDatastore":                                      &healthlake.FHIRDatastore{},
+		"AWS::IAM::AccessKey":                                                 &iam.AccessKey{},
+		"AWS::IAM::Group":                                                     &iam.Group{},
+		"AWS::IAM::GroupPolicy":                                               &iam.GroupPolicy{},
+		"AWS::IAM::InstanceProfile":                                           &iam.InstanceProfile{},
+		"AWS::IAM::ManagedPolicy":                                             &iam.ManagedPolicy{},
+		"AWS::IAM::OIDCProvider":                                              &iam.OIDCProvider{},
+		"AWS::IAM::Policy":                                                    &iam.Policy{},
+		"AWS::IAM::Role":                                                      &iam.Role{},
+		"AWS::IAM::RolePolicy":                                                &iam.RolePolicy{},
+		"AWS::IAM::SAMLProvider":                                              &iam.SAMLProvider{},
+		"AWS::IAM::ServerCertificate":                                         &iam.ServerCertificate{},
+		"AWS::IAM::ServiceLinkedRole":                                         &iam.ServiceLinkedRole{},
+		"AWS::IAM::User":                                                      &iam.User{},
+		"AWS::IAM::UserPolicy":                                                &iam.UserPolicy{},
+		"AWS::IAM::UserToGroupAddition":                                       &iam.UserToGroupAddition{},
+		"AWS::IAM::VirtualMFADevice":                                          &iam.VirtualMFADevice{},
+		"AWS::IVS::Channel":                                                   &ivs.Channel{},
+		"AWS::IVS::EncoderConfiguration":                                      &ivs.EncoderConfiguration{},
+		"AWS::IVS::IngestConfiguration":                                       &ivs.IngestConfiguration{},
+		"AWS::IVS::PlaybackKeyPair":                                           &ivs.PlaybackKeyPair{},
+		"AWS::IVS::PlaybackRestrictionPolicy":                                 &ivs.PlaybackRestrictionPolicy{},
+		"AWS::IVS::PublicKey":                                                 &ivs.PublicKey{},
+		"AWS::IVS::RecordingConfiguration":                                    &ivs.RecordingConfiguration{},
+		"AWS::IVS::Stage":                                                     &ivs.Stage{},
+		"AWS::IVS::StorageConfiguration":                                      &ivs.StorageConfiguration{},
+		"AWS::IVS::StreamKey":                                                 &ivs.StreamKey{},
+		"AWS::IVSChat::LoggingConfiguration":                                  &ivschat.LoggingConfiguration{},
+		"AWS::IVSChat::Room":                                                  &ivschat.Room{},
+		"AWS::IdentityStore::Group":                                           &identitystore.Group{},
+		"AWS::IdentityStore::GroupMembership":                                 &identitystore.GroupMembership{},
+		"AWS::ImageBuilder::Component":                                        &imagebuilder.Component{},
+		"AWS::ImageBuilder::ContainerRecipe":                                  &imagebuilder.ContainerRecipe{},
+		"AWS::ImageBuilder::DistributionConfiguration":                        &imagebuilder.DistributionConfiguration{},
+		"AWS::ImageBuilder::Image":                                            &imagebuilder.Image{},
+		"AWS::ImageBuilder::ImagePipeline":                                    &imagebuilder.ImagePipeline{},
+		"AWS::ImageBuilder::ImageRecipe":                                      &imagebuilder.ImageRecipe{},
+		"AWS::ImageBuilder::InfrastructureConfiguration":                      &imagebuilder.InfrastructureConfiguration{},
+		"AWS::ImageBuilder::LifecyclePolicy":                                  &imagebuilder.LifecyclePolicy{},
+		"AWS::ImageBuilder::Workflow":                                         &imagebuilder.Workflow{},
+		"AWS::Inspector::AssessmentTarget":                                    &inspector.AssessmentTarget{},
+		"AWS::Inspector::AssessmentTemplate":                                  &inspector.AssessmentTemplate{},
+		"AWS::Inspector::ResourceGroup":                                       &inspector.ResourceGroup{},
+		"AWS::InspectorV2::CisScanConfiguration":                              &inspectorv2.CisScanConfiguration{},
+		"AWS::InspectorV2::Filter":                                            &inspectorv2.Filter{},
+		"AWS::InternetMonitor::Monitor":                                       &internetmonitor.Monitor{},
+		"AWS::Invoicing::InvoiceUnit":                                         &invoicing.InvoiceUnit{},
+		"AWS::IoT::AccountAuditConfiguration":                                 &iot.AccountAuditConfiguration{},
+		"AWS::IoT::Authorizer":                                                &iot.Authorizer{},
+		"AWS::IoT::BillingGroup":                                              &iot.BillingGroup{},
+		"AWS::IoT::CACertificate":                                             &iot.CACertificate{},
+		"AWS::IoT::Certificate":                                               &iot.Certificate{},
+		"AWS::IoT::CertificateProvider":                                       &iot.CertificateProvider{},
+		"AWS::IoT::Command":                                                   &iot.Command{},
+		"AWS::IoT::CustomMetric":                                              &iot.CustomMetric{},
+		"AWS::IoT::Dimension":                                                 &iot.Dimension{},
+		"AWS::IoT::DomainConfiguration":                                       &iot.DomainConfiguration{},
+		"AWS::IoT::FleetMetric":                                               &iot.FleetMetric{},
+		"AWS::IoT::JobTemplate":                                               &iot.JobTemplate{},
+		"AWS::IoT::Logging":                                                   &iot.Logging{},
+		"AWS::IoT::MitigationAction":                                          &iot.MitigationAction{},
+		"AWS::IoT::Policy":                                                    &iot.Policy{},
+		"AWS::IoT::PolicyPrincipalAttachment":                                 &iot.PolicyPrincipalAttachment{},
+		"AWS::IoT::ProvisioningTemplate":                                      &iot.ProvisioningTemplate{},
+		"AWS::IoT::ResourceSpecificLogging":                                   &iot.ResourceSpecificLogging{},
+		"AWS::IoT::RoleAlias":                                                 &iot.RoleAlias{},
+		"AWS::IoT::ScheduledAudit":                                            &iot.ScheduledAudit{},
+		"AWS::IoT::SecurityProfile":                                           &iot.SecurityProfile{},
+		"AWS::IoT::SoftwarePackage":                                           &iot.SoftwarePackage{},
+		"AWS::IoT::SoftwarePackageVersion":                                    &iot.SoftwarePackageVersion{},
+		"AWS::IoT::Thing":                                                     &iot.Thing{},
+		"AWS::IoT::ThingGroup":                                                &iot.ThingGroup{},
+		"AWS::IoT::ThingPrincipalAttachment":                                  &iot.ThingPrincipalAttachment{},
+		"AWS::IoT::ThingType":                                                 &iot.ThingType{},
+		"AWS::IoT::TopicRule":                                                 &iot.TopicRule{},
+		"AWS::IoT::TopicRuleDestination":                                      &iot.TopicRuleDestination{},
+		"AWS::IoTAnalytics::Channel":                                          &iotanalytics.Channel{},
+		"AWS::IoTAnalytics::Dataset":                                          &iotanalytics.Dataset{},
+		"AWS::IoTAnalytics::Datastore":                                        &iotanalytics.Datastore{},
+		"AWS::IoTAnalytics::Pipeline":                                         &iotanalytics.Pipeline{},
+		"AWS::IoTCoreDeviceAdvisor::SuiteDefinition":                          &iotcoredeviceadvisor.SuiteDefinition{},
+		"AWS::IoTEvents::AlarmModel":                                          &iotevents.AlarmModel{},
+		"AWS::IoTEvents::DetectorModel":                                       &iotevents.DetectorModel{},
+		"AWS::IoTEvents::Input":                                               &iotevents.Input{},
+		"AWS::IoTFleetHub::Application":                                       &iotfleethub.Application{},
+		"AWS::IoTFleetWise::Campaign":                                         &iotfleetwise.Campaign{},
+		"AWS::IoTFleetWise::DecoderManifest":                                  &iotfleetwise.DecoderManifest{},
+		"AWS::IoTFleetWise::Fleet":                                            &iotfleetwise.Fleet{},
+		"AWS::IoTFleetWise::ModelManifest":                                    &iotfleetwise.ModelManifest{},
+		"AWS::IoTFleetWise::SignalCatalog":                                    &iotfleetwise.SignalCatalog{},
+		"AWS::IoTFleetWise::StateTemplate":                                    &iotfleetwise.StateTemplate{},
+		"AWS::IoTFleetWise::Vehicle":                                          &iotfleetwise.Vehicle{},
+		"AWS::IoTSiteWise::AccessPolicy":                                      &iotsitewise.AccessPolicy{},
+		"AWS::IoTSiteWise::Asset":                                             &iotsitewise.Asset{},
+		"AWS::IoTSiteWise::AssetModel":                                        &iotsitewise.AssetModel{},
+		"AWS::IoTSiteWise::Dashboard":                                         &iotsitewise.Dashboard{},
+		"AWS::IoTSiteWise::Gateway":                                           &iotsitewise.Gateway{},
+		"AWS::IoTSiteWise::Portal":                                            &iotsitewise.Portal{},
+		"AWS::IoTSiteWise::Project":                                           &iotsitewise.Project{},
+		"AWS::IoTThingsGraph::FlowTemplate":                                   &iotthingsgraph.FlowTemplate{},
+		"AWS::IoTTwinMaker::ComponentType":                                    &iottwinmaker.ComponentType{},
+		"AWS::IoTTwinMaker::Entity":                                           &iottwinmaker.Entity{},
+		"AWS::IoTTwinMaker::Scene":                                            &iottwinmaker.Scene{},
+		"AWS::IoTTwinMaker::SyncJob":                                          &iottwinmaker.SyncJob{},
+		"AWS::IoTTwinMaker::Workspace":                                        &iottwinmaker.Workspace{},
+		"AWS::IoTWireless::Destination":                                       &iotwireless.Destination{},
+		"AWS::IoTWireless::DeviceProfile":                                     &iotwireless.DeviceProfile{},
+		"AWS::IoTWireless::FuotaTask":                                         &iotwireless.FuotaTask{},
+		"AWS::IoTWireless::MulticastGroup":                                    &iotwireless.MulticastGroup{},
+		"AWS::IoTWireless::NetworkAnalyzerConfiguration":                      &iotwireless.NetworkAnalyzerConfiguration{},
+		"AWS::IoTWireless::PartnerAccount":                                    &iotwireless.PartnerAccount{},
+		"AWS::IoTWireless::ServiceProfile":                                    &iotwireless.ServiceProfile{},
+		"AWS::IoTWireless::TaskDefinition":                                    &iotwireless.TaskDefinition{},
+		"AWS::IoTWireless::WirelessDevice":                                    &iotwireless.WirelessDevice{},
+		"AWS::IoTWireless::WirelessDeviceImportTask":                          &iotwireless.WirelessDeviceImportTask{},
+		"AWS::IoTWireless::WirelessGateway":                                   &iotwireless.WirelessGateway{},
+		"AWS::KMS::Alias":                                                     &kms.Alias{},
+		"AWS::KMS::Key":                                                       &kms.Key{},
+		"AWS::KMS::ReplicaKey":                                                &kms.ReplicaKey{},
+		"AWS::KafkaConnect::Connector":                                        &kafkaconnect.Connector{},
+		"AWS::KafkaConnect::CustomPlugin":                                     &kafkaconnect.CustomPlugin{},
+		"AWS::KafkaConnect::WorkerConfiguration":                              &kafkaconnect.WorkerConfiguration{},
+		"AWS::Kendra::DataSource":                                             &kendra.DataSource{},
+		"AWS::Kendra::Faq":                                                    &kendra.Faq{},
+		"AWS::Kendra::Index":                                                  &kendra.Index{},
+		"AWS::KendraRanking::ExecutionPlan":                                   &kendraranking.ExecutionPlan{},
+		"AWS::Kinesis::ResourcePolicy":                                        &kinesis.ResourcePolicy{},
+		"AWS::Kinesis::Stream":                                                &kinesis.Stream{},
+		"AWS::Kinesis::StreamConsumer":                                        &kinesis.StreamConsumer{},
+		"AWS::KinesisAnalytics::Application":                                  &kinesisanalytics.Application{},
+		"AWS::KinesisAnalytics::ApplicationOutput":                            &kinesisanalytics.ApplicationOutput{},
+		"AWS::KinesisAnalytics::ApplicationReferenceDataSource":               &kinesisanalytics.ApplicationReferenceDataSource{},
+		"AWS::KinesisAnalyticsV2::Application":                                &kinesisanalyticsv2.Application{},
+		"AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption":         &kinesisanalyticsv2.ApplicationCloudWatchLoggingOption{},
+		"AWS::KinesisAnalyticsV2::ApplicationOutput":                          &kinesisanalyticsv2.ApplicationOutput{},
+		"AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource":             &kinesisanalyticsv2.ApplicationReferenceDataSource{},
+		"AWS::KinesisFirehose::DeliveryStream":                                &kinesisfirehose.DeliveryStream{},
+		"AWS::KinesisVideo::SignalingChannel":                                 &kinesisvideo.SignalingChannel{},
+		"AWS::KinesisVideo::Stream":                                           &kinesisvideo.Stream{},
+		"AWS::LakeFormation::DataCellsFilter":                                 &lakeformation.DataCellsFilter{},
+		"AWS::LakeFormation::DataLakeSettings":                                &lakeformation.DataLakeSettings{},
+		"AWS::LakeFormation::Permissions":                                     &lakeformation.Permissions{},
+		"AWS::LakeFormation::PrincipalPermissions":                            &lakeformation.PrincipalPermissions{},
+		"AWS::LakeFormation::Resource":                                        &lakeformation.Resource{},
+		"AWS::LakeFormation::Tag":                                             &lakeformation.Tag{},
+		"AWS::LakeFormation::TagAssociation":                                  &lakeformation.TagAssociation{},
+		"AWS::Lambda::Alias":                                                  &lambda.Alias{},
+		"AWS::Lambda::CodeSigningConfig":                                      &lambda.CodeSigningConfig{},
+		"AWS::Lambda::EventInvokeConfig":                                      &lambda.EventInvokeConfig{},
+		"AWS::Lambda::EventSourceMapping":                                     &lambda.EventSourceMapping{},
+		"AWS::Lambda::Function":                                               &lambda.Function{},
+		"AWS::Lambda::LayerVersion":                                           &lambda.LayerVersion{},
+		"AWS::Lambda::LayerVersionPermission":                                 &lambda.LayerVersionPermission{},
+		"AWS::Lambda::Permission":                                             &lambda.Permission{},
+		"AWS::Lambda::Url":                                                    &lambda.Url{},
+		"AWS::Lambda::Version":                                                &lambda.Version{},
+		"AWS::LaunchWizard::Deployment":                                       &launchwizard.Deployment{},
+		"AWS::Lex::Bot":                                                       &lex.Bot{},
+		"AWS::Lex::BotAlias":                                                  &lex.BotAlias{},
+		"AWS::Lex::BotVersion":                                                &lex.BotVersion{},
+		"AWS::Lex::ResourcePolicy":                                            &lex.ResourcePolicy{},
+		"AWS::LicenseManager::Grant":                                          &licensemanager.Grant{},
+		"AWS::LicenseManager::License":                                        &licensemanager.License{},
+		"AWS::Lightsail::Alarm":                                               &lightsail.Alarm{},
+		"AWS::Lightsail::Bucket":                                              &lightsail.Bucket{},
+		"AWS::Lightsail::Certificate":                                         &lightsail.Certificate{},
+		"AWS::Lightsail::Container":                                           &lightsail.Container{},
+		"AWS::Lightsail::Database":                                            &lightsail.Database{},
+		"AWS::Lightsail::Disk":                                                &lightsail.Disk{},
+		"AWS::Lightsail::Distribution":                                        &lightsail.Distribution{},
+		"AWS::Lightsail::Instance":                                            &lightsail.Instance{},
+		"AWS::Lightsail::LoadBalancer":                                        &lightsail.LoadBalancer{},
+		"AWS::Lightsail::LoadBalancerTlsCertificate":                          &lightsail.LoadBalancerTlsCertificate{},
+		"AWS::Lightsail::StaticIp":                                            &lightsail.StaticIp{},
+		"AWS::Location::APIKey":                                               &location.APIKey{},
+		"AWS::Location::GeofenceCollection":                                   &location.GeofenceCollection{},
+		"AWS::Location::Map":                                                  &location.Map{},
+		"AWS::Location::PlaceIndex":                                           &location.PlaceIndex{},
+		"AWS::Location::RouteCalculator":                                      &location.RouteCalculator{},
+		"AWS::Location::Tracker":                                              &location.Tracker{},
+		"AWS::Location::TrackerConsumer":                                      &location.TrackerConsumer{},
+		"AWS::Logs::AccountPolicy":                                            &logs.AccountPolicy{},
+		"AWS::Logs::Delivery":                                                 &logs.Delivery{},
+		"AWS::Logs::DeliveryDestination":                                      &logs.DeliveryDestination{},
+		"AWS::Logs::DeliverySource":                                           &logs.DeliverySource{},
+		"AWS::Logs::Destination":                                              &logs.Destination{},
+		"AWS::Logs::Integration":                                              &logs.Integration{},
+		"AWS::Logs::LogAnomalyDetector":                                       &logs.LogAnomalyDetector{},
+		"AWS::Logs::LogGroup":                                                 &logs.LogGroup{},
+		"AWS::Logs::LogStream":                                                &logs.LogStream{},
+		"AWS::Logs::MetricFilter":                                             &logs.MetricFilter{},
+		"AWS::Logs::QueryDefinition":                                          &logs.QueryDefinition{},
+		"AWS::Logs::ResourcePolicy":                                           &logs.ResourcePolicy{},
+		"AWS::Logs::SubscriptionFilter":                                       &logs.SubscriptionFilter{},
+		"AWS::Logs::Transformer":                                              &logs.Transformer{},
+		"AWS::LookoutEquipment::InferenceScheduler":                           &lookoutequipment.InferenceScheduler{},
+		"AWS::LookoutMetrics::Alert":                                          &lookoutmetrics.Alert{},
+		"AWS::LookoutMetrics::AnomalyDetector":                                &lookoutmetrics.AnomalyDetector{},
+		"AWS::LookoutVision::Project":                                         &lookoutvision.Project{},
+		"AWS::M2::Application":                                                &m2.Application{},
+		"AWS::M2::Deployment":                                                 &m2.Deployment{},
+		"AWS::M2::Environment":                                                &m2.Environment{},
+		"AWS::MSK::BatchScramSecret":                                          &msk.BatchScramSecret{},
+		"AWS::MSK::Cluster":                                                   &msk.Cluster{},
+		"AWS::MSK::ClusterPolicy":                                             &msk.ClusterPolicy{},
+		"AWS::MSK::Configuration":                                             &msk.Configuration{},
+		"AWS::MSK::Replicator":                                                &msk.Replicator{},
+		"AWS::MSK::ServerlessCluster":                                         &msk.ServerlessCluster{},
+		"AWS::MSK::VpcConnection":                                             &msk.VpcConnection{},
+		"AWS::MWAA::Environment":                                              &mwaa.Environment{},
+		"AWS::Macie::AllowList":                                               &macie.AllowList{},
+		"AWS::Macie::CustomDataIdentifier":                                    &macie.CustomDataIdentifier{},
+		"AWS::Macie::FindingsFilter":                                          &macie.FindingsFilter{},
+		"AWS::Macie::Session":                                                 &macie.Session{},
+		"AWS::ManagedBlockchain::Accessor":                                    &managedblockchain.Accessor{},
+		"AWS::ManagedBlockchain::Member":                                      &managedblockchain.Member{},
+		"AWS::ManagedBlockchain::Node":                                        &managedblockchain.Node{},
+		"AWS::MediaConnect::Bridge":                                           &mediaconnect.Bridge{},
+		"AWS::MediaConnect::BridgeOutput":                                     &mediaconnect.BridgeOutput{},
+		"AWS::MediaConnect::BridgeSource":                                     &mediaconnect.BridgeSource{},
+		"AWS::MediaConnect::Flow":                                             &mediaconnect.Flow{},
+		"AWS::MediaConnect::FlowEntitlement":                                  &mediaconnect.FlowEntitlement{},
+		"AWS::MediaConnect::FlowOutput":                                       &mediaconnect.FlowOutput{},
+		"AWS::MediaConnect::FlowSource":                                       &mediaconnect.FlowSource{},
+		"AWS::MediaConnect::FlowVpcInterface":                                 &mediaconnect.FlowVpcInterface{},
+		"AWS::MediaConnect::Gateway":                                          &mediaconnect.Gateway{},
+		"AWS::MediaConvert::JobTemplate":                                      &mediaconvert.JobTemplate{},
+		"AWS::MediaConvert::Preset":                                           &mediaconvert.Preset{},
+		"AWS::MediaConvert::Queue":                                            &mediaconvert.Queue{},
+		"AWS::MediaLive::Channel":                                             &medialive.Channel{},
+		"AWS::MediaLive::ChannelPlacementGroup":                               &medialive.ChannelPlacementGroup{},
+		"AWS::MediaLive::CloudWatchAlarmTemplate":                             &medialive.CloudWatchAlarmTemplate{},
+		"AWS::MediaLive::CloudWatchAlarmTemplateGroup":                        &medialive.CloudWatchAlarmTemplateGroup{},
+		"AWS::MediaLive::Cluster":                                             &medialive.Cluster{},
+		"AWS::MediaLive::EventBridgeRuleTemplate":                             &medialive.EventBridgeRuleTemplate{},
+		"AWS::MediaLive::EventBridgeRuleTemplateGroup":                        &medialive.EventBridgeRuleTemplateGroup{},
+		"AWS::MediaLive::Input":                                               &medialive.Input{},
+		"AWS::MediaLive::InputSecurityGroup":                                  &medialive.InputSecurityGroup{},
+		"AWS::MediaLive::Multiplex":                                           &medialive.Multiplex{},
+		"AWS::MediaLive::Multiplexprogram":                                    &medialive.Multiplexprogram{},
+		"AWS::MediaLive::Network":                                             &medialive.Network{},
+		"AWS::MediaLive::SdiSource":                                           &medialive.SdiSource{},
+		"AWS::MediaLive::SignalMap":                                           &medialive.SignalMap{},
+		"AWS::MediaPackage::Asset":                                            &mediapackage.Asset{},
+		"AWS::MediaPackage::Channel":                                          &mediapackage.Channel{},
+		"AWS::MediaPackage::OriginEndpoint":                                   &mediapackage.OriginEndpoint{},
+		"AWS::MediaPackage::PackagingConfiguration":                           &mediapackage.PackagingConfiguration{},
+		"AWS::MediaPackage::PackagingGroup":                                   &mediapackage.PackagingGroup{},
+		"AWS::MediaPackageV2::Channel":                                        &mediapackagev2.Channel{},
+		"AWS::MediaPackageV2::ChannelGroup":                                   &mediapackagev2.ChannelGroup{},
+		"AWS::MediaPackageV2::ChannelPolicy":                                  &mediapackagev2.ChannelPolicy{},
+		"AWS::MediaPackageV2::OriginEndpoint":                                 &mediapackagev2.OriginEndpoint{},
+		"AWS::MediaPackageV2::OriginEndpointPolicy":                           &mediapackagev2.OriginEndpointPolicy{},
+		"AWS::MediaStore::Container":                                          &mediastore.Container{},
+		"AWS::MediaTailor::Channel":                                           &mediatailor.Channel{},
+		"AWS::MediaTailor::ChannelPolicy":                                     &mediatailor.ChannelPolicy{},
+		"AWS::MediaTailor::LiveSource":                                        &mediatailor.LiveSource{},
+		"AWS::MediaTailor::PlaybackConfiguration":                             &mediatailor.PlaybackConfiguration{},
+		"AWS::MediaTailor::SourceLocation":                                    &mediatailor.SourceLocation{},
+		"AWS::MediaTailor::VodSource":                                         &mediatailor.VodSource{},
+		"AWS::MemoryDB::ACL":                                                  &memorydb.ACL{},
+		"AWS::MemoryDB::Cluster":                                              &memorydb.Cluster{},
+		"AWS::MemoryDB::MultiRegionCluster":                                   &memorydb.MultiRegionCluster{},
+		"AWS::MemoryDB::ParameterGroup":                                       &memorydb.ParameterGroup{},
+		"AWS::MemoryDB::SubnetGroup":                                          &memorydb.SubnetGroup{},
+		"AWS::MemoryDB::User":                                                 &memorydb.User{},
+		"AWS::Neptune::DBCluster":                                             &neptune.DBCluster{},
+		"AWS::Neptune::DBClusterParameterGroup":                               &neptune.DBClusterParameterGroup{},
+		"AWS::Neptune::DBInstance":                                            &neptune.DBInstance{},
+		"AWS::Neptune::DBParameterGroup":                                      &neptune.DBParameterGroup{},
+		"AWS::Neptune::DBSubnetGroup":                                         &neptune.DBSubnetGroup{},
+		"AWS::Neptune::EventSubscription":                                     &neptune.EventSubscription{},
+		"AWS::NeptuneGraph::Graph":                                            &neptunegraph.Graph{},
+		"AWS::NeptuneGraph::PrivateGraphEndpoint":                             &neptunegraph.PrivateGraphEndpoint{},
+		"AWS::NetworkFirewall::Firewall":                                      &networkfirewall.Firewall{},
+		"AWS::NetworkFirewall::FirewallPolicy":                                &networkfirewall.FirewallPolicy{},
+		"AWS::NetworkFirewall::LoggingConfiguration":                          &networkfirewall.LoggingConfiguration{},
+		"AWS::NetworkFirewall::RuleGroup":                                     &networkfirewall.RuleGroup{},
+		"AWS::NetworkFirewall::TLSInspectionConfiguration":                    &networkfirewall.TLSInspectionConfiguration{},
+		"AWS::NetworkManager::ConnectAttachment":                              &networkmanager.ConnectAttachment{},
+		"AWS::NetworkManager::ConnectPeer":                                    &networkmanager.ConnectPeer{},
+		"AWS::NetworkManager::CoreNetwork":                                    &networkmanager.CoreNetwork{},
+		"AWS::NetworkManager::CustomerGatewayAssociation":                     &networkmanager.CustomerGatewayAssociation{},
+		"AWS::NetworkManager::Device":                                         &networkmanager.Device{},
+		"AWS::NetworkManager::DirectConnectGatewayAttachment":                 &networkmanager.DirectConnectGatewayAttachment{},
+		"AWS::NetworkManager::GlobalNetwork":                                  &networkmanager.GlobalNetwork{},
+		"AWS::NetworkManager::Link":                                           &networkmanager.Link{},
+		"AWS::NetworkManager::LinkAssociation":                                &networkmanager.LinkAssociation{},
+		"AWS::NetworkManager::Site":                                           &networkmanager.Site{},
+		"AWS::NetworkManager::SiteToSiteVpnAttachment":                        &networkmanager.SiteToSiteVpnAttachment{},
+		"AWS::NetworkManager::TransitGatewayPeering":                          &networkmanager.TransitGatewayPeering{},
+		"AWS::NetworkManager::TransitGatewayRegistration":                     &networkmanager.TransitGatewayRegistration{},
+		"AWS::NetworkManager::TransitGatewayRouteTableAttachment":             &networkmanager.TransitGatewayRouteTableAttachment{},
+		"AWS::NetworkManager::VpcAttachment":                                  &networkmanager.VpcAttachment{},
+		"AWS::Notifications::ChannelAssociation":                              &notifications.ChannelAssociation{},
+		"AWS::Notifications::EventRule":                                       &notifications.EventRule{},
+		"AWS::Notifications::ManagedNotificationAccountContactAssociation":    &notifications.ManagedNotificationAccountContactAssociation{},
+		"AWS::Notifications::ManagedNotificationAdditionalChannelAssociation": &notifications.ManagedNotificationAdditionalChannelAssociation{},
+		"AWS::Notifications::NotificationConfiguration":                       &notifications.NotificationConfiguration{},
+		"AWS::Notifications::NotificationHub":                                 &notifications.NotificationHub{},
+		"AWS::NotificationsContacts::EmailContact":                            &notificationscontacts.EmailContact{},
+		"AWS::OSIS::Pipeline":                                                 &osis.Pipeline{},
+		"AWS::Oam::Link":                                                      &oam.Link{},
+		"AWS::Oam::Sink":                                                      &oam.Sink{},
+		"AWS::Omics::AnnotationStore":                                         &omics.AnnotationStore{},
+		"AWS::Omics::ReferenceStore":                                          &omics.ReferenceStore{},
+		"AWS::Omics::RunGroup":                                                &omics.RunGroup{},
+		"AWS::Omics::SequenceStore":                                           &omics.SequenceStore{},
+		"AWS::Omics::VariantStore":                                            &omics.VariantStore{},
+		"AWS::Omics::Workflow":                                                &omics.Workflow{},
+		"AWS::OpenSearchServerless::AccessPolicy":                             &opensearchserverless.AccessPolicy{},
+		"AWS::OpenSearchServerless::Collection":                               &opensearchserverless.Collection{},
+		"AWS::OpenSearchServerless::LifecyclePolicy":                          &opensearchserverless.LifecyclePolicy{},
+		"AWS::OpenSearchServerless::SecurityConfig":                           &opensearchserverless.SecurityConfig{},
+		"AWS::OpenSearchServerless::SecurityPolicy":                           &opensearchserverless.SecurityPolicy{},
+		"AWS::OpenSearchServerless::VpcEndpoint":                              &opensearchserverless.VpcEndpoint{},
+		"AWS::OpenSearchService::Application":                                 &opensearchservice.Application{},
+		"AWS::OpenSearchService::Domain":                                      &opensearchservice.Domain{},
+		"AWS::OpsWorks::App":                                                  &opsworks.App{},
+		"AWS::OpsWorks::ElasticLoadBalancerAttachment":                        &opsworks.ElasticLoadBalancerAttachment{},
+		"AWS::OpsWorks::Instance":                                             &opsworks.Instance{},
+		"AWS::OpsWorks::Layer":                                                &opsworks.Layer{},
+		"AWS::OpsWorks::Stack":                                                &opsworks.Stack{},
+		"AWS::OpsWorks::UserProfile":                                          &opsworks.UserProfile{},
+		"AWS::OpsWorks::Volume":                                               &opsworks.Volume{},
+		"AWS::OpsWorksCM::Server":                                             &opsworkscm.Server{},
+		"AWS::Organizations::Account":                                         &organizations.Account{},
+		"AWS::Organizations::Organization":                                    &organizations.Organization{},
+		"AWS::Organizations::OrganizationalUnit":                              &organizations.OrganizationalUnit{},
+		"AWS::Organizations::Policy":                                          &organizations.Policy{},
+		"AWS::Organizations::ResourcePolicy":                                  &organizations.ResourcePolicy{},
+		"AWS::PCAConnectorAD::Connector":                                      &pcaconnectorad.Connector{},
+		"AWS::PCAConnectorAD::DirectoryRegistration":                          &pcaconnectorad.DirectoryRegistration{},
+		"AWS::PCAConnectorAD::ServicePrincipalName":                           &pcaconnectorad.ServicePrincipalName{},
+		"AWS::PCAConnectorAD::Template":                                       &pcaconnectorad.Template{},
+		"AWS::PCAConnectorAD::TemplateGroupAccessControlEntry":                &pcaconnectorad.TemplateGroupAccessControlEntry{},
+		"AWS::PCAConnectorSCEP::Challenge":                                    &pcaconnectorscep.Challenge{},
+		"AWS::PCAConnectorSCEP::Connector":                                    &pcaconnectorscep.Connector{},
+		"AWS::PCS::Cluster":                                                   &pcs.Cluster{},
+		"AWS::PCS::ComputeNodeGroup":                                          &pcs.ComputeNodeGroup{},
+		"AWS::PCS::Queue":                                                     &pcs.Queue{},
+		"AWS::Panorama::ApplicationInstance":                                  &panorama.ApplicationInstance{},
+		"AWS::Panorama::Package":                                              &panorama.Package{},
+		"AWS::Panorama::PackageVersion":                                       &panorama.PackageVersion{},
+		"AWS::PaymentCryptography::Alias":                                     &paymentcryptography.Alias{},
+		"AWS::PaymentCryptography::Key":                                       &paymentcryptography.Key{},
+		"AWS::Personalize::Dataset":                                           &personalize.Dataset{},
+		"AWS::Personalize::DatasetGroup":                                      &personalize.DatasetGroup{},
+		"AWS::Personalize::Schema":                                            &personalize.Schema{},
+		"AWS::Personalize::Solution":                                          &personalize.Solution{},
+		"AWS::Pinpoint::ADMChannel":                                           &pinpoint.ADMChannel{},
+		"AWS::Pinpoint::APNSChannel":                                          &pinpoint.APNSChannel{},
+		"AWS::Pinpoint::APNSSandboxChannel":                                   &pinpoint.APNSSandboxChannel{},
+		"AWS::Pinpoint::APNSVoipChannel":                                      &pinpoint.APNSVoipChannel{},
+		"AWS::Pinpoint::APNSVoipSandboxChannel":                               &pinpoint.APNSVoipSandboxChannel{},
+		"AWS::Pinpoint::App":                                                  &pinpoint.App{},
+		"AWS::Pinpoint::ApplicationSettings":                                  &pinpoint.ApplicationSettings{},
+		"AWS::Pinpoint::BaiduChannel":                                         &pinpoint.BaiduChannel{},
+		"AWS::Pinpoint::Campaign":                                             &pinpoint.Campaign{},
+		"AWS::Pinpoint::EmailChannel":                                         &pinpoint.EmailChannel{},
+		"AWS::Pinpoint::EmailTemplate":                                        &pinpoint.EmailTemplate{},
+		"AWS::Pinpoint::EventStream":                                          &pinpoint.EventStream{},
+		"AWS::Pinpoint::GCMChannel":                                           &pinpoint.GCMChannel{},
+		"AWS::Pinpoint::InAppTemplate":                                        &pinpoint.InAppTemplate{},
+		"AWS::Pinpoint::PushTemplate":                                         &pinpoint.PushTemplate{},
+		"AWS::Pinpoint::SMSChannel":                                           &pinpoint.SMSChannel{},
+		"AWS::Pinpoint::Segment":                                              &pinpoint.Segment{},
+		"AWS::Pinpoint::SmsTemplate":                                          &pinpoint.SmsTemplate{},
+		"AWS::Pinpoint::VoiceChannel":                                         &pinpoint.VoiceChannel{},
+		"AWS::PinpointEmail::ConfigurationSet":                                &pinpointemail.ConfigurationSet{},
+		"AWS::PinpointEmail::ConfigurationSetEventDestination":                &pinpointemail.ConfigurationSetEventDestination{},
+		"AWS::PinpointEmail::DedicatedIpPool":                                 &pinpointemail.DedicatedIpPool{},
+		"AWS::PinpointEmail::Identity":                                        &pinpointemail.Identity{},
+		"AWS::Pipes::Pipe":                                                    &pipes.Pipe{},
+		"AWS::Proton::EnvironmentAccountConnection":                           &proton.EnvironmentAccountConnection{},
+		"AWS::Proton::EnvironmentTemplate":                                    &proton.EnvironmentTemplate{},
+		"AWS::Proton::ServiceTemplate":                                        &proton.ServiceTemplate{},
+		"AWS::QBusiness::Application":                                         &qbusiness.Application{},
+		"AWS::QBusiness::DataAccessor":                                        &qbusiness.DataAccessor{},
+		"AWS::QBusiness::DataSource":                                          &qbusiness.DataSource{},
+		"AWS::QBusiness::Index":                                               &qbusiness.Index{},
+		"AWS::QBusiness::Permission":                                          &qbusiness.Permission{},
+		"AWS::QBusiness::Plugin":                                              &qbusiness.Plugin{},
+		"AWS::QBusiness::Retriever":                                           &qbusiness.Retriever{},
+		"AWS::QBusiness::WebExperience":                                       &qbusiness.WebExperience{},
+		"AWS::QLDB::Ledger":                                                   &qldb.Ledger{},
+		"AWS::QLDB::Stream":                                                   &qldb.Stream{},
+		"AWS::QuickSight::Analysis":                                           &quicksight.Analysis{},
+		"AWS::QuickSight::CustomPermissions":                                  &quicksight.CustomPermissions{},
+		"AWS::QuickSight::Dashboard":                                          &quicksight.Dashboard{},
+		"AWS::QuickSight::DataSet":                                            &quicksight.DataSet{},
+		"AWS::QuickSight::DataSource":                                         &quicksight.DataSource{},
+		"AWS::QuickSight::Folder":                                             &quicksight.Folder{},
+		"AWS::QuickSight::RefreshSchedule":                                    &quicksight.RefreshSchedule{},
+		"AWS::QuickSight::Template":                                           &quicksight.Template{},
+		"AWS::QuickSight::Theme":                                              &quicksight.Theme{},
+		"AWS::QuickSight::Topic":                                              &quicksight.Topic{},
+		"AWS::QuickSight::VPCConnection":                                      &quicksight.VPCConnection{},
+		"AWS::RAM::Permission":                                                &ram.Permission{},
+		"AWS::RAM::ResourceShare":                                             &ram.ResourceShare{},
+		"AWS::RDS::CustomDBEngineVersion":                                     &rds.CustomDBEngineVersion{},
+		"AWS::RDS::DBCluster":                                                 &rds.DBCluster{},
+		"AWS::RDS::DBClusterParameterGroup":                                   &rds.DBClusterParameterGroup{},
+		"AWS::RDS::DBInstance":                                                &rds.DBInstance{},
+		"AWS::RDS::DBParameterGroup":                                          &rds.DBParameterGroup{},
+		"AWS::RDS::DBProxy":                                                   &rds.DBProxy{},
+		"AWS::RDS::DBProxyEndpoint":                                           &rds.DBProxyEndpoint{},
+		"AWS::RDS::DBProxyTargetGroup":                                        &rds.DBProxyTargetGroup{},
+		"AWS::RDS::DBSecurityGroup":                                           &rds.DBSecurityGroup{},
+		"AWS::RDS::DBSecurityGroupIngress":                                    &rds.DBSecurityGroupIngress{},
+		"AWS::RDS::DBShardGroup":                                              &rds.DBShardGroup{},
+		"AWS::RDS::DBSubnetGroup":                                             &rds.DBSubnetGroup{},
+		"AWS::RDS::EventSubscription":                                         &rds.EventSubscription{},
+		"AWS::RDS::GlobalCluster":                                             &rds.GlobalCluster{},
+		"AWS::RDS::Integration":                                               &rds.Integration{},
+		"AWS::RDS::OptionGroup":                                               &rds.OptionGroup{},
+		"AWS::RUM::AppMonitor":                                                &rum.AppMonitor{},
+		"AWS::Rbin::Rule":                                                     &rbin.Rule{},
+		"AWS::Redshift::Cluster":                                              &redshift.Cluster{},
+		"AWS::Redshift::ClusterParameterGroup":                                &redshift.ClusterParameterGroup{},
+		"AWS::Redshift::ClusterSecurityGroup":                                 &redshift.ClusterSecurityGroup{},
+		"AWS::Redshift::ClusterSecurityGroupIngress":                          &redshift.ClusterSecurityGroupIngress{},
+		"AWS::Redshift::ClusterSubnetGroup":                                   &redshift.ClusterSubnetGroup{},
+		"AWS::Redshift::EndpointAccess":                                       &redshift.EndpointAccess{},
+		"AWS::Redshift::EndpointAuthorization":                                &redshift.EndpointAuthorization{},
+		"AWS::Redshift::EventSubscription":                                    &redshift.EventSubscription{},
+		"AWS::Redshift::Integration":                                          &redshift.Integration{},
+		"AWS::Redshift::ScheduledAction":                                      &redshift.ScheduledAction{},
+		"AWS::RedshiftServerless::Namespace":                                  &redshiftserverless.Namespace{},
+		"AWS::RedshiftServerless::Workgroup":                                  &redshiftserverless.Workgroup{},
+		"AWS::RefactorSpaces::Application":                                    &refactorspaces.Application{},
+		"AWS::RefactorSpaces::Environment":                                    &refactorspaces.Environment{},
+		"AWS::RefactorSpaces::Route":                                          &refactorspaces.Route{},
+		"AWS::RefactorSpaces::Service":                                        &refactorspaces.Service{},
+		"AWS::Rekognition::Collection":                                        &rekognition.Collection{},
+		"AWS::Rekognition::Project":                                           &rekognition.Project{},
+		"AWS::Rekognition::StreamProcessor":                                   &rekognition.StreamProcessor{},
+		"AWS::ResilienceHub::App":                                             &resiliencehub.App{},
+		"AWS::ResilienceHub::ResiliencyPolicy":                                &resiliencehub.ResiliencyPolicy{},
+		"AWS::ResourceExplorer2::DefaultViewAssociation":                      &resourceexplorer2.DefaultViewAssociation{},
+		"AWS::ResourceExplorer2::Index":                                       &resourceexplorer2.Index{},
+		"AWS::ResourceExplorer2::View":                                        &resourceexplorer2.View{},
+		"AWS::ResourceGroups::Group":                                          &resourcegroups.Group{},
+		"AWS::ResourceGroups::TagSyncTask":                                    &resourcegroups.TagSyncTask{},
+		"AWS::RoboMaker::Fleet":                                               &robomaker.Fleet{},
+		"AWS::RoboMaker::Robot":                                               &robomaker.Robot{},
+		"AWS::RoboMaker::RobotApplication":                                    &robomaker.RobotApplication{},
+		"AWS::RoboMaker::RobotApplicationVersion":                             &robomaker.RobotApplicationVersion{},
+		"AWS::RoboMaker::SimulationApplication":                               &robomaker.SimulationApplication{},
+		"AWS::RoboMaker::SimulationApplicationVersion":                        &robomaker.SimulationApplicationVersion{},
+		"AWS::RolesAnywhere::CRL":                                             &rolesanywhere.CRL{},
+		"AWS::RolesAnywhere::Profile":                                         &rolesanywhere.Profile{},
+		"AWS::RolesAnywhere::TrustAnchor":                                     &rolesanywhere.TrustAnchor{},
+		"AWS::Route53::CidrCollection":                                        &route53.CidrCollection{},
+		"AWS::Route53::DNSSEC":                                                &route53.DNSSEC{},
+		"AWS::Route53::HealthCheck":                                           &route53.HealthCheck{},
+		"AWS::Route53::HostedZone":                                            &route53.HostedZone{},
+		"AWS::Route53::KeySigningKey":                                         &route53.KeySigningKey{},
+		"AWS::Route53::RecordSet":                                             &route53.RecordSet{},
+		"AWS::Route53::RecordSetGroup":                                        &route53.RecordSetGroup{},
+		"AWS::Route53Profiles::Profile":                                       &route53profiles.Profile{},
+		"AWS::Route53Profiles::ProfileAssociation":                            &route53profiles.ProfileAssociation{},
+		"AWS::Route53Profiles::ProfileResourceAssociation":                    &route53profiles.ProfileResourceAssociation{},
+		"AWS::Route53RecoveryControl::Cluster":                                &route53recoverycontrol.Cluster{},
+		"AWS::Route53RecoveryControl::ControlPanel":                           &route53recoverycontrol.ControlPanel{},
+		"AWS::Route53RecoveryControl::RoutingControl":                         &route53recoverycontrol.RoutingControl{},
+		"AWS::Route53RecoveryControl::SafetyRule":                             &route53recoverycontrol.SafetyRule{},
+		"AWS::Route53RecoveryReadiness::Cell":                                 &route53recoveryreadiness.Cell{},
+		"AWS::Route53RecoveryReadiness::ReadinessCheck":                       &route53recoveryreadiness.ReadinessCheck{},
+		"AWS::Route53RecoveryReadiness::RecoveryGroup":                        &route53recoveryreadiness.RecoveryGroup{},
+		"AWS::Route53RecoveryReadiness::ResourceSet":                          &route53recoveryreadiness.ResourceSet{},
+		"AWS::Route53Resolver::FirewallDomainList":                            &route53resolver.FirewallDomainList{},
+		"AWS::Route53Resolver::FirewallRuleGroup":                             &route53resolver.FirewallRuleGroup{},
+		"AWS::Route53Resolver::FirewallRuleGroupAssociation":                  &route53resolver.FirewallRuleGroupAssociation{},
+		"AWS::Route53Resolver::OutpostResolver":                               &route53resolver.OutpostResolver{},
+		"AWS::Route53Resolver::ResolverConfig":                                &route53resolver.ResolverConfig{},
+		"AWS::Route53Resolver::ResolverDNSSECConfig":                          &route53resolver.ResolverDNSSECConfig{},
+		"AWS::Route53Resolver::ResolverEndpoint":                              &route53resolver.ResolverEndpoint{},
+		"AWS::Route53Resolver::ResolverQueryLoggingConfig":                    &route53resolver.ResolverQueryLoggingConfig{},
+		"AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation":         &route53resolver.ResolverQueryLoggingConfigAssociation{},
+		"AWS::Route53Resolver::ResolverRule":                                  &route53resolver.ResolverRule{},
+		"AWS::Route53Resolver::ResolverRuleAssociation":                       &route53resolver.ResolverRuleAssociation{},
+		"AWS::S3::AccessGrant":                                                &s3.AccessGrant{},
+		"AWS::S3::AccessGrantsInstance":                                       &s3.AccessGrantsInstance{},
+		"AWS::S3::AccessGrantsLocation":                                       &s3.AccessGrantsLocation{},
+		"AWS::S3::AccessPoint":                                                &s3.AccessPoint{},
+		"AWS::S3::Bucket":                                                     &s3.Bucket{},
+		"AWS::S3::BucketPolicy":                                               &s3.BucketPolicy{},
+		"AWS::S3::MultiRegionAccessPoint":                                     &s3.MultiRegionAccessPoint{},
+		"AWS::S3::MultiRegionAccessPointPolicy":                               &s3.MultiRegionAccessPointPolicy{},
+		"AWS::S3::StorageLens":                                                &s3.StorageLens{},
+		"AWS::S3::StorageLensGroup":                                           &s3.StorageLensGroup{},
+		"AWS::S3Express::BucketPolicy":                                        &s3express.BucketPolicy{},
+		"AWS::S3Express::DirectoryBucket":                                     &s3express.DirectoryBucket{},
+		"AWS::S3ObjectLambda::AccessPoint":                                    &s3objectlambda.AccessPoint{},
+		"AWS::S3ObjectLambda::AccessPointPolicy":                              &s3objectlambda.AccessPointPolicy{},
+		"AWS::S3Outposts::AccessPoint":                                        &s3outposts.AccessPoint{},
+		"AWS::S3Outposts::Bucket":                                             &s3outposts.Bucket{},
+		"AWS::S3Outposts::BucketPolicy":                                       &s3outposts.BucketPolicy{},
+		"AWS::S3Outposts::Endpoint":                                           &s3outposts.Endpoint{},
+		"AWS::S3Tables::TableBucket":                                          &s3tables.TableBucket{},
+		"AWS::S3Tables::TableBucketPolicy":                                    &s3tables.TableBucketPolicy{},
+		"AWS::SDB::Domain":                                                    &sdb.Domain{},
+		"AWS::SES::ConfigurationSet":                                          &ses.ConfigurationSet{},
+		"AWS::SES::ConfigurationSetEventDestination":                          &ses.ConfigurationSetEventDestination{},
+		"AWS::SES::ContactList":                                               &ses.ContactList{},
+		"AWS::SES::DedicatedIpPool":                                           &ses.DedicatedIpPool{},
+		"AWS::SES::EmailIdentity":                                             &ses.EmailIdentity{},
+		"AWS::SES::MailManagerAddonInstance":                                  &ses.MailManagerAddonInstance{},
+		"AWS::SES::MailManagerAddonSubscription":                              &ses.MailManagerAddonSubscription{},
+		"AWS::SES::MailManagerArchive":                                        &ses.MailManagerArchive{},
+		"AWS::SES::MailManagerIngressPoint":                                   &ses.MailManagerIngressPoint{},
+		"AWS::SES::MailManagerRelay":                                          &ses.MailManagerRelay{},
+		"AWS::SES::MailManagerRuleSet":                                        &ses.MailManagerRuleSet{},
+		"AWS::SES::MailManagerTrafficPolicy":                                  &ses.MailManagerTrafficPolicy{},
+		"AWS::SES::ReceiptFilter":                                             &ses.ReceiptFilter{},
+		"AWS::SES::ReceiptRule":                                               &ses.ReceiptRule{},
+		"AWS::SES::ReceiptRuleSet":                                            &ses.ReceiptRuleSet{},
+		"AWS::SES::Template":                                                  &ses.Template{},
+		"AWS::SES::VdmAttributes":                                             &ses.VdmAttributes{},
+		"AWS::SNS::Subscription":                                              &sns.Subscription{},
+		"AWS::SNS::Topic":                                                     &sns.Topic{},
+		"AWS::SNS::TopicInlinePolicy":                                         &sns.TopicInlinePolicy{},
+		"AWS::SNS::TopicPolicy":                                               &sns.TopicPolicy{},
+		"AWS::SQS::Queue":                                                     &sqs.Queue{},
+		"AWS::SQS::QueueInlinePolicy":                                         &sqs.QueueInlinePolicy{},
+		"AWS::SQS::QueuePolicy":                                               &sqs.QueuePolicy{},
+		"AWS::SSM::Association":                                               &ssm.Association{},
+		"AWS::SSM::Document":                                                  &ssm.Document{},
+		"AWS::SSM::MaintenanceWindow":                                         &ssm.MaintenanceWindow{},
+		"AWS::SSM::MaintenanceWindowTarget":                                   &ssm.MaintenanceWindowTarget{},
+		"AWS::SSM::MaintenanceWindowTask":                                     &ssm.MaintenanceWindowTask{},
+		"AWS::SSM::Parameter":                                                 &ssm.Parameter{},
+		"AWS::SSM::PatchBaseline":                                             &ssm.PatchBaseline{},
+		"AWS::SSM::ResourceDataSync":                                          &ssm.ResourceDataSync{},
+		"AWS::SSM::ResourcePolicy":                                            &ssm.ResourcePolicy{},
+		"AWS::SSMContacts::Contact":                                           &ssmcontacts.Contact{},
+		"AWS::SSMContacts::ContactChannel":                                    &ssmcontacts.ContactChannel{},
+		"AWS::SSMContacts::Plan":                                              &ssmcontacts.Plan{},
+		"AWS::SSMContacts::Rotation":                                          &ssmcontacts.Rotation{},
+		"AWS::SSMIncidents::ReplicationSet":                                   &ssmincidents.ReplicationSet{},
+		"AWS::SSMIncidents::ResponsePlan":                                     &ssmincidents.ResponsePlan{},
+		"AWS::SSMQuickSetup::ConfigurationManager":                            &ssmquicksetup.ConfigurationManager{},
+		"AWS::SSO::Application":                                               &sso.Application{},
+		"AWS::SSO::ApplicationAssignment":                                     &sso.ApplicationAssignment{},
+		"AWS::SSO::Assignment":                                                &sso.Assignment{},
+		"AWS::SSO::Instance":                                                  &sso.Instance{},
+		"AWS::SSO::InstanceAccessControlAttributeConfiguration":               &sso.InstanceAccessControlAttributeConfiguration{},
+		"AWS::SSO::PermissionSet":                                             &sso.PermissionSet{},
+		"AWS::SageMaker::App":                                                 &sagemaker.App{},
+		"AWS::SageMaker::AppImageConfig":                                      &sagemaker.AppImageConfig{},
+		"AWS::SageMaker::Cluster":                                             &sagemaker.Cluster{},
+		"AWS::SageMaker::CodeRepository":                                      &sagemaker.CodeRepository{},
+		"AWS::SageMaker::DataQualityJobDefinition":                            &sagemaker.DataQualityJobDefinition{},
+		"AWS::SageMaker::Device":                                              &sagemaker.Device{},
+		"AWS::SageMaker::DeviceFleet":                                         &sagemaker.DeviceFleet{},
+		"AWS::SageMaker::Domain":                                              &sagemaker.Domain{},
+		"AWS::SageMaker::Endpoint":                                            &sagemaker.Endpoint{},
+		"AWS::SageMaker::EndpointConfig":                                      &sagemaker.EndpointConfig{},
+		"AWS::SageMaker::FeatureGroup":                                        &sagemaker.FeatureGroup{},
+		"AWS::SageMaker::Image":                                               &sagemaker.Image{},
+		"AWS::SageMaker::ImageVersion":                                        &sagemaker.ImageVersion{},
+		"AWS::SageMaker::InferenceComponent":                                  &sagemaker.InferenceComponent{},
+		"AWS::SageMaker::InferenceExperiment":                                 &sagemaker.InferenceExperiment{},
+		"AWS::SageMaker::MlflowTrackingServer":                                &sagemaker.MlflowTrackingServer{},
+		"AWS::SageMaker::Model":                                               &sagemaker.Model{},
+		"AWS::SageMaker::ModelBiasJobDefinition":                              &sagemaker.ModelBiasJobDefinition{},
+		"AWS::SageMaker::ModelCard":                                           &sagemaker.ModelCard{},
+		"AWS::SageMaker::ModelExplainabilityJobDefinition":                    &sagemaker.ModelExplainabilityJobDefinition{},
+		"AWS::SageMaker::ModelPackage":                                        &sagemaker.ModelPackage{},
+		"AWS::SageMaker::ModelPackageGroup":                                   &sagemaker.ModelPackageGroup{},
+		"AWS::SageMaker::ModelQualityJobDefinition":                           &sagemaker.ModelQualityJobDefinition{},
+		"AWS::SageMaker::MonitoringSchedule":                                  &sagemaker.MonitoringSchedule{},
+		"AWS::SageMaker::NotebookInstance":                                    &sagemaker.NotebookInstance{},
+		"AWS::SageMaker::NotebookInstanceLifecycleConfig":                     &sagemaker.NotebookInstanceLifecycleConfig{},
+		"AWS::SageMaker::PartnerApp":                                          &sagemaker.PartnerApp{},
+		"AWS::SageMaker::Pipeline":                                            &sagemaker.Pipeline{},
+		"AWS::SageMaker::Project":                                             &sagemaker.Project{},
+		"AWS::SageMaker::Space":                                               &sagemaker.Space{},
+		"AWS::SageMaker::StudioLifecycleConfig":                               &sagemaker.StudioLifecycleConfig{},
+		"AWS::SageMaker::UserProfile":                                         &sagemaker.UserProfile{},
+		"AWS::SageMaker::Workteam":                                            &sagemaker.Workteam{},
+		"AWS::Scheduler::Schedule":                                            &scheduler.Schedule{},
+		"AWS::Scheduler::ScheduleGroup":                                       &scheduler.ScheduleGroup{},
+		"AWS::SecretsManager::ResourcePolicy":                                 &secretsmanager.ResourcePolicy{},
+		"AWS::SecretsManager::RotationSchedule":                               &secretsmanager.RotationSchedule{},
+		"AWS::SecretsManager::Secret":                                         &secretsmanager.Secret{},
+		"AWS::SecretsManager::SecretTargetAttachment":                         &secretsmanager.SecretTargetAttachment{},
+		"AWS::SecurityHub::AutomationRule":                                    &securityhub.AutomationRule{},
+		"AWS::SecurityHub::ConfigurationPolicy":                               &securityhub.ConfigurationPolicy{},
+		"AWS::SecurityHub::DelegatedAdmin":                                    &securityhub.DelegatedAdmin{},
+		"AWS::SecurityHub::FindingAggregator":                                 &securityhub.FindingAggregator{},
+		"AWS::SecurityHub::Hub":                                               &securityhub.Hub{},
+		"AWS::SecurityHub::Insight":                                           &securityhub.Insight{},
+		"AWS::SecurityHub::OrganizationConfiguration":                         &securityhub.OrganizationConfiguration{},
+		"AWS::SecurityHub::PolicyAssociation":                                 &securityhub.PolicyAssociation{},
+		"AWS::SecurityHub::ProductSubscription":                               &securityhub.ProductSubscription{},
+		"AWS::SecurityHub::SecurityControl":                                   &securityhub.SecurityControl{},
+		"AWS::SecurityHub::Standard":                                          &securityhub.Standard{},
+		"AWS::SecurityLake::AwsLogSource":                                     &securitylake.AwsLogSource{},
+		"AWS::SecurityLake::DataLake":                                         &securitylake.DataLake{},
+		"AWS::SecurityLake::Subscriber":                                       &securitylake.Subscriber{},
+		"AWS::SecurityLake::SubscriberNotification":                           &securitylake.SubscriberNotification{},
+		"AWS::Serverless::Api":                                                &serverless.Api{},
+		"AWS::Serverless::Application":                                        &serverless.Application{},
+		"AWS::Serverless::Function":                                           &serverless.Function{},
+		"AWS::Serverless::HttpApi":                                            &serverless.HttpApi{},
+		"AWS::Serverless::LayerVersion":                                       &serverless.LayerVersion{},
+		"AWS::Serverless::SimpleTable":                                        &serverless.SimpleTable{},
+		"AWS::Serverless::StateMachine":                                       &serverless.StateMachine{},
+		"AWS::ServiceCatalog::AcceptedPortfolioShare":                         &servicecatalog.AcceptedPortfolioShare{},
+		"AWS::ServiceCatalog::CloudFormationProduct":                          &servicecatalog.CloudFormationProduct{},
+		"AWS::ServiceCatalog::CloudFormationProvisionedProduct":               &servicecatalog.CloudFormationProvisionedProduct{},
+		"AWS::ServiceCatalog::LaunchNotificationConstraint":                   &servicecatalog.LaunchNotificationConstraint{},
+		"AWS::ServiceCatalog::LaunchRoleConstraint":                           &servicecatalog.LaunchRoleConstraint{},
+		"AWS::ServiceCatalog::LaunchTemplateConstraint":                       &servicecatalog.LaunchTemplateConstraint{},
+		"AWS::ServiceCatalog::Portfolio":                                      &servicecatalog.Portfolio{},
+		"AWS::ServiceCatalog::PortfolioPrincipalAssociation":                  &servicecatalog.PortfolioPrincipalAssociation{},
+		"AWS::ServiceCatalog::PortfolioProductAssociation":                    &servicecatalog.PortfolioProductAssociation{},
+		"AWS::ServiceCatalog::PortfolioShare":                                 &servicecatalog.PortfolioShare{},
+		"AWS::ServiceCatalog::ResourceUpdateConstraint":                       &servicecatalog.ResourceUpdateConstraint{},
+		"AWS::ServiceCatalog::ServiceAction":                                  &servicecatalog.ServiceAction{},
+		"AWS::ServiceCatalog::ServiceActionAssociation":                       &servicecatalog.ServiceActionAssociation{},
+		"AWS::ServiceCatalog::StackSetConstraint":                             &servicecatalog.StackSetConstraint{},
+		"AWS::ServiceCatalog::TagOption":                                      &servicecatalog.TagOption{},
+		"AWS::ServiceCatalog::TagOptionAssociation":                           &servicecatalog.TagOptionAssociation{},
+		"AWS::ServiceCatalogAppRegistry::Application":                         &servicecatalogappregistry.Application{},
+		"AWS::ServiceCatalogAppRegistry::AttributeGroup":                      &servicecatalogappregistry.AttributeGroup{},
+		"AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation":           &servicecatalogappregistry.AttributeGroupAssociation{},
+		"AWS::ServiceCatalogAppRegistry::ResourceAssociation":                 &servicecatalogappregistry.ResourceAssociation{},
+		"AWS::ServiceDiscovery::HttpNamespace":                                &servicediscovery.HttpNamespace{},
+		"AWS::ServiceDiscovery::Instance":                                     &servicediscovery.Instance{},
+		"AWS::ServiceDiscovery::PrivateDnsNamespace":                          &servicediscovery.PrivateDnsNamespace{},
+		"AWS::ServiceDiscovery::PublicDnsNamespace":                           &servicediscovery.PublicDnsNamespace{},
+		"AWS::ServiceDiscovery::Service":                                      &servicediscovery.Service{},
+		"AWS::Shield::DRTAccess":                                              &shield.DRTAccess{},
+		"AWS::Shield::ProactiveEngagement":                                    &shield.ProactiveEngagement{},
+		"AWS::Shield::Protection":                                             &shield.Protection{},
+		"AWS::Shield::ProtectionGroup":                                        &shield.ProtectionGroup{},
+		"AWS::Signer::ProfilePermission":                                      &signer.ProfilePermission{},
+		"AWS::Signer::SigningProfile":                                         &signer.SigningProfile{},
+		"AWS::SimSpaceWeaver::Simulation":                                     &simspaceweaver.Simulation{},
+		"AWS::StepFunctions::Activity":                                        &stepfunctions.Activity{},
+		"AWS::StepFunctions::StateMachine":                                    &stepfunctions.StateMachine{},
+		"AWS::StepFunctions::StateMachineAlias":                               &stepfunctions.StateMachineAlias{},
+		"AWS::StepFunctions::StateMachineVersion":                             &stepfunctions.StateMachineVersion{},
+		"AWS::SupportApp::AccountAlias":                                       &supportapp.AccountAlias{},
+		"AWS::SupportApp::SlackChannelConfiguration":                          &supportapp.SlackChannelConfiguration{},
+		"AWS::SupportApp::SlackWorkspaceConfiguration":                        &supportapp.SlackWorkspaceConfiguration{},
+		"AWS::Synthetics::Canary":                                             &synthetics.Canary{},
+		"AWS::Synthetics::Group":                                              &synthetics.Group{},
+		"AWS::SystemsManagerSAP::Application":                                 &systemsmanagersap.Application{},
+		"AWS::Timestream::Database":                                           &timestream.Database{},
+		"AWS::Timestream::InfluxDBInstance":                                   &timestream.InfluxDBInstance{},
+		"AWS::Timestream::ScheduledQuery":                                     &timestream.ScheduledQuery{},
+		"AWS::Timestream::Table":                                              &timestream.Table{},
+		"AWS::Transfer::Agreement":                                            &transfer.Agreement{},
+		"AWS::Transfer::Certificate":                                          &transfer.Certificate{},
+		"AWS::Transfer::Connector":                                            &transfer.Connector{},
+		"AWS::Transfer::Profile":                                              &transfer.Profile{},
+		"AWS::Transfer::Server":                                               &transfer.Server{},
+		"AWS::Transfer::User":                                                 &transfer.User{},
+		"AWS::Transfer::WebApp":                                               &transfer.WebApp{},
+		"AWS::Transfer::Workflow":                                             &transfer.Workflow{},
+		"AWS::VerifiedPermissions::IdentitySource":                            &verifiedpermissions.IdentitySource{},
+		"AWS::VerifiedPermissions::Policy":                                    &verifiedpermissions.Policy{},
+		"AWS::VerifiedPermissions::PolicyStore":                               &verifiedpermissions.PolicyStore{},
+		"AWS::VerifiedPermissions::PolicyTemplate":                            &verifiedpermissions.PolicyTemplate{},
+		"AWS::VoiceID::Domain":                                                &voiceid.Domain{},
+		"AWS::VpcLattice::AccessLogSubscription":                              &vpclattice.AccessLogSubscription{},
+		"AWS::VpcLattice::AuthPolicy":                                         &vpclattice.AuthPolicy{},
+		"AWS::VpcLattice::Listener":                                           &vpclattice.Listener{},
+		"AWS::VpcLattice::ResourceConfiguration":                              &vpclattice.ResourceConfiguration{},
+		"AWS::VpcLattice::ResourceGateway":                                    &vpclattice.ResourceGateway{},
+		"AWS::VpcLattice::ResourcePolicy":                                     &vpclattice.ResourcePolicy{},
+		"AWS::VpcLattice::Rule":                                               &vpclattice.Rule{},
+		"AWS::VpcLattice::Service":                                            &vpclattice.Service{},
+		"AWS::VpcLattice::ServiceNetwork":                                     &vpclattice.ServiceNetwork{},
+		"AWS::VpcLattice::ServiceNetworkResourceAssociation":                  &vpclattice.ServiceNetworkResourceAssociation{},
+		"AWS::VpcLattice::ServiceNetworkServiceAssociation":                   &vpclattice.ServiceNetworkServiceAssociation{},
+		"AWS::VpcLattice::ServiceNetworkVpcAssociation":                       &vpclattice.ServiceNetworkVpcAssociation{},
+		"AWS::VpcLattice::TargetGroup":                                        &vpclattice.TargetGroup{},
+		"AWS::WAF::ByteMatchSet":                                              &waf.ByteMatchSet{},
+		"AWS::WAF::IPSet":                                                     &waf.IPSet{},
+		"AWS::WAF::Rule":                                                      &waf.Rule{},
+		"AWS::WAF::SizeConstraintSet":                                         &waf.SizeConstraintSet{},
+		"AWS::WAF::SqlInjectionMatchSet":                                      &waf.SqlInjectionMatchSet{},
+		"AWS::WAF::WebACL":                                                    &waf.WebACL{},
+		"AWS::WAF::XssMatchSet":                                               &waf.XssMatchSet{},
+		"AWS::WAFRegional::ByteMatchSet":                                      &wafregional.ByteMatchSet{},
+		"AWS::WAFRegional::GeoMatchSet":                                       &wafregional.GeoMatchSet{},
+		"AWS::WAFRegional::IPSet":                                             &wafregional.IPSet{},
+		"AWS::WAFRegional::RateBasedRule":                                     &wafregional.RateBasedRule{},
+		"AWS::WAFRegional::RegexPatternSet":                                   &wafregional.RegexPatternSet{},
+		"AWS::WAFRegional::Rule":                                              &wafregional.Rule{},
+		"AWS::WAFRegional::SizeConstraintSet":                                 &wafregional.SizeConstraintSet{},
+		"AWS::WAFRegional::SqlInjectionMatchSet":                              &wafregional.SqlInjectionMatchSet{},
+		"AWS::WAFRegional::WebACL":                                            &wafregional.WebACL{},
+		"AWS::WAFRegional::WebACLAssociation":                                 &wafregional.WebACLAssociation{},
+		"AWS::WAFRegional::XssMatchSet":                                       &wafregional.XssMatchSet{},
+		"AWS::WAFv2::IPSet":                                                   &wafv2.IPSet{},
+		"AWS::WAFv2::LoggingConfiguration":                                    &wafv2.LoggingConfiguration{},
+		"AWS::WAFv2::RegexPatternSet":                                         &wafv2.RegexPatternSet{},
+		"AWS::WAFv2::RuleGroup":                                               &wafv2.RuleGroup{},
+		"AWS::WAFv2::WebACL":                                                  &wafv2.WebACL{},
+		"AWS::WAFv2::WebACLAssociation":                                       &wafv2.WebACLAssociation{},
+		"AWS::Wisdom::AIAgent":                                                &wisdom.AIAgent{},
+		"AWS::Wisdom::AIAgentVersion":                                         &wisdom.AIAgentVersion{},
+		"AWS::Wisdom::AIGuardrail":                                            &wisdom.AIGuardrail{},
+		"AWS::Wisdom::AIGuardrailVersion":                                     &wisdom.AIGuardrailVersion{},
+		"AWS::Wisdom::AIPrompt":                                               &wisdom.AIPrompt{},
+		"AWS::Wisdom::AIPromptVersion":                                        &wisdom.AIPromptVersion{},
+		"AWS::Wisdom::Assistant":                                              &wisdom.Assistant{},
+		"AWS::Wisdom::AssistantAssociation":                                   &wisdom.AssistantAssociation{},
+		"AWS::Wisdom::KnowledgeBase":                                          &wisdom.KnowledgeBase{},
+		"AWS::Wisdom::MessageTemplate":                                        &wisdom.MessageTemplate{},
+		"AWS::Wisdom::MessageTemplateVersion":                                 &wisdom.MessageTemplateVersion{},
+		"AWS::WorkSpaces::ConnectionAlias":                                    &workspaces.ConnectionAlias{},
+		"AWS::WorkSpaces::Workspace":                                          &workspaces.Workspace{},
+		"AWS::WorkSpaces::WorkspacesPool":                                     &workspaces.WorkspacesPool{},
+		"AWS::WorkSpacesThinClient::Environment":                              &workspacesthinclient.Environment{},
+		"AWS::WorkSpacesWeb::BrowserSettings":                                 &workspacesweb.BrowserSettings{},
+		"AWS::WorkSpacesWeb::DataProtectionSettings":                          &workspacesweb.DataProtectionSettings{},
+		"AWS::WorkSpacesWeb::IdentityProvider":                                &workspacesweb.IdentityProvider{},
+		"AWS::WorkSpacesWeb::IpAccessSettings":                                &workspacesweb.IpAccessSettings{},
+		"AWS::WorkSpacesWeb::NetworkSettings":                                 &workspacesweb.NetworkSettings{},
+		"AWS::WorkSpacesWeb::Portal":                                          &workspacesweb.Portal{},
+		"AWS::WorkSpacesWeb::TrustStore":                                      &workspacesweb.TrustStore{},
+		"AWS::WorkSpacesWeb::UserAccessLoggingSettings":                       &workspacesweb.UserAccessLoggingSettings{},
+		"AWS::WorkSpacesWeb::UserSettings":                                    &workspacesweb.UserSettings{},
+		"AWS::XRay::Group":                                                    &xray.Group{},
+		"AWS::XRay::ResourcePolicy":                                           &xray.ResourcePolicy{},
+		"AWS::XRay::SamplingRule":                                             &xray.SamplingRule{},
+		"Alexa::ASK::Skill":                                                   &ask.Skill{},
+		"Api":                                                                 &global.Api{},
+		"Function":                                                            &global.Function{},
+		"HttpApi":                                                             &global.HttpApi{},
+		"SimpleTable":                                                         &global.SimpleTable{},
 	}
 }
 
@@ -1681,6 +1818,30 @@ func (t *Template) GetAPSWorkspaceWithName(name string) (*aps.Workspace, error) 
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type aps.Workspace not found", name)
+}
+
+// GetAllARCZonalShiftAutoshiftObserverNotificationStatusResources retrieves all arczonalshift.AutoshiftObserverNotificationStatus items from an AWS CloudFormation template
+func (t *Template) GetAllARCZonalShiftAutoshiftObserverNotificationStatusResources() map[string]*arczonalshift.AutoshiftObserverNotificationStatus {
+	results := map[string]*arczonalshift.AutoshiftObserverNotificationStatus{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *arczonalshift.AutoshiftObserverNotificationStatus:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetARCZonalShiftAutoshiftObserverNotificationStatusWithName retrieves all arczonalshift.AutoshiftObserverNotificationStatus items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetARCZonalShiftAutoshiftObserverNotificationStatusWithName(name string) (*arczonalshift.AutoshiftObserverNotificationStatus, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *arczonalshift.AutoshiftObserverNotificationStatus:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type arczonalshift.AutoshiftObserverNotificationStatus not found", name)
 }
 
 // GetAllARCZonalShiftZonalAutoshiftConfigurationResources retrieves all arczonalshift.ZonalAutoshiftConfiguration items from an AWS CloudFormation template
@@ -2043,6 +2204,30 @@ func (t *Template) GetApiGatewayBasePathMappingWithName(name string) (*apigatewa
 	return nil, fmt.Errorf("resource %q of type apigateway.BasePathMapping not found", name)
 }
 
+// GetAllApiGatewayBasePathMappingV2Resources retrieves all apigateway.BasePathMappingV2 items from an AWS CloudFormation template
+func (t *Template) GetAllApiGatewayBasePathMappingV2Resources() map[string]*apigateway.BasePathMappingV2 {
+	results := map[string]*apigateway.BasePathMappingV2{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *apigateway.BasePathMappingV2:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetApiGatewayBasePathMappingV2WithName retrieves all apigateway.BasePathMappingV2 items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetApiGatewayBasePathMappingV2WithName(name string) (*apigateway.BasePathMappingV2, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *apigateway.BasePathMappingV2:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type apigateway.BasePathMappingV2 not found", name)
+}
+
 // GetAllApiGatewayClientCertificateResources retrieves all apigateway.ClientCertificate items from an AWS CloudFormation template
 func (t *Template) GetAllApiGatewayClientCertificateResources() map[string]*apigateway.ClientCertificate {
 	results := map[string]*apigateway.ClientCertificate{}
@@ -2161,6 +2346,54 @@ func (t *Template) GetApiGatewayDomainNameWithName(name string) (*apigateway.Dom
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type apigateway.DomainName not found", name)
+}
+
+// GetAllApiGatewayDomainNameAccessAssociationResources retrieves all apigateway.DomainNameAccessAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllApiGatewayDomainNameAccessAssociationResources() map[string]*apigateway.DomainNameAccessAssociation {
+	results := map[string]*apigateway.DomainNameAccessAssociation{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *apigateway.DomainNameAccessAssociation:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetApiGatewayDomainNameAccessAssociationWithName retrieves all apigateway.DomainNameAccessAssociation items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetApiGatewayDomainNameAccessAssociationWithName(name string) (*apigateway.DomainNameAccessAssociation, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *apigateway.DomainNameAccessAssociation:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type apigateway.DomainNameAccessAssociation not found", name)
+}
+
+// GetAllApiGatewayDomainNameV2Resources retrieves all apigateway.DomainNameV2 items from an AWS CloudFormation template
+func (t *Template) GetAllApiGatewayDomainNameV2Resources() map[string]*apigateway.DomainNameV2 {
+	results := map[string]*apigateway.DomainNameV2{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *apigateway.DomainNameV2:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetApiGatewayDomainNameV2WithName retrieves all apigateway.DomainNameV2 items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetApiGatewayDomainNameV2WithName(name string) (*apigateway.DomainNameV2, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *apigateway.DomainNameV2:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type apigateway.DomainNameV2 not found", name)
 }
 
 // GetAllApiGatewayGatewayResponseResources retrieves all apigateway.GatewayResponse items from an AWS CloudFormation template
@@ -3651,6 +3884,30 @@ func (t *Template) GetAppStreamUserWithName(name string) (*appstream.User, error
 	return nil, fmt.Errorf("resource %q of type appstream.User not found", name)
 }
 
+// GetAllAppSyncApiResources retrieves all appsync.Api items from an AWS CloudFormation template
+func (t *Template) GetAllAppSyncApiResources() map[string]*appsync.Api {
+	results := map[string]*appsync.Api{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *appsync.Api:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetAppSyncApiWithName retrieves all appsync.Api items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetAppSyncApiWithName(name string) (*appsync.Api, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *appsync.Api:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type appsync.Api not found", name)
+}
+
 // GetAllAppSyncApiCacheResources retrieves all appsync.ApiCache items from an AWS CloudFormation template
 func (t *Template) GetAllAppSyncApiCacheResources() map[string]*appsync.ApiCache {
 	results := map[string]*appsync.ApiCache{}
@@ -3697,6 +3954,30 @@ func (t *Template) GetAppSyncApiKeyWithName(name string) (*appsync.ApiKey, error
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type appsync.ApiKey not found", name)
+}
+
+// GetAllAppSyncChannelNamespaceResources retrieves all appsync.ChannelNamespace items from an AWS CloudFormation template
+func (t *Template) GetAllAppSyncChannelNamespaceResources() map[string]*appsync.ChannelNamespace {
+	results := map[string]*appsync.ChannelNamespace{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *appsync.ChannelNamespace:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetAppSyncChannelNamespaceWithName retrieves all appsync.ChannelNamespace items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetAppSyncChannelNamespaceWithName(name string) (*appsync.ChannelNamespace, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *appsync.ChannelNamespace:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type appsync.ChannelNamespace not found", name)
 }
 
 // GetAllAppSyncDataSourceResources retrieves all appsync.DataSource items from an AWS CloudFormation template
@@ -3891,6 +4172,30 @@ func (t *Template) GetAppSyncSourceApiAssociationWithName(name string) (*appsync
 	return nil, fmt.Errorf("resource %q of type appsync.SourceApiAssociation not found", name)
 }
 
+// GetAllAppTestTestCaseResources retrieves all apptest.TestCase items from an AWS CloudFormation template
+func (t *Template) GetAllAppTestTestCaseResources() map[string]*apptest.TestCase {
+	results := map[string]*apptest.TestCase{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *apptest.TestCase:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetAppTestTestCaseWithName retrieves all apptest.TestCase items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetAppTestTestCaseWithName(name string) (*apptest.TestCase, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *apptest.TestCase:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type apptest.TestCase not found", name)
+}
+
 // GetAllApplicationAutoScalingScalableTargetResources retrieves all applicationautoscaling.ScalableTarget items from an AWS CloudFormation template
 func (t *Template) GetAllApplicationAutoScalingScalableTargetResources() map[string]*applicationautoscaling.ScalableTarget {
 	results := map[string]*applicationautoscaling.ScalableTarget{}
@@ -3961,6 +4266,30 @@ func (t *Template) GetApplicationInsightsApplicationWithName(name string) (*appl
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type applicationinsights.Application not found", name)
+}
+
+// GetAllApplicationSignalsServiceLevelObjectiveResources retrieves all applicationsignals.ServiceLevelObjective items from an AWS CloudFormation template
+func (t *Template) GetAllApplicationSignalsServiceLevelObjectiveResources() map[string]*applicationsignals.ServiceLevelObjective {
+	results := map[string]*applicationsignals.ServiceLevelObjective{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *applicationsignals.ServiceLevelObjective:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetApplicationSignalsServiceLevelObjectiveWithName retrieves all applicationsignals.ServiceLevelObjective items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetApplicationSignalsServiceLevelObjectiveWithName(name string) (*applicationsignals.ServiceLevelObjective, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *applicationsignals.ServiceLevelObjective:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type applicationsignals.ServiceLevelObjective not found", name)
 }
 
 // GetAllAthenaCapacityReservationResources retrieves all athena.CapacityReservation items from an AWS CloudFormation template
@@ -4491,6 +4820,30 @@ func (t *Template) GetBackupFrameworkWithName(name string) (*backup.Framework, e
 	return nil, fmt.Errorf("resource %q of type backup.Framework not found", name)
 }
 
+// GetAllBackupLogicallyAirGappedBackupVaultResources retrieves all backup.LogicallyAirGappedBackupVault items from an AWS CloudFormation template
+func (t *Template) GetAllBackupLogicallyAirGappedBackupVaultResources() map[string]*backup.LogicallyAirGappedBackupVault {
+	results := map[string]*backup.LogicallyAirGappedBackupVault{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *backup.LogicallyAirGappedBackupVault:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBackupLogicallyAirGappedBackupVaultWithName retrieves all backup.LogicallyAirGappedBackupVault items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBackupLogicallyAirGappedBackupVaultWithName(name string) (*backup.LogicallyAirGappedBackupVault, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *backup.LogicallyAirGappedBackupVault:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type backup.LogicallyAirGappedBackupVault not found", name)
+}
+
 // GetAllBackupReportPlanResources retrieves all backup.ReportPlan items from an AWS CloudFormation template
 func (t *Template) GetAllBackupReportPlanResources() map[string]*backup.ReportPlan {
 	results := map[string]*backup.ReportPlan{}
@@ -4731,6 +5084,30 @@ func (t *Template) GetBedrockAgentAliasWithName(name string) (*bedrock.AgentAlia
 	return nil, fmt.Errorf("resource %q of type bedrock.AgentAlias not found", name)
 }
 
+// GetAllBedrockApplicationInferenceProfileResources retrieves all bedrock.ApplicationInferenceProfile items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockApplicationInferenceProfileResources() map[string]*bedrock.ApplicationInferenceProfile {
+	results := map[string]*bedrock.ApplicationInferenceProfile{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.ApplicationInferenceProfile:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockApplicationInferenceProfileWithName retrieves all bedrock.ApplicationInferenceProfile items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockApplicationInferenceProfileWithName(name string) (*bedrock.ApplicationInferenceProfile, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.ApplicationInferenceProfile:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.ApplicationInferenceProfile not found", name)
+}
+
 // GetAllBedrockDataSourceResources retrieves all bedrock.DataSource items from an AWS CloudFormation template
 func (t *Template) GetAllBedrockDataSourceResources() map[string]*bedrock.DataSource {
 	results := map[string]*bedrock.DataSource{}
@@ -4753,6 +5130,78 @@ func (t *Template) GetBedrockDataSourceWithName(name string) (*bedrock.DataSourc
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type bedrock.DataSource not found", name)
+}
+
+// GetAllBedrockFlowResources retrieves all bedrock.Flow items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockFlowResources() map[string]*bedrock.Flow {
+	results := map[string]*bedrock.Flow{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.Flow:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockFlowWithName retrieves all bedrock.Flow items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockFlowWithName(name string) (*bedrock.Flow, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.Flow:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.Flow not found", name)
+}
+
+// GetAllBedrockFlowAliasResources retrieves all bedrock.FlowAlias items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockFlowAliasResources() map[string]*bedrock.FlowAlias {
+	results := map[string]*bedrock.FlowAlias{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.FlowAlias:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockFlowAliasWithName retrieves all bedrock.FlowAlias items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockFlowAliasWithName(name string) (*bedrock.FlowAlias, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.FlowAlias:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.FlowAlias not found", name)
+}
+
+// GetAllBedrockFlowVersionResources retrieves all bedrock.FlowVersion items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockFlowVersionResources() map[string]*bedrock.FlowVersion {
+	results := map[string]*bedrock.FlowVersion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.FlowVersion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockFlowVersionWithName retrieves all bedrock.FlowVersion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockFlowVersionWithName(name string) (*bedrock.FlowVersion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.FlowVersion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.FlowVersion not found", name)
 }
 
 // GetAllBedrockGuardrailResources retrieves all bedrock.Guardrail items from an AWS CloudFormation template
@@ -4779,6 +5228,30 @@ func (t *Template) GetBedrockGuardrailWithName(name string) (*bedrock.Guardrail,
 	return nil, fmt.Errorf("resource %q of type bedrock.Guardrail not found", name)
 }
 
+// GetAllBedrockGuardrailVersionResources retrieves all bedrock.GuardrailVersion items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockGuardrailVersionResources() map[string]*bedrock.GuardrailVersion {
+	results := map[string]*bedrock.GuardrailVersion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.GuardrailVersion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockGuardrailVersionWithName retrieves all bedrock.GuardrailVersion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockGuardrailVersionWithName(name string) (*bedrock.GuardrailVersion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.GuardrailVersion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.GuardrailVersion not found", name)
+}
+
 // GetAllBedrockKnowledgeBaseResources retrieves all bedrock.KnowledgeBase items from an AWS CloudFormation template
 func (t *Template) GetAllBedrockKnowledgeBaseResources() map[string]*bedrock.KnowledgeBase {
 	results := map[string]*bedrock.KnowledgeBase{}
@@ -4801,6 +5274,54 @@ func (t *Template) GetBedrockKnowledgeBaseWithName(name string) (*bedrock.Knowle
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type bedrock.KnowledgeBase not found", name)
+}
+
+// GetAllBedrockPromptResources retrieves all bedrock.Prompt items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockPromptResources() map[string]*bedrock.Prompt {
+	results := map[string]*bedrock.Prompt{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.Prompt:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockPromptWithName retrieves all bedrock.Prompt items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockPromptWithName(name string) (*bedrock.Prompt, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.Prompt:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.Prompt not found", name)
+}
+
+// GetAllBedrockPromptVersionResources retrieves all bedrock.PromptVersion items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockPromptVersionResources() map[string]*bedrock.PromptVersion {
+	results := map[string]*bedrock.PromptVersion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.PromptVersion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockPromptVersionWithName retrieves all bedrock.PromptVersion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockPromptVersionWithName(name string) (*bedrock.PromptVersion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.PromptVersion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.PromptVersion not found", name)
 }
 
 // GetAllBillingConductorBillingGroupResources retrieves all billingconductor.BillingGroup items from an AWS CloudFormation template
@@ -5115,6 +5636,30 @@ func (t *Template) GetCassandraTableWithName(name string) (*cassandra.Table, err
 	return nil, fmt.Errorf("resource %q of type cassandra.Table not found", name)
 }
 
+// GetAllCassandraTypeResources retrieves all cassandra.Type items from an AWS CloudFormation template
+func (t *Template) GetAllCassandraTypeResources() map[string]*cassandra.Type {
+	results := map[string]*cassandra.Type{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cassandra.Type:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCassandraTypeWithName retrieves all cassandra.Type items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCassandraTypeWithName(name string) (*cassandra.Type, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cassandra.Type:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cassandra.Type not found", name)
+}
+
 // GetAllCertificateManagerAccountResources retrieves all certificatemanager.Account items from an AWS CloudFormation template
 func (t *Template) GetAllCertificateManagerAccountResources() map[string]*certificatemanager.Account {
 	results := map[string]*certificatemanager.Account{}
@@ -5161,6 +5706,30 @@ func (t *Template) GetCertificateManagerCertificateWithName(name string) (*certi
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type certificatemanager.Certificate not found", name)
+}
+
+// GetAllChatbotCustomActionResources retrieves all chatbot.CustomAction items from an AWS CloudFormation template
+func (t *Template) GetAllChatbotCustomActionResources() map[string]*chatbot.CustomAction {
+	results := map[string]*chatbot.CustomAction{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *chatbot.CustomAction:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetChatbotCustomActionWithName retrieves all chatbot.CustomAction items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetChatbotCustomActionWithName(name string) (*chatbot.CustomAction, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *chatbot.CustomAction:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type chatbot.CustomAction not found", name)
 }
 
 // GetAllChatbotMicrosoftTeamsChannelConfigurationResources retrieves all chatbot.MicrosoftTeamsChannelConfiguration items from an AWS CloudFormation template
@@ -5307,6 +5876,54 @@ func (t *Template) GetCleanRoomsConfiguredTableAssociationWithName(name string) 
 	return nil, fmt.Errorf("resource %q of type cleanrooms.ConfiguredTableAssociation not found", name)
 }
 
+// GetAllCleanRoomsIdMappingTableResources retrieves all cleanrooms.IdMappingTable items from an AWS CloudFormation template
+func (t *Template) GetAllCleanRoomsIdMappingTableResources() map[string]*cleanrooms.IdMappingTable {
+	results := map[string]*cleanrooms.IdMappingTable{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cleanrooms.IdMappingTable:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCleanRoomsIdMappingTableWithName retrieves all cleanrooms.IdMappingTable items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCleanRoomsIdMappingTableWithName(name string) (*cleanrooms.IdMappingTable, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cleanrooms.IdMappingTable:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cleanrooms.IdMappingTable not found", name)
+}
+
+// GetAllCleanRoomsIdNamespaceAssociationResources retrieves all cleanrooms.IdNamespaceAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllCleanRoomsIdNamespaceAssociationResources() map[string]*cleanrooms.IdNamespaceAssociation {
+	results := map[string]*cleanrooms.IdNamespaceAssociation{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cleanrooms.IdNamespaceAssociation:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCleanRoomsIdNamespaceAssociationWithName retrieves all cleanrooms.IdNamespaceAssociation items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCleanRoomsIdNamespaceAssociationWithName(name string) (*cleanrooms.IdNamespaceAssociation, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cleanrooms.IdNamespaceAssociation:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cleanrooms.IdNamespaceAssociation not found", name)
+}
+
 // GetAllCleanRoomsMembershipResources retrieves all cleanrooms.Membership items from an AWS CloudFormation template
 func (t *Template) GetAllCleanRoomsMembershipResources() map[string]*cleanrooms.Membership {
 	results := map[string]*cleanrooms.Membership{}
@@ -5427,6 +6044,30 @@ func (t *Template) GetCloudFormationCustomResourceWithName(name string) (*cloudf
 	return nil, fmt.Errorf("resource %q of type cloudformation.CustomResource not found", name)
 }
 
+// GetAllCloudFormationGuardHookResources retrieves all cloudformation.GuardHook items from an AWS CloudFormation template
+func (t *Template) GetAllCloudFormationGuardHookResources() map[string]*cloudformation.GuardHook {
+	results := map[string]*cloudformation.GuardHook{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cloudformation.GuardHook:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCloudFormationGuardHookWithName retrieves all cloudformation.GuardHook items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCloudFormationGuardHookWithName(name string) (*cloudformation.GuardHook, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cloudformation.GuardHook:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cloudformation.GuardHook not found", name)
+}
+
 // GetAllCloudFormationHookDefaultVersionResources retrieves all cloudformation.HookDefaultVersion items from an AWS CloudFormation template
 func (t *Template) GetAllCloudFormationHookDefaultVersionResources() map[string]*cloudformation.HookDefaultVersion {
 	results := map[string]*cloudformation.HookDefaultVersion{}
@@ -5497,6 +6138,30 @@ func (t *Template) GetCloudFormationHookVersionWithName(name string) (*cloudform
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type cloudformation.HookVersion not found", name)
+}
+
+// GetAllCloudFormationLambdaHookResources retrieves all cloudformation.LambdaHook items from an AWS CloudFormation template
+func (t *Template) GetAllCloudFormationLambdaHookResources() map[string]*cloudformation.LambdaHook {
+	results := map[string]*cloudformation.LambdaHook{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cloudformation.LambdaHook:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCloudFormationLambdaHookWithName retrieves all cloudformation.LambdaHook items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCloudFormationLambdaHookWithName(name string) (*cloudformation.LambdaHook, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cloudformation.LambdaHook:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cloudformation.LambdaHook not found", name)
 }
 
 // GetAllCloudFormationMacroResources retrieves all cloudformation.Macro items from an AWS CloudFormation template
@@ -5785,6 +6450,30 @@ func (t *Template) GetCloudFormationWaitConditionHandleWithName(name string) (*c
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type cloudformation.WaitConditionHandle not found", name)
+}
+
+// GetAllCloudFrontAnycastIpListResources retrieves all cloudfront.AnycastIpList items from an AWS CloudFormation template
+func (t *Template) GetAllCloudFrontAnycastIpListResources() map[string]*cloudfront.AnycastIpList {
+	results := map[string]*cloudfront.AnycastIpList{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cloudfront.AnycastIpList:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCloudFrontAnycastIpListWithName retrieves all cloudfront.AnycastIpList items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCloudFrontAnycastIpListWithName(name string) (*cloudfront.AnycastIpList, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cloudfront.AnycastIpList:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cloudfront.AnycastIpList not found", name)
 }
 
 // GetAllCloudFrontCachePolicyResources retrieves all cloudfront.CachePolicy items from an AWS CloudFormation template
@@ -6123,6 +6812,30 @@ func (t *Template) GetCloudFrontStreamingDistributionWithName(name string) (*clo
 	return nil, fmt.Errorf("resource %q of type cloudfront.StreamingDistribution not found", name)
 }
 
+// GetAllCloudFrontVpcOriginResources retrieves all cloudfront.VpcOrigin items from an AWS CloudFormation template
+func (t *Template) GetAllCloudFrontVpcOriginResources() map[string]*cloudfront.VpcOrigin {
+	results := map[string]*cloudfront.VpcOrigin{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cloudfront.VpcOrigin:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCloudFrontVpcOriginWithName retrieves all cloudfront.VpcOrigin items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCloudFrontVpcOriginWithName(name string) (*cloudfront.VpcOrigin, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cloudfront.VpcOrigin:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cloudfront.VpcOrigin not found", name)
+}
+
 // GetAllCloudTrailChannelResources retrieves all cloudtrail.Channel items from an AWS CloudFormation template
 func (t *Template) GetAllCloudTrailChannelResources() map[string]*cloudtrail.Channel {
 	results := map[string]*cloudtrail.Channel{}
@@ -6145,6 +6858,30 @@ func (t *Template) GetCloudTrailChannelWithName(name string) (*cloudtrail.Channe
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type cloudtrail.Channel not found", name)
+}
+
+// GetAllCloudTrailDashboardResources retrieves all cloudtrail.Dashboard items from an AWS CloudFormation template
+func (t *Template) GetAllCloudTrailDashboardResources() map[string]*cloudtrail.Dashboard {
+	results := map[string]*cloudtrail.Dashboard{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cloudtrail.Dashboard:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCloudTrailDashboardWithName retrieves all cloudtrail.Dashboard items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCloudTrailDashboardWithName(name string) (*cloudtrail.Dashboard, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cloudtrail.Dashboard:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cloudtrail.Dashboard not found", name)
 }
 
 // GetAllCloudTrailEventDataStoreResources retrieves all cloudtrail.EventDataStore items from an AWS CloudFormation template
@@ -6987,6 +7724,30 @@ func (t *Template) GetCognitoLogDeliveryConfigurationWithName(name string) (*cog
 	return nil, fmt.Errorf("resource %q of type cognito.LogDeliveryConfiguration not found", name)
 }
 
+// GetAllCognitoManagedLoginBrandingResources retrieves all cognito.ManagedLoginBranding items from an AWS CloudFormation template
+func (t *Template) GetAllCognitoManagedLoginBrandingResources() map[string]*cognito.ManagedLoginBranding {
+	results := map[string]*cognito.ManagedLoginBranding{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *cognito.ManagedLoginBranding:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCognitoManagedLoginBrandingWithName retrieves all cognito.ManagedLoginBranding items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCognitoManagedLoginBrandingWithName(name string) (*cognito.ManagedLoginBranding, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *cognito.ManagedLoginBranding:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type cognito.ManagedLoginBranding not found", name)
+}
+
 // GetAllCognitoUserPoolResources retrieves all cognito.UserPool items from an AWS CloudFormation template
 func (t *Template) GetAllCognitoUserPoolResources() map[string]*cognito.UserPool {
 	results := map[string]*cognito.UserPool{}
@@ -7515,6 +8276,30 @@ func (t *Template) GetConfigStoredQueryWithName(name string) (*config.StoredQuer
 	return nil, fmt.Errorf("resource %q of type config.StoredQuery not found", name)
 }
 
+// GetAllConnectAgentStatusResources retrieves all connect.AgentStatus items from an AWS CloudFormation template
+func (t *Template) GetAllConnectAgentStatusResources() map[string]*connect.AgentStatus {
+	results := map[string]*connect.AgentStatus{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *connect.AgentStatus:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetConnectAgentStatusWithName retrieves all connect.AgentStatus items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetConnectAgentStatusWithName(name string) (*connect.AgentStatus, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *connect.AgentStatus:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type connect.AgentStatus not found", name)
+}
+
 // GetAllConnectApprovedOriginResources retrieves all connect.ApprovedOrigin items from an AWS CloudFormation template
 func (t *Template) GetAllConnectApprovedOriginResources() map[string]*connect.ApprovedOrigin {
 	results := map[string]*connect.ApprovedOrigin{}
@@ -7585,6 +8370,54 @@ func (t *Template) GetConnectContactFlowModuleWithName(name string) (*connect.Co
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type connect.ContactFlowModule not found", name)
+}
+
+// GetAllConnectContactFlowVersionResources retrieves all connect.ContactFlowVersion items from an AWS CloudFormation template
+func (t *Template) GetAllConnectContactFlowVersionResources() map[string]*connect.ContactFlowVersion {
+	results := map[string]*connect.ContactFlowVersion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *connect.ContactFlowVersion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetConnectContactFlowVersionWithName retrieves all connect.ContactFlowVersion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetConnectContactFlowVersionWithName(name string) (*connect.ContactFlowVersion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *connect.ContactFlowVersion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type connect.ContactFlowVersion not found", name)
+}
+
+// GetAllConnectEmailAddressResources retrieves all connect.EmailAddress items from an AWS CloudFormation template
+func (t *Template) GetAllConnectEmailAddressResources() map[string]*connect.EmailAddress {
+	results := map[string]*connect.EmailAddress{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *connect.EmailAddress:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetConnectEmailAddressWithName retrieves all connect.EmailAddress items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetConnectEmailAddressWithName(name string) (*connect.EmailAddress, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *connect.EmailAddress:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type connect.EmailAddress not found", name)
 }
 
 // GetAllConnectEvaluationFormResources retrieves all connect.EvaluationForm items from an AWS CloudFormation template
@@ -8019,6 +8852,30 @@ func (t *Template) GetConnectUserHierarchyGroupWithName(name string) (*connect.U
 	return nil, fmt.Errorf("resource %q of type connect.UserHierarchyGroup not found", name)
 }
 
+// GetAllConnectUserHierarchyStructureResources retrieves all connect.UserHierarchyStructure items from an AWS CloudFormation template
+func (t *Template) GetAllConnectUserHierarchyStructureResources() map[string]*connect.UserHierarchyStructure {
+	results := map[string]*connect.UserHierarchyStructure{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *connect.UserHierarchyStructure:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetConnectUserHierarchyStructureWithName retrieves all connect.UserHierarchyStructure items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetConnectUserHierarchyStructureWithName(name string) (*connect.UserHierarchyStructure, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *connect.UserHierarchyStructure:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type connect.UserHierarchyStructure not found", name)
+}
+
 // GetAllConnectViewResources retrieves all connect.View items from an AWS CloudFormation template
 func (t *Template) GetAllConnectViewResources() map[string]*connect.View {
 	results := map[string]*connect.View{}
@@ -8089,6 +8946,30 @@ func (t *Template) GetConnectCampaignsCampaignWithName(name string) (*connectcam
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type connectcampaigns.Campaign not found", name)
+}
+
+// GetAllConnectCampaignsV2CampaignResources retrieves all connectcampaignsv2.Campaign items from an AWS CloudFormation template
+func (t *Template) GetAllConnectCampaignsV2CampaignResources() map[string]*connectcampaignsv2.Campaign {
+	results := map[string]*connectcampaignsv2.Campaign{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *connectcampaignsv2.Campaign:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetConnectCampaignsV2CampaignWithName retrieves all connectcampaignsv2.Campaign items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetConnectCampaignsV2CampaignWithName(name string) (*connectcampaignsv2.Campaign, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *connectcampaignsv2.Campaign:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type connectcampaignsv2.Campaign not found", name)
 }
 
 // GetAllControlTowerEnabledBaselineResources retrieves all controltower.EnabledBaseline items from an AWS CloudFormation template
@@ -8235,6 +9116,30 @@ func (t *Template) GetCustomerProfilesEventStreamWithName(name string) (*custome
 	return nil, fmt.Errorf("resource %q of type customerprofiles.EventStream not found", name)
 }
 
+// GetAllCustomerProfilesEventTriggerResources retrieves all customerprofiles.EventTrigger items from an AWS CloudFormation template
+func (t *Template) GetAllCustomerProfilesEventTriggerResources() map[string]*customerprofiles.EventTrigger {
+	results := map[string]*customerprofiles.EventTrigger{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *customerprofiles.EventTrigger:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCustomerProfilesEventTriggerWithName retrieves all customerprofiles.EventTrigger items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCustomerProfilesEventTriggerWithName(name string) (*customerprofiles.EventTrigger, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *customerprofiles.EventTrigger:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type customerprofiles.EventTrigger not found", name)
+}
+
 // GetAllCustomerProfilesIntegrationResources retrieves all customerprofiles.Integration items from an AWS CloudFormation template
 func (t *Template) GetAllCustomerProfilesIntegrationResources() map[string]*customerprofiles.Integration {
 	results := map[string]*customerprofiles.Integration{}
@@ -8281,6 +9186,30 @@ func (t *Template) GetCustomerProfilesObjectTypeWithName(name string) (*customer
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type customerprofiles.ObjectType not found", name)
+}
+
+// GetAllCustomerProfilesSegmentDefinitionResources retrieves all customerprofiles.SegmentDefinition items from an AWS CloudFormation template
+func (t *Template) GetAllCustomerProfilesSegmentDefinitionResources() map[string]*customerprofiles.SegmentDefinition {
+	results := map[string]*customerprofiles.SegmentDefinition{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *customerprofiles.SegmentDefinition:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetCustomerProfilesSegmentDefinitionWithName retrieves all customerprofiles.SegmentDefinition items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetCustomerProfilesSegmentDefinitionWithName(name string) (*customerprofiles.SegmentDefinition, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *customerprofiles.SegmentDefinition:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type customerprofiles.SegmentDefinition not found", name)
 }
 
 // GetAllDAXClusterResources retrieves all dax.Cluster items from an AWS CloudFormation template
@@ -8401,6 +9330,30 @@ func (t *Template) GetDMSCertificateWithName(name string) (*dms.Certificate, err
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type dms.Certificate not found", name)
+}
+
+// GetAllDMSDataMigrationResources retrieves all dms.DataMigration items from an AWS CloudFormation template
+func (t *Template) GetAllDMSDataMigrationResources() map[string]*dms.DataMigration {
+	results := map[string]*dms.DataMigration{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *dms.DataMigration:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDMSDataMigrationWithName retrieves all dms.DataMigration items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDMSDataMigrationWithName(name string) (*dms.DataMigration, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *dms.DataMigration:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type dms.DataMigration not found", name)
 }
 
 // GetAllDMSDataProviderResources retrieves all dms.DataProvider items from an AWS CloudFormation template
@@ -9195,6 +10148,30 @@ func (t *Template) GetDataZoneEnvironmentWithName(name string) (*datazone.Enviro
 	return nil, fmt.Errorf("resource %q of type datazone.Environment not found", name)
 }
 
+// GetAllDataZoneEnvironmentActionsResources retrieves all datazone.EnvironmentActions items from an AWS CloudFormation template
+func (t *Template) GetAllDataZoneEnvironmentActionsResources() map[string]*datazone.EnvironmentActions {
+	results := map[string]*datazone.EnvironmentActions{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *datazone.EnvironmentActions:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDataZoneEnvironmentActionsWithName retrieves all datazone.EnvironmentActions items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDataZoneEnvironmentActionsWithName(name string) (*datazone.EnvironmentActions, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *datazone.EnvironmentActions:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type datazone.EnvironmentActions not found", name)
+}
+
 // GetAllDataZoneEnvironmentBlueprintConfigurationResources retrieves all datazone.EnvironmentBlueprintConfiguration items from an AWS CloudFormation template
 func (t *Template) GetAllDataZoneEnvironmentBlueprintConfigurationResources() map[string]*datazone.EnvironmentBlueprintConfiguration {
 	results := map[string]*datazone.EnvironmentBlueprintConfiguration{}
@@ -9243,6 +10220,30 @@ func (t *Template) GetDataZoneEnvironmentProfileWithName(name string) (*datazone
 	return nil, fmt.Errorf("resource %q of type datazone.EnvironmentProfile not found", name)
 }
 
+// GetAllDataZoneGroupProfileResources retrieves all datazone.GroupProfile items from an AWS CloudFormation template
+func (t *Template) GetAllDataZoneGroupProfileResources() map[string]*datazone.GroupProfile {
+	results := map[string]*datazone.GroupProfile{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *datazone.GroupProfile:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDataZoneGroupProfileWithName retrieves all datazone.GroupProfile items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDataZoneGroupProfileWithName(name string) (*datazone.GroupProfile, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *datazone.GroupProfile:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type datazone.GroupProfile not found", name)
+}
+
 // GetAllDataZoneProjectResources retrieves all datazone.Project items from an AWS CloudFormation template
 func (t *Template) GetAllDataZoneProjectResources() map[string]*datazone.Project {
 	results := map[string]*datazone.Project{}
@@ -9267,6 +10268,30 @@ func (t *Template) GetDataZoneProjectWithName(name string) (*datazone.Project, e
 	return nil, fmt.Errorf("resource %q of type datazone.Project not found", name)
 }
 
+// GetAllDataZoneProjectMembershipResources retrieves all datazone.ProjectMembership items from an AWS CloudFormation template
+func (t *Template) GetAllDataZoneProjectMembershipResources() map[string]*datazone.ProjectMembership {
+	results := map[string]*datazone.ProjectMembership{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *datazone.ProjectMembership:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDataZoneProjectMembershipWithName retrieves all datazone.ProjectMembership items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDataZoneProjectMembershipWithName(name string) (*datazone.ProjectMembership, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *datazone.ProjectMembership:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type datazone.ProjectMembership not found", name)
+}
+
 // GetAllDataZoneSubscriptionTargetResources retrieves all datazone.SubscriptionTarget items from an AWS CloudFormation template
 func (t *Template) GetAllDataZoneSubscriptionTargetResources() map[string]*datazone.SubscriptionTarget {
 	results := map[string]*datazone.SubscriptionTarget{}
@@ -9289,6 +10314,30 @@ func (t *Template) GetDataZoneSubscriptionTargetWithName(name string) (*datazone
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type datazone.SubscriptionTarget not found", name)
+}
+
+// GetAllDataZoneUserProfileResources retrieves all datazone.UserProfile items from an AWS CloudFormation template
+func (t *Template) GetAllDataZoneUserProfileResources() map[string]*datazone.UserProfile {
+	results := map[string]*datazone.UserProfile{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *datazone.UserProfile:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDataZoneUserProfileWithName retrieves all datazone.UserProfile items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDataZoneUserProfileWithName(name string) (*datazone.UserProfile, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *datazone.UserProfile:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type datazone.UserProfile not found", name)
 }
 
 // GetAllDeadlineFarmResources retrieves all deadline.Farm items from an AWS CloudFormation template
@@ -9363,6 +10412,30 @@ func (t *Template) GetDeadlineLicenseEndpointWithName(name string) (*deadline.Li
 	return nil, fmt.Errorf("resource %q of type deadline.LicenseEndpoint not found", name)
 }
 
+// GetAllDeadlineLimitResources retrieves all deadline.Limit items from an AWS CloudFormation template
+func (t *Template) GetAllDeadlineLimitResources() map[string]*deadline.Limit {
+	results := map[string]*deadline.Limit{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *deadline.Limit:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDeadlineLimitWithName retrieves all deadline.Limit items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDeadlineLimitWithName(name string) (*deadline.Limit, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *deadline.Limit:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type deadline.Limit not found", name)
+}
+
 // GetAllDeadlineMeteredProductResources retrieves all deadline.MeteredProduct items from an AWS CloudFormation template
 func (t *Template) GetAllDeadlineMeteredProductResources() map[string]*deadline.MeteredProduct {
 	results := map[string]*deadline.MeteredProduct{}
@@ -9385,6 +10458,30 @@ func (t *Template) GetDeadlineMeteredProductWithName(name string) (*deadline.Met
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type deadline.MeteredProduct not found", name)
+}
+
+// GetAllDeadlineMonitorResources retrieves all deadline.Monitor items from an AWS CloudFormation template
+func (t *Template) GetAllDeadlineMonitorResources() map[string]*deadline.Monitor {
+	results := map[string]*deadline.Monitor{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *deadline.Monitor:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDeadlineMonitorWithName retrieves all deadline.Monitor items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDeadlineMonitorWithName(name string) (*deadline.Monitor, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *deadline.Monitor:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type deadline.Monitor not found", name)
 }
 
 // GetAllDeadlineQueueResources retrieves all deadline.Queue items from an AWS CloudFormation template
@@ -9457,6 +10554,30 @@ func (t *Template) GetDeadlineQueueFleetAssociationWithName(name string) (*deadl
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type deadline.QueueFleetAssociation not found", name)
+}
+
+// GetAllDeadlineQueueLimitAssociationResources retrieves all deadline.QueueLimitAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllDeadlineQueueLimitAssociationResources() map[string]*deadline.QueueLimitAssociation {
+	results := map[string]*deadline.QueueLimitAssociation{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *deadline.QueueLimitAssociation:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDeadlineQueueLimitAssociationWithName retrieves all deadline.QueueLimitAssociation items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDeadlineQueueLimitAssociationWithName(name string) (*deadline.QueueLimitAssociation, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *deadline.QueueLimitAssociation:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type deadline.QueueLimitAssociation not found", name)
 }
 
 // GetAllDeadlineStorageProfileResources retrieves all deadline.StorageProfile items from an AWS CloudFormation template
@@ -11091,6 +12212,30 @@ func (t *Template) GetEC2SecurityGroupIngressWithName(name string) (*ec2.Securit
 	return nil, fmt.Errorf("resource %q of type ec2.SecurityGroupIngress not found", name)
 }
 
+// GetAllEC2SecurityGroupVpcAssociationResources retrieves all ec2.SecurityGroupVpcAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllEC2SecurityGroupVpcAssociationResources() map[string]*ec2.SecurityGroupVpcAssociation {
+	results := map[string]*ec2.SecurityGroupVpcAssociation{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ec2.SecurityGroupVpcAssociation:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetEC2SecurityGroupVpcAssociationWithName retrieves all ec2.SecurityGroupVpcAssociation items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetEC2SecurityGroupVpcAssociationWithName(name string) (*ec2.SecurityGroupVpcAssociation, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ec2.SecurityGroupVpcAssociation:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ec2.SecurityGroupVpcAssociation not found", name)
+}
+
 // GetAllEC2SnapshotBlockPublicAccessResources retrieves all ec2.SnapshotBlockPublicAccess items from an AWS CloudFormation template
 func (t *Template) GetAllEC2SnapshotBlockPublicAccessResources() map[string]*ec2.SnapshotBlockPublicAccess {
 	results := map[string]*ec2.SnapshotBlockPublicAccess{}
@@ -11665,6 +12810,54 @@ func (t *Template) GetEC2VPCWithName(name string) (*ec2.VPC, error) {
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type ec2.VPC not found", name)
+}
+
+// GetAllEC2VPCBlockPublicAccessExclusionResources retrieves all ec2.VPCBlockPublicAccessExclusion items from an AWS CloudFormation template
+func (t *Template) GetAllEC2VPCBlockPublicAccessExclusionResources() map[string]*ec2.VPCBlockPublicAccessExclusion {
+	results := map[string]*ec2.VPCBlockPublicAccessExclusion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ec2.VPCBlockPublicAccessExclusion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetEC2VPCBlockPublicAccessExclusionWithName retrieves all ec2.VPCBlockPublicAccessExclusion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetEC2VPCBlockPublicAccessExclusionWithName(name string) (*ec2.VPCBlockPublicAccessExclusion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ec2.VPCBlockPublicAccessExclusion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ec2.VPCBlockPublicAccessExclusion not found", name)
+}
+
+// GetAllEC2VPCBlockPublicAccessOptionsResources retrieves all ec2.VPCBlockPublicAccessOptions items from an AWS CloudFormation template
+func (t *Template) GetAllEC2VPCBlockPublicAccessOptionsResources() map[string]*ec2.VPCBlockPublicAccessOptions {
+	results := map[string]*ec2.VPCBlockPublicAccessOptions{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ec2.VPCBlockPublicAccessOptions:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetEC2VPCBlockPublicAccessOptionsWithName retrieves all ec2.VPCBlockPublicAccessOptions items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetEC2VPCBlockPublicAccessOptionsWithName(name string) (*ec2.VPCBlockPublicAccessOptions, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ec2.VPCBlockPublicAccessOptions:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ec2.VPCBlockPublicAccessOptions not found", name)
 }
 
 // GetAllEC2VPCCidrBlockResources retrieves all ec2.VPCCidrBlock items from an AWS CloudFormation template
@@ -14475,6 +15668,30 @@ func (t *Template) GetGameLiftBuildWithName(name string) (*gamelift.Build, error
 	return nil, fmt.Errorf("resource %q of type gamelift.Build not found", name)
 }
 
+// GetAllGameLiftContainerFleetResources retrieves all gamelift.ContainerFleet items from an AWS CloudFormation template
+func (t *Template) GetAllGameLiftContainerFleetResources() map[string]*gamelift.ContainerFleet {
+	results := map[string]*gamelift.ContainerFleet{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *gamelift.ContainerFleet:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetGameLiftContainerFleetWithName retrieves all gamelift.ContainerFleet items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetGameLiftContainerFleetWithName(name string) (*gamelift.ContainerFleet, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *gamelift.ContainerFleet:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type gamelift.ContainerFleet not found", name)
+}
+
 // GetAllGameLiftContainerGroupDefinitionResources retrieves all gamelift.ContainerGroupDefinition items from an AWS CloudFormation template
 func (t *Template) GetAllGameLiftContainerGroupDefinitionResources() map[string]*gamelift.ContainerGroupDefinition {
 	results := map[string]*gamelift.ContainerGroupDefinition{}
@@ -15219,6 +16436,30 @@ func (t *Template) GetGlueTriggerWithName(name string) (*glue.Trigger, error) {
 	return nil, fmt.Errorf("resource %q of type glue.Trigger not found", name)
 }
 
+// GetAllGlueUsageProfileResources retrieves all glue.UsageProfile items from an AWS CloudFormation template
+func (t *Template) GetAllGlueUsageProfileResources() map[string]*glue.UsageProfile {
+	results := map[string]*glue.UsageProfile{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *glue.UsageProfile:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetGlueUsageProfileWithName retrieves all glue.UsageProfile items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetGlueUsageProfileWithName(name string) (*glue.UsageProfile, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *glue.UsageProfile:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type glue.UsageProfile not found", name)
+}
+
 // GetAllGlueWorkflowResources retrieves all glue.Workflow items from an AWS CloudFormation template
 func (t *Template) GetAllGlueWorkflowResources() map[string]*glue.Workflow {
 	results := map[string]*glue.Workflow{}
@@ -15843,6 +17084,30 @@ func (t *Template) GetGuardDutyIPSetWithName(name string) (*guardduty.IPSet, err
 	return nil, fmt.Errorf("resource %q of type guardduty.IPSet not found", name)
 }
 
+// GetAllGuardDutyMalwareProtectionPlanResources retrieves all guardduty.MalwareProtectionPlan items from an AWS CloudFormation template
+func (t *Template) GetAllGuardDutyMalwareProtectionPlanResources() map[string]*guardduty.MalwareProtectionPlan {
+	results := map[string]*guardduty.MalwareProtectionPlan{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *guardduty.MalwareProtectionPlan:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetGuardDutyMalwareProtectionPlanWithName retrieves all guardduty.MalwareProtectionPlan items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetGuardDutyMalwareProtectionPlanWithName(name string) (*guardduty.MalwareProtectionPlan, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *guardduty.MalwareProtectionPlan:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type guardduty.MalwareProtectionPlan not found", name)
+}
+
 // GetAllGuardDutyMasterResources retrieves all guardduty.Master items from an AWS CloudFormation template
 func (t *Template) GetAllGuardDutyMasterResources() map[string]*guardduty.Master {
 	results := map[string]*guardduty.Master{}
@@ -16395,6 +17660,30 @@ func (t *Template) GetIVSEncoderConfigurationWithName(name string) (*ivs.Encoder
 	return nil, fmt.Errorf("resource %q of type ivs.EncoderConfiguration not found", name)
 }
 
+// GetAllIVSIngestConfigurationResources retrieves all ivs.IngestConfiguration items from an AWS CloudFormation template
+func (t *Template) GetAllIVSIngestConfigurationResources() map[string]*ivs.IngestConfiguration {
+	results := map[string]*ivs.IngestConfiguration{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ivs.IngestConfiguration:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetIVSIngestConfigurationWithName retrieves all ivs.IngestConfiguration items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetIVSIngestConfigurationWithName(name string) (*ivs.IngestConfiguration, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ivs.IngestConfiguration:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ivs.IngestConfiguration not found", name)
+}
+
 // GetAllIVSPlaybackKeyPairResources retrieves all ivs.PlaybackKeyPair items from an AWS CloudFormation template
 func (t *Template) GetAllIVSPlaybackKeyPairResources() map[string]*ivs.PlaybackKeyPair {
 	results := map[string]*ivs.PlaybackKeyPair{}
@@ -16441,6 +17730,30 @@ func (t *Template) GetIVSPlaybackRestrictionPolicyWithName(name string) (*ivs.Pl
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type ivs.PlaybackRestrictionPolicy not found", name)
+}
+
+// GetAllIVSPublicKeyResources retrieves all ivs.PublicKey items from an AWS CloudFormation template
+func (t *Template) GetAllIVSPublicKeyResources() map[string]*ivs.PublicKey {
+	results := map[string]*ivs.PublicKey{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ivs.PublicKey:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetIVSPublicKeyWithName retrieves all ivs.PublicKey items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetIVSPublicKeyWithName(name string) (*ivs.PublicKey, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ivs.PublicKey:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ivs.PublicKey not found", name)
 }
 
 // GetAllIVSRecordingConfigurationResources retrieves all ivs.RecordingConfiguration items from an AWS CloudFormation template
@@ -16995,76 +18308,28 @@ func (t *Template) GetInternetMonitorMonitorWithName(name string) (*internetmoni
 	return nil, fmt.Errorf("resource %q of type internetmonitor.Monitor not found", name)
 }
 
-// GetAllIoT1ClickDeviceResources retrieves all iot1click.Device items from an AWS CloudFormation template
-func (t *Template) GetAllIoT1ClickDeviceResources() map[string]*iot1click.Device {
-	results := map[string]*iot1click.Device{}
+// GetAllInvoicingInvoiceUnitResources retrieves all invoicing.InvoiceUnit items from an AWS CloudFormation template
+func (t *Template) GetAllInvoicingInvoiceUnitResources() map[string]*invoicing.InvoiceUnit {
+	results := map[string]*invoicing.InvoiceUnit{}
 	for name, untyped := range t.Resources {
 		switch resource := untyped.(type) {
-		case *iot1click.Device:
+		case *invoicing.InvoiceUnit:
 			results[name] = resource
 		}
 	}
 	return results
 }
 
-// GetIoT1ClickDeviceWithName retrieves all iot1click.Device items from an AWS CloudFormation template
+// GetInvoicingInvoiceUnitWithName retrieves all invoicing.InvoiceUnit items from an AWS CloudFormation template
 // whose logical ID matches the provided name. Returns an error if not found.
-func (t *Template) GetIoT1ClickDeviceWithName(name string) (*iot1click.Device, error) {
+func (t *Template) GetInvoicingInvoiceUnitWithName(name string) (*invoicing.InvoiceUnit, error) {
 	if untyped, ok := t.Resources[name]; ok {
 		switch resource := untyped.(type) {
-		case *iot1click.Device:
+		case *invoicing.InvoiceUnit:
 			return resource, nil
 		}
 	}
-	return nil, fmt.Errorf("resource %q of type iot1click.Device not found", name)
-}
-
-// GetAllIoT1ClickPlacementResources retrieves all iot1click.Placement items from an AWS CloudFormation template
-func (t *Template) GetAllIoT1ClickPlacementResources() map[string]*iot1click.Placement {
-	results := map[string]*iot1click.Placement{}
-	for name, untyped := range t.Resources {
-		switch resource := untyped.(type) {
-		case *iot1click.Placement:
-			results[name] = resource
-		}
-	}
-	return results
-}
-
-// GetIoT1ClickPlacementWithName retrieves all iot1click.Placement items from an AWS CloudFormation template
-// whose logical ID matches the provided name. Returns an error if not found.
-func (t *Template) GetIoT1ClickPlacementWithName(name string) (*iot1click.Placement, error) {
-	if untyped, ok := t.Resources[name]; ok {
-		switch resource := untyped.(type) {
-		case *iot1click.Placement:
-			return resource, nil
-		}
-	}
-	return nil, fmt.Errorf("resource %q of type iot1click.Placement not found", name)
-}
-
-// GetAllIoT1ClickProjectResources retrieves all iot1click.Project items from an AWS CloudFormation template
-func (t *Template) GetAllIoT1ClickProjectResources() map[string]*iot1click.Project {
-	results := map[string]*iot1click.Project{}
-	for name, untyped := range t.Resources {
-		switch resource := untyped.(type) {
-		case *iot1click.Project:
-			results[name] = resource
-		}
-	}
-	return results
-}
-
-// GetIoT1ClickProjectWithName retrieves all iot1click.Project items from an AWS CloudFormation template
-// whose logical ID matches the provided name. Returns an error if not found.
-func (t *Template) GetIoT1ClickProjectWithName(name string) (*iot1click.Project, error) {
-	if untyped, ok := t.Resources[name]; ok {
-		switch resource := untyped.(type) {
-		case *iot1click.Project:
-			return resource, nil
-		}
-	}
-	return nil, fmt.Errorf("resource %q of type iot1click.Project not found", name)
+	return nil, fmt.Errorf("resource %q of type invoicing.InvoiceUnit not found", name)
 }
 
 // GetAllIoTAccountAuditConfigurationResources retrieves all iot.AccountAuditConfiguration items from an AWS CloudFormation template
@@ -17209,6 +18474,30 @@ func (t *Template) GetIoTCertificateProviderWithName(name string) (*iot.Certific
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type iot.CertificateProvider not found", name)
+}
+
+// GetAllIoTCommandResources retrieves all iot.Command items from an AWS CloudFormation template
+func (t *Template) GetAllIoTCommandResources() map[string]*iot.Command {
+	results := map[string]*iot.Command{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *iot.Command:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetIoTCommandWithName retrieves all iot.Command items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetIoTCommandWithName(name string) (*iot.Command, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *iot.Command:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type iot.Command not found", name)
 }
 
 // GetAllIoTCustomMetricResources retrieves all iot.CustomMetric items from an AWS CloudFormation template
@@ -18075,6 +19364,30 @@ func (t *Template) GetIoTFleetWiseSignalCatalogWithName(name string) (*iotfleetw
 	return nil, fmt.Errorf("resource %q of type iotfleetwise.SignalCatalog not found", name)
 }
 
+// GetAllIoTFleetWiseStateTemplateResources retrieves all iotfleetwise.StateTemplate items from an AWS CloudFormation template
+func (t *Template) GetAllIoTFleetWiseStateTemplateResources() map[string]*iotfleetwise.StateTemplate {
+	results := map[string]*iotfleetwise.StateTemplate{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *iotfleetwise.StateTemplate:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetIoTFleetWiseStateTemplateWithName retrieves all iotfleetwise.StateTemplate items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetIoTFleetWiseStateTemplateWithName(name string) (*iotfleetwise.StateTemplate, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *iotfleetwise.StateTemplate:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type iotfleetwise.StateTemplate not found", name)
+}
+
 // GetAllIoTFleetWiseVehicleResources retrieves all iotfleetwise.Vehicle items from an AWS CloudFormation template
 func (t *Template) GetAllIoTFleetWiseVehicleResources() map[string]*iotfleetwise.Vehicle {
 	results := map[string]*iotfleetwise.Vehicle{}
@@ -18915,6 +20228,30 @@ func (t *Template) GetKendraRankingExecutionPlanWithName(name string) (*kendrara
 	return nil, fmt.Errorf("resource %q of type kendraranking.ExecutionPlan not found", name)
 }
 
+// GetAllKinesisResourcePolicyResources retrieves all kinesis.ResourcePolicy items from an AWS CloudFormation template
+func (t *Template) GetAllKinesisResourcePolicyResources() map[string]*kinesis.ResourcePolicy {
+	results := map[string]*kinesis.ResourcePolicy{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *kinesis.ResourcePolicy:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetKinesisResourcePolicyWithName retrieves all kinesis.ResourcePolicy items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetKinesisResourcePolicyWithName(name string) (*kinesis.ResourcePolicy, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *kinesis.ResourcePolicy:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type kinesis.ResourcePolicy not found", name)
+}
+
 // GetAllKinesisStreamResources retrieves all kinesis.Stream items from an AWS CloudFormation template
 func (t *Template) GetAllKinesisStreamResources() map[string]*kinesis.Stream {
 	results := map[string]*kinesis.Stream{}
@@ -19609,6 +20946,30 @@ func (t *Template) GetLambdaVersionWithName(name string) (*lambda.Version, error
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type lambda.Version not found", name)
+}
+
+// GetAllLaunchWizardDeploymentResources retrieves all launchwizard.Deployment items from an AWS CloudFormation template
+func (t *Template) GetAllLaunchWizardDeploymentResources() map[string]*launchwizard.Deployment {
+	results := map[string]*launchwizard.Deployment{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *launchwizard.Deployment:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetLaunchWizardDeploymentWithName retrieves all launchwizard.Deployment items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetLaunchWizardDeploymentWithName(name string) (*launchwizard.Deployment, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *launchwizard.Deployment:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type launchwizard.Deployment not found", name)
 }
 
 // GetAllLexBotResources retrieves all lex.Bot items from an AWS CloudFormation template
@@ -20307,6 +21668,30 @@ func (t *Template) GetLogsDestinationWithName(name string) (*logs.Destination, e
 	return nil, fmt.Errorf("resource %q of type logs.Destination not found", name)
 }
 
+// GetAllLogsIntegrationResources retrieves all logs.Integration items from an AWS CloudFormation template
+func (t *Template) GetAllLogsIntegrationResources() map[string]*logs.Integration {
+	results := map[string]*logs.Integration{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *logs.Integration:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetLogsIntegrationWithName retrieves all logs.Integration items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetLogsIntegrationWithName(name string) (*logs.Integration, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *logs.Integration:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type logs.Integration not found", name)
+}
+
 // GetAllLogsLogAnomalyDetectorResources retrieves all logs.LogAnomalyDetector items from an AWS CloudFormation template
 func (t *Template) GetAllLogsLogAnomalyDetectorResources() map[string]*logs.LogAnomalyDetector {
 	results := map[string]*logs.LogAnomalyDetector{}
@@ -20475,6 +21860,30 @@ func (t *Template) GetLogsSubscriptionFilterWithName(name string) (*logs.Subscri
 	return nil, fmt.Errorf("resource %q of type logs.SubscriptionFilter not found", name)
 }
 
+// GetAllLogsTransformerResources retrieves all logs.Transformer items from an AWS CloudFormation template
+func (t *Template) GetAllLogsTransformerResources() map[string]*logs.Transformer {
+	results := map[string]*logs.Transformer{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *logs.Transformer:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetLogsTransformerWithName retrieves all logs.Transformer items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetLogsTransformerWithName(name string) (*logs.Transformer, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *logs.Transformer:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type logs.Transformer not found", name)
+}
+
 // GetAllLookoutEquipmentInferenceSchedulerResources retrieves all lookoutequipment.InferenceScheduler items from an AWS CloudFormation template
 func (t *Template) GetAllLookoutEquipmentInferenceSchedulerResources() map[string]*lookoutequipment.InferenceScheduler {
 	results := map[string]*lookoutequipment.InferenceScheduler{}
@@ -20593,6 +22002,30 @@ func (t *Template) GetM2ApplicationWithName(name string) (*m2.Application, error
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type m2.Application not found", name)
+}
+
+// GetAllM2DeploymentResources retrieves all m2.Deployment items from an AWS CloudFormation template
+func (t *Template) GetAllM2DeploymentResources() map[string]*m2.Deployment {
+	results := map[string]*m2.Deployment{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *m2.Deployment:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetM2DeploymentWithName retrieves all m2.Deployment items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetM2DeploymentWithName(name string) (*m2.Deployment, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *m2.Deployment:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type m2.Deployment not found", name)
 }
 
 // GetAllM2EnvironmentResources retrieves all m2.Environment items from an AWS CloudFormation template
@@ -21291,6 +22724,150 @@ func (t *Template) GetMediaLiveChannelWithName(name string) (*medialive.Channel,
 	return nil, fmt.Errorf("resource %q of type medialive.Channel not found", name)
 }
 
+// GetAllMediaLiveChannelPlacementGroupResources retrieves all medialive.ChannelPlacementGroup items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveChannelPlacementGroupResources() map[string]*medialive.ChannelPlacementGroup {
+	results := map[string]*medialive.ChannelPlacementGroup{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.ChannelPlacementGroup:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveChannelPlacementGroupWithName retrieves all medialive.ChannelPlacementGroup items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveChannelPlacementGroupWithName(name string) (*medialive.ChannelPlacementGroup, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.ChannelPlacementGroup:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.ChannelPlacementGroup not found", name)
+}
+
+// GetAllMediaLiveCloudWatchAlarmTemplateResources retrieves all medialive.CloudWatchAlarmTemplate items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveCloudWatchAlarmTemplateResources() map[string]*medialive.CloudWatchAlarmTemplate {
+	results := map[string]*medialive.CloudWatchAlarmTemplate{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.CloudWatchAlarmTemplate:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveCloudWatchAlarmTemplateWithName retrieves all medialive.CloudWatchAlarmTemplate items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveCloudWatchAlarmTemplateWithName(name string) (*medialive.CloudWatchAlarmTemplate, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.CloudWatchAlarmTemplate:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.CloudWatchAlarmTemplate not found", name)
+}
+
+// GetAllMediaLiveCloudWatchAlarmTemplateGroupResources retrieves all medialive.CloudWatchAlarmTemplateGroup items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveCloudWatchAlarmTemplateGroupResources() map[string]*medialive.CloudWatchAlarmTemplateGroup {
+	results := map[string]*medialive.CloudWatchAlarmTemplateGroup{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.CloudWatchAlarmTemplateGroup:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveCloudWatchAlarmTemplateGroupWithName retrieves all medialive.CloudWatchAlarmTemplateGroup items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveCloudWatchAlarmTemplateGroupWithName(name string) (*medialive.CloudWatchAlarmTemplateGroup, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.CloudWatchAlarmTemplateGroup:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.CloudWatchAlarmTemplateGroup not found", name)
+}
+
+// GetAllMediaLiveClusterResources retrieves all medialive.Cluster items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveClusterResources() map[string]*medialive.Cluster {
+	results := map[string]*medialive.Cluster{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.Cluster:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveClusterWithName retrieves all medialive.Cluster items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveClusterWithName(name string) (*medialive.Cluster, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.Cluster:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.Cluster not found", name)
+}
+
+// GetAllMediaLiveEventBridgeRuleTemplateResources retrieves all medialive.EventBridgeRuleTemplate items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveEventBridgeRuleTemplateResources() map[string]*medialive.EventBridgeRuleTemplate {
+	results := map[string]*medialive.EventBridgeRuleTemplate{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.EventBridgeRuleTemplate:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveEventBridgeRuleTemplateWithName retrieves all medialive.EventBridgeRuleTemplate items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveEventBridgeRuleTemplateWithName(name string) (*medialive.EventBridgeRuleTemplate, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.EventBridgeRuleTemplate:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.EventBridgeRuleTemplate not found", name)
+}
+
+// GetAllMediaLiveEventBridgeRuleTemplateGroupResources retrieves all medialive.EventBridgeRuleTemplateGroup items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveEventBridgeRuleTemplateGroupResources() map[string]*medialive.EventBridgeRuleTemplateGroup {
+	results := map[string]*medialive.EventBridgeRuleTemplateGroup{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.EventBridgeRuleTemplateGroup:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveEventBridgeRuleTemplateGroupWithName retrieves all medialive.EventBridgeRuleTemplateGroup items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveEventBridgeRuleTemplateGroupWithName(name string) (*medialive.EventBridgeRuleTemplateGroup, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.EventBridgeRuleTemplateGroup:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.EventBridgeRuleTemplateGroup not found", name)
+}
+
 // GetAllMediaLiveInputResources retrieves all medialive.Input items from an AWS CloudFormation template
 func (t *Template) GetAllMediaLiveInputResources() map[string]*medialive.Input {
 	results := map[string]*medialive.Input{}
@@ -21385,6 +22962,78 @@ func (t *Template) GetMediaLiveMultiplexprogramWithName(name string) (*medialive
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type medialive.Multiplexprogram not found", name)
+}
+
+// GetAllMediaLiveNetworkResources retrieves all medialive.Network items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveNetworkResources() map[string]*medialive.Network {
+	results := map[string]*medialive.Network{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.Network:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveNetworkWithName retrieves all medialive.Network items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveNetworkWithName(name string) (*medialive.Network, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.Network:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.Network not found", name)
+}
+
+// GetAllMediaLiveSdiSourceResources retrieves all medialive.SdiSource items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveSdiSourceResources() map[string]*medialive.SdiSource {
+	results := map[string]*medialive.SdiSource{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.SdiSource:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveSdiSourceWithName retrieves all medialive.SdiSource items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveSdiSourceWithName(name string) (*medialive.SdiSource, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.SdiSource:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.SdiSource not found", name)
+}
+
+// GetAllMediaLiveSignalMapResources retrieves all medialive.SignalMap items from an AWS CloudFormation template
+func (t *Template) GetAllMediaLiveSignalMapResources() map[string]*medialive.SignalMap {
+	results := map[string]*medialive.SignalMap{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *medialive.SignalMap:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMediaLiveSignalMapWithName retrieves all medialive.SignalMap items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMediaLiveSignalMapWithName(name string) (*medialive.SignalMap, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *medialive.SignalMap:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type medialive.SignalMap not found", name)
 }
 
 // GetAllMediaPackageAssetResources retrieves all mediapackage.Asset items from an AWS CloudFormation template
@@ -21843,6 +23492,30 @@ func (t *Template) GetMemoryDBClusterWithName(name string) (*memorydb.Cluster, e
 	return nil, fmt.Errorf("resource %q of type memorydb.Cluster not found", name)
 }
 
+// GetAllMemoryDBMultiRegionClusterResources retrieves all memorydb.MultiRegionCluster items from an AWS CloudFormation template
+func (t *Template) GetAllMemoryDBMultiRegionClusterResources() map[string]*memorydb.MultiRegionCluster {
+	results := map[string]*memorydb.MultiRegionCluster{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *memorydb.MultiRegionCluster:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetMemoryDBMultiRegionClusterWithName retrieves all memorydb.MultiRegionCluster items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetMemoryDBMultiRegionClusterWithName(name string) (*memorydb.MultiRegionCluster, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *memorydb.MultiRegionCluster:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type memorydb.MultiRegionCluster not found", name)
+}
+
 // GetAllMemoryDBParameterGroupResources retrieves all memorydb.ParameterGroup items from an AWS CloudFormation template
 func (t *Template) GetAllMemoryDBParameterGroupResources() map[string]*memorydb.ParameterGroup {
 	results := map[string]*memorydb.ParameterGroup{}
@@ -22033,6 +23706,30 @@ func (t *Template) GetNeptuneDBSubnetGroupWithName(name string) (*neptune.DBSubn
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type neptune.DBSubnetGroup not found", name)
+}
+
+// GetAllNeptuneEventSubscriptionResources retrieves all neptune.EventSubscription items from an AWS CloudFormation template
+func (t *Template) GetAllNeptuneEventSubscriptionResources() map[string]*neptune.EventSubscription {
+	results := map[string]*neptune.EventSubscription{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *neptune.EventSubscription:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetNeptuneEventSubscriptionWithName retrieves all neptune.EventSubscription items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetNeptuneEventSubscriptionWithName(name string) (*neptune.EventSubscription, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *neptune.EventSubscription:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type neptune.EventSubscription not found", name)
 }
 
 // GetAllNeptuneGraphGraphResources retrieves all neptunegraph.Graph items from an AWS CloudFormation template
@@ -22323,6 +24020,30 @@ func (t *Template) GetNetworkManagerDeviceWithName(name string) (*networkmanager
 	return nil, fmt.Errorf("resource %q of type networkmanager.Device not found", name)
 }
 
+// GetAllNetworkManagerDirectConnectGatewayAttachmentResources retrieves all networkmanager.DirectConnectGatewayAttachment items from an AWS CloudFormation template
+func (t *Template) GetAllNetworkManagerDirectConnectGatewayAttachmentResources() map[string]*networkmanager.DirectConnectGatewayAttachment {
+	results := map[string]*networkmanager.DirectConnectGatewayAttachment{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *networkmanager.DirectConnectGatewayAttachment:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetNetworkManagerDirectConnectGatewayAttachmentWithName retrieves all networkmanager.DirectConnectGatewayAttachment items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetNetworkManagerDirectConnectGatewayAttachmentWithName(name string) (*networkmanager.DirectConnectGatewayAttachment, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *networkmanager.DirectConnectGatewayAttachment:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type networkmanager.DirectConnectGatewayAttachment not found", name)
+}
+
 // GetAllNetworkManagerGlobalNetworkResources retrieves all networkmanager.GlobalNetwork items from an AWS CloudFormation template
 func (t *Template) GetAllNetworkManagerGlobalNetworkResources() map[string]*networkmanager.GlobalNetwork {
 	results := map[string]*networkmanager.GlobalNetwork{}
@@ -22539,100 +24260,172 @@ func (t *Template) GetNetworkManagerVpcAttachmentWithName(name string) (*network
 	return nil, fmt.Errorf("resource %q of type networkmanager.VpcAttachment not found", name)
 }
 
-// GetAllNimbleStudioLaunchProfileResources retrieves all nimblestudio.LaunchProfile items from an AWS CloudFormation template
-func (t *Template) GetAllNimbleStudioLaunchProfileResources() map[string]*nimblestudio.LaunchProfile {
-	results := map[string]*nimblestudio.LaunchProfile{}
+// GetAllNotificationsChannelAssociationResources retrieves all notifications.ChannelAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllNotificationsChannelAssociationResources() map[string]*notifications.ChannelAssociation {
+	results := map[string]*notifications.ChannelAssociation{}
 	for name, untyped := range t.Resources {
 		switch resource := untyped.(type) {
-		case *nimblestudio.LaunchProfile:
+		case *notifications.ChannelAssociation:
 			results[name] = resource
 		}
 	}
 	return results
 }
 
-// GetNimbleStudioLaunchProfileWithName retrieves all nimblestudio.LaunchProfile items from an AWS CloudFormation template
+// GetNotificationsChannelAssociationWithName retrieves all notifications.ChannelAssociation items from an AWS CloudFormation template
 // whose logical ID matches the provided name. Returns an error if not found.
-func (t *Template) GetNimbleStudioLaunchProfileWithName(name string) (*nimblestudio.LaunchProfile, error) {
+func (t *Template) GetNotificationsChannelAssociationWithName(name string) (*notifications.ChannelAssociation, error) {
 	if untyped, ok := t.Resources[name]; ok {
 		switch resource := untyped.(type) {
-		case *nimblestudio.LaunchProfile:
+		case *notifications.ChannelAssociation:
 			return resource, nil
 		}
 	}
-	return nil, fmt.Errorf("resource %q of type nimblestudio.LaunchProfile not found", name)
+	return nil, fmt.Errorf("resource %q of type notifications.ChannelAssociation not found", name)
 }
 
-// GetAllNimbleStudioStreamingImageResources retrieves all nimblestudio.StreamingImage items from an AWS CloudFormation template
-func (t *Template) GetAllNimbleStudioStreamingImageResources() map[string]*nimblestudio.StreamingImage {
-	results := map[string]*nimblestudio.StreamingImage{}
+// GetAllNotificationsEventRuleResources retrieves all notifications.EventRule items from an AWS CloudFormation template
+func (t *Template) GetAllNotificationsEventRuleResources() map[string]*notifications.EventRule {
+	results := map[string]*notifications.EventRule{}
 	for name, untyped := range t.Resources {
 		switch resource := untyped.(type) {
-		case *nimblestudio.StreamingImage:
+		case *notifications.EventRule:
 			results[name] = resource
 		}
 	}
 	return results
 }
 
-// GetNimbleStudioStreamingImageWithName retrieves all nimblestudio.StreamingImage items from an AWS CloudFormation template
+// GetNotificationsEventRuleWithName retrieves all notifications.EventRule items from an AWS CloudFormation template
 // whose logical ID matches the provided name. Returns an error if not found.
-func (t *Template) GetNimbleStudioStreamingImageWithName(name string) (*nimblestudio.StreamingImage, error) {
+func (t *Template) GetNotificationsEventRuleWithName(name string) (*notifications.EventRule, error) {
 	if untyped, ok := t.Resources[name]; ok {
 		switch resource := untyped.(type) {
-		case *nimblestudio.StreamingImage:
+		case *notifications.EventRule:
 			return resource, nil
 		}
 	}
-	return nil, fmt.Errorf("resource %q of type nimblestudio.StreamingImage not found", name)
+	return nil, fmt.Errorf("resource %q of type notifications.EventRule not found", name)
 }
 
-// GetAllNimbleStudioStudioResources retrieves all nimblestudio.Studio items from an AWS CloudFormation template
-func (t *Template) GetAllNimbleStudioStudioResources() map[string]*nimblestudio.Studio {
-	results := map[string]*nimblestudio.Studio{}
+// GetAllNotificationsManagedNotificationAccountContactAssociationResources retrieves all notifications.ManagedNotificationAccountContactAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllNotificationsManagedNotificationAccountContactAssociationResources() map[string]*notifications.ManagedNotificationAccountContactAssociation {
+	results := map[string]*notifications.ManagedNotificationAccountContactAssociation{}
 	for name, untyped := range t.Resources {
 		switch resource := untyped.(type) {
-		case *nimblestudio.Studio:
+		case *notifications.ManagedNotificationAccountContactAssociation:
 			results[name] = resource
 		}
 	}
 	return results
 }
 
-// GetNimbleStudioStudioWithName retrieves all nimblestudio.Studio items from an AWS CloudFormation template
+// GetNotificationsManagedNotificationAccountContactAssociationWithName retrieves all notifications.ManagedNotificationAccountContactAssociation items from an AWS CloudFormation template
 // whose logical ID matches the provided name. Returns an error if not found.
-func (t *Template) GetNimbleStudioStudioWithName(name string) (*nimblestudio.Studio, error) {
+func (t *Template) GetNotificationsManagedNotificationAccountContactAssociationWithName(name string) (*notifications.ManagedNotificationAccountContactAssociation, error) {
 	if untyped, ok := t.Resources[name]; ok {
 		switch resource := untyped.(type) {
-		case *nimblestudio.Studio:
+		case *notifications.ManagedNotificationAccountContactAssociation:
 			return resource, nil
 		}
 	}
-	return nil, fmt.Errorf("resource %q of type nimblestudio.Studio not found", name)
+	return nil, fmt.Errorf("resource %q of type notifications.ManagedNotificationAccountContactAssociation not found", name)
 }
 
-// GetAllNimbleStudioStudioComponentResources retrieves all nimblestudio.StudioComponent items from an AWS CloudFormation template
-func (t *Template) GetAllNimbleStudioStudioComponentResources() map[string]*nimblestudio.StudioComponent {
-	results := map[string]*nimblestudio.StudioComponent{}
+// GetAllNotificationsManagedNotificationAdditionalChannelAssociationResources retrieves all notifications.ManagedNotificationAdditionalChannelAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllNotificationsManagedNotificationAdditionalChannelAssociationResources() map[string]*notifications.ManagedNotificationAdditionalChannelAssociation {
+	results := map[string]*notifications.ManagedNotificationAdditionalChannelAssociation{}
 	for name, untyped := range t.Resources {
 		switch resource := untyped.(type) {
-		case *nimblestudio.StudioComponent:
+		case *notifications.ManagedNotificationAdditionalChannelAssociation:
 			results[name] = resource
 		}
 	}
 	return results
 }
 
-// GetNimbleStudioStudioComponentWithName retrieves all nimblestudio.StudioComponent items from an AWS CloudFormation template
+// GetNotificationsManagedNotificationAdditionalChannelAssociationWithName retrieves all notifications.ManagedNotificationAdditionalChannelAssociation items from an AWS CloudFormation template
 // whose logical ID matches the provided name. Returns an error if not found.
-func (t *Template) GetNimbleStudioStudioComponentWithName(name string) (*nimblestudio.StudioComponent, error) {
+func (t *Template) GetNotificationsManagedNotificationAdditionalChannelAssociationWithName(name string) (*notifications.ManagedNotificationAdditionalChannelAssociation, error) {
 	if untyped, ok := t.Resources[name]; ok {
 		switch resource := untyped.(type) {
-		case *nimblestudio.StudioComponent:
+		case *notifications.ManagedNotificationAdditionalChannelAssociation:
 			return resource, nil
 		}
 	}
-	return nil, fmt.Errorf("resource %q of type nimblestudio.StudioComponent not found", name)
+	return nil, fmt.Errorf("resource %q of type notifications.ManagedNotificationAdditionalChannelAssociation not found", name)
+}
+
+// GetAllNotificationsNotificationConfigurationResources retrieves all notifications.NotificationConfiguration items from an AWS CloudFormation template
+func (t *Template) GetAllNotificationsNotificationConfigurationResources() map[string]*notifications.NotificationConfiguration {
+	results := map[string]*notifications.NotificationConfiguration{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *notifications.NotificationConfiguration:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetNotificationsNotificationConfigurationWithName retrieves all notifications.NotificationConfiguration items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetNotificationsNotificationConfigurationWithName(name string) (*notifications.NotificationConfiguration, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *notifications.NotificationConfiguration:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type notifications.NotificationConfiguration not found", name)
+}
+
+// GetAllNotificationsNotificationHubResources retrieves all notifications.NotificationHub items from an AWS CloudFormation template
+func (t *Template) GetAllNotificationsNotificationHubResources() map[string]*notifications.NotificationHub {
+	results := map[string]*notifications.NotificationHub{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *notifications.NotificationHub:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetNotificationsNotificationHubWithName retrieves all notifications.NotificationHub items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetNotificationsNotificationHubWithName(name string) (*notifications.NotificationHub, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *notifications.NotificationHub:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type notifications.NotificationHub not found", name)
+}
+
+// GetAllNotificationsContactsEmailContactResources retrieves all notificationscontacts.EmailContact items from an AWS CloudFormation template
+func (t *Template) GetAllNotificationsContactsEmailContactResources() map[string]*notificationscontacts.EmailContact {
+	results := map[string]*notificationscontacts.EmailContact{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *notificationscontacts.EmailContact:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetNotificationsContactsEmailContactWithName retrieves all notificationscontacts.EmailContact items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetNotificationsContactsEmailContactWithName(name string) (*notificationscontacts.EmailContact, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *notificationscontacts.EmailContact:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type notificationscontacts.EmailContact not found", name)
 }
 
 // GetAllOSISPipelineResources retrieves all osis.Pipeline items from an AWS CloudFormation template
@@ -22993,6 +24786,30 @@ func (t *Template) GetOpenSearchServerlessVpcEndpointWithName(name string) (*ope
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type opensearchserverless.VpcEndpoint not found", name)
+}
+
+// GetAllOpenSearchServiceApplicationResources retrieves all opensearchservice.Application items from an AWS CloudFormation template
+func (t *Template) GetAllOpenSearchServiceApplicationResources() map[string]*opensearchservice.Application {
+	results := map[string]*opensearchservice.Application{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *opensearchservice.Application:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetOpenSearchServiceApplicationWithName retrieves all opensearchservice.Application items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetOpenSearchServiceApplicationWithName(name string) (*opensearchservice.Application, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *opensearchservice.Application:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type opensearchservice.Application not found", name)
 }
 
 // GetAllOpenSearchServiceDomainResources retrieves all opensearchservice.Domain items from an AWS CloudFormation template
@@ -23449,6 +25266,126 @@ func (t *Template) GetPCAConnectorADTemplateGroupAccessControlEntryWithName(name
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type pcaconnectorad.TemplateGroupAccessControlEntry not found", name)
+}
+
+// GetAllPCAConnectorSCEPChallengeResources retrieves all pcaconnectorscep.Challenge items from an AWS CloudFormation template
+func (t *Template) GetAllPCAConnectorSCEPChallengeResources() map[string]*pcaconnectorscep.Challenge {
+	results := map[string]*pcaconnectorscep.Challenge{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *pcaconnectorscep.Challenge:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetPCAConnectorSCEPChallengeWithName retrieves all pcaconnectorscep.Challenge items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetPCAConnectorSCEPChallengeWithName(name string) (*pcaconnectorscep.Challenge, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *pcaconnectorscep.Challenge:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type pcaconnectorscep.Challenge not found", name)
+}
+
+// GetAllPCAConnectorSCEPConnectorResources retrieves all pcaconnectorscep.Connector items from an AWS CloudFormation template
+func (t *Template) GetAllPCAConnectorSCEPConnectorResources() map[string]*pcaconnectorscep.Connector {
+	results := map[string]*pcaconnectorscep.Connector{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *pcaconnectorscep.Connector:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetPCAConnectorSCEPConnectorWithName retrieves all pcaconnectorscep.Connector items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetPCAConnectorSCEPConnectorWithName(name string) (*pcaconnectorscep.Connector, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *pcaconnectorscep.Connector:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type pcaconnectorscep.Connector not found", name)
+}
+
+// GetAllPCSClusterResources retrieves all pcs.Cluster items from an AWS CloudFormation template
+func (t *Template) GetAllPCSClusterResources() map[string]*pcs.Cluster {
+	results := map[string]*pcs.Cluster{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *pcs.Cluster:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetPCSClusterWithName retrieves all pcs.Cluster items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetPCSClusterWithName(name string) (*pcs.Cluster, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *pcs.Cluster:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type pcs.Cluster not found", name)
+}
+
+// GetAllPCSComputeNodeGroupResources retrieves all pcs.ComputeNodeGroup items from an AWS CloudFormation template
+func (t *Template) GetAllPCSComputeNodeGroupResources() map[string]*pcs.ComputeNodeGroup {
+	results := map[string]*pcs.ComputeNodeGroup{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *pcs.ComputeNodeGroup:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetPCSComputeNodeGroupWithName retrieves all pcs.ComputeNodeGroup items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetPCSComputeNodeGroupWithName(name string) (*pcs.ComputeNodeGroup, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *pcs.ComputeNodeGroup:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type pcs.ComputeNodeGroup not found", name)
+}
+
+// GetAllPCSQueueResources retrieves all pcs.Queue items from an AWS CloudFormation template
+func (t *Template) GetAllPCSQueueResources() map[string]*pcs.Queue {
+	results := map[string]*pcs.Queue{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *pcs.Queue:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetPCSQueueWithName retrieves all pcs.Queue items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetPCSQueueWithName(name string) (*pcs.Queue, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *pcs.Queue:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type pcs.Queue not found", name)
 }
 
 // GetAllPanoramaApplicationInstanceResources retrieves all panorama.ApplicationInstance items from an AWS CloudFormation template
@@ -24315,6 +26252,198 @@ func (t *Template) GetProtonServiceTemplateWithName(name string) (*proton.Servic
 	return nil, fmt.Errorf("resource %q of type proton.ServiceTemplate not found", name)
 }
 
+// GetAllQBusinessApplicationResources retrieves all qbusiness.Application items from an AWS CloudFormation template
+func (t *Template) GetAllQBusinessApplicationResources() map[string]*qbusiness.Application {
+	results := map[string]*qbusiness.Application{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qbusiness.Application:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQBusinessApplicationWithName retrieves all qbusiness.Application items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQBusinessApplicationWithName(name string) (*qbusiness.Application, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qbusiness.Application:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qbusiness.Application not found", name)
+}
+
+// GetAllQBusinessDataAccessorResources retrieves all qbusiness.DataAccessor items from an AWS CloudFormation template
+func (t *Template) GetAllQBusinessDataAccessorResources() map[string]*qbusiness.DataAccessor {
+	results := map[string]*qbusiness.DataAccessor{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qbusiness.DataAccessor:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQBusinessDataAccessorWithName retrieves all qbusiness.DataAccessor items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQBusinessDataAccessorWithName(name string) (*qbusiness.DataAccessor, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qbusiness.DataAccessor:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qbusiness.DataAccessor not found", name)
+}
+
+// GetAllQBusinessDataSourceResources retrieves all qbusiness.DataSource items from an AWS CloudFormation template
+func (t *Template) GetAllQBusinessDataSourceResources() map[string]*qbusiness.DataSource {
+	results := map[string]*qbusiness.DataSource{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qbusiness.DataSource:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQBusinessDataSourceWithName retrieves all qbusiness.DataSource items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQBusinessDataSourceWithName(name string) (*qbusiness.DataSource, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qbusiness.DataSource:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qbusiness.DataSource not found", name)
+}
+
+// GetAllQBusinessIndexResources retrieves all qbusiness.Index items from an AWS CloudFormation template
+func (t *Template) GetAllQBusinessIndexResources() map[string]*qbusiness.Index {
+	results := map[string]*qbusiness.Index{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qbusiness.Index:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQBusinessIndexWithName retrieves all qbusiness.Index items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQBusinessIndexWithName(name string) (*qbusiness.Index, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qbusiness.Index:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qbusiness.Index not found", name)
+}
+
+// GetAllQBusinessPermissionResources retrieves all qbusiness.Permission items from an AWS CloudFormation template
+func (t *Template) GetAllQBusinessPermissionResources() map[string]*qbusiness.Permission {
+	results := map[string]*qbusiness.Permission{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qbusiness.Permission:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQBusinessPermissionWithName retrieves all qbusiness.Permission items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQBusinessPermissionWithName(name string) (*qbusiness.Permission, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qbusiness.Permission:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qbusiness.Permission not found", name)
+}
+
+// GetAllQBusinessPluginResources retrieves all qbusiness.Plugin items from an AWS CloudFormation template
+func (t *Template) GetAllQBusinessPluginResources() map[string]*qbusiness.Plugin {
+	results := map[string]*qbusiness.Plugin{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qbusiness.Plugin:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQBusinessPluginWithName retrieves all qbusiness.Plugin items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQBusinessPluginWithName(name string) (*qbusiness.Plugin, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qbusiness.Plugin:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qbusiness.Plugin not found", name)
+}
+
+// GetAllQBusinessRetrieverResources retrieves all qbusiness.Retriever items from an AWS CloudFormation template
+func (t *Template) GetAllQBusinessRetrieverResources() map[string]*qbusiness.Retriever {
+	results := map[string]*qbusiness.Retriever{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qbusiness.Retriever:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQBusinessRetrieverWithName retrieves all qbusiness.Retriever items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQBusinessRetrieverWithName(name string) (*qbusiness.Retriever, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qbusiness.Retriever:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qbusiness.Retriever not found", name)
+}
+
+// GetAllQBusinessWebExperienceResources retrieves all qbusiness.WebExperience items from an AWS CloudFormation template
+func (t *Template) GetAllQBusinessWebExperienceResources() map[string]*qbusiness.WebExperience {
+	results := map[string]*qbusiness.WebExperience{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *qbusiness.WebExperience:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQBusinessWebExperienceWithName retrieves all qbusiness.WebExperience items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQBusinessWebExperienceWithName(name string) (*qbusiness.WebExperience, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *qbusiness.WebExperience:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type qbusiness.WebExperience not found", name)
+}
+
 // GetAllQLDBLedgerResources retrieves all qldb.Ledger items from an AWS CloudFormation template
 func (t *Template) GetAllQLDBLedgerResources() map[string]*qldb.Ledger {
 	results := map[string]*qldb.Ledger{}
@@ -24387,6 +26516,30 @@ func (t *Template) GetQuickSightAnalysisWithName(name string) (*quicksight.Analy
 	return nil, fmt.Errorf("resource %q of type quicksight.Analysis not found", name)
 }
 
+// GetAllQuickSightCustomPermissionsResources retrieves all quicksight.CustomPermissions items from an AWS CloudFormation template
+func (t *Template) GetAllQuickSightCustomPermissionsResources() map[string]*quicksight.CustomPermissions {
+	results := map[string]*quicksight.CustomPermissions{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *quicksight.CustomPermissions:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQuickSightCustomPermissionsWithName retrieves all quicksight.CustomPermissions items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQuickSightCustomPermissionsWithName(name string) (*quicksight.CustomPermissions, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *quicksight.CustomPermissions:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type quicksight.CustomPermissions not found", name)
+}
+
 // GetAllQuickSightDashboardResources retrieves all quicksight.Dashboard items from an AWS CloudFormation template
 func (t *Template) GetAllQuickSightDashboardResources() map[string]*quicksight.Dashboard {
 	results := map[string]*quicksight.Dashboard{}
@@ -24457,6 +26610,30 @@ func (t *Template) GetQuickSightDataSourceWithName(name string) (*quicksight.Dat
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type quicksight.DataSource not found", name)
+}
+
+// GetAllQuickSightFolderResources retrieves all quicksight.Folder items from an AWS CloudFormation template
+func (t *Template) GetAllQuickSightFolderResources() map[string]*quicksight.Folder {
+	results := map[string]*quicksight.Folder{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *quicksight.Folder:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetQuickSightFolderWithName retrieves all quicksight.Folder items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetQuickSightFolderWithName(name string) (*quicksight.Folder, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *quicksight.Folder:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type quicksight.Folder not found", name)
 }
 
 // GetAllQuickSightRefreshScheduleResources retrieves all quicksight.RefreshSchedule items from an AWS CloudFormation template
@@ -24867,6 +27044,30 @@ func (t *Template) GetRDSDBSecurityGroupIngressWithName(name string) (*rds.DBSec
 	return nil, fmt.Errorf("resource %q of type rds.DBSecurityGroupIngress not found", name)
 }
 
+// GetAllRDSDBShardGroupResources retrieves all rds.DBShardGroup items from an AWS CloudFormation template
+func (t *Template) GetAllRDSDBShardGroupResources() map[string]*rds.DBShardGroup {
+	results := map[string]*rds.DBShardGroup{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *rds.DBShardGroup:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetRDSDBShardGroupWithName retrieves all rds.DBShardGroup items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetRDSDBShardGroupWithName(name string) (*rds.DBShardGroup, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *rds.DBShardGroup:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type rds.DBShardGroup not found", name)
+}
+
 // GetAllRDSDBSubnetGroupResources retrieves all rds.DBSubnetGroup items from an AWS CloudFormation template
 func (t *Template) GetAllRDSDBSubnetGroupResources() map[string]*rds.DBSubnetGroup {
 	results := map[string]*rds.DBSubnetGroup{}
@@ -25009,6 +27210,30 @@ func (t *Template) GetRUMAppMonitorWithName(name string) (*rum.AppMonitor, error
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type rum.AppMonitor not found", name)
+}
+
+// GetAllRbinRuleResources retrieves all rbin.Rule items from an AWS CloudFormation template
+func (t *Template) GetAllRbinRuleResources() map[string]*rbin.Rule {
+	results := map[string]*rbin.Rule{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *rbin.Rule:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetRbinRuleWithName retrieves all rbin.Rule items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetRbinRuleWithName(name string) (*rbin.Rule, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *rbin.Rule:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type rbin.Rule not found", name)
 }
 
 // GetAllRedshiftClusterResources retrieves all redshift.Cluster items from an AWS CloudFormation template
@@ -25201,6 +27426,30 @@ func (t *Template) GetRedshiftEventSubscriptionWithName(name string) (*redshift.
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type redshift.EventSubscription not found", name)
+}
+
+// GetAllRedshiftIntegrationResources retrieves all redshift.Integration items from an AWS CloudFormation template
+func (t *Template) GetAllRedshiftIntegrationResources() map[string]*redshift.Integration {
+	results := map[string]*redshift.Integration{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *redshift.Integration:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetRedshiftIntegrationWithName retrieves all redshift.Integration items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetRedshiftIntegrationWithName(name string) (*redshift.Integration, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *redshift.Integration:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type redshift.Integration not found", name)
 }
 
 // GetAllRedshiftScheduledActionResources retrieves all redshift.ScheduledAction items from an AWS CloudFormation template
@@ -25585,6 +27834,30 @@ func (t *Template) GetResourceGroupsGroupWithName(name string) (*resourcegroups.
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type resourcegroups.Group not found", name)
+}
+
+// GetAllResourceGroupsTagSyncTaskResources retrieves all resourcegroups.TagSyncTask items from an AWS CloudFormation template
+func (t *Template) GetAllResourceGroupsTagSyncTaskResources() map[string]*resourcegroups.TagSyncTask {
+	results := map[string]*resourcegroups.TagSyncTask{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *resourcegroups.TagSyncTask:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetResourceGroupsTagSyncTaskWithName retrieves all resourcegroups.TagSyncTask items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetResourceGroupsTagSyncTaskWithName(name string) (*resourcegroups.TagSyncTask, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *resourcegroups.TagSyncTask:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type resourcegroups.TagSyncTask not found", name)
 }
 
 // GetAllRoboMakerFleetResources retrieves all robomaker.Fleet items from an AWS CloudFormation template
@@ -26931,6 +29204,54 @@ func (t *Template) GetS3OutpostsEndpointWithName(name string) (*s3outposts.Endpo
 	return nil, fmt.Errorf("resource %q of type s3outposts.Endpoint not found", name)
 }
 
+// GetAllS3TablesTableBucketResources retrieves all s3tables.TableBucket items from an AWS CloudFormation template
+func (t *Template) GetAllS3TablesTableBucketResources() map[string]*s3tables.TableBucket {
+	results := map[string]*s3tables.TableBucket{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *s3tables.TableBucket:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetS3TablesTableBucketWithName retrieves all s3tables.TableBucket items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetS3TablesTableBucketWithName(name string) (*s3tables.TableBucket, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *s3tables.TableBucket:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type s3tables.TableBucket not found", name)
+}
+
+// GetAllS3TablesTableBucketPolicyResources retrieves all s3tables.TableBucketPolicy items from an AWS CloudFormation template
+func (t *Template) GetAllS3TablesTableBucketPolicyResources() map[string]*s3tables.TableBucketPolicy {
+	results := map[string]*s3tables.TableBucketPolicy{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *s3tables.TableBucketPolicy:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetS3TablesTableBucketPolicyWithName retrieves all s3tables.TableBucketPolicy items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetS3TablesTableBucketPolicyWithName(name string) (*s3tables.TableBucketPolicy, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *s3tables.TableBucketPolicy:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type s3tables.TableBucketPolicy not found", name)
+}
+
 // GetAllSDBDomainResources retrieves all sdb.Domain items from an AWS CloudFormation template
 func (t *Template) GetAllSDBDomainResources() map[string]*sdb.Domain {
 	results := map[string]*sdb.Domain{}
@@ -27073,6 +29394,174 @@ func (t *Template) GetSESEmailIdentityWithName(name string) (*ses.EmailIdentity,
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type ses.EmailIdentity not found", name)
+}
+
+// GetAllSESMailManagerAddonInstanceResources retrieves all ses.MailManagerAddonInstance items from an AWS CloudFormation template
+func (t *Template) GetAllSESMailManagerAddonInstanceResources() map[string]*ses.MailManagerAddonInstance {
+	results := map[string]*ses.MailManagerAddonInstance{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerAddonInstance:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSESMailManagerAddonInstanceWithName retrieves all ses.MailManagerAddonInstance items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSESMailManagerAddonInstanceWithName(name string) (*ses.MailManagerAddonInstance, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerAddonInstance:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ses.MailManagerAddonInstance not found", name)
+}
+
+// GetAllSESMailManagerAddonSubscriptionResources retrieves all ses.MailManagerAddonSubscription items from an AWS CloudFormation template
+func (t *Template) GetAllSESMailManagerAddonSubscriptionResources() map[string]*ses.MailManagerAddonSubscription {
+	results := map[string]*ses.MailManagerAddonSubscription{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerAddonSubscription:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSESMailManagerAddonSubscriptionWithName retrieves all ses.MailManagerAddonSubscription items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSESMailManagerAddonSubscriptionWithName(name string) (*ses.MailManagerAddonSubscription, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerAddonSubscription:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ses.MailManagerAddonSubscription not found", name)
+}
+
+// GetAllSESMailManagerArchiveResources retrieves all ses.MailManagerArchive items from an AWS CloudFormation template
+func (t *Template) GetAllSESMailManagerArchiveResources() map[string]*ses.MailManagerArchive {
+	results := map[string]*ses.MailManagerArchive{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerArchive:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSESMailManagerArchiveWithName retrieves all ses.MailManagerArchive items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSESMailManagerArchiveWithName(name string) (*ses.MailManagerArchive, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerArchive:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ses.MailManagerArchive not found", name)
+}
+
+// GetAllSESMailManagerIngressPointResources retrieves all ses.MailManagerIngressPoint items from an AWS CloudFormation template
+func (t *Template) GetAllSESMailManagerIngressPointResources() map[string]*ses.MailManagerIngressPoint {
+	results := map[string]*ses.MailManagerIngressPoint{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerIngressPoint:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSESMailManagerIngressPointWithName retrieves all ses.MailManagerIngressPoint items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSESMailManagerIngressPointWithName(name string) (*ses.MailManagerIngressPoint, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerIngressPoint:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ses.MailManagerIngressPoint not found", name)
+}
+
+// GetAllSESMailManagerRelayResources retrieves all ses.MailManagerRelay items from an AWS CloudFormation template
+func (t *Template) GetAllSESMailManagerRelayResources() map[string]*ses.MailManagerRelay {
+	results := map[string]*ses.MailManagerRelay{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerRelay:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSESMailManagerRelayWithName retrieves all ses.MailManagerRelay items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSESMailManagerRelayWithName(name string) (*ses.MailManagerRelay, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerRelay:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ses.MailManagerRelay not found", name)
+}
+
+// GetAllSESMailManagerRuleSetResources retrieves all ses.MailManagerRuleSet items from an AWS CloudFormation template
+func (t *Template) GetAllSESMailManagerRuleSetResources() map[string]*ses.MailManagerRuleSet {
+	results := map[string]*ses.MailManagerRuleSet{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerRuleSet:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSESMailManagerRuleSetWithName retrieves all ses.MailManagerRuleSet items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSESMailManagerRuleSetWithName(name string) (*ses.MailManagerRuleSet, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerRuleSet:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ses.MailManagerRuleSet not found", name)
+}
+
+// GetAllSESMailManagerTrafficPolicyResources retrieves all ses.MailManagerTrafficPolicy items from an AWS CloudFormation template
+func (t *Template) GetAllSESMailManagerTrafficPolicyResources() map[string]*ses.MailManagerTrafficPolicy {
+	results := map[string]*ses.MailManagerTrafficPolicy{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerTrafficPolicy:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSESMailManagerTrafficPolicyWithName retrieves all ses.MailManagerTrafficPolicy items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSESMailManagerTrafficPolicyWithName(name string) (*ses.MailManagerTrafficPolicy, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ses.MailManagerTrafficPolicy:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ses.MailManagerTrafficPolicy not found", name)
 }
 
 // GetAllSESReceiptFilterResources retrieves all ses.ReceiptFilter items from an AWS CloudFormation template
@@ -27723,6 +30212,78 @@ func (t *Template) GetSSMIncidentsResponsePlanWithName(name string) (*ssminciden
 	return nil, fmt.Errorf("resource %q of type ssmincidents.ResponsePlan not found", name)
 }
 
+// GetAllSSMQuickSetupConfigurationManagerResources retrieves all ssmquicksetup.ConfigurationManager items from an AWS CloudFormation template
+func (t *Template) GetAllSSMQuickSetupConfigurationManagerResources() map[string]*ssmquicksetup.ConfigurationManager {
+	results := map[string]*ssmquicksetup.ConfigurationManager{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *ssmquicksetup.ConfigurationManager:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSSMQuickSetupConfigurationManagerWithName retrieves all ssmquicksetup.ConfigurationManager items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSSMQuickSetupConfigurationManagerWithName(name string) (*ssmquicksetup.ConfigurationManager, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *ssmquicksetup.ConfigurationManager:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type ssmquicksetup.ConfigurationManager not found", name)
+}
+
+// GetAllSSOApplicationResources retrieves all sso.Application items from an AWS CloudFormation template
+func (t *Template) GetAllSSOApplicationResources() map[string]*sso.Application {
+	results := map[string]*sso.Application{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *sso.Application:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSSOApplicationWithName retrieves all sso.Application items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSSOApplicationWithName(name string) (*sso.Application, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *sso.Application:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type sso.Application not found", name)
+}
+
+// GetAllSSOApplicationAssignmentResources retrieves all sso.ApplicationAssignment items from an AWS CloudFormation template
+func (t *Template) GetAllSSOApplicationAssignmentResources() map[string]*sso.ApplicationAssignment {
+	results := map[string]*sso.ApplicationAssignment{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *sso.ApplicationAssignment:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSSOApplicationAssignmentWithName retrieves all sso.ApplicationAssignment items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSSOApplicationAssignmentWithName(name string) (*sso.ApplicationAssignment, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *sso.ApplicationAssignment:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type sso.ApplicationAssignment not found", name)
+}
+
 // GetAllSSOAssignmentResources retrieves all sso.Assignment items from an AWS CloudFormation template
 func (t *Template) GetAllSSOAssignmentResources() map[string]*sso.Assignment {
 	results := map[string]*sso.Assignment{}
@@ -27745,6 +30306,30 @@ func (t *Template) GetSSOAssignmentWithName(name string) (*sso.Assignment, error
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type sso.Assignment not found", name)
+}
+
+// GetAllSSOInstanceResources retrieves all sso.Instance items from an AWS CloudFormation template
+func (t *Template) GetAllSSOInstanceResources() map[string]*sso.Instance {
+	results := map[string]*sso.Instance{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *sso.Instance:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSSOInstanceWithName retrieves all sso.Instance items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSSOInstanceWithName(name string) (*sso.Instance, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *sso.Instance:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type sso.Instance not found", name)
 }
 
 // GetAllSSOInstanceAccessControlAttributeConfigurationResources retrieves all sso.InstanceAccessControlAttributeConfiguration items from an AWS CloudFormation template
@@ -27841,6 +30426,30 @@ func (t *Template) GetSageMakerAppImageConfigWithName(name string) (*sagemaker.A
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type sagemaker.AppImageConfig not found", name)
+}
+
+// GetAllSageMakerClusterResources retrieves all sagemaker.Cluster items from an AWS CloudFormation template
+func (t *Template) GetAllSageMakerClusterResources() map[string]*sagemaker.Cluster {
+	results := map[string]*sagemaker.Cluster{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *sagemaker.Cluster:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSageMakerClusterWithName retrieves all sagemaker.Cluster items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSageMakerClusterWithName(name string) (*sagemaker.Cluster, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *sagemaker.Cluster:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type sagemaker.Cluster not found", name)
 }
 
 // GetAllSageMakerCodeRepositoryResources retrieves all sagemaker.CodeRepository items from an AWS CloudFormation template
@@ -28131,6 +30740,30 @@ func (t *Template) GetSageMakerInferenceExperimentWithName(name string) (*sagema
 	return nil, fmt.Errorf("resource %q of type sagemaker.InferenceExperiment not found", name)
 }
 
+// GetAllSageMakerMlflowTrackingServerResources retrieves all sagemaker.MlflowTrackingServer items from an AWS CloudFormation template
+func (t *Template) GetAllSageMakerMlflowTrackingServerResources() map[string]*sagemaker.MlflowTrackingServer {
+	results := map[string]*sagemaker.MlflowTrackingServer{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *sagemaker.MlflowTrackingServer:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSageMakerMlflowTrackingServerWithName retrieves all sagemaker.MlflowTrackingServer items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSageMakerMlflowTrackingServerWithName(name string) (*sagemaker.MlflowTrackingServer, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *sagemaker.MlflowTrackingServer:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type sagemaker.MlflowTrackingServer not found", name)
+}
+
 // GetAllSageMakerModelResources retrieves all sagemaker.Model items from an AWS CloudFormation template
 func (t *Template) GetAllSageMakerModelResources() map[string]*sagemaker.Model {
 	results := map[string]*sagemaker.Model{}
@@ -28371,6 +31004,30 @@ func (t *Template) GetSageMakerNotebookInstanceLifecycleConfigWithName(name stri
 	return nil, fmt.Errorf("resource %q of type sagemaker.NotebookInstanceLifecycleConfig not found", name)
 }
 
+// GetAllSageMakerPartnerAppResources retrieves all sagemaker.PartnerApp items from an AWS CloudFormation template
+func (t *Template) GetAllSageMakerPartnerAppResources() map[string]*sagemaker.PartnerApp {
+	results := map[string]*sagemaker.PartnerApp{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *sagemaker.PartnerApp:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSageMakerPartnerAppWithName retrieves all sagemaker.PartnerApp items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSageMakerPartnerAppWithName(name string) (*sagemaker.PartnerApp, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *sagemaker.PartnerApp:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type sagemaker.PartnerApp not found", name)
+}
+
 // GetAllSageMakerPipelineResources retrieves all sagemaker.Pipeline items from an AWS CloudFormation template
 func (t *Template) GetAllSageMakerPipelineResources() map[string]*sagemaker.Pipeline {
 	results := map[string]*sagemaker.Pipeline{}
@@ -28441,6 +31098,30 @@ func (t *Template) GetSageMakerSpaceWithName(name string) (*sagemaker.Space, err
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type sagemaker.Space not found", name)
+}
+
+// GetAllSageMakerStudioLifecycleConfigResources retrieves all sagemaker.StudioLifecycleConfig items from an AWS CloudFormation template
+func (t *Template) GetAllSageMakerStudioLifecycleConfigResources() map[string]*sagemaker.StudioLifecycleConfig {
+	results := map[string]*sagemaker.StudioLifecycleConfig{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *sagemaker.StudioLifecycleConfig:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSageMakerStudioLifecycleConfigWithName retrieves all sagemaker.StudioLifecycleConfig items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSageMakerStudioLifecycleConfigWithName(name string) (*sagemaker.StudioLifecycleConfig, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *sagemaker.StudioLifecycleConfig:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type sagemaker.StudioLifecycleConfig not found", name)
 }
 
 // GetAllSageMakerUserProfileResources retrieves all sagemaker.UserProfile items from an AWS CloudFormation template
@@ -28659,6 +31340,30 @@ func (t *Template) GetSecurityHubAutomationRuleWithName(name string) (*securityh
 	return nil, fmt.Errorf("resource %q of type securityhub.AutomationRule not found", name)
 }
 
+// GetAllSecurityHubConfigurationPolicyResources retrieves all securityhub.ConfigurationPolicy items from an AWS CloudFormation template
+func (t *Template) GetAllSecurityHubConfigurationPolicyResources() map[string]*securityhub.ConfigurationPolicy {
+	results := map[string]*securityhub.ConfigurationPolicy{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *securityhub.ConfigurationPolicy:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSecurityHubConfigurationPolicyWithName retrieves all securityhub.ConfigurationPolicy items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSecurityHubConfigurationPolicyWithName(name string) (*securityhub.ConfigurationPolicy, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *securityhub.ConfigurationPolicy:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type securityhub.ConfigurationPolicy not found", name)
+}
+
 // GetAllSecurityHubDelegatedAdminResources retrieves all securityhub.DelegatedAdmin items from an AWS CloudFormation template
 func (t *Template) GetAllSecurityHubDelegatedAdminResources() map[string]*securityhub.DelegatedAdmin {
 	results := map[string]*securityhub.DelegatedAdmin{}
@@ -28681,6 +31386,30 @@ func (t *Template) GetSecurityHubDelegatedAdminWithName(name string) (*securityh
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type securityhub.DelegatedAdmin not found", name)
+}
+
+// GetAllSecurityHubFindingAggregatorResources retrieves all securityhub.FindingAggregator items from an AWS CloudFormation template
+func (t *Template) GetAllSecurityHubFindingAggregatorResources() map[string]*securityhub.FindingAggregator {
+	results := map[string]*securityhub.FindingAggregator{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *securityhub.FindingAggregator:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSecurityHubFindingAggregatorWithName retrieves all securityhub.FindingAggregator items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSecurityHubFindingAggregatorWithName(name string) (*securityhub.FindingAggregator, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *securityhub.FindingAggregator:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type securityhub.FindingAggregator not found", name)
 }
 
 // GetAllSecurityHubHubResources retrieves all securityhub.Hub items from an AWS CloudFormation template
@@ -28731,6 +31460,54 @@ func (t *Template) GetSecurityHubInsightWithName(name string) (*securityhub.Insi
 	return nil, fmt.Errorf("resource %q of type securityhub.Insight not found", name)
 }
 
+// GetAllSecurityHubOrganizationConfigurationResources retrieves all securityhub.OrganizationConfiguration items from an AWS CloudFormation template
+func (t *Template) GetAllSecurityHubOrganizationConfigurationResources() map[string]*securityhub.OrganizationConfiguration {
+	results := map[string]*securityhub.OrganizationConfiguration{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *securityhub.OrganizationConfiguration:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSecurityHubOrganizationConfigurationWithName retrieves all securityhub.OrganizationConfiguration items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSecurityHubOrganizationConfigurationWithName(name string) (*securityhub.OrganizationConfiguration, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *securityhub.OrganizationConfiguration:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type securityhub.OrganizationConfiguration not found", name)
+}
+
+// GetAllSecurityHubPolicyAssociationResources retrieves all securityhub.PolicyAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllSecurityHubPolicyAssociationResources() map[string]*securityhub.PolicyAssociation {
+	results := map[string]*securityhub.PolicyAssociation{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *securityhub.PolicyAssociation:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSecurityHubPolicyAssociationWithName retrieves all securityhub.PolicyAssociation items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSecurityHubPolicyAssociationWithName(name string) (*securityhub.PolicyAssociation, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *securityhub.PolicyAssociation:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type securityhub.PolicyAssociation not found", name)
+}
+
 // GetAllSecurityHubProductSubscriptionResources retrieves all securityhub.ProductSubscription items from an AWS CloudFormation template
 func (t *Template) GetAllSecurityHubProductSubscriptionResources() map[string]*securityhub.ProductSubscription {
 	results := map[string]*securityhub.ProductSubscription{}
@@ -28753,6 +31530,30 @@ func (t *Template) GetSecurityHubProductSubscriptionWithName(name string) (*secu
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type securityhub.ProductSubscription not found", name)
+}
+
+// GetAllSecurityHubSecurityControlResources retrieves all securityhub.SecurityControl items from an AWS CloudFormation template
+func (t *Template) GetAllSecurityHubSecurityControlResources() map[string]*securityhub.SecurityControl {
+	results := map[string]*securityhub.SecurityControl{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *securityhub.SecurityControl:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSecurityHubSecurityControlWithName retrieves all securityhub.SecurityControl items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSecurityHubSecurityControlWithName(name string) (*securityhub.SecurityControl, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *securityhub.SecurityControl:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type securityhub.SecurityControl not found", name)
 }
 
 // GetAllSecurityHubStandardResources retrieves all securityhub.Standard items from an AWS CloudFormation template
@@ -28849,6 +31650,30 @@ func (t *Template) GetSecurityLakeSubscriberWithName(name string) (*securitylake
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type securitylake.Subscriber not found", name)
+}
+
+// GetAllSecurityLakeSubscriberNotificationResources retrieves all securitylake.SubscriberNotification items from an AWS CloudFormation template
+func (t *Template) GetAllSecurityLakeSubscriberNotificationResources() map[string]*securitylake.SubscriberNotification {
+	results := map[string]*securitylake.SubscriberNotification{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *securitylake.SubscriberNotification:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetSecurityLakeSubscriberNotificationWithName retrieves all securitylake.SubscriberNotification items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetSecurityLakeSubscriberNotificationWithName(name string) (*securitylake.SubscriberNotification, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *securitylake.SubscriberNotification:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type securitylake.SubscriberNotification not found", name)
 }
 
 // GetAllServerlessApiResources retrieves all serverless.Api items from an AWS CloudFormation template
@@ -30267,6 +33092,30 @@ func (t *Template) GetTransferUserWithName(name string) (*transfer.User, error) 
 	return nil, fmt.Errorf("resource %q of type transfer.User not found", name)
 }
 
+// GetAllTransferWebAppResources retrieves all transfer.WebApp items from an AWS CloudFormation template
+func (t *Template) GetAllTransferWebAppResources() map[string]*transfer.WebApp {
+	results := map[string]*transfer.WebApp{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *transfer.WebApp:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetTransferWebAppWithName retrieves all transfer.WebApp items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetTransferWebAppWithName(name string) (*transfer.WebApp, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *transfer.WebApp:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type transfer.WebApp not found", name)
+}
+
 // GetAllTransferWorkflowResources retrieves all transfer.Workflow items from an AWS CloudFormation template
 func (t *Template) GetAllTransferWorkflowResources() map[string]*transfer.Workflow {
 	results := map[string]*transfer.Workflow{}
@@ -30483,6 +33332,54 @@ func (t *Template) GetVpcLatticeListenerWithName(name string) (*vpclattice.Liste
 	return nil, fmt.Errorf("resource %q of type vpclattice.Listener not found", name)
 }
 
+// GetAllVpcLatticeResourceConfigurationResources retrieves all vpclattice.ResourceConfiguration items from an AWS CloudFormation template
+func (t *Template) GetAllVpcLatticeResourceConfigurationResources() map[string]*vpclattice.ResourceConfiguration {
+	results := map[string]*vpclattice.ResourceConfiguration{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *vpclattice.ResourceConfiguration:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetVpcLatticeResourceConfigurationWithName retrieves all vpclattice.ResourceConfiguration items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetVpcLatticeResourceConfigurationWithName(name string) (*vpclattice.ResourceConfiguration, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *vpclattice.ResourceConfiguration:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type vpclattice.ResourceConfiguration not found", name)
+}
+
+// GetAllVpcLatticeResourceGatewayResources retrieves all vpclattice.ResourceGateway items from an AWS CloudFormation template
+func (t *Template) GetAllVpcLatticeResourceGatewayResources() map[string]*vpclattice.ResourceGateway {
+	results := map[string]*vpclattice.ResourceGateway{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *vpclattice.ResourceGateway:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetVpcLatticeResourceGatewayWithName retrieves all vpclattice.ResourceGateway items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetVpcLatticeResourceGatewayWithName(name string) (*vpclattice.ResourceGateway, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *vpclattice.ResourceGateway:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type vpclattice.ResourceGateway not found", name)
+}
+
 // GetAllVpcLatticeResourcePolicyResources retrieves all vpclattice.ResourcePolicy items from an AWS CloudFormation template
 func (t *Template) GetAllVpcLatticeResourcePolicyResources() map[string]*vpclattice.ResourcePolicy {
 	results := map[string]*vpclattice.ResourcePolicy{}
@@ -30577,6 +33474,30 @@ func (t *Template) GetVpcLatticeServiceNetworkWithName(name string) (*vpclattice
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type vpclattice.ServiceNetwork not found", name)
+}
+
+// GetAllVpcLatticeServiceNetworkResourceAssociationResources retrieves all vpclattice.ServiceNetworkResourceAssociation items from an AWS CloudFormation template
+func (t *Template) GetAllVpcLatticeServiceNetworkResourceAssociationResources() map[string]*vpclattice.ServiceNetworkResourceAssociation {
+	results := map[string]*vpclattice.ServiceNetworkResourceAssociation{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *vpclattice.ServiceNetworkResourceAssociation:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetVpcLatticeServiceNetworkResourceAssociationWithName retrieves all vpclattice.ServiceNetworkResourceAssociation items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetVpcLatticeServiceNetworkResourceAssociationWithName(name string) (*vpclattice.ServiceNetworkResourceAssociation, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *vpclattice.ServiceNetworkResourceAssociation:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type vpclattice.ServiceNetworkResourceAssociation not found", name)
 }
 
 // GetAllVpcLatticeServiceNetworkServiceAssociationResources retrieves all vpclattice.ServiceNetworkServiceAssociation items from an AWS CloudFormation template
@@ -31227,6 +34148,150 @@ func (t *Template) GetWAFv2WebACLAssociationWithName(name string) (*wafv2.WebACL
 	return nil, fmt.Errorf("resource %q of type wafv2.WebACLAssociation not found", name)
 }
 
+// GetAllWisdomAIAgentResources retrieves all wisdom.AIAgent items from an AWS CloudFormation template
+func (t *Template) GetAllWisdomAIAgentResources() map[string]*wisdom.AIAgent {
+	results := map[string]*wisdom.AIAgent{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *wisdom.AIAgent:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWisdomAIAgentWithName retrieves all wisdom.AIAgent items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWisdomAIAgentWithName(name string) (*wisdom.AIAgent, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *wisdom.AIAgent:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type wisdom.AIAgent not found", name)
+}
+
+// GetAllWisdomAIAgentVersionResources retrieves all wisdom.AIAgentVersion items from an AWS CloudFormation template
+func (t *Template) GetAllWisdomAIAgentVersionResources() map[string]*wisdom.AIAgentVersion {
+	results := map[string]*wisdom.AIAgentVersion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *wisdom.AIAgentVersion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWisdomAIAgentVersionWithName retrieves all wisdom.AIAgentVersion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWisdomAIAgentVersionWithName(name string) (*wisdom.AIAgentVersion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *wisdom.AIAgentVersion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type wisdom.AIAgentVersion not found", name)
+}
+
+// GetAllWisdomAIGuardrailResources retrieves all wisdom.AIGuardrail items from an AWS CloudFormation template
+func (t *Template) GetAllWisdomAIGuardrailResources() map[string]*wisdom.AIGuardrail {
+	results := map[string]*wisdom.AIGuardrail{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *wisdom.AIGuardrail:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWisdomAIGuardrailWithName retrieves all wisdom.AIGuardrail items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWisdomAIGuardrailWithName(name string) (*wisdom.AIGuardrail, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *wisdom.AIGuardrail:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type wisdom.AIGuardrail not found", name)
+}
+
+// GetAllWisdomAIGuardrailVersionResources retrieves all wisdom.AIGuardrailVersion items from an AWS CloudFormation template
+func (t *Template) GetAllWisdomAIGuardrailVersionResources() map[string]*wisdom.AIGuardrailVersion {
+	results := map[string]*wisdom.AIGuardrailVersion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *wisdom.AIGuardrailVersion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWisdomAIGuardrailVersionWithName retrieves all wisdom.AIGuardrailVersion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWisdomAIGuardrailVersionWithName(name string) (*wisdom.AIGuardrailVersion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *wisdom.AIGuardrailVersion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type wisdom.AIGuardrailVersion not found", name)
+}
+
+// GetAllWisdomAIPromptResources retrieves all wisdom.AIPrompt items from an AWS CloudFormation template
+func (t *Template) GetAllWisdomAIPromptResources() map[string]*wisdom.AIPrompt {
+	results := map[string]*wisdom.AIPrompt{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *wisdom.AIPrompt:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWisdomAIPromptWithName retrieves all wisdom.AIPrompt items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWisdomAIPromptWithName(name string) (*wisdom.AIPrompt, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *wisdom.AIPrompt:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type wisdom.AIPrompt not found", name)
+}
+
+// GetAllWisdomAIPromptVersionResources retrieves all wisdom.AIPromptVersion items from an AWS CloudFormation template
+func (t *Template) GetAllWisdomAIPromptVersionResources() map[string]*wisdom.AIPromptVersion {
+	results := map[string]*wisdom.AIPromptVersion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *wisdom.AIPromptVersion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWisdomAIPromptVersionWithName retrieves all wisdom.AIPromptVersion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWisdomAIPromptVersionWithName(name string) (*wisdom.AIPromptVersion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *wisdom.AIPromptVersion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type wisdom.AIPromptVersion not found", name)
+}
+
 // GetAllWisdomAssistantResources retrieves all wisdom.Assistant items from an AWS CloudFormation template
 func (t *Template) GetAllWisdomAssistantResources() map[string]*wisdom.Assistant {
 	results := map[string]*wisdom.Assistant{}
@@ -31299,6 +34364,54 @@ func (t *Template) GetWisdomKnowledgeBaseWithName(name string) (*wisdom.Knowledg
 	return nil, fmt.Errorf("resource %q of type wisdom.KnowledgeBase not found", name)
 }
 
+// GetAllWisdomMessageTemplateResources retrieves all wisdom.MessageTemplate items from an AWS CloudFormation template
+func (t *Template) GetAllWisdomMessageTemplateResources() map[string]*wisdom.MessageTemplate {
+	results := map[string]*wisdom.MessageTemplate{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *wisdom.MessageTemplate:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWisdomMessageTemplateWithName retrieves all wisdom.MessageTemplate items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWisdomMessageTemplateWithName(name string) (*wisdom.MessageTemplate, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *wisdom.MessageTemplate:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type wisdom.MessageTemplate not found", name)
+}
+
+// GetAllWisdomMessageTemplateVersionResources retrieves all wisdom.MessageTemplateVersion items from an AWS CloudFormation template
+func (t *Template) GetAllWisdomMessageTemplateVersionResources() map[string]*wisdom.MessageTemplateVersion {
+	results := map[string]*wisdom.MessageTemplateVersion{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *wisdom.MessageTemplateVersion:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWisdomMessageTemplateVersionWithName retrieves all wisdom.MessageTemplateVersion items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWisdomMessageTemplateVersionWithName(name string) (*wisdom.MessageTemplateVersion, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *wisdom.MessageTemplateVersion:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type wisdom.MessageTemplateVersion not found", name)
+}
+
 // GetAllWorkSpacesConnectionAliasResources retrieves all workspaces.ConnectionAlias items from an AWS CloudFormation template
 func (t *Template) GetAllWorkSpacesConnectionAliasResources() map[string]*workspaces.ConnectionAlias {
 	results := map[string]*workspaces.ConnectionAlias{}
@@ -31347,6 +34460,30 @@ func (t *Template) GetWorkSpacesWorkspaceWithName(name string) (*workspaces.Work
 	return nil, fmt.Errorf("resource %q of type workspaces.Workspace not found", name)
 }
 
+// GetAllWorkSpacesWorkspacesPoolResources retrieves all workspaces.WorkspacesPool items from an AWS CloudFormation template
+func (t *Template) GetAllWorkSpacesWorkspacesPoolResources() map[string]*workspaces.WorkspacesPool {
+	results := map[string]*workspaces.WorkspacesPool{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *workspaces.WorkspacesPool:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWorkSpacesWorkspacesPoolWithName retrieves all workspaces.WorkspacesPool items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWorkSpacesWorkspacesPoolWithName(name string) (*workspaces.WorkspacesPool, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *workspaces.WorkspacesPool:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type workspaces.WorkspacesPool not found", name)
+}
+
 // GetAllWorkSpacesThinClientEnvironmentResources retrieves all workspacesthinclient.Environment items from an AWS CloudFormation template
 func (t *Template) GetAllWorkSpacesThinClientEnvironmentResources() map[string]*workspacesthinclient.Environment {
 	results := map[string]*workspacesthinclient.Environment{}
@@ -31393,6 +34530,30 @@ func (t *Template) GetWorkSpacesWebBrowserSettingsWithName(name string) (*worksp
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type workspacesweb.BrowserSettings not found", name)
+}
+
+// GetAllWorkSpacesWebDataProtectionSettingsResources retrieves all workspacesweb.DataProtectionSettings items from an AWS CloudFormation template
+func (t *Template) GetAllWorkSpacesWebDataProtectionSettingsResources() map[string]*workspacesweb.DataProtectionSettings {
+	results := map[string]*workspacesweb.DataProtectionSettings{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *workspacesweb.DataProtectionSettings:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetWorkSpacesWebDataProtectionSettingsWithName retrieves all workspacesweb.DataProtectionSettings items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetWorkSpacesWebDataProtectionSettingsWithName(name string) (*workspacesweb.DataProtectionSettings, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *workspacesweb.DataProtectionSettings:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type workspacesweb.DataProtectionSettings not found", name)
 }
 
 // GetAllWorkSpacesWebIdentityProviderResources retrieves all workspacesweb.IdentityProvider items from an AWS CloudFormation template

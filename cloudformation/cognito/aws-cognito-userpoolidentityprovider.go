@@ -16,7 +16,7 @@ type UserPoolIdentityProvider struct {
 	// AttributeMapping AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-attributemapping
-	AttributeMapping interface{} `json:"AttributeMapping,omitempty"`
+	AttributeMapping map[string]string `json:"AttributeMapping,omitempty"`
 
 	// IdpIdentifiers AWS CloudFormation Property
 	// Required: false
@@ -24,9 +24,9 @@ type UserPoolIdentityProvider struct {
 	IdpIdentifiers []string `json:"IdpIdentifiers,omitempty"`
 
 	// ProviderDetails AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providerdetails
-	ProviderDetails interface{} `json:"ProviderDetails,omitempty"`
+	ProviderDetails map[string]string `json:"ProviderDetails"`
 
 	// ProviderName AWS CloudFormation Property
 	// Required: true

@@ -35,10 +35,30 @@ type FirewallRuleGroup_FirewallRule struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockresponse
 	BlockResponse *string `json:"BlockResponse,omitempty"`
 
+	// ConfidenceThreshold AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-confidencethreshold
+	ConfidenceThreshold *string `json:"ConfidenceThreshold,omitempty"`
+
+	// DnsThreatProtection AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-dnsthreatprotection
+	DnsThreatProtection *string `json:"DnsThreatProtection,omitempty"`
+
 	// FirewallDomainListId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainlistid
-	FirewallDomainListId string `json:"FirewallDomainListId"`
+	FirewallDomainListId *string `json:"FirewallDomainListId,omitempty"`
+
+	// FirewallDomainRedirectionAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainredirectionaction
+	FirewallDomainRedirectionAction *string `json:"FirewallDomainRedirectionAction,omitempty"`
+
+	// FirewallThreatProtectionId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewallthreatprotectionid
+	FirewallThreatProtectionId *string `json:"FirewallThreatProtectionId,omitempty"`
 
 	// Priority AWS CloudFormation Property
 	// Required: true

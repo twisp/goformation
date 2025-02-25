@@ -50,6 +50,11 @@ type LaunchTemplate_InstanceRequirements struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baselineebsbandwidthmbps
 	BaselineEbsBandwidthMbps *LaunchTemplate_BaselineEbsBandwidthMbps `json:"BaselineEbsBandwidthMbps,omitempty"`
 
+	// BaselinePerformanceFactors AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baselineperformancefactors
+	BaselinePerformanceFactors *LaunchTemplate_BaselinePerformanceFactors `json:"BaselinePerformanceFactors,omitempty"`
+
 	// BurstablePerformance AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-burstableperformance

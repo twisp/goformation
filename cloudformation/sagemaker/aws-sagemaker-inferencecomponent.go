@@ -30,9 +30,9 @@ type InferenceComponent struct {
 	InferenceComponentName *string `json:"InferenceComponentName,omitempty"`
 
 	// RuntimeConfig AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-runtimeconfig
-	RuntimeConfig *InferenceComponent_InferenceComponentRuntimeConfig `json:"RuntimeConfig"`
+	RuntimeConfig *InferenceComponent_InferenceComponentRuntimeConfig `json:"RuntimeConfig,omitempty"`
 
 	// Specification AWS CloudFormation Property
 	// Required: true
@@ -45,9 +45,9 @@ type InferenceComponent struct {
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VariantName AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-variantname
-	VariantName string `json:"VariantName"`
+	VariantName *string `json:"VariantName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

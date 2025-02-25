@@ -30,6 +30,11 @@ type Dashboard_SankeyDiagramVisual struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sankeydiagramvisual.html#cfn-quicksight-dashboard-sankeydiagramvisual-title
 	Title *Dashboard_VisualTitleLabelOptions `json:"Title,omitempty"`
 
+	// VisualContentAltText AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sankeydiagramvisual.html#cfn-quicksight-dashboard-sankeydiagramvisual-visualcontentalttext
+	VisualContentAltText *string `json:"VisualContentAltText,omitempty"`
+
 	// VisualId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sankeydiagramvisual.html#cfn-quicksight-dashboard-sankeydiagramvisual-visualid

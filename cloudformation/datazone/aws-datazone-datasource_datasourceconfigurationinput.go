@@ -20,6 +20,11 @@ type DataSource_DataSourceConfigurationInput struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-datasourceconfigurationinput.html#cfn-datazone-datasource-datasourceconfigurationinput-redshiftrunconfiguration
 	RedshiftRunConfiguration *DataSource_RedshiftRunConfigurationInput `json:"RedshiftRunConfiguration,omitempty"`
 
+	// SageMakerRunConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-datasourceconfigurationinput.html#cfn-datazone-datasource-datasourceconfigurationinput-sagemakerrunconfiguration
+	SageMakerRunConfiguration *DataSource_SageMakerRunConfigurationInput `json:"SageMakerRunConfiguration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

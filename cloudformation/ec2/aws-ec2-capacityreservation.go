@@ -14,9 +14,14 @@ import (
 type CapacityReservation struct {
 
 	// AvailabilityZone AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-availabilityzone
-	AvailabilityZone string `json:"AvailabilityZone"`
+	AvailabilityZone *string `json:"AvailabilityZone,omitempty"`
+
+	// AvailabilityZoneId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-availabilityzoneid
+	AvailabilityZoneId *string `json:"AvailabilityZoneId,omitempty"`
 
 	// EbsOptimized AWS CloudFormation Property
 	// Required: false
@@ -77,6 +82,11 @@ type CapacityReservation struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tenancy
 	Tenancy *string `json:"Tenancy,omitempty"`
+
+	// UnusedReservationBillingOwnerId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-unusedreservationbillingownerid
+	UnusedReservationBillingOwnerId *string `json:"UnusedReservationBillingOwnerId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

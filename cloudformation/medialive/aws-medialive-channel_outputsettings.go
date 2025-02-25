@@ -50,6 +50,11 @@ type Channel_OutputSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-rtmpoutputsettings
 	RtmpOutputSettings *Channel_RtmpOutputSettings `json:"RtmpOutputSettings,omitempty"`
 
+	// SrtOutputSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-srtoutputsettings
+	SrtOutputSettings *Channel_SrtOutputSettings `json:"SrtOutputSettings,omitempty"`
+
 	// UdpOutputSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-udpoutputsettings

@@ -18,6 +18,16 @@ type AutoScalingGroup struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-autoscalinggroupname
 	AutoScalingGroupName *string `json:"AutoScalingGroupName,omitempty"`
 
+	// AvailabilityZoneDistribution AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution
+	AvailabilityZoneDistribution *AutoScalingGroup_AvailabilityZoneDistribution `json:"AvailabilityZoneDistribution,omitempty"`
+
+	// AvailabilityZoneImpairmentPolicy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy
+	AvailabilityZoneImpairmentPolicy *AutoScalingGroup_AvailabilityZoneImpairmentPolicy `json:"AvailabilityZoneImpairmentPolicy,omitempty"`
+
 	// AvailabilityZones AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzones
@@ -27,6 +37,11 @@ type AutoScalingGroup struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityrebalance
 	CapacityRebalance *bool `json:"CapacityRebalance,omitempty"`
+
+	// CapacityReservationSpecification AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification
+	CapacityReservationSpecification *AutoScalingGroup_CapacityReservationSpecification `json:"CapacityReservationSpecification,omitempty"`
 
 	// Context AWS CloudFormation Property
 	// Required: false
@@ -138,6 +153,11 @@ type AutoScalingGroup struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn
 	ServiceLinkedRoleARN *string `json:"ServiceLinkedRoleARN,omitempty"`
 
+	// SkipZonalShiftValidation AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-skipzonalshiftvalidation
+	SkipZonalShiftValidation *bool `json:"SkipZonalShiftValidation,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-tags
@@ -152,6 +172,11 @@ type AutoScalingGroup struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-terminationpolicies
 	TerminationPolicies []string `json:"TerminationPolicies,omitempty"`
+
+	// TrafficSources AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources
+	TrafficSources []AutoScalingGroup_TrafficSourceIdentifier `json:"TrafficSources,omitempty"`
 
 	// VPCZoneIdentifier AWS CloudFormation Property
 	// Required: false

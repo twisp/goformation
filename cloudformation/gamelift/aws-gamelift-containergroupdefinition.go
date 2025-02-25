@@ -14,10 +14,15 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html
 type ContainerGroupDefinition struct {
 
-	// ContainerDefinitions AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-containerdefinitions
-	ContainerDefinitions []ContainerGroupDefinition_ContainerDefinition `json:"ContainerDefinitions"`
+	// ContainerGroupType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-containergrouptype
+	ContainerGroupType *string `json:"ContainerGroupType,omitempty"`
+
+	// GameServerContainerDefinition AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-gameservercontainerdefinition
+	GameServerContainerDefinition *ContainerGroupDefinition_GameServerContainerDefinition `json:"GameServerContainerDefinition,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
@@ -29,25 +34,35 @@ type ContainerGroupDefinition struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-operatingsystem
 	OperatingSystem string `json:"OperatingSystem"`
 
-	// SchedulingStrategy AWS CloudFormation Property
+	// SourceVersionNumber AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-schedulingstrategy
-	SchedulingStrategy *string `json:"SchedulingStrategy,omitempty"`
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-sourceversionnumber
+	SourceVersionNumber *int `json:"SourceVersionNumber,omitempty"`
+
+	// SupportContainerDefinitions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-supportcontainerdefinitions
+	SupportContainerDefinitions []ContainerGroupDefinition_SupportContainerDefinition `json:"SupportContainerDefinitions,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
-	// TotalCpuLimit AWS CloudFormation Property
+	// TotalMemoryLimitMebibytes AWS CloudFormation Property
 	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalcpulimit
-	TotalCpuLimit int `json:"TotalCpuLimit"`
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalmemorylimitmebibytes
+	TotalMemoryLimitMebibytes int `json:"TotalMemoryLimitMebibytes"`
 
-	// TotalMemoryLimit AWS CloudFormation Property
+	// TotalVcpuLimit AWS CloudFormation Property
 	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalmemorylimit
-	TotalMemoryLimit int `json:"TotalMemoryLimit"`
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalvcpulimit
+	TotalVcpuLimit float64 `json:"TotalVcpuLimit"`
+
+	// VersionDescription AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-versiondescription
+	VersionDescription *string `json:"VersionDescription,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
