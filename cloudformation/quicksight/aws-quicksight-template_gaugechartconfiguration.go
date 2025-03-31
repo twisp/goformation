@@ -10,6 +10,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-gaugechartconfiguration.html
 type Template_GaugeChartConfiguration struct {
 
+	// ColorConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-gaugechartconfiguration.html#cfn-quicksight-template-gaugechartconfiguration-colorconfiguration
+	ColorConfiguration *Template_GaugeChartColorConfiguration `json:"ColorConfiguration,omitempty"`
+
 	// DataLabels AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-gaugechartconfiguration.html#cfn-quicksight-template-gaugechartconfiguration-datalabels
@@ -24,6 +29,11 @@ type Template_GaugeChartConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-gaugechartconfiguration.html#cfn-quicksight-template-gaugechartconfiguration-gaugechartoptions
 	GaugeChartOptions *Template_GaugeChartOptions `json:"GaugeChartOptions,omitempty"`
+
+	// Interactions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-gaugechartconfiguration.html#cfn-quicksight-template-gaugechartconfiguration-interactions
+	Interactions *Template_VisualInteractionOptions `json:"Interactions,omitempty"`
 
 	// TooltipOptions AWS CloudFormation Property
 	// Required: false

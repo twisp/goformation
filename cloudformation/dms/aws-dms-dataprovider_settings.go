@@ -15,6 +15,16 @@ type DataProvider_Settings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-docdbsettings
 	DocDbSettings *DataProvider_DocDbSettings `json:"DocDbSettings,omitempty"`
 
+	// IbmDb2LuwSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-ibmdb2luwsettings
+	IbmDb2LuwSettings *DataProvider_IbmDb2LuwSettings `json:"IbmDb2LuwSettings,omitempty"`
+
+	// IbmDb2zOsSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-ibmdb2zossettings
+	IbmDb2zOsSettings *DataProvider_IbmDb2zOsSettings `json:"IbmDb2zOsSettings,omitempty"`
+
 	// MariaDbSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-mariadbsettings

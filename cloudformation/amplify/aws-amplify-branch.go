@@ -39,6 +39,11 @@ type Branch struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-buildspec
 	BuildSpec *string `json:"BuildSpec,omitempty"`
 
+	// ComputeRoleArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-computerolearn
+	ComputeRoleArn *string `json:"ComputeRoleArn,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-description
@@ -58,6 +63,11 @@ type Branch struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enablepullrequestpreview
 	EnablePullRequestPreview *bool `json:"EnablePullRequestPreview,omitempty"`
+
+	// EnableSkewProtection AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html#cfn-amplify-branch-enableskewprotection
+	EnableSkewProtection *bool `json:"EnableSkewProtection,omitempty"`
 
 	// EnvironmentVariables AWS CloudFormation Property
 	// Required: false

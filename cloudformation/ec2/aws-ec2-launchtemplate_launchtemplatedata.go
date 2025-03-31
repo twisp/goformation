@@ -133,7 +133,7 @@ type LaunchTemplate_LaunchTemplateData struct {
 	// NetworkPerformanceOptions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-networkperformanceoptions
-	NetworkPerformanceOptions interface{} `json:"NetworkPerformanceOptions,omitempty"`
+	NetworkPerformanceOptions *LaunchTemplate_NetworkPerformanceOptions `json:"NetworkPerformanceOptions,omitempty"`
 
 	// Placement AWS CloudFormation Property
 	// Required: false

@@ -29,9 +29,9 @@ type EventBridgeRuleTemplate struct {
 	EventType string `json:"EventType"`
 
 	// GroupIdentifier AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-eventbridgeruletemplate.html#cfn-medialive-eventbridgeruletemplate-groupidentifier
-	GroupIdentifier string `json:"GroupIdentifier"`
+	GroupIdentifier *string `json:"GroupIdentifier,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

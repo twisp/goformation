@@ -20,6 +20,11 @@ type Template_BodySectionConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-bodysectionconfiguration.html#cfn-quicksight-template-bodysectionconfiguration-pagebreakconfiguration
 	PageBreakConfiguration *Template_SectionPageBreakConfiguration `json:"PageBreakConfiguration,omitempty"`
 
+	// RepeatConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-bodysectionconfiguration.html#cfn-quicksight-template-bodysectionconfiguration-repeatconfiguration
+	RepeatConfiguration *Template_BodySectionRepeatConfiguration `json:"RepeatConfiguration,omitempty"`
+
 	// SectionId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-bodysectionconfiguration.html#cfn-quicksight-template-bodysectionconfiguration-sectionid

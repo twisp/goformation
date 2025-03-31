@@ -372,6 +372,7 @@ func AllResources() map[string]Resource {
 		"AWS::ApplicationAutoScaling::ScalableTarget":                         &applicationautoscaling.ScalableTarget{},
 		"AWS::ApplicationAutoScaling::ScalingPolicy":                          &applicationautoscaling.ScalingPolicy{},
 		"AWS::ApplicationInsights::Application":                               &applicationinsights.Application{},
+		"AWS::ApplicationSignals::Discovery":                                  &applicationsignals.Discovery{},
 		"AWS::ApplicationSignals::ServiceLevelObjective":                      &applicationsignals.ServiceLevelObjective{},
 		"AWS::Athena::CapacityReservation":                                    &athena.CapacityReservation{},
 		"AWS::Athena::DataCatalog":                                            &athena.DataCatalog{},
@@ -401,12 +402,15 @@ func AllResources() map[string]Resource {
 		"AWS::Backup::RestoreTestingSelection":                                &backup.RestoreTestingSelection{},
 		"AWS::BackupGateway::Hypervisor":                                      &backupgateway.Hypervisor{},
 		"AWS::Batch::ComputeEnvironment":                                      &batch.ComputeEnvironment{},
+		"AWS::Batch::ConsumableResource":                                      &batch.ConsumableResource{},
 		"AWS::Batch::JobDefinition":                                           &batch.JobDefinition{},
 		"AWS::Batch::JobQueue":                                                &batch.JobQueue{},
 		"AWS::Batch::SchedulingPolicy":                                        &batch.SchedulingPolicy{},
 		"AWS::Bedrock::Agent":                                                 &bedrock.Agent{},
 		"AWS::Bedrock::AgentAlias":                                            &bedrock.AgentAlias{},
 		"AWS::Bedrock::ApplicationInferenceProfile":                           &bedrock.ApplicationInferenceProfile{},
+		"AWS::Bedrock::Blueprint":                                             &bedrock.Blueprint{},
+		"AWS::Bedrock::DataAutomationProject":                                 &bedrock.DataAutomationProject{},
 		"AWS::Bedrock::DataSource":                                            &bedrock.DataSource{},
 		"AWS::Bedrock::Flow":                                                  &bedrock.Flow{},
 		"AWS::Bedrock::FlowAlias":                                             &bedrock.FlowAlias{},
@@ -614,6 +618,7 @@ func AllResources() map[string]Resource {
 		"AWS::DataSync::LocationSMB":                                          &datasync.LocationSMB{},
 		"AWS::DataSync::StorageSystem":                                        &datasync.StorageSystem{},
 		"AWS::DataSync::Task":                                                 &datasync.Task{},
+		"AWS::DataZone::Connection":                                           &datazone.Connection{},
 		"AWS::DataZone::DataSource":                                           &datazone.DataSource{},
 		"AWS::DataZone::Domain":                                               &datazone.Domain{},
 		"AWS::DataZone::Environment":                                          &datazone.Environment{},
@@ -909,6 +914,7 @@ func AllResources() map[string]Resource {
 		"AWS::GuardDuty::MalwareProtectionPlan":                               &guardduty.MalwareProtectionPlan{},
 		"AWS::GuardDuty::Master":                                              &guardduty.Master{},
 		"AWS::GuardDuty::Member":                                              &guardduty.Member{},
+		"AWS::GuardDuty::PublishingDestination":                               &guardduty.PublishingDestination{},
 		"AWS::GuardDuty::ThreatIntelSet":                                      &guardduty.ThreatIntelSet{},
 		"AWS::HealthImaging::Datastore":                                       &healthimaging.Datastore{},
 		"AWS::HealthLake::FHIRDatastore":                                      &healthlake.FHIRDatastore{},
@@ -1007,6 +1013,7 @@ func AllResources() map[string]Resource {
 		"AWS::IoTSiteWise::Asset":                                             &iotsitewise.Asset{},
 		"AWS::IoTSiteWise::AssetModel":                                        &iotsitewise.AssetModel{},
 		"AWS::IoTSiteWise::Dashboard":                                         &iotsitewise.Dashboard{},
+		"AWS::IoTSiteWise::Dataset":                                           &iotsitewise.Dataset{},
 		"AWS::IoTSiteWise::Gateway":                                           &iotsitewise.Gateway{},
 		"AWS::IoTSiteWise::Portal":                                            &iotsitewise.Portal{},
 		"AWS::IoTSiteWise::Project":                                           &iotsitewise.Project{},
@@ -1223,6 +1230,7 @@ func AllResources() map[string]Resource {
 		"AWS::Omics::Workflow":                                                &omics.Workflow{},
 		"AWS::OpenSearchServerless::AccessPolicy":                             &opensearchserverless.AccessPolicy{},
 		"AWS::OpenSearchServerless::Collection":                               &opensearchserverless.Collection{},
+		"AWS::OpenSearchServerless::Index":                                    &opensearchserverless.Index{},
 		"AWS::OpenSearchServerless::LifecyclePolicy":                          &opensearchserverless.LifecyclePolicy{},
 		"AWS::OpenSearchServerless::SecurityConfig":                           &opensearchserverless.SecurityConfig{},
 		"AWS::OpenSearchServerless::SecurityPolicy":                           &opensearchserverless.SecurityPolicy{},
@@ -1644,6 +1652,7 @@ func AllResources() map[string]Resource {
 		"AWS::XRay::Group":                                                    &xray.Group{},
 		"AWS::XRay::ResourcePolicy":                                           &xray.ResourcePolicy{},
 		"AWS::XRay::SamplingRule":                                             &xray.SamplingRule{},
+		"AWS::XRay::TransactionSearchConfig":                                  &xray.TransactionSearchConfig{},
 		"Alexa::ASK::Skill":                                                   &ask.Skill{},
 		"Api":                                                                 &global.Api{},
 		"Function":                                                            &global.Function{},
@@ -4268,6 +4277,30 @@ func (t *Template) GetApplicationInsightsApplicationWithName(name string) (*appl
 	return nil, fmt.Errorf("resource %q of type applicationinsights.Application not found", name)
 }
 
+// GetAllApplicationSignalsDiscoveryResources retrieves all applicationsignals.Discovery items from an AWS CloudFormation template
+func (t *Template) GetAllApplicationSignalsDiscoveryResources() map[string]*applicationsignals.Discovery {
+	results := map[string]*applicationsignals.Discovery{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *applicationsignals.Discovery:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetApplicationSignalsDiscoveryWithName retrieves all applicationsignals.Discovery items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetApplicationSignalsDiscoveryWithName(name string) (*applicationsignals.Discovery, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *applicationsignals.Discovery:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type applicationsignals.Discovery not found", name)
+}
+
 // GetAllApplicationSignalsServiceLevelObjectiveResources retrieves all applicationsignals.ServiceLevelObjective items from an AWS CloudFormation template
 func (t *Template) GetAllApplicationSignalsServiceLevelObjectiveResources() map[string]*applicationsignals.ServiceLevelObjective {
 	results := map[string]*applicationsignals.ServiceLevelObjective{}
@@ -4964,6 +4997,30 @@ func (t *Template) GetBatchComputeEnvironmentWithName(name string) (*batch.Compu
 	return nil, fmt.Errorf("resource %q of type batch.ComputeEnvironment not found", name)
 }
 
+// GetAllBatchConsumableResourceResources retrieves all batch.ConsumableResource items from an AWS CloudFormation template
+func (t *Template) GetAllBatchConsumableResourceResources() map[string]*batch.ConsumableResource {
+	results := map[string]*batch.ConsumableResource{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *batch.ConsumableResource:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBatchConsumableResourceWithName retrieves all batch.ConsumableResource items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBatchConsumableResourceWithName(name string) (*batch.ConsumableResource, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *batch.ConsumableResource:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type batch.ConsumableResource not found", name)
+}
+
 // GetAllBatchJobDefinitionResources retrieves all batch.JobDefinition items from an AWS CloudFormation template
 func (t *Template) GetAllBatchJobDefinitionResources() map[string]*batch.JobDefinition {
 	results := map[string]*batch.JobDefinition{}
@@ -5106,6 +5163,54 @@ func (t *Template) GetBedrockApplicationInferenceProfileWithName(name string) (*
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type bedrock.ApplicationInferenceProfile not found", name)
+}
+
+// GetAllBedrockBlueprintResources retrieves all bedrock.Blueprint items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockBlueprintResources() map[string]*bedrock.Blueprint {
+	results := map[string]*bedrock.Blueprint{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.Blueprint:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockBlueprintWithName retrieves all bedrock.Blueprint items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockBlueprintWithName(name string) (*bedrock.Blueprint, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.Blueprint:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.Blueprint not found", name)
+}
+
+// GetAllBedrockDataAutomationProjectResources retrieves all bedrock.DataAutomationProject items from an AWS CloudFormation template
+func (t *Template) GetAllBedrockDataAutomationProjectResources() map[string]*bedrock.DataAutomationProject {
+	results := map[string]*bedrock.DataAutomationProject{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *bedrock.DataAutomationProject:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetBedrockDataAutomationProjectWithName retrieves all bedrock.DataAutomationProject items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetBedrockDataAutomationProjectWithName(name string) (*bedrock.DataAutomationProject, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *bedrock.DataAutomationProject:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type bedrock.DataAutomationProject not found", name)
 }
 
 // GetAllBedrockDataSourceResources retrieves all bedrock.DataSource items from an AWS CloudFormation template
@@ -10074,6 +10179,30 @@ func (t *Template) GetDataSyncTaskWithName(name string) (*datasync.Task, error) 
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type datasync.Task not found", name)
+}
+
+// GetAllDataZoneConnectionResources retrieves all datazone.Connection items from an AWS CloudFormation template
+func (t *Template) GetAllDataZoneConnectionResources() map[string]*datazone.Connection {
+	results := map[string]*datazone.Connection{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *datazone.Connection:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetDataZoneConnectionWithName retrieves all datazone.Connection items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetDataZoneConnectionWithName(name string) (*datazone.Connection, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *datazone.Connection:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type datazone.Connection not found", name)
 }
 
 // GetAllDataZoneDataSourceResources retrieves all datazone.DataSource items from an AWS CloudFormation template
@@ -17156,6 +17285,30 @@ func (t *Template) GetGuardDutyMemberWithName(name string) (*guardduty.Member, e
 	return nil, fmt.Errorf("resource %q of type guardduty.Member not found", name)
 }
 
+// GetAllGuardDutyPublishingDestinationResources retrieves all guardduty.PublishingDestination items from an AWS CloudFormation template
+func (t *Template) GetAllGuardDutyPublishingDestinationResources() map[string]*guardduty.PublishingDestination {
+	results := map[string]*guardduty.PublishingDestination{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *guardduty.PublishingDestination:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetGuardDutyPublishingDestinationWithName retrieves all guardduty.PublishingDestination items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetGuardDutyPublishingDestinationWithName(name string) (*guardduty.PublishingDestination, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *guardduty.PublishingDestination:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type guardduty.PublishingDestination not found", name)
+}
+
 // GetAllGuardDutyThreatIntelSetResources retrieves all guardduty.ThreatIntelSet items from an AWS CloudFormation template
 func (t *Template) GetAllGuardDutyThreatIntelSetResources() map[string]*guardduty.ThreatIntelSet {
 	results := map[string]*guardduty.ThreatIntelSet{}
@@ -19506,6 +19659,30 @@ func (t *Template) GetIoTSiteWiseDashboardWithName(name string) (*iotsitewise.Da
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type iotsitewise.Dashboard not found", name)
+}
+
+// GetAllIoTSiteWiseDatasetResources retrieves all iotsitewise.Dataset items from an AWS CloudFormation template
+func (t *Template) GetAllIoTSiteWiseDatasetResources() map[string]*iotsitewise.Dataset {
+	results := map[string]*iotsitewise.Dataset{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *iotsitewise.Dataset:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetIoTSiteWiseDatasetWithName retrieves all iotsitewise.Dataset items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetIoTSiteWiseDatasetWithName(name string) (*iotsitewise.Dataset, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *iotsitewise.Dataset:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type iotsitewise.Dataset not found", name)
 }
 
 // GetAllIoTSiteWiseGatewayResources retrieves all iotsitewise.Gateway items from an AWS CloudFormation template
@@ -24690,6 +24867,30 @@ func (t *Template) GetOpenSearchServerlessCollectionWithName(name string) (*open
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type opensearchserverless.Collection not found", name)
+}
+
+// GetAllOpenSearchServerlessIndexResources retrieves all opensearchserverless.Index items from an AWS CloudFormation template
+func (t *Template) GetAllOpenSearchServerlessIndexResources() map[string]*opensearchserverless.Index {
+	results := map[string]*opensearchserverless.Index{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *opensearchserverless.Index:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetOpenSearchServerlessIndexWithName retrieves all opensearchserverless.Index items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetOpenSearchServerlessIndexWithName(name string) (*opensearchserverless.Index, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *opensearchserverless.Index:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type opensearchserverless.Index not found", name)
 }
 
 // GetAllOpenSearchServerlessLifecyclePolicyResources retrieves all opensearchserverless.LifecyclePolicy items from an AWS CloudFormation template
@@ -34794,6 +34995,30 @@ func (t *Template) GetXRaySamplingRuleWithName(name string) (*xray.SamplingRule,
 		}
 	}
 	return nil, fmt.Errorf("resource %q of type xray.SamplingRule not found", name)
+}
+
+// GetAllXRayTransactionSearchConfigResources retrieves all xray.TransactionSearchConfig items from an AWS CloudFormation template
+func (t *Template) GetAllXRayTransactionSearchConfigResources() map[string]*xray.TransactionSearchConfig {
+	results := map[string]*xray.TransactionSearchConfig{}
+	for name, untyped := range t.Resources {
+		switch resource := untyped.(type) {
+		case *xray.TransactionSearchConfig:
+			results[name] = resource
+		}
+	}
+	return results
+}
+
+// GetXRayTransactionSearchConfigWithName retrieves all xray.TransactionSearchConfig items from an AWS CloudFormation template
+// whose logical ID matches the provided name. Returns an error if not found.
+func (t *Template) GetXRayTransactionSearchConfigWithName(name string) (*xray.TransactionSearchConfig, error) {
+	if untyped, ok := t.Resources[name]; ok {
+		switch resource := untyped.(type) {
+		case *xray.TransactionSearchConfig:
+			return resource, nil
+		}
+	}
+	return nil, fmt.Errorf("resource %q of type xray.TransactionSearchConfig not found", name)
 }
 
 // GetAllASKSkillResources retrieves all ask.Skill items from an AWS CloudFormation template

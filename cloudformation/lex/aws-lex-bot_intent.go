@@ -65,6 +65,11 @@ type Bot_Intent struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-parentintentsignature
 	ParentIntentSignature *string `json:"ParentIntentSignature,omitempty"`
 
+	// QnAIntentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-qnaintentconfiguration
+	QnAIntentConfiguration *Bot_QnAIntentConfiguration `json:"QnAIntentConfiguration,omitempty"`
+
 	// SampleUtterances AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-sampleutterances

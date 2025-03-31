@@ -15,6 +15,11 @@ type DataSource_VectorIngestionConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-chunkingconfiguration
 	ChunkingConfiguration *DataSource_ChunkingConfiguration `json:"ChunkingConfiguration,omitempty"`
 
+	// ContextEnrichmentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-contextenrichmentconfiguration
+	ContextEnrichmentConfiguration *DataSource_ContextEnrichmentConfiguration `json:"ContextEnrichmentConfiguration,omitempty"`
+
 	// CustomTransformationConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-vectoringestionconfiguration.html#cfn-bedrock-datasource-vectoringestionconfiguration-customtransformationconfiguration

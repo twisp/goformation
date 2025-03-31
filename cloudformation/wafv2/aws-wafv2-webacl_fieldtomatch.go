@@ -35,6 +35,11 @@ type WebACL_FieldToMatch struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-ja3fingerprint
 	JA3Fingerprint *WebACL_JA3Fingerprint `json:"JA3Fingerprint,omitempty"`
 
+	// JA4Fingerprint AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-ja4fingerprint
+	JA4Fingerprint *WebACL_JA4Fingerprint `json:"JA4Fingerprint,omitempty"`
+
 	// JsonBody AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-jsonbody
@@ -59,6 +64,11 @@ type WebACL_FieldToMatch struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-singlequeryargument
 	SingleQueryArgument *WebACL_SingleQueryArgument `json:"SingleQueryArgument,omitempty"`
+
+	// UriFragment AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldtomatch.html#cfn-wafv2-webacl-fieldtomatch-urifragment
+	UriFragment *WebACL_UriFragment `json:"UriFragment,omitempty"`
 
 	// UriPath AWS CloudFormation Property
 	// Required: false

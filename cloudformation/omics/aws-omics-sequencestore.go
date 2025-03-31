@@ -13,10 +13,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html
 type SequenceStore struct {
 
+	// AccessLogLocation AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-accessloglocation
+	AccessLogLocation *string `json:"AccessLogLocation,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-description
 	Description *string `json:"Description,omitempty"`
+
+	// ETagAlgorithmFamily AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-etagalgorithmfamily
+	ETagAlgorithmFamily *string `json:"ETagAlgorithmFamily,omitempty"`
 
 	// FallbackLocation AWS CloudFormation Property
 	// Required: false
@@ -27,6 +37,16 @@ type SequenceStore struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-name
 	Name string `json:"Name"`
+
+	// PropagatedSetLevelTags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-propagatedsetleveltags
+	PropagatedSetLevelTags []string `json:"PropagatedSetLevelTags,omitempty"`
+
+	// S3AccessPolicy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html#cfn-omics-sequencestore-s3accesspolicy
+	S3AccessPolicy interface{} `json:"S3AccessPolicy,omitempty"`
 
 	// SseConfig AWS CloudFormation Property
 	// Required: false

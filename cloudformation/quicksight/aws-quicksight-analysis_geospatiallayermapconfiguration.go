@@ -13,7 +13,7 @@ type Analysis_GeospatialLayerMapConfiguration struct {
 	// Interactions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-geospatiallayermapconfiguration.html#cfn-quicksight-analysis-geospatiallayermapconfiguration-interactions
-	Interactions interface{} `json:"Interactions,omitempty"`
+	Interactions *Analysis_VisualInteractionOptions `json:"Interactions,omitempty"`
 
 	// Legend AWS CloudFormation Property
 	// Required: false

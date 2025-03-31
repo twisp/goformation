@@ -49,6 +49,11 @@ type DBInstance struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationregion
 	AutomaticBackupReplicationRegion *string `json:"AutomaticBackupReplicationRegion,omitempty"`
 
+	// AutomaticBackupReplicationRetentionPeriod AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationretentionperiod
+	AutomaticBackupReplicationRetentionPeriod *int `json:"AutomaticBackupReplicationRetentionPeriod,omitempty"`
+
 	// AvailabilityZone AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-availabilityzone
@@ -63,11 +68,6 @@ type DBInstance struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-cacertificateidentifier
 	CACertificateIdentifier *string `json:"CACertificateIdentifier,omitempty"`
-
-	// CertificateDetails AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-certificatedetails
-	CertificateDetails *DBInstance_CertificateDetails `json:"CertificateDetails,omitempty"`
 
 	// CertificateRotationRestart AWS CloudFormation Property
 	// Required: false
@@ -198,11 +198,6 @@ type DBInstance struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-enableperformanceinsights
 	EnablePerformanceInsights *bool `json:"EnablePerformanceInsights,omitempty"`
-
-	// Endpoint AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-endpoint
-	Endpoint *DBInstance_Endpoint `json:"Endpoint,omitempty"`
 
 	// Engine AWS CloudFormation Property
 	// Required: false

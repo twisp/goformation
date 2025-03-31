@@ -30,10 +30,15 @@ type AccountAuditConfiguration_AuditCheckConfigurations struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-conflictingclientidscheck
 	ConflictingClientIdsCheck *AccountAuditConfiguration_AuditCheckConfiguration `json:"ConflictingClientIdsCheck,omitempty"`
 
+	// DeviceCertificateAgeCheck AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificateagecheck
+	DeviceCertificateAgeCheck *AccountAuditConfiguration_DeviceCertAgeAuditCheckConfiguration `json:"DeviceCertificateAgeCheck,omitempty"`
+
 	// DeviceCertificateExpiringCheck AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificateexpiringcheck
-	DeviceCertificateExpiringCheck *AccountAuditConfiguration_AuditCheckConfiguration `json:"DeviceCertificateExpiringCheck,omitempty"`
+	DeviceCertificateExpiringCheck *AccountAuditConfiguration_DeviceCertExpirationAuditCheckConfiguration `json:"DeviceCertificateExpiringCheck,omitempty"`
 
 	// DeviceCertificateKeyQualityCheck AWS CloudFormation Property
 	// Required: false

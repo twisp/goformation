@@ -39,11 +39,6 @@ type GlobalCluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalclusteridentifier
 	GlobalClusterIdentifier *string `json:"GlobalClusterIdentifier,omitempty"`
 
-	// GlobalEndpoint AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalendpoint
-	GlobalEndpoint *GlobalCluster_GlobalEndpoint `json:"GlobalEndpoint,omitempty"`
-
 	// SourceDBClusterIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-sourcedbclusteridentifier

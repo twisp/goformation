@@ -25,11 +25,6 @@ type AIAgent_AIAgentConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-selfserviceaiagentconfiguration
 	SelfServiceAIAgentConfiguration *AIAgent_SelfServiceAIAgentConfiguration `json:"SelfServiceAIAgentConfiguration,omitempty"`
 
-	// SessionSummarizationAIAgentConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-sessionsummarizationaiagentconfiguration
-	SessionSummarizationAIAgentConfiguration *AIAgent_SessionSummarizationAIAgentConfiguration `json:"SessionSummarizationAIAgentConfiguration,omitempty"`
-
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

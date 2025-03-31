@@ -25,6 +25,11 @@ type PromptVersion_PromptVariant struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptvariant.html#cfn-bedrock-promptversion-promptvariant-inferenceconfiguration
 	InferenceConfiguration *PromptVersion_PromptInferenceConfiguration `json:"InferenceConfiguration,omitempty"`
 
+	// Metadata AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptvariant.html#cfn-bedrock-promptversion-promptvariant-metadata
+	Metadata []PromptVersion_PromptMetadataEntry `json:"Metadata,omitempty"`
+
 	// ModelId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptvariant.html#cfn-bedrock-promptversion-promptvariant-modelid

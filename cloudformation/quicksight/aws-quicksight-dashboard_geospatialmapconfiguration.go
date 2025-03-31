@@ -18,7 +18,7 @@ type Dashboard_GeospatialMapConfiguration struct {
 	// Interactions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-geospatialmapconfiguration.html#cfn-quicksight-dashboard-geospatialmapconfiguration-interactions
-	Interactions interface{} `json:"Interactions,omitempty"`
+	Interactions *Dashboard_VisualInteractionOptions `json:"Interactions,omitempty"`
 
 	// Legend AWS CloudFormation Property
 	// Required: false

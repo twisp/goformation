@@ -35,6 +35,11 @@ type RuleGroup_FieldToMatch struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-ja3fingerprint
 	JA3Fingerprint *RuleGroup_JA3Fingerprint `json:"JA3Fingerprint,omitempty"`
 
+	// JA4Fingerprint AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-ja4fingerprint
+	JA4Fingerprint *RuleGroup_JA4Fingerprint `json:"JA4Fingerprint,omitempty"`
+
 	// JsonBody AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-jsonbody
@@ -59,6 +64,11 @@ type RuleGroup_FieldToMatch struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-singlequeryargument
 	SingleQueryArgument *RuleGroup_SingleQueryArgument `json:"SingleQueryArgument,omitempty"`
+
+	// UriFragment AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-urifragment
+	UriFragment *RuleGroup_UriFragment `json:"UriFragment,omitempty"`
 
 	// UriPath AWS CloudFormation Property
 	// Required: false

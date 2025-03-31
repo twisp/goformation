@@ -20,6 +20,16 @@ type Function_SQSEvent struct {
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
 	Enabled *bool `json:"Enabled,omitempty"`
 
+	// FunctionResponseTypes AWS CloudFormation Property
+	// Required: false
+	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
+	FunctionResponseTypes []string `json:"FunctionResponseTypes,omitempty"`
+
+	// MaximumBatchingWindowInSeconds AWS CloudFormation Property
+	// Required: false
+	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
+	MaximumBatchingWindowInSeconds *int `json:"MaximumBatchingWindowInSeconds,omitempty"`
+
 	// Queue AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs

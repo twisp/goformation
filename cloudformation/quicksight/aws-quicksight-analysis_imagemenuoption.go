@@ -13,7 +13,7 @@ type Analysis_ImageMenuOption struct {
 	// AvailabilityStatus AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-imagemenuoption.html#cfn-quicksight-analysis-imagemenuoption-availabilitystatus
-	AvailabilityStatus interface{} `json:"AvailabilityStatus,omitempty"`
+	AvailabilityStatus *string `json:"AvailabilityStatus,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

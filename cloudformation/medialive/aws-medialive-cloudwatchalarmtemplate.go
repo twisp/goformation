@@ -34,9 +34,9 @@ type CloudWatchAlarmTemplate struct {
 	EvaluationPeriods float64 `json:"EvaluationPeriods"`
 
 	// GroupIdentifier AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-cloudwatchalarmtemplate.html#cfn-medialive-cloudwatchalarmtemplate-groupidentifier
-	GroupIdentifier string `json:"GroupIdentifier"`
+	GroupIdentifier *string `json:"GroupIdentifier,omitempty"`
 
 	// MetricName AWS CloudFormation Property
 	// Required: true

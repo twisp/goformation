@@ -34,6 +34,11 @@ type WebACL struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-customresponsebodies
 	CustomResponseBodies map[string]WebACL_CustomResponseBody `json:"CustomResponseBodies,omitempty"`
 
+	// DataProtectionConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-dataprotectionconfig
+	DataProtectionConfig *WebACL_DataProtectionConfig `json:"DataProtectionConfig,omitempty"`
+
 	// DefaultAction AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-defaultaction

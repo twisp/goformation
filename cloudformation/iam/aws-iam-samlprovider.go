@@ -14,15 +14,35 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html
 type SAMLProvider struct {
 
+	// AddPrivateKey AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-addprivatekey
+	AddPrivateKey *string `json:"AddPrivateKey,omitempty"`
+
+	// AssertionEncryptionMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-assertionencryptionmode
+	AssertionEncryptionMode *string `json:"AssertionEncryptionMode,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-name
 	Name *string `json:"Name,omitempty"`
 
+	// PrivateKeyList AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-privatekeylist
+	PrivateKeyList []SAMLProvider_SAMLPrivateKey `json:"PrivateKeyList,omitempty"`
+
+	// RemovePrivateKey AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-removeprivatekey
+	RemovePrivateKey *string `json:"RemovePrivateKey,omitempty"`
+
 	// SamlMetadataDocument AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-samlmetadatadocument
-	SamlMetadataDocument string `json:"SamlMetadataDocument"`
+	SamlMetadataDocument *string `json:"SamlMetadataDocument,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

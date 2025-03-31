@@ -20,9 +20,14 @@ type Agreement struct {
 	AccessRole string `json:"AccessRole"`
 
 	// BaseDirectory AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-basedirectory
-	BaseDirectory string `json:"BaseDirectory"`
+	BaseDirectory *string `json:"BaseDirectory,omitempty"`
+
+	// CustomDirectories AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html#cfn-transfer-agreement-customdirectories
+	CustomDirectories *Agreement_CustomDirectories `json:"CustomDirectories,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false

@@ -29,15 +29,30 @@ type AppMonitor struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-cwlogenabled
 	CwLogEnabled *bool `json:"CwLogEnabled,omitempty"`
 
+	// DeobfuscationConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-deobfuscationconfiguration
+	DeobfuscationConfiguration *AppMonitor_DeobfuscationConfiguration `json:"DeobfuscationConfiguration,omitempty"`
+
 	// Domain AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domain
-	Domain string `json:"Domain"`
+	Domain *string `json:"Domain,omitempty"`
+
+	// DomainList AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-domainlist
+	DomainList []string `json:"DomainList,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-name
 	Name string `json:"Name"`
+
+	// ResourcePolicy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html#cfn-rum-appmonitor-resourcepolicy
+	ResourcePolicy *AppMonitor_ResourcePolicy `json:"ResourcePolicy,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

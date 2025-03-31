@@ -15,6 +15,11 @@ type KnowledgeBase_StorageConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-mongodbatlasconfiguration
 	MongoDbAtlasConfiguration *KnowledgeBase_MongoDbAtlasConfiguration `json:"MongoDbAtlasConfiguration,omitempty"`
 
+	// NeptuneAnalyticsConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-neptuneanalyticsconfiguration
+	NeptuneAnalyticsConfiguration *KnowledgeBase_NeptuneAnalyticsConfiguration `json:"NeptuneAnalyticsConfiguration,omitempty"`
+
 	// OpensearchServerlessConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-opensearchserverlessconfiguration
