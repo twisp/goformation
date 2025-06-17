@@ -134,6 +134,11 @@ type Instance struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-licensespecifications
 	LicenseSpecifications []Instance_LicenseSpecification `json:"LicenseSpecifications,omitempty"`
 
+	// MetadataOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-metadataoptions
+	MetadataOptions *Instance_MetadataOptions `json:"MetadataOptions,omitempty"`
+
 	// Monitoring AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-monitoring

@@ -11,9 +11,14 @@ import (
 type MailManagerTrafficPolicy_IngressBooleanToEvaluate struct {
 
 	// Analysis AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate-analysis
-	Analysis *MailManagerTrafficPolicy_IngressAnalysis `json:"Analysis"`
+	Analysis *MailManagerTrafficPolicy_IngressAnalysis `json:"Analysis,omitempty"`
+
+	// IsInAddressList AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate.html#cfn-ses-mailmanagertrafficpolicy-ingressbooleantoevaluate-isinaddresslist
+	IsInAddressList *MailManagerTrafficPolicy_IngressIsInAddressList `json:"IsInAddressList,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

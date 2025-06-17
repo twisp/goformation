@@ -20,14 +20,24 @@ type LocationObjectStorage struct {
 	AccessKey *string `json:"AccessKey,omitempty"`
 
 	// AgentArns AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-agentarns
-	AgentArns []string `json:"AgentArns"`
+	AgentArns []string `json:"AgentArns,omitempty"`
 
 	// BucketName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-bucketname
 	BucketName *string `json:"BucketName,omitempty"`
+
+	// CmkSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-cmksecretconfig
+	CmkSecretConfig *LocationObjectStorage_CmkSecretConfig `json:"CmkSecretConfig,omitempty"`
+
+	// CustomSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html#cfn-datasync-locationobjectstorage-customsecretconfig
+	CustomSecretConfig *LocationObjectStorage_CustomSecretConfig `json:"CustomSecretConfig,omitempty"`
 
 	// SecretKey AWS CloudFormation Property
 	// Required: false

@@ -20,9 +20,9 @@ type ResourceGateway struct {
 	IpAddressType *string `json:"IpAddressType,omitempty"`
 
 	// Name AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-name
-	Name *string `json:"Name,omitempty"`
+	Name string `json:"Name"`
 
 	// SecurityGroupIds AWS CloudFormation Property
 	// Required: false
@@ -30,9 +30,9 @@ type ResourceGateway struct {
 	SecurityGroupIds []string `json:"SecurityGroupIds,omitempty"`
 
 	// SubnetIds AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-subnetids
-	SubnetIds []string `json:"SubnetIds,omitempty"`
+	SubnetIds []string `json:"SubnetIds"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -40,9 +40,9 @@ type ResourceGateway struct {
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VpcIdentifier AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcegateway.html#cfn-vpclattice-resourcegateway-vpcidentifier
-	VpcIdentifier *string `json:"VpcIdentifier,omitempty"`
+	VpcIdentifier string `json:"VpcIdentifier"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

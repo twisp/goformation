@@ -35,6 +35,11 @@ type FileSystem_LustreConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-datacompressiontype
 	DataCompressionType *string `json:"DataCompressionType,omitempty"`
 
+	// DataReadCacheConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-datareadcacheconfiguration
+	DataReadCacheConfiguration *FileSystem_DataReadCacheConfiguration `json:"DataReadCacheConfiguration,omitempty"`
+
 	// DeploymentType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-deploymenttype
@@ -74,6 +79,11 @@ type FileSystem_LustreConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-perunitstoragethroughput
 	PerUnitStorageThroughput *int `json:"PerUnitStorageThroughput,omitempty"`
+
+	// ThroughputCapacity AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-throughputcapacity
+	ThroughputCapacity *int `json:"ThroughputCapacity,omitempty"`
 
 	// WeeklyMaintenanceStartTime AWS CloudFormation Property
 	// Required: false

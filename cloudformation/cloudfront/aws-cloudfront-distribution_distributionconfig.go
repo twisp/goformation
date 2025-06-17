@@ -35,6 +35,11 @@ type Distribution_DistributionConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-comment
 	Comment *string `json:"Comment,omitempty"`
 
+	// ConnectionMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-connectionmode
+	ConnectionMode *string `json:"ConnectionMode,omitempty"`
+
 	// ContinuousDeploymentPolicyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-continuousdeploymentpolicyid
@@ -109,6 +114,11 @@ type Distribution_DistributionConfig struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-staging
 	Staging *bool `json:"Staging,omitempty"`
+
+	// TenantConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-tenantconfig
+	TenantConfig *Distribution_TenantConfig `json:"TenantConfig,omitempty"`
 
 	// ViewerCertificate AWS CloudFormation Property
 	// Required: false

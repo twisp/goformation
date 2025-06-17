@@ -25,6 +25,11 @@ type Flow_FlowNodeConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-condition
 	Condition *Flow_ConditionFlowNodeConfiguration `json:"Condition,omitempty"`
 
+	// InlineCode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-inlinecode
+	InlineCode *Flow_InlineCodeFlowNodeConfiguration `json:"InlineCode,omitempty"`
+
 	// Input AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-input
@@ -49,6 +54,21 @@ type Flow_FlowNodeConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-lex
 	Lex *Flow_LexFlowNodeConfiguration `json:"Lex,omitempty"`
+
+	// Loop AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loop
+	Loop *Flow_LoopFlowNodeConfiguration `json:"Loop,omitempty"`
+
+	// LoopController AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loopcontroller
+	LoopController *Flow_LoopControllerFlowNodeConfiguration `json:"LoopController,omitempty"`
+
+	// LoopInput AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-flownodeconfiguration.html#cfn-bedrock-flow-flownodeconfiguration-loopinput
+	LoopInput interface{} `json:"LoopInput,omitempty"`
 
 	// Output AWS CloudFormation Property
 	// Required: false

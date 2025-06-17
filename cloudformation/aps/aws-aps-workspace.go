@@ -34,10 +34,20 @@ type Workspace struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-loggingconfiguration
 	LoggingConfiguration *Workspace_LoggingConfiguration `json:"LoggingConfiguration,omitempty"`
 
+	// QueryLoggingConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-queryloggingconfiguration
+	QueryLoggingConfiguration *Workspace_QueryLoggingConfiguration `json:"QueryLoggingConfiguration,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// WorkspaceConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html#cfn-aps-workspace-workspaceconfiguration
+	WorkspaceConfiguration *Workspace_WorkspaceConfiguration `json:"WorkspaceConfiguration,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

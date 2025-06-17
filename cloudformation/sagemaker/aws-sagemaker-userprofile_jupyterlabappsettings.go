@@ -15,6 +15,11 @@ type UserProfile_JupyterLabAppSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-applifecyclemanagement
 	AppLifecycleManagement *UserProfile_AppLifecycleManagement `json:"AppLifecycleManagement,omitempty"`
 
+	// BuiltInLifecycleConfigArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-builtinlifecycleconfigarn
+	BuiltInLifecycleConfigArn *string `json:"BuiltInLifecycleConfigArn,omitempty"`
+
 	// CodeRepositories AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterlabappsettings.html#cfn-sagemaker-userprofile-jupyterlabappsettings-coderepositories

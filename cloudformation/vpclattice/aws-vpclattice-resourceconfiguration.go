@@ -20,9 +20,9 @@ type ResourceConfiguration struct {
 	AllowAssociationToSharableServiceNetwork *bool `json:"AllowAssociationToSharableServiceNetwork,omitempty"`
 
 	// Name AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-name
-	Name *string `json:"Name,omitempty"`
+	Name string `json:"Name"`
 
 	// PortRanges AWS CloudFormation Property
 	// Required: false
@@ -50,9 +50,9 @@ type ResourceConfiguration struct {
 	ResourceConfigurationGroupId *string `json:"ResourceConfigurationGroupId,omitempty"`
 
 	// ResourceConfigurationType AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourceconfiguration.html#cfn-vpclattice-resourceconfiguration-resourceconfigurationtype
-	ResourceConfigurationType *string `json:"ResourceConfigurationType,omitempty"`
+	ResourceConfigurationType string `json:"ResourceConfigurationType"`
 
 	// ResourceGatewayId AWS CloudFormation Property
 	// Required: false

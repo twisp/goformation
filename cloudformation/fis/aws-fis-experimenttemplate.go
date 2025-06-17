@@ -49,9 +49,9 @@ type ExperimentTemplate struct {
 	StopConditions []ExperimentTemplate_ExperimentTemplateStopCondition `json:"StopConditions"`
 
 	// Tags AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-tags
-	Tags map[string]string `json:"Tags"`
+	Tags map[string]string `json:"Tags,omitempty"`
 
 	// Targets AWS CloudFormation Property
 	// Required: true

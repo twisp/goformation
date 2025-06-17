@@ -24,9 +24,9 @@ type Deployment struct {
 	Name string `json:"Name"`
 
 	// Specifications AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-launchwizard-deployment.html#cfn-launchwizard-deployment-specifications
-	Specifications map[string]string `json:"Specifications"`
+	Specifications map[string]string `json:"Specifications,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

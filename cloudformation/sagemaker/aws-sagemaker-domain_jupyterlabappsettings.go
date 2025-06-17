@@ -15,6 +15,11 @@ type Domain_JupyterLabAppSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterlabappsettings.html#cfn-sagemaker-domain-jupyterlabappsettings-applifecyclemanagement
 	AppLifecycleManagement *Domain_AppLifecycleManagement `json:"AppLifecycleManagement,omitempty"`
 
+	// BuiltInLifecycleConfigArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterlabappsettings.html#cfn-sagemaker-domain-jupyterlabappsettings-builtinlifecycleconfigarn
+	BuiltInLifecycleConfigArn *string `json:"BuiltInLifecycleConfigArn,omitempty"`
+
 	// CodeRepositories AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-jupyterlabappsettings.html#cfn-sagemaker-domain-jupyterlabappsettings-coderepositories

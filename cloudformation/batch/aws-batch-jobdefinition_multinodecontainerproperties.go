@@ -15,6 +15,11 @@ type JobDefinition_MultiNodeContainerProperties struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodecontainerproperties.html#cfn-batch-jobdefinition-multinodecontainerproperties-command
 	Command []string `json:"Command,omitempty"`
 
+	// EnableExecuteCommand AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodecontainerproperties.html#cfn-batch-jobdefinition-multinodecontainerproperties-enableexecutecommand
+	EnableExecuteCommand *bool `json:"EnableExecuteCommand,omitempty"`
+
 	// Environment AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-multinodecontainerproperties.html#cfn-batch-jobdefinition-multinodecontainerproperties-environment

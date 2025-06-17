@@ -19,10 +19,20 @@ type Membership struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-collaborationidentifier
 	CollaborationIdentifier string `json:"CollaborationIdentifier"`
 
+	// DefaultJobResultConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultjobresultconfiguration
+	DefaultJobResultConfiguration *Membership_MembershipProtectedJobResultConfiguration `json:"DefaultJobResultConfiguration,omitempty"`
+
 	// DefaultResultConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultresultconfiguration
 	DefaultResultConfiguration *Membership_MembershipProtectedQueryResultConfiguration `json:"DefaultResultConfiguration,omitempty"`
+
+	// JobLogStatus AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-joblogstatus
+	JobLogStatus *string `json:"JobLogStatus,omitempty"`
 
 	// PaymentConfiguration AWS CloudFormation Property
 	// Required: false

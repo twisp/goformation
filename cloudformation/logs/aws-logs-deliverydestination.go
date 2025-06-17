@@ -17,7 +17,7 @@ type DeliveryDestination struct {
 	// DeliveryDestinationPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-deliverydestinationpolicy
-	DeliveryDestinationPolicy interface{} `json:"DeliveryDestinationPolicy,omitempty"`
+	DeliveryDestinationPolicy *DeliveryDestination_DestinationPolicy `json:"DeliveryDestinationPolicy,omitempty"`
 
 	// DestinationResourceArn AWS CloudFormation Property
 	// Required: false

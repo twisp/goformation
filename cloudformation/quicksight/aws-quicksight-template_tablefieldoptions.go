@@ -25,6 +25,11 @@ type Template_TableFieldOptions struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-tablefieldoptions.html#cfn-quicksight-template-tablefieldoptions-selectedfieldoptions
 	SelectedFieldOptions []Template_TableFieldOption `json:"SelectedFieldOptions,omitempty"`
 
+	// TransposedTableOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-tablefieldoptions.html#cfn-quicksight-template-tablefieldoptions-transposedtableoptions
+	TransposedTableOptions []Template_TransposedTableOption `json:"TransposedTableOptions,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

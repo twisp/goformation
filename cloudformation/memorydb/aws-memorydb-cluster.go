@@ -59,6 +59,11 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-finalsnapshotname
 	FinalSnapshotName *string `json:"FinalSnapshotName,omitempty"`
 
+	// IpDiscovery AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-ipdiscovery
+	IpDiscovery *string `json:"IpDiscovery,omitempty"`
+
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-kmskeyid
@@ -73,6 +78,11 @@ type Cluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-multiregionclustername
 	MultiRegionClusterName *string `json:"MultiRegionClusterName,omitempty"`
+
+	// NetworkType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-networktype
+	NetworkType *string `json:"NetworkType,omitempty"`
 
 	// NodeType AWS CloudFormation Property
 	// Required: true

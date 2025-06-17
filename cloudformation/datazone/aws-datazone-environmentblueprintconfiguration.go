@@ -28,10 +28,20 @@ type EnvironmentBlueprintConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-environmentblueprintidentifier
 	EnvironmentBlueprintIdentifier string `json:"EnvironmentBlueprintIdentifier"`
 
+	// EnvironmentRolePermissionBoundary AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-environmentrolepermissionboundary
+	EnvironmentRolePermissionBoundary *string `json:"EnvironmentRolePermissionBoundary,omitempty"`
+
 	// ManageAccessRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-manageaccessrolearn
 	ManageAccessRoleArn *string `json:"ManageAccessRoleArn,omitempty"`
+
+	// ProvisioningConfigurations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environmentblueprintconfiguration.html#cfn-datazone-environmentblueprintconfiguration-provisioningconfigurations
+	ProvisioningConfigurations []EnvironmentBlueprintConfiguration_ProvisioningConfiguration `json:"ProvisioningConfigurations,omitempty"`
 
 	// ProvisioningRoleArn AWS CloudFormation Property
 	// Required: false

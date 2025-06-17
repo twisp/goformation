@@ -25,6 +25,11 @@ type Analysis_TableFieldOptions struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-tablefieldoptions.html#cfn-quicksight-analysis-tablefieldoptions-selectedfieldoptions
 	SelectedFieldOptions []Analysis_TableFieldOption `json:"SelectedFieldOptions,omitempty"`
 
+	// TransposedTableOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-tablefieldoptions.html#cfn-quicksight-analysis-tablefieldoptions-transposedtableoptions
+	TransposedTableOptions []Analysis_TransposedTableOption `json:"TransposedTableOptions,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 
