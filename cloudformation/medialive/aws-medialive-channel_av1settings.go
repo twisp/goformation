@@ -15,6 +15,11 @@ type Channel_Av1Settings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-afdsignaling
 	AfdSignaling *string `json:"AfdSignaling,omitempty"`
 
+	// Bitrate AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-bitrate
+	Bitrate *int `json:"Bitrate,omitempty"`
+
 	// BufSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-bufsize
@@ -84,6 +89,11 @@ type Channel_Av1Settings struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-qvbrqualitylevel
 	QvbrQualityLevel *int `json:"QvbrQualityLevel,omitempty"`
+
+	// RateControlMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-ratecontrolmode
+	RateControlMode *string `json:"RateControlMode,omitempty"`
 
 	// SceneChangeDetect AWS CloudFormation Property
 	// Required: false

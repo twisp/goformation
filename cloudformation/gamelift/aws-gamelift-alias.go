@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Alias AWS CloudFormation Resource (AWS::GameLift::Alias)
@@ -27,6 +28,11 @@ type Alias struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-routingstrategy
 	RoutingStrategy *Alias_RoutingStrategy `json:"RoutingStrategy"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

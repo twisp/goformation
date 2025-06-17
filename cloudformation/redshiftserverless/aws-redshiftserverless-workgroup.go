@@ -54,10 +54,30 @@ type Workgroup struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-publiclyaccessible
 	PubliclyAccessible *bool `json:"PubliclyAccessible,omitempty"`
 
+	// RecoveryPointId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-recoverypointid
+	RecoveryPointId *string `json:"RecoveryPointId,omitempty"`
+
 	// SecurityGroupIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-securitygroupids
 	SecurityGroupIds []string `json:"SecurityGroupIds,omitempty"`
+
+	// SnapshotArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotarn
+	SnapshotArn *string `json:"SnapshotArn,omitempty"`
+
+	// SnapshotName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotname
+	SnapshotName *string `json:"SnapshotName,omitempty"`
+
+	// SnapshotOwnerAccount AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html#cfn-redshiftserverless-workgroup-snapshotowneraccount
+	SnapshotOwnerAccount *string `json:"SnapshotOwnerAccount,omitempty"`
 
 	// SubnetIds AWS CloudFormation Property
 	// Required: false

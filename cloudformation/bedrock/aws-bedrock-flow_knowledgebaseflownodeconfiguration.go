@@ -15,6 +15,11 @@ type Flow_KnowledgeBaseFlowNodeConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-guardrailconfiguration
 	GuardrailConfiguration *Flow_GuardrailConfiguration `json:"GuardrailConfiguration,omitempty"`
 
+	// InferenceConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-inferenceconfiguration
+	InferenceConfiguration *Flow_PromptInferenceConfiguration `json:"InferenceConfiguration,omitempty"`
+
 	// KnowledgeBaseId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-knowledgebaseid
@@ -24,6 +29,26 @@ type Flow_KnowledgeBaseFlowNodeConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-modelid
 	ModelId *string `json:"ModelId,omitempty"`
+
+	// NumberOfResults AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-numberofresults
+	NumberOfResults *float64 `json:"NumberOfResults,omitempty"`
+
+	// OrchestrationConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-orchestrationconfiguration
+	OrchestrationConfiguration *Flow_KnowledgeBaseOrchestrationConfiguration `json:"OrchestrationConfiguration,omitempty"`
+
+	// PromptTemplate AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-prompttemplate
+	PromptTemplate *Flow_KnowledgeBasePromptTemplate `json:"PromptTemplate,omitempty"`
+
+	// RerankingConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flow-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flow-knowledgebaseflownodeconfiguration-rerankingconfiguration
+	RerankingConfiguration *Flow_VectorSearchRerankingConfiguration `json:"RerankingConfiguration,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -10,6 +10,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html
 type Bot_Intent struct {
 
+	// BedrockAgentIntentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-bedrockagentintentconfiguration
+	BedrockAgentIntentConfiguration *Bot_BedrockAgentIntentConfiguration `json:"BedrockAgentIntentConfiguration,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-description
@@ -64,6 +69,11 @@ type Bot_Intent struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-parentintentsignature
 	ParentIntentSignature *string `json:"ParentIntentSignature,omitempty"`
+
+	// QInConnectIntentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html#cfn-lex-bot-intent-qinconnectintentconfiguration
+	QInConnectIntentConfiguration *Bot_QInConnectIntentConfiguration `json:"QInConnectIntentConfiguration,omitempty"`
 
 	// QnAIntentConfiguration AWS CloudFormation Property
 	// Required: false

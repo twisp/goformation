@@ -20,6 +20,11 @@ type MailManagerTrafficPolicy_PolicyCondition struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-policycondition.html#cfn-ses-mailmanagertrafficpolicy-policycondition-ipexpression
 	IpExpression *MailManagerTrafficPolicy_IngressIpv4Expression `json:"IpExpression,omitempty"`
 
+	// Ipv6Expression AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-policycondition.html#cfn-ses-mailmanagertrafficpolicy-policycondition-ipv6expression
+	Ipv6Expression *MailManagerTrafficPolicy_IngressIpv6Expression `json:"Ipv6Expression,omitempty"`
+
 	// StringExpression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagertrafficpolicy-policycondition.html#cfn-ses-mailmanagertrafficpolicy-policycondition-stringexpression

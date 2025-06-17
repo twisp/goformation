@@ -98,6 +98,11 @@ type UserPoolClient struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes
 	ReadAttributes []string `json:"ReadAttributes,omitempty"`
 
+	// RefreshTokenRotation AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenrotation
+	RefreshTokenRotation *UserPoolClient_RefreshTokenRotation `json:"RefreshTokenRotation,omitempty"`
+
 	// RefreshTokenValidity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenvalidity

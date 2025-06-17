@@ -15,9 +15,9 @@ import (
 type LocationAzureBlob struct {
 
 	// AgentArns AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationazureblob.html#cfn-datasync-locationazureblob-agentarns
-	AgentArns []string `json:"AgentArns"`
+	AgentArns []string `json:"AgentArns,omitempty"`
 
 	// AzureAccessTier AWS CloudFormation Property
 	// Required: false
@@ -43,6 +43,16 @@ type LocationAzureBlob struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationazureblob.html#cfn-datasync-locationazureblob-azureblobtype
 	AzureBlobType *string `json:"AzureBlobType,omitempty"`
+
+	// CmkSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationazureblob.html#cfn-datasync-locationazureblob-cmksecretconfig
+	CmkSecretConfig *LocationAzureBlob_CmkSecretConfig `json:"CmkSecretConfig,omitempty"`
+
+	// CustomSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationazureblob.html#cfn-datasync-locationazureblob-customsecretconfig
+	CustomSecretConfig *LocationAzureBlob_CustomSecretConfig `json:"CustomSecretConfig,omitempty"`
 
 	// Subdirectory AWS CloudFormation Property
 	// Required: false

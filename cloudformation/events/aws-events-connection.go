@@ -33,6 +33,11 @@ type Connection struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters
 	InvocationConnectivityParameters *Connection_InvocationConnectivityParameters `json:"InvocationConnectivityParameters,omitempty"`
 
+	// KmsKeyIdentifier AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-kmskeyidentifier
+	KmsKeyIdentifier *string `json:"KmsKeyIdentifier,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-name

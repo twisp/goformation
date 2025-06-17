@@ -28,6 +28,11 @@ type Archive struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-eventpattern
 	EventPattern interface{} `json:"EventPattern,omitempty"`
 
+	// KmsKeyIdentifier AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-kmskeyidentifier
+	KmsKeyIdentifier *string `json:"KmsKeyIdentifier,omitempty"`
+
 	// RetentionDays AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-retentiondays

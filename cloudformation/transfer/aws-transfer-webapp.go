@@ -34,6 +34,11 @@ type WebApp struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-webapp.html#cfn-transfer-webapp-webappcustomization
 	WebAppCustomization *WebApp_WebAppCustomization `json:"WebAppCustomization,omitempty"`
 
+	// WebAppEndpointPolicy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-webapp.html#cfn-transfer-webapp-webappendpointpolicy
+	WebAppEndpointPolicy *string `json:"WebAppEndpointPolicy,omitempty"`
+
 	// WebAppUnits AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-webapp.html#cfn-transfer-webapp-webappunits

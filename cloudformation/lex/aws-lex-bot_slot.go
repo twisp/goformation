@@ -35,6 +35,11 @@ type Bot_Slot struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slot.html#cfn-lex-bot-slot-slottypename
 	SlotTypeName string `json:"SlotTypeName"`
 
+	// SubSlotSetting AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slot.html#cfn-lex-bot-slot-subslotsetting
+	SubSlotSetting *Bot_SubSlotSetting `json:"SubSlotSetting,omitempty"`
+
 	// ValueElicitationSetting AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slot.html#cfn-lex-bot-slot-valueelicitationsetting

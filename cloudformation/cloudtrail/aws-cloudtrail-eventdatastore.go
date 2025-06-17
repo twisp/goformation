@@ -24,6 +24,11 @@ type EventDataStore struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-billingmode
 	BillingMode *string `json:"BillingMode,omitempty"`
 
+	// ContextKeySelectors AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-contextkeyselectors
+	ContextKeySelectors []EventDataStore_ContextKeySelector `json:"ContextKeySelectors,omitempty"`
+
 	// FederationEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-federationenabled
@@ -53,6 +58,11 @@ type EventDataStore struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-kmskeyid
 	KmsKeyId *string `json:"KmsKeyId,omitempty"`
+
+	// MaxEventSize AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html#cfn-cloudtrail-eventdatastore-maxeventsize
+	MaxEventSize *string `json:"MaxEventSize,omitempty"`
 
 	// MultiRegionEnabled AWS CloudFormation Property
 	// Required: false

@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Build AWS CloudFormation Resource (AWS::GameLift::Build)
@@ -32,6 +33,11 @@ type Build struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation
 	StorageLocation *Build_StorageLocation `json:"StorageLocation,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// Version AWS CloudFormation Property
 	// Required: false

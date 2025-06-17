@@ -33,6 +33,11 @@ type ClientVpnEndpoint struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientloginbanneroptions
 	ClientLoginBannerOptions *ClientVpnEndpoint_ClientLoginBannerOptions `json:"ClientLoginBannerOptions,omitempty"`
 
+	// ClientRouteEnforcementOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientrouteenforcementoptions
+	ClientRouteEnforcementOptions *ClientVpnEndpoint_ClientRouteEnforcementOptions `json:"ClientRouteEnforcementOptions,omitempty"`
+
 	// ConnectionLogOptions AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-connectionlogoptions

@@ -53,6 +53,16 @@ type Input struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-rolearn
 	RoleArn *string `json:"RoleArn,omitempty"`
 
+	// SdiSources AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sdisources
+	SdiSources []string `json:"SdiSources,omitempty"`
+
+	// Smpte2110ReceiverGroupSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-smpte2110receivergroupsettings
+	Smpte2110ReceiverGroupSettings *Input_Smpte2110ReceiverGroupSettings `json:"Smpte2110ReceiverGroupSettings,omitempty"`
+
 	// Sources AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-sources

@@ -54,6 +54,11 @@ type WebACL struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-name
 	Name *string `json:"Name,omitempty"`
 
+	// OnSourceDDoSProtectionConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-onsourceddosprotectionconfig
+	OnSourceDDoSProtectionConfig interface{} `json:"OnSourceDDoSProtectionConfig,omitempty"`
+
 	// Rules AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-rules

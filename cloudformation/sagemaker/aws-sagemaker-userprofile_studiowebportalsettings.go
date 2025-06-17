@@ -15,10 +15,20 @@ type UserProfile_StudioWebPortalSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddenapptypes
 	HiddenAppTypes []string `json:"HiddenAppTypes,omitempty"`
 
+	// HiddenInstanceTypes AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddeninstancetypes
+	HiddenInstanceTypes []string `json:"HiddenInstanceTypes,omitempty"`
+
 	// HiddenMlTools AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddenmltools
 	HiddenMlTools []string `json:"HiddenMlTools,omitempty"`
+
+	// HiddenSageMakerImageVersionAliases AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-studiowebportalsettings.html#cfn-sagemaker-userprofile-studiowebportalsettings-hiddensagemakerimageversionaliases
+	HiddenSageMakerImageVersionAliases []UserProfile_HiddenSageMakerImage `json:"HiddenSageMakerImageVersionAliases,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -25,6 +25,11 @@ type FlowVersion_FlowNodeConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-flownodeconfiguration.html#cfn-bedrock-flowversion-flownodeconfiguration-condition
 	Condition *FlowVersion_ConditionFlowNodeConfiguration `json:"Condition,omitempty"`
 
+	// InlineCode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-flownodeconfiguration.html#cfn-bedrock-flowversion-flownodeconfiguration-inlinecode
+	InlineCode *FlowVersion_InlineCodeFlowNodeConfiguration `json:"InlineCode,omitempty"`
+
 	// Input AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-flownodeconfiguration.html#cfn-bedrock-flowversion-flownodeconfiguration-input
@@ -49,6 +54,21 @@ type FlowVersion_FlowNodeConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-flownodeconfiguration.html#cfn-bedrock-flowversion-flownodeconfiguration-lex
 	Lex *FlowVersion_LexFlowNodeConfiguration `json:"Lex,omitempty"`
+
+	// Loop AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-flownodeconfiguration.html#cfn-bedrock-flowversion-flownodeconfiguration-loop
+	Loop *FlowVersion_LoopFlowNodeConfiguration `json:"Loop,omitempty"`
+
+	// LoopController AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-flownodeconfiguration.html#cfn-bedrock-flowversion-flownodeconfiguration-loopcontroller
+	LoopController *FlowVersion_LoopControllerFlowNodeConfiguration `json:"LoopController,omitempty"`
+
+	// LoopInput AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-flownodeconfiguration.html#cfn-bedrock-flowversion-flownodeconfiguration-loopinput
+	LoopInput interface{} `json:"LoopInput,omitempty"`
 
 	// Output AWS CloudFormation Property
 	// Required: false

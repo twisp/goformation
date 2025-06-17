@@ -11,14 +11,14 @@ import (
 type TrustAnchor_Source struct {
 
 	// SourceData AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-source.html#cfn-rolesanywhere-trustanchor-source-sourcedata
-	SourceData *TrustAnchor_SourceData `json:"SourceData,omitempty"`
+	SourceData *TrustAnchor_SourceData `json:"SourceData"`
 
 	// SourceType AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-source.html#cfn-rolesanywhere-trustanchor-source-sourcetype
-	SourceType *string `json:"SourceType,omitempty"`
+	SourceType string `json:"SourceType"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -7,11 +7,17 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // PolicyStore AWS CloudFormation Resource (AWS::VerifiedPermissions::PolicyStore)
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html
 type PolicyStore struct {
+
+	// DeletionProtection AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-deletionprotection
+	DeletionProtection *PolicyStore_DeletionProtection `json:"DeletionProtection,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
@@ -22,6 +28,11 @@ type PolicyStore struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-schema
 	Schema *PolicyStore_SchemaDefinition `json:"Schema,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-policystore.html#cfn-verifiedpermissions-policystore-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// ValidationSettings AWS CloudFormation Property
 	// Required: true
