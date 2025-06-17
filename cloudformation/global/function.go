@@ -120,6 +120,11 @@ type Function struct {
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
 	PermissionsBoundary *string `json:"PermissionsBoundary,omitempty"`
 
+	// RecursiveLoop AWS CloudFormation Property
+	// Required: false
+	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+	RecursiveLoop *string `json:"RecursiveLoop,omitempty"`
+
 	// ReservedConcurrentExecutions AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
