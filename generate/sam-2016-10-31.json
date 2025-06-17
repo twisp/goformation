@@ -89,6 +89,12 @@
           "PrimitiveType": "Integer",
           "UpdateType": "Immutable"
         },
+        "RecursiveLoop": {
+          "Documentation": "https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction",
+          "Required": false,
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
         "Role": {
           "Documentation": "https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction",
           "Required": false,

@@ -241453,6 +241453,9 @@
                         "ProvisionedConcurrencyConfig": {
                             "$ref": "#/definitions/AWS::Serverless::Function.ProvisionedConcurrencyConfig"
                         },
+                        "RecursiveLoop": {
+                            "type": "string"
+                        },
                         "ReservedConcurrentExecutions": {
                             "type": "number"
                         },
@@ -260684,6 +260687,9 @@
                             "type": "string"
                         },
                         "PermissionsBoundary": {
+                            "type": "string"
+                        },
+                        "RecursiveLoop": {
                             "type": "string"
                         },
                         "ReservedConcurrentExecutions": {

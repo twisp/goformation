@@ -241458,6 +241458,9 @@ var SamSchema = `{
                         "ProvisionedConcurrencyConfig": {
                             "$ref": "#/definitions/AWS::Serverless::Function.ProvisionedConcurrencyConfig"
                         },
+                        "RecursiveLoop": {
+                            "type": "string"
+                        },
                         "ReservedConcurrentExecutions": {
                             "type": "number"
                         },
@@ -260689,6 +260692,9 @@ var SamSchema = `{
                             "type": "string"
                         },
                         "PermissionsBoundary": {
+                            "type": "string"
+                        },
+                        "RecursiveLoop": {
                             "type": "string"
                         },
                         "ReservedConcurrentExecutions": {
