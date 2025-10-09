@@ -15,15 +15,15 @@ type Flow_SAPODataSourceProperties struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-objectpath
 	ObjectPath string `json:"ObjectPath"`
 
-	// paginationConfig AWS CloudFormation Property
+	// PaginationConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-paginationconfig
-	paginationConfig *Flow_SAPODataPaginationConfig `json:"paginationConfig,omitempty"`
+	PaginationConfig *Flow_SAPODataPaginationConfig `json:"PaginationConfig,omitempty"`
 
-	// parallelismConfig AWS CloudFormation Property
+	// ParallelismConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-parallelismconfig
-	parallelismConfig *Flow_SAPODataParallelismConfig `json:"parallelismConfig,omitempty"`
+	ParallelismConfig *Flow_SAPODataParallelismConfig `json:"ParallelismConfig,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

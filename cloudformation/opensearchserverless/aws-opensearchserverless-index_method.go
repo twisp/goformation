@@ -11,9 +11,9 @@ import (
 type Index_Method struct {
 
 	// Engine AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchserverless-index-method.html#cfn-opensearchserverless-index-method-engine
-	Engine string `json:"Engine"`
+	Engine *string `json:"Engine,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

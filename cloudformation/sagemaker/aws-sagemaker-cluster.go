@@ -14,15 +14,30 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html
 type Cluster struct {
 
+	// AutoScaling AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-autoscaling
+	AutoScaling *Cluster_ClusterAutoScalingConfig `json:"AutoScaling,omitempty"`
+
 	// ClusterName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-clustername
 	ClusterName *string `json:"ClusterName,omitempty"`
 
+	// ClusterRole AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-clusterrole
+	ClusterRole *string `json:"ClusterRole,omitempty"`
+
 	// InstanceGroups AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-instancegroups
-	InstanceGroups []Cluster_ClusterInstanceGroup `json:"InstanceGroups"`
+	InstanceGroups []Cluster_ClusterInstanceGroup `json:"InstanceGroups,omitempty"`
+
+	// NodeProvisioningMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-nodeprovisioningmode
+	NodeProvisioningMode *string `json:"NodeProvisioningMode,omitempty"`
 
 	// NodeRecovery AWS CloudFormation Property
 	// Required: false
@@ -33,6 +48,11 @@ type Cluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-orchestrator
 	Orchestrator *Cluster_Orchestrator `json:"Orchestrator,omitempty"`
+
+	// RestrictedInstanceGroups AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-restrictedinstancegroups
+	RestrictedInstanceGroups []Cluster_ClusterRestrictedInstanceGroup `json:"RestrictedInstanceGroups,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

@@ -34,6 +34,11 @@ type Addon struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-configurationvalues
 	ConfigurationValues *string `json:"ConfigurationValues,omitempty"`
 
+	// NamespaceConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-namespaceconfig
+	NamespaceConfig *Addon_NamespaceConfig `json:"NamespaceConfig,omitempty"`
+
 	// PodIdentityAssociations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-podidentityassociations

@@ -49,6 +49,11 @@ type AssetModel struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodeltype
 	AssetModelType *string `json:"AssetModelType,omitempty"`
 
+	// EnforcedAssetModelInterfaceRelationships AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-enforcedassetmodelinterfacerelationships
+	EnforcedAssetModelInterfaceRelationships []AssetModel_EnforcedAssetModelInterfaceRelationship `json:"EnforcedAssetModelInterfaceRelationships,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-tags

@@ -30,6 +30,21 @@ type Dashboard_DashboardPublishOptions struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-datapointtooltipoption
 	DataPointTooltipOption *Dashboard_DataPointTooltipOption `json:"DataPointTooltipOption,omitempty"`
 
+	// DataQAEnabledOption AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-dataqaenabledoption
+	DataQAEnabledOption *Dashboard_DataQAEnabledOption `json:"DataQAEnabledOption,omitempty"`
+
+	// DataStoriesSharingOption AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-datastoriessharingoption
+	DataStoriesSharingOption *Dashboard_DataStoriesSharingOption `json:"DataStoriesSharingOption,omitempty"`
+
+	// ExecutiveSummaryOption AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-executivesummaryoption
+	ExecutiveSummaryOption *Dashboard_ExecutiveSummaryOption `json:"ExecutiveSummaryOption,omitempty"`
+
 	// ExportToCSVOption AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-exporttocsvoption

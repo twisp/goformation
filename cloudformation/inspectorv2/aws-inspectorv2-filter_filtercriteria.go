@@ -15,6 +15,21 @@ type Filter_FilterCriteria struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-awsaccountid
 	AwsAccountId []Filter_StringFilter `json:"AwsAccountId,omitempty"`
 
+	// CodeVulnerabilityDetectorName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilitydetectorname
+	CodeVulnerabilityDetectorName []Filter_StringFilter `json:"CodeVulnerabilityDetectorName,omitempty"`
+
+	// CodeVulnerabilityDetectorTags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilitydetectortags
+	CodeVulnerabilityDetectorTags []Filter_StringFilter `json:"CodeVulnerabilityDetectorTags,omitempty"`
+
+	// CodeVulnerabilityFilePath AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-codevulnerabilityfilepath
+	CodeVulnerabilityFilePath []Filter_StringFilter `json:"CodeVulnerabilityFilePath,omitempty"`
+
 	// ComponentId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-componentid
@@ -70,6 +85,16 @@ type Filter_FilterCriteria struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-ecrimagetags
 	EcrImageTags []Filter_StringFilter `json:"EcrImageTags,omitempty"`
 
+	// EpssScore AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-epssscore
+	EpssScore []Filter_NumberFilter `json:"EpssScore,omitempty"`
+
+	// ExploitAvailable AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-exploitavailable
+	ExploitAvailable []Filter_StringFilter `json:"ExploitAvailable,omitempty"`
+
 	// FindingArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-findingarn
@@ -90,10 +115,40 @@ type Filter_FilterCriteria struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-firstobservedat
 	FirstObservedAt []Filter_DateFilter `json:"FirstObservedAt,omitempty"`
 
+	// FixAvailable AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-fixavailable
+	FixAvailable []Filter_StringFilter `json:"FixAvailable,omitempty"`
+
 	// InspectorScore AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-inspectorscore
 	InspectorScore []Filter_NumberFilter `json:"InspectorScore,omitempty"`
+
+	// LambdaFunctionExecutionRoleArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionexecutionrolearn
+	LambdaFunctionExecutionRoleArn []Filter_StringFilter `json:"LambdaFunctionExecutionRoleArn,omitempty"`
+
+	// LambdaFunctionLastModifiedAt AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionlastmodifiedat
+	LambdaFunctionLastModifiedAt []Filter_DateFilter `json:"LambdaFunctionLastModifiedAt,omitempty"`
+
+	// LambdaFunctionLayers AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionlayers
+	LambdaFunctionLayers []Filter_StringFilter `json:"LambdaFunctionLayers,omitempty"`
+
+	// LambdaFunctionName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionname
+	LambdaFunctionName []Filter_StringFilter `json:"LambdaFunctionName,omitempty"`
+
+	// LambdaFunctionRuntime AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-filtercriteria.html#cfn-inspectorv2-filter-filtercriteria-lambdafunctionruntime
+	LambdaFunctionRuntime []Filter_StringFilter `json:"LambdaFunctionRuntime,omitempty"`
 
 	// LastObservedAt AWS CloudFormation Property
 	// Required: false

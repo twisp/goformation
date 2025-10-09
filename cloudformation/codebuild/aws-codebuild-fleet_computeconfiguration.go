@@ -10,30 +10,30 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html
 type Fleet_ComputeConfiguration struct {
 
-	// disk AWS CloudFormation Property
+	// Disk AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-disk
-	disk *int `json:"disk,omitempty"`
+	Disk *int `json:"Disk,omitempty"`
 
-	// instanceType AWS CloudFormation Property
+	// InstanceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-instancetype
-	instanceType *string `json:"instanceType,omitempty"`
+	InstanceType *string `json:"InstanceType,omitempty"`
 
-	// machineType AWS CloudFormation Property
+	// MachineType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-machinetype
-	machineType *string `json:"machineType,omitempty"`
+	MachineType *string `json:"MachineType,omitempty"`
 
-	// memory AWS CloudFormation Property
+	// Memory AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-memory
-	memory *int `json:"memory,omitempty"`
+	Memory *int `json:"Memory,omitempty"`
 
-	// vCpu AWS CloudFormation Property
+	// VCpu AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-vcpu
-	vCpu *int `json:"vCpu,omitempty"`
+	VCpu *int `json:"VCpu,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

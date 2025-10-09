@@ -15,15 +15,15 @@ type ConnectorProfile_SalesforceConnectorProfileProperties struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-instanceurl
 	InstanceUrl *string `json:"InstanceUrl,omitempty"`
 
-	// isSandboxEnvironment AWS CloudFormation Property
+	// IsSandboxEnvironment AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment
-	isSandboxEnvironment *bool `json:"isSandboxEnvironment,omitempty"`
+	IsSandboxEnvironment *bool `json:"IsSandboxEnvironment,omitempty"`
 
-	// usePrivateLinkForMetadataAndAuthorization AWS CloudFormation Property
+	// UsePrivateLinkForMetadataAndAuthorization AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-useprivatelinkformetadataandauthorization
-	usePrivateLinkForMetadataAndAuthorization *bool `json:"usePrivateLinkForMetadataAndAuthorization,omitempty"`
+	UsePrivateLinkForMetadataAndAuthorization *bool `json:"UsePrivateLinkForMetadataAndAuthorization,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

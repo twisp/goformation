@@ -26,9 +26,9 @@ type Collaboration_MemberSpecification struct {
 	MLMemberAbilities *Collaboration_MLMemberAbilities `json:"MLMemberAbilities,omitempty"`
 
 	// MemberAbilities AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-memberspecification.html#cfn-cleanrooms-collaboration-memberspecification-memberabilities
-	MemberAbilities []string `json:"MemberAbilities"`
+	MemberAbilities []string `json:"MemberAbilities,omitempty"`
 
 	// PaymentConfiguration AWS CloudFormation Property
 	// Required: false

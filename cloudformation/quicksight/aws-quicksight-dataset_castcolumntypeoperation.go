@@ -11,9 +11,9 @@ import (
 type DataSet_CastColumnTypeOperation struct {
 
 	// ColumnName AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-castcolumntypeoperation.html#cfn-quicksight-dataset-castcolumntypeoperation-columnname
-	ColumnName string `json:"ColumnName"`
+	ColumnName *string `json:"ColumnName,omitempty"`
 
 	// Format AWS CloudFormation Property
 	// Required: false

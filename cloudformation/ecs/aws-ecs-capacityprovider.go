@@ -19,6 +19,16 @@ type CapacityProvider struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-autoscalinggroupprovider
 	AutoScalingGroupProvider *CapacityProvider_AutoScalingGroupProvider `json:"AutoScalingGroupProvider,omitempty"`
 
+	// ClusterName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-clustername
+	ClusterName *string `json:"ClusterName,omitempty"`
+
+	// ManagedInstancesProvider AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-managedinstancesprovider
+	ManagedInstancesProvider *CapacityProvider_ManagedInstancesProvider `json:"ManagedInstancesProvider,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-name

@@ -94,6 +94,11 @@ type DBCluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-databasename
 	DatabaseName *string `json:"DatabaseName,omitempty"`
 
+	// DeleteAutomatedBackups AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deleteautomatedbackups
+	DeleteAutomatedBackups *bool `json:"DeleteAutomatedBackups,omitempty"`
+
 	// DeletionProtection AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-deletionprotection
@@ -173,6 +178,11 @@ type DBCluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-managemasteruserpassword
 	ManageMasterUserPassword *bool `json:"ManageMasterUserPassword,omitempty"`
+
+	// MasterUserAuthenticationType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-masteruserauthenticationtype
+	MasterUserAuthenticationType *string `json:"MasterUserAuthenticationType,omitempty"`
 
 	// MasterUserPassword AWS CloudFormation Property
 	// Required: false
@@ -273,6 +283,11 @@ type DBCluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-sourcedbclusteridentifier
 	SourceDBClusterIdentifier *string `json:"SourceDBClusterIdentifier,omitempty"`
+
+	// SourceDbClusterResourceId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-sourcedbclusterresourceid
+	SourceDbClusterResourceId *string `json:"SourceDbClusterResourceId,omitempty"`
 
 	// SourceRegion AWS CloudFormation Property
 	// Required: false

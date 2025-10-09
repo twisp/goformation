@@ -50,9 +50,9 @@ type NatGateway struct {
 	SecondaryPrivateIpAddresses []string `json:"SecondaryPrivateIpAddresses,omitempty"`
 
 	// SubnetId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-subnetid
-	SubnetId string `json:"SubnetId"`
+	SubnetId *string `json:"SubnetId,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

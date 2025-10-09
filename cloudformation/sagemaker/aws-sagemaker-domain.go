@@ -55,9 +55,9 @@ type Domain struct {
 	KmsKeyId *string `json:"KmsKeyId,omitempty"`
 
 	// SubnetIds AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-subnetids
-	SubnetIds []string `json:"SubnetIds"`
+	SubnetIds []string `json:"SubnetIds,omitempty"`
 
 	// TagPropagation AWS CloudFormation Property
 	// Required: false
@@ -70,9 +70,9 @@ type Domain struct {
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VpcId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-vpcid
-	VpcId string `json:"VpcId"`
+	VpcId *string `json:"VpcId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

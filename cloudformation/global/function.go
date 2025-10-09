@@ -105,6 +105,11 @@ type Function struct {
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
 	Layers *[]string `json:"Layers,omitempty"`
 
+	// LoggingConfig AWS CloudFormation Property
+	// Required: false
+	// See: https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-lambda-function-loggingconfig.html
+	LoggingConfig *serverless.Function_LoggingConfig `json:"LoggingConfig,omitempty"`
+
 	// MemorySize AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction

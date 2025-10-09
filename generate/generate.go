@@ -12,6 +12,7 @@ import (
 	"sort"
 	"strings"
 	"text/template"
+	"unicode"
 )
 
 // ResourceGenerator takes AWS CloudFormation Resource Specification
@@ -67,7 +68,6 @@ var (
 // and generates Go structs and a JSON Schema from them.
 // The input can be a mix of URLs (https://) or files (file://).
 func NewResourceGenerator(primaryURL string, fragmentUrls map[string]string) (*ResourceGenerator, error) {
-
 	rg := &ResourceGenerator{
 		primaryURL:   primaryURL,
 		fragmentUrls: fragmentUrls,
@@ -85,7 +85,6 @@ func NewResourceGenerator(primaryURL string, fragmentUrls map[string]string) (*R
 // Generate generates Go structs and a JSON Schema from the AWS CloudFormation
 // Resource Specifications provided to NewResourceGenerator
 func (rg *ResourceGenerator) Generate() error {
-
 	// Process the primary template first, since the primary template resources
 	// are added to the JSON schema for fragment transform specs
 	fmt.Printf("Downloading cloudformation specification from %s\n", rg.primaryURL)
@@ -163,7 +162,6 @@ func (rg *ResourceGenerator) downloadSpec(location string) ([]byte, error) {
 }
 
 func (rg *ResourceGenerator) processSpec(specname string, data []byte) (*CloudFormationResourceSpecification, error) {
-
 	// Unmarshall the JSON specification
 	spec := &CloudFormationResourceSpecification{}
 	if err := json.Unmarshal(data, spec); err != nil {
@@ -233,11 +231,9 @@ func (rg *ResourceGenerator) processSpec(specname string, data []byte) (*CloudFo
 	}
 
 	return spec, nil
-
 }
 
 func (rg *ResourceGenerator) generateAllResourcesMap(resources []GeneratedResource) error {
-
 	// Open the all resources template
 	tmpl, err := template.ParseFiles("generate/templates/all.template")
 	if err != nil {
@@ -275,11 +271,9 @@ func (rg *ResourceGenerator) generateAllResourcesMap(resources []GeneratedResour
 	}
 
 	return nil
-
 }
 
 func (rg *ResourceGenerator) generateResources(name string, resource Resource, isCustomProperty bool, spec *CloudFormationResourceSpecification) error {
-
 	// Open the resource template
 	tmpl, err := template.ParseFiles("generate/templates/resource.template")
 	if err != nil {
@@ -308,11 +302,22 @@ func (rg *ResourceGenerator) generateResources(name string, resource Resource, i
 	// note: the property might not always be called 'Tags'
 	// see: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html#cfn-dlm-lifecyclepolicy-schedule-tagstoadd
 	hasTags := false
-	for _, property := range resource.Properties {
+	renames := map[string]string{}
+	for name, property := range resource.Properties {
 		if property.ItemType == "Tag" {
 			hasTags = true
 			break
 		}
+
+		runes := []rune(name)
+		if len(runes) > 0 && unicode.IsLower(runes[0]) {
+			renames[name] = string(unicode.ToUpper(runes[0])) + string(runes[1:])
+		}
+	}
+
+	for name, rename := range renames {
+		resource.Properties[rename] = resource.Properties[name]
+		delete(resource.Properties, name)
 	}
 
 	// Pass in the following information into the template
@@ -397,11 +402,9 @@ func (rg *ResourceGenerator) generateResources(name string, resource Resource, i
 	rg.Results.ProcessedCount++
 
 	return nil
-
 }
 
 func (rg *ResourceGenerator) generateGlobals(name string, global Global, spec *CloudFormationResourceSpecification) error {
-
 	// Open the resource template
 	tmpl, err := template.ParseFiles("generate/templates/globals.template")
 	if err != nil {
@@ -488,11 +491,9 @@ func (rg *ResourceGenerator) generateGlobals(name string, global Global, spec *C
 	rg.Results.ProcessedCount++
 
 	return nil
-
 }
 
 func (rg *ResourceGenerator) generateJSONSchema(specname string, spec *CloudFormationResourceSpecification) error {
-
 	// Open the schema template and setup a counter function that will
 	// available in the template to be used to detect when trailing commas
 	// are required in the JSON when looping through maps
@@ -517,7 +518,6 @@ func (rg *ResourceGenerator) generateJSONSchema(specname string, spec *CloudForm
 	formatted, err := json.MarshalIndent(j, "", "    ")
 	if err != nil {
 		return fmt.Errorf("failed to marshal JSON Schema: %s", err)
-
 	}
 
 	filename := fmt.Sprintf("schema/%s.schema.json", specname)
@@ -542,11 +542,9 @@ func (rg *ResourceGenerator) generateJSONSchema(specname string, spec *CloudForm
 	rg.Results.UpdatedSchemas[filename] = specname
 
 	return nil
-
 }
 
 func generatePolymorphicProperty(typename string, name string, property Property) {
-
 	// Open the polymorphic property template
 	tmpl, err := template.New("polymorphic-property.template").Funcs(template.FuncMap{
 		"convertToGoType": convertTypeToGo,
@@ -609,7 +607,6 @@ func generatePolymorphicProperty(typename string, name string, property Property
 		fmt.Printf("Error: Failed to write JSON Schema\n%s\n", err)
 		os.Exit(1)
 	}
-
 }
 
 // counter is used within the JSON Schema template to determin whether or not

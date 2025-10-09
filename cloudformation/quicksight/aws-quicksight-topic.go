@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Topic AWS CloudFormation Resource (AWS::QuickSight::Topic)
@@ -22,6 +23,11 @@ type Topic struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-configoptions
 	ConfigOptions *Topic_TopicConfigOptions `json:"ConfigOptions,omitempty"`
+
+	// CustomInstructions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-custominstructions
+	CustomInstructions *Topic_CustomInstructions `json:"CustomInstructions,omitempty"`
 
 	// DataSets AWS CloudFormation Property
 	// Required: false
@@ -42,6 +48,11 @@ type Topic struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-name
 	Name *string `json:"Name,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// TopicId AWS CloudFormation Property
 	// Required: false

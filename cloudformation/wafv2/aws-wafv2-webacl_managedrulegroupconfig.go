@@ -20,6 +20,11 @@ type WebACL_ManagedRuleGroupConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-managedrulegroupconfig.html#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesatpruleset
 	AWSManagedRulesATPRuleSet *WebACL_AWSManagedRulesATPRuleSet `json:"AWSManagedRulesATPRuleSet,omitempty"`
 
+	// AWSManagedRulesAntiDDoSRuleSet AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-managedrulegroupconfig.html#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesantiddosruleset
+	AWSManagedRulesAntiDDoSRuleSet *WebACL_AWSManagedRulesAntiDDoSRuleSet `json:"AWSManagedRulesAntiDDoSRuleSet,omitempty"`
+
 	// AWSManagedRulesBotControlRuleSet AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-managedrulegroupconfig.html#cfn-wafv2-webacl-managedrulegroupconfig-awsmanagedrulesbotcontrolruleset

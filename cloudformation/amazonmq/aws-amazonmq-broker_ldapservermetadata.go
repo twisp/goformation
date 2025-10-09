@@ -36,9 +36,9 @@ type Broker_LdapServerMetadata struct {
 	RoleSearchSubtree *bool `json:"RoleSearchSubtree,omitempty"`
 
 	// ServiceAccountPassword AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html#cfn-amazonmq-broker-ldapservermetadata-serviceaccountpassword
-	ServiceAccountPassword string `json:"ServiceAccountPassword"`
+	ServiceAccountPassword *string `json:"ServiceAccountPassword,omitempty"`
 
 	// ServiceAccountUsername AWS CloudFormation Property
 	// Required: true

@@ -64,6 +64,11 @@ type DBInstance struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-backupretentionperiod
 	BackupRetentionPeriod *int `json:"BackupRetentionPeriod,omitempty"`
 
+	// BackupTarget AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-backuptarget
+	BackupTarget *string `json:"BackupTarget,omitempty"`
+
 	// CACertificateIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-cacertificateidentifier
@@ -238,6 +243,11 @@ type DBInstance struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-managemasteruserpassword
 	ManageMasterUserPassword *bool `json:"ManageMasterUserPassword,omitempty"`
+
+	// MasterUserAuthenticationType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-masteruserauthenticationtype
+	MasterUserAuthenticationType *string `json:"MasterUserAuthenticationType,omitempty"`
 
 	// MasterUserPassword AWS CloudFormation Property
 	// Required: false

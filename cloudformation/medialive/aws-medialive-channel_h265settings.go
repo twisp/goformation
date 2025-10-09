@@ -75,10 +75,20 @@ type Channel_H265Settings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-frameratenumerator
 	FramerateNumerator *int `json:"FramerateNumerator,omitempty"`
 
+	// GopBReference AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-gopbreference
+	GopBReference *string `json:"GopBReference,omitempty"`
+
 	// GopClosedCadence AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-gopclosedcadence
 	GopClosedCadence *int `json:"GopClosedCadence,omitempty"`
+
+	// GopNumBFrames AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-gopnumbframes
+	GopNumBFrames *int `json:"GopNumBFrames,omitempty"`
 
 	// GopSize AWS CloudFormation Property
 	// Required: false
@@ -104,6 +114,11 @@ type Channel_H265Settings struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-maxbitrate
 	MaxBitrate *int `json:"MaxBitrate,omitempty"`
+
+	// MinBitrate AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-minbitrate
+	MinBitrate *int `json:"MinBitrate,omitempty"`
 
 	// MinIInterval AWS CloudFormation Property
 	// Required: false
@@ -164,6 +179,11 @@ type Channel_H265Settings struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-slices
 	Slices *int `json:"Slices,omitempty"`
+
+	// SubgopLength AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-subgoplength
+	SubgopLength *string `json:"SubgopLength,omitempty"`
 
 	// Tier AWS CloudFormation Property
 	// Required: false

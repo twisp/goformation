@@ -15,14 +15,14 @@ import (
 type PlaybackRestrictionPolicy struct {
 
 	// AllowedCountries AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackrestrictionpolicy.html#cfn-ivs-playbackrestrictionpolicy-allowedcountries
-	AllowedCountries []string `json:"AllowedCountries"`
+	AllowedCountries []string `json:"AllowedCountries,omitempty"`
 
 	// AllowedOrigins AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackrestrictionpolicy.html#cfn-ivs-playbackrestrictionpolicy-allowedorigins
-	AllowedOrigins []string `json:"AllowedOrigins"`
+	AllowedOrigins []string `json:"AllowedOrigins,omitempty"`
 
 	// EnableStrictOriginEnforcement AWS CloudFormation Property
 	// Required: false

@@ -20,6 +20,11 @@ type Filter_PackageFilter struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-epoch
 	Epoch *Filter_NumberFilter `json:"Epoch,omitempty"`
 
+	// FilePath AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-filepath
+	FilePath *Filter_StringFilter `json:"FilePath,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-name
@@ -29,6 +34,11 @@ type Filter_PackageFilter struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-release
 	Release *Filter_StringFilter `json:"Release,omitempty"`
+
+	// SourceLambdaLayerArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html#cfn-inspectorv2-filter-packagefilter-sourcelambdalayerarn
+	SourceLambdaLayerArn *Filter_StringFilter `json:"SourceLambdaLayerArn,omitempty"`
 
 	// SourceLayerHash AWS CloudFormation Property
 	// Required: false

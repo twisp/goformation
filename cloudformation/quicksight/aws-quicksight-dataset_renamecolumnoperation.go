@@ -11,9 +11,9 @@ import (
 type DataSet_RenameColumnOperation struct {
 
 	// ColumnName AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-renamecolumnoperation.html#cfn-quicksight-dataset-renamecolumnoperation-columnname
-	ColumnName string `json:"ColumnName"`
+	ColumnName *string `json:"ColumnName,omitempty"`
 
 	// NewColumnName AWS CloudFormation Property
 	// Required: false

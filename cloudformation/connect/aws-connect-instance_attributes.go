@@ -30,10 +30,35 @@ type Instance_Attributes struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-earlymedia
 	EarlyMedia *bool `json:"EarlyMedia,omitempty"`
 
+	// EnhancedChatMonitoring AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-enhancedchatmonitoring
+	EnhancedChatMonitoring *bool `json:"EnhancedChatMonitoring,omitempty"`
+
+	// EnhancedContactMonitoring AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-enhancedcontactmonitoring
+	EnhancedContactMonitoring *bool `json:"EnhancedContactMonitoring,omitempty"`
+
+	// HighVolumeOutBound AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-highvolumeoutbound
+	HighVolumeOutBound *bool `json:"HighVolumeOutBound,omitempty"`
+
 	// InboundCalls AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-inboundcalls
 	InboundCalls bool `json:"InboundCalls"`
+
+	// MultiPartyChatConference AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-multipartychatconference
+	MultiPartyChatConference *bool `json:"MultiPartyChatConference,omitempty"`
+
+	// MultiPartyConference AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html#cfn-connect-instance-attributes-multipartyconference
+	MultiPartyConference *bool `json:"MultiPartyConference,omitempty"`
 
 	// OutboundCalls AWS CloudFormation Property
 	// Required: true

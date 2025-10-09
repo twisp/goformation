@@ -15,10 +15,20 @@ type Service_DeploymentConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-alarms
 	Alarms *Service_DeploymentAlarms `json:"Alarms,omitempty"`
 
+	// BakeTimeInMinutes AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-baketimeinminutes
+	BakeTimeInMinutes *int `json:"BakeTimeInMinutes,omitempty"`
+
 	// DeploymentCircuitBreaker AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker
 	DeploymentCircuitBreaker *Service_DeploymentCircuitBreaker `json:"DeploymentCircuitBreaker,omitempty"`
+
+	// LifecycleHooks AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-lifecyclehooks
+	LifecycleHooks []Service_DeploymentLifecycleHook `json:"LifecycleHooks,omitempty"`
 
 	// MaximumPercent AWS CloudFormation Property
 	// Required: false
@@ -29,6 +39,11 @@ type Service_DeploymentConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent
 	MinimumHealthyPercent *int `json:"MinimumHealthyPercent,omitempty"`
+
+	// Strategy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-strategy
+	Strategy *string `json:"Strategy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

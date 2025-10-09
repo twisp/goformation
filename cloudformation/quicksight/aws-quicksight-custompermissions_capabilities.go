@@ -15,6 +15,11 @@ type CustomPermissions_Capabilities struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-addorrunanomalydetectionforanalyses
 	AddOrRunAnomalyDetectionForAnalyses *string `json:"AddOrRunAnomalyDetectionForAnalyses,omitempty"`
 
+	// Analysis AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-analysis
+	Analysis *string `json:"Analysis,omitempty"`
+
 	// CreateAndUpdateDashboardEmailReports AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatedashboardemailreports
@@ -50,15 +55,50 @@ type CustomPermissions_Capabilities struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createsharedfolders
 	CreateSharedFolders *string `json:"CreateSharedFolders,omitempty"`
 
+	// Dashboard AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-dashboard
+	Dashboard *string `json:"Dashboard,omitempty"`
+
 	// ExportToCsv AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-exporttocsv
 	ExportToCsv *string `json:"ExportToCsv,omitempty"`
 
+	// ExportToCsvInScheduledReports AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-exporttocsvinscheduledreports
+	ExportToCsvInScheduledReports *string `json:"ExportToCsvInScheduledReports,omitempty"`
+
 	// ExportToExcel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-exporttoexcel
 	ExportToExcel *string `json:"ExportToExcel,omitempty"`
+
+	// ExportToExcelInScheduledReports AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-exporttoexcelinscheduledreports
+	ExportToExcelInScheduledReports *string `json:"ExportToExcelInScheduledReports,omitempty"`
+
+	// ExportToPdf AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-exporttopdf
+	ExportToPdf *string `json:"ExportToPdf,omitempty"`
+
+	// ExportToPdfInScheduledReports AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-exporttopdfinscheduledreports
+	ExportToPdfInScheduledReports *string `json:"ExportToPdfInScheduledReports,omitempty"`
+
+	// IncludeContentInScheduledReportsEmail AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-includecontentinscheduledreportsemail
+	IncludeContentInScheduledReportsEmail *string `json:"IncludeContentInScheduledReportsEmail,omitempty"`
+
+	// PrintReports AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-printreports
+	PrintReports *string `json:"PrintReports,omitempty"`
 
 	// RenameSharedFolders AWS CloudFormation Property
 	// Required: false

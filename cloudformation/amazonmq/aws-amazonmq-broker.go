@@ -109,9 +109,9 @@ type Broker struct {
 	Tags []Broker_TagsEntry `json:"Tags,omitempty"`
 
 	// Users AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-users
-	Users []Broker_User `json:"Users"`
+	Users []Broker_User `json:"Users,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

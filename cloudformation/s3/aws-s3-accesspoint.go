@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // AccessPoint AWS CloudFormation Resource (AWS::S3::AccessPoint)
@@ -37,6 +38,11 @@ type AccessPoint struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-publicaccessblockconfiguration
 	PublicAccessBlockConfiguration *AccessPoint_PublicAccessBlockConfiguration `json:"PublicAccessBlockConfiguration,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VpcConfiguration AWS CloudFormation Property
 	// Required: false

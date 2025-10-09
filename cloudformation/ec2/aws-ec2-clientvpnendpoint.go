@@ -19,9 +19,9 @@ type ClientVpnEndpoint struct {
 	AuthenticationOptions []ClientVpnEndpoint_ClientAuthenticationRequest `json:"AuthenticationOptions"`
 
 	// ClientCidrBlock AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientcidrblock
-	ClientCidrBlock string `json:"ClientCidrBlock"`
+	ClientCidrBlock *string `json:"ClientCidrBlock,omitempty"`
 
 	// ClientConnectOptions AWS CloudFormation Property
 	// Required: false

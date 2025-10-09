@@ -18,6 +18,21 @@ type WorkflowVersion struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-accelerators
 	Accelerators *string `json:"Accelerators,omitempty"`
 
+	// ContainerRegistryMap AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-containerregistrymap
+	ContainerRegistryMap *WorkflowVersion_ContainerRegistryMap `json:"ContainerRegistryMap,omitempty"`
+
+	// ContainerRegistryMapUri AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-containerregistrymapuri
+	ContainerRegistryMapUri *string `json:"ContainerRegistryMapUri,omitempty"`
+
+	// DefinitionRepository AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-definitionrepository
+	DefinitionRepository *WorkflowVersion_DefinitionRepository `json:"DefinitionRepository,omitempty"`
+
 	// DefinitionUri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-definitionuri
@@ -42,6 +57,26 @@ type WorkflowVersion struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-parametertemplate
 	ParameterTemplate map[string]WorkflowVersion_WorkflowParameter `json:"ParameterTemplate,omitempty"`
+
+	// ParameterTemplatePath AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-parametertemplatepath
+	ParameterTemplatePath *string `json:"ParameterTemplatePath,omitempty"`
+
+	// ReadmeMarkdown AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-readmemarkdown
+	ReadmeMarkdown *string `json:"ReadmeMarkdown,omitempty"`
+
+	// ReadmePath AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-readmepath
+	ReadmePath *string `json:"ReadmePath,omitempty"`
+
+	// ReadmeUri AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflowversion.html#cfn-omics-workflowversion-readmeuri
+	ReadmeUri *string `json:"ReadmeUri,omitempty"`
 
 	// StorageCapacity AWS CloudFormation Property
 	// Required: false

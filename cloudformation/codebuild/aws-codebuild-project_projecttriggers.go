@@ -20,6 +20,11 @@ type Project_ProjectTriggers struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-filtergroups
 	FilterGroups []Project_FilterGroup `json:"FilterGroups,omitempty"`
 
+	// PullRequestBuildPolicy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-pullrequestbuildpolicy
+	PullRequestBuildPolicy *Project_PullRequestBuildPolicy `json:"PullRequestBuildPolicy,omitempty"`
+
 	// ScopeConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html#cfn-codebuild-project-projecttriggers-scopeconfiguration

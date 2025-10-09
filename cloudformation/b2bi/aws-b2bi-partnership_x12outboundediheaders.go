@@ -10,6 +10,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html
 type Partnership_X12OutboundEdiHeaders struct {
 
+	// ControlNumbers AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-controlnumbers
+	ControlNumbers *Partnership_X12ControlNumbers `json:"ControlNumbers,omitempty"`
+
 	// Delimiters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-delimiters
@@ -19,6 +24,11 @@ type Partnership_X12OutboundEdiHeaders struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-functionalgroupheaders
 	FunctionalGroupHeaders *Partnership_X12FunctionalGroupHeaders `json:"FunctionalGroupHeaders,omitempty"`
+
+	// Gs05TimeFormat AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-partnership-x12outboundediheaders.html#cfn-b2bi-partnership-x12outboundediheaders-gs05timeformat
+	Gs05TimeFormat *string `json:"Gs05TimeFormat,omitempty"`
 
 	// InterchangeControlHeaders AWS CloudFormation Property
 	// Required: false

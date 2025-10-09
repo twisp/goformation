@@ -19,6 +19,11 @@ type IdMappingWorkflow struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-description
 	Description *string `json:"Description,omitempty"`
 
+	// IdMappingIncrementalRunConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingincrementalrunconfig
+	IdMappingIncrementalRunConfig *IdMappingWorkflow_IdMappingIncrementalRunConfig `json:"IdMappingIncrementalRunConfig,omitempty"`
+
 	// IdMappingTechniques AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-idmappingtechniques
