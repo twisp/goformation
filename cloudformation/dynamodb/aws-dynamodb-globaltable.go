@@ -28,6 +28,21 @@ type GlobalTable struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globalsecondaryindexes
 	GlobalSecondaryIndexes []GlobalTable_GlobalSecondaryIndex `json:"GlobalSecondaryIndexes,omitempty"`
 
+	// GlobalTableSettingsReplicationMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablesettingsreplicationmode
+	GlobalTableSettingsReplicationMode *string `json:"GlobalTableSettingsReplicationMode,omitempty"`
+
+	// GlobalTableSourceArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablesourcearn
+	GlobalTableSourceArn *string `json:"GlobalTableSourceArn,omitempty"`
+
+	// GlobalTableWitnesses AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses
+	GlobalTableWitnesses []GlobalTable_GlobalTableWitness `json:"GlobalTableWitnesses,omitempty"`
+
 	// KeySchema AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-keyschema
@@ -37,6 +52,11 @@ type GlobalTable struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-localsecondaryindexes
 	LocalSecondaryIndexes []GlobalTable_LocalSecondaryIndex `json:"LocalSecondaryIndexes,omitempty"`
+
+	// MultiRegionConsistency AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-multiregionconsistency
+	MultiRegionConsistency *string `json:"MultiRegionConsistency,omitempty"`
 
 	// Replicas AWS CloudFormation Property
 	// Required: true

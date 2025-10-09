@@ -10,35 +10,35 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html
 type FindingsFilter_CriterionAdditionalProperties struct {
 
-	// eq AWS CloudFormation Property
+	// Eq AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-eq
-	eq []string `json:"eq,omitempty"`
+	Eq []string `json:"Eq,omitempty"`
 
-	// gt AWS CloudFormation Property
+	// Gt AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-gt
-	gt *int `json:"gt,omitempty"`
+	Gt *int `json:"Gt,omitempty"`
 
-	// gte AWS CloudFormation Property
+	// Gte AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-gte
-	gte *int `json:"gte,omitempty"`
+	Gte *int `json:"Gte,omitempty"`
 
-	// lt AWS CloudFormation Property
+	// Lt AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-lt
-	lt *int `json:"lt,omitempty"`
+	Lt *int `json:"Lt,omitempty"`
 
-	// lte AWS CloudFormation Property
+	// Lte AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-lte
-	lte *int `json:"lte,omitempty"`
+	Lte *int `json:"Lte,omitempty"`
 
-	// neq AWS CloudFormation Property
+	// Neq AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-neq
-	neq []string `json:"neq,omitempty"`
+	Neq []string `json:"Neq,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -11,9 +11,9 @@ import (
 type DataSet_RowLevelPermissionTagRule struct {
 
 	// ColumnName AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-rowlevelpermissiontagrule.html#cfn-quicksight-dataset-rowlevelpermissiontagrule-columnname
-	ColumnName string `json:"ColumnName"`
+	ColumnName *string `json:"ColumnName,omitempty"`
 
 	// MatchAllValue AWS CloudFormation Property
 	// Required: false

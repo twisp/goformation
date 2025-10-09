@@ -257,6 +257,12 @@
           "Required": false,
           "Type": "EphemeralStorage",
           "UpdateType": "Immutable"
+        },
+        "LoggingConfig": {
+          "Documentation": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-lambda-function-loggingconfig.html",
+          "Required": false,
+          "Type": "LoggingConfig",
+          "UpdateType": "Immutable"
         }
       }
     },
@@ -2111,6 +2117,35 @@
           "Documentation": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-ephemeralstorage.html#cfn-lambda-function-ephemeralstorage-size",
           "Required": true,
           "PrimitiveType": "Integer",
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Serverless::Function.LoggingConfig": {
+      "Documentation": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-lambda-function-loggingconfig.html",
+      "Properties": {
+        "ApplicationLogLevel": {
+          "Documentation": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-lambda-function-loggingconfig.html#aws-properties-lambda-function-loggingconfig-properties",
+          "Required": false,
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
+        "LogFormat": {
+          "Documentation": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-lambda-function-loggingconfig.html#aws-properties-lambda-function-loggingconfig-properties",
+          "Required": false,
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
+        "LogGroup": {
+          "Documentation": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-lambda-function-loggingconfig.html#aws-properties-lambda-function-loggingconfig-properties",
+          "Required": false,
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
+        "SystemLogLevel": {
+          "Documentation": "https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-properties-lambda-function-loggingconfig.html#aws-properties-lambda-function-loggingconfig-properties",
+          "Required": false,
+          "PrimitiveType": "String",
           "UpdateType": "Immutable"
         }
       }

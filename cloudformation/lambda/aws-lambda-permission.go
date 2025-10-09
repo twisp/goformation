@@ -33,6 +33,11 @@ type Permission struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-functionurlauthtype
 	FunctionUrlAuthType *string `json:"FunctionUrlAuthType,omitempty"`
 
+	// InvokedViaFunctionUrl AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-invokedviafunctionurl
+	InvokedViaFunctionUrl *bool `json:"InvokedViaFunctionUrl,omitempty"`
+
 	// Principal AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-principal

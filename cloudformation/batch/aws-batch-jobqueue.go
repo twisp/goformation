@@ -14,14 +14,19 @@ import (
 type JobQueue struct {
 
 	// ComputeEnvironmentOrder AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-computeenvironmentorder
-	ComputeEnvironmentOrder []JobQueue_ComputeEnvironmentOrder `json:"ComputeEnvironmentOrder"`
+	ComputeEnvironmentOrder []JobQueue_ComputeEnvironmentOrder `json:"ComputeEnvironmentOrder,omitempty"`
 
 	// JobQueueName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobqueuename
 	JobQueueName *string `json:"JobQueueName,omitempty"`
+
+	// JobQueueType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobqueuetype
+	JobQueueType *string `json:"JobQueueType,omitempty"`
 
 	// JobStateTimeLimitActions AWS CloudFormation Property
 	// Required: false
@@ -37,6 +42,11 @@ type JobQueue struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-schedulingpolicyarn
 	SchedulingPolicyArn *string `json:"SchedulingPolicyArn,omitempty"`
+
+	// ServiceEnvironmentOrder AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-serviceenvironmentorder
+	ServiceEnvironmentOrder []JobQueue_ServiceEnvironmentOrder `json:"ServiceEnvironmentOrder,omitempty"`
 
 	// State AWS CloudFormation Property
 	// Required: false

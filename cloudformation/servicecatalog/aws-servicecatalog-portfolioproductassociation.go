@@ -19,14 +19,14 @@ type PortfolioProductAssociation struct {
 	AcceptLanguage *string `json:"AcceptLanguage,omitempty"`
 
 	// PortfolioId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-portfolioid
-	PortfolioId string `json:"PortfolioId"`
+	PortfolioId *string `json:"PortfolioId,omitempty"`
 
 	// ProductId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-productid
-	ProductId string `json:"ProductId"`
+	ProductId *string `json:"ProductId,omitempty"`
 
 	// SourcePortfolioId AWS CloudFormation Property
 	// Required: false

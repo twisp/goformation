@@ -54,10 +54,20 @@ type PlaybackConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-hlsconfiguration
 	HlsConfiguration *PlaybackConfiguration_HlsConfiguration `json:"HlsConfiguration,omitempty"`
 
+	// InsertionMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-insertionmode
+	InsertionMode *string `json:"InsertionMode,omitempty"`
+
 	// LivePreRollConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-liveprerollconfiguration
 	LivePreRollConfiguration *PlaybackConfiguration_LivePreRollConfiguration `json:"LivePreRollConfiguration,omitempty"`
+
+	// LogConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-logconfiguration
+	LogConfiguration *PlaybackConfiguration_LogConfiguration `json:"LogConfiguration,omitempty"`
 
 	// ManifestProcessingRules AWS CloudFormation Property
 	// Required: false

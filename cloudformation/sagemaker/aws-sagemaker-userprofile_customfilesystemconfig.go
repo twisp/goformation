@@ -20,6 +20,11 @@ type UserProfile_CustomFileSystemConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customfilesystemconfig.html#cfn-sagemaker-userprofile-customfilesystemconfig-fsxlustrefilesystemconfig
 	FSxLustreFileSystemConfig *UserProfile_FSxLustreFileSystemConfig `json:"FSxLustreFileSystemConfig,omitempty"`
 
+	// S3FileSystemConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customfilesystemconfig.html#cfn-sagemaker-userprofile-customfilesystemconfig-s3filesystemconfig
+	S3FileSystemConfig *UserProfile_S3FileSystemConfig `json:"S3FileSystemConfig,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

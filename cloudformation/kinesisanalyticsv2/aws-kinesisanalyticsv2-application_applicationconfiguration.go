@@ -15,6 +15,11 @@ type Application_ApplicationConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-applicationcodeconfiguration
 	ApplicationCodeConfiguration *Application_ApplicationCodeConfiguration `json:"ApplicationCodeConfiguration,omitempty"`
 
+	// ApplicationEncryptionConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-applicationencryptionconfiguration
+	ApplicationEncryptionConfiguration *Application_ApplicationEncryptionConfiguration `json:"ApplicationEncryptionConfiguration,omitempty"`
+
 	// ApplicationSnapshotConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-applicationsnapshotconfiguration

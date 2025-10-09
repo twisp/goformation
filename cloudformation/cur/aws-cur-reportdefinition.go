@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // ReportDefinition AWS CloudFormation Resource (AWS::CUR::ReportDefinition)
@@ -67,6 +68,11 @@ type ReportDefinition struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cur-reportdefinition.html#cfn-cur-reportdefinition-s3region
 	S3Region string `json:"S3Region"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cur-reportdefinition.html#cfn-cur-reportdefinition-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// TimeUnit AWS CloudFormation Property
 	// Required: true

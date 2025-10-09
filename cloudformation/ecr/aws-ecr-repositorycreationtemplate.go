@@ -39,6 +39,11 @@ type RepositoryCreationTemplate struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-imagetagmutability
 	ImageTagMutability *string `json:"ImageTagMutability,omitempty"`
 
+	// ImageTagMutabilityExclusionFilters AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-imagetagmutabilityexclusionfilters
+	ImageTagMutabilityExclusionFilters []RepositoryCreationTemplate_ImageTagMutabilityExclusionFilter `json:"ImageTagMutabilityExclusionFilters,omitempty"`
+
 	// LifecyclePolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repositorycreationtemplate.html#cfn-ecr-repositorycreationtemplate-lifecyclepolicy

@@ -30,14 +30,19 @@ type Project struct {
 	ServiceCatalogProvisionedProductDetails *Project_ServiceCatalogProvisionedProductDetails `json:"ServiceCatalogProvisionedProductDetails,omitempty"`
 
 	// ServiceCatalogProvisioningDetails AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-servicecatalogprovisioningdetails
-	ServiceCatalogProvisioningDetails *Project_ServiceCatalogProvisioningDetails `json:"ServiceCatalogProvisioningDetails"`
+	ServiceCatalogProvisioningDetails *Project_ServiceCatalogProvisioningDetails `json:"ServiceCatalogProvisioningDetails,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// TemplateProviderDetails AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-templateproviderdetails
+	TemplateProviderDetails []Project_TemplateProviderDetail `json:"TemplateProviderDetails,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

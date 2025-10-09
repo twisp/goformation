@@ -34,6 +34,11 @@ type RoutingProfile struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html#cfn-connect-routingprofile-instancearn
 	InstanceArn string `json:"InstanceArn"`
 
+	// ManualAssignmentQueueConfigs AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html#cfn-connect-routingprofile-manualassignmentqueueconfigs
+	ManualAssignmentQueueConfigs []RoutingProfile_RoutingProfileManualAssignmentQueueConfig `json:"ManualAssignmentQueueConfigs,omitempty"`
+
 	// MediaConcurrencies AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-routingprofile.html#cfn-connect-routingprofile-mediaconcurrencies

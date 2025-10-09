@@ -13,7 +13,7 @@ type TableOptimizer_RetentionConfiguration struct {
 	// IcebergConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-tableoptimizer-tableoptimizerconfiguration-retentionconfiguration.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration-retentionconfiguration-icebergconfiguration
-	IcebergConfiguration *TableOptimizer_IcebergConfiguration `json:"IcebergConfiguration,omitempty"`
+	IcebergConfiguration *TableOptimizer_IcebergRetentionConfiguration `json:"IcebergConfiguration,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

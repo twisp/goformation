@@ -10,10 +10,10 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html
 type Channel_HlsIngest struct {
 
-	// ingestEndpoints AWS CloudFormation Property
+	// IngestEndpoints AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html#cfn-mediapackage-channel-hlsingest-ingestendpoints
-	ingestEndpoints []Channel_IngestEndpoint `json:"ingestEndpoints,omitempty"`
+	IngestEndpoints []Channel_IngestEndpoint `json:"IngestEndpoints,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

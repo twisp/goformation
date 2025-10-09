@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // AccessPoint AWS CloudFormation Resource (AWS::S3Express::AccessPoint)
@@ -42,6 +43,11 @@ type AccessPoint struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-accesspoint.html#cfn-s3express-accesspoint-scope
 	Scope *AccessPoint_Scope `json:"Scope,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-accesspoint.html#cfn-s3express-accesspoint-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VpcConfiguration AWS CloudFormation Property
 	// Required: false

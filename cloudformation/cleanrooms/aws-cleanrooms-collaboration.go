@@ -19,6 +19,11 @@ type Collaboration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-analyticsengine
 	AnalyticsEngine *string `json:"AnalyticsEngine,omitempty"`
 
+	// AutoApprovedChangeTypes AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-autoapprovedchangetypes
+	AutoApprovedChangeTypes []string `json:"AutoApprovedChangeTypes,omitempty"`
+
 	// CreatorDisplayName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatordisplayname
@@ -30,9 +35,9 @@ type Collaboration struct {
 	CreatorMLMemberAbilities *Collaboration_MLMemberAbilities `json:"CreatorMLMemberAbilities,omitempty"`
 
 	// CreatorMemberAbilities AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatormemberabilities
-	CreatorMemberAbilities []string `json:"CreatorMemberAbilities"`
+	CreatorMemberAbilities []string `json:"CreatorMemberAbilities,omitempty"`
 
 	// CreatorPaymentConfiguration AWS CloudFormation Property
 	// Required: false
@@ -55,9 +60,9 @@ type Collaboration struct {
 	JobLogStatus *string `json:"JobLogStatus,omitempty"`
 
 	// Members AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-members
-	Members []Collaboration_MemberSpecification `json:"Members"`
+	Members []Collaboration_MemberSpecification `json:"Members,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

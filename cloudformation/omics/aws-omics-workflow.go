@@ -18,6 +18,21 @@ type Workflow struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-accelerators
 	Accelerators *string `json:"Accelerators,omitempty"`
 
+	// ContainerRegistryMap AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-containerregistrymap
+	ContainerRegistryMap *Workflow_ContainerRegistryMap `json:"ContainerRegistryMap,omitempty"`
+
+	// ContainerRegistryMapUri AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-containerregistrymapuri
+	ContainerRegistryMapUri *string `json:"ContainerRegistryMapUri,omitempty"`
+
+	// DefinitionRepository AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-definitionrepository
+	DefinitionRepository *Workflow_DefinitionRepository `json:"DefinitionRepository,omitempty"`
+
 	// DefinitionUri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-definitionuri
@@ -48,6 +63,26 @@ type Workflow struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate
 	ParameterTemplate map[string]Workflow_WorkflowParameter `json:"ParameterTemplate,omitempty"`
 
+	// ParameterTemplatePath AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplatepath
+	ParameterTemplatePath *string `json:"ParameterTemplatePath,omitempty"`
+
+	// ReadmeMarkdown AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-readmemarkdown
+	ReadmeMarkdown *string `json:"ReadmeMarkdown,omitempty"`
+
+	// ReadmePath AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-readmepath
+	ReadmePath *string `json:"ReadmePath,omitempty"`
+
+	// ReadmeUri AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-readmeuri
+	ReadmeUri *string `json:"ReadmeUri,omitempty"`
+
 	// StorageCapacity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity
@@ -62,6 +97,11 @@ type Workflow struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-tags
 	Tags map[string]string `json:"Tags,omitempty"`
+
+	// WorkflowBucketOwnerId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-workflowbucketownerid
+	WorkflowBucketOwnerId *string `json:"WorkflowBucketOwnerId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

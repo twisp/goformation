@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // ConfigurationSet AWS CloudFormation Resource (AWS::SES::ConfigurationSet)
@@ -37,6 +38,11 @@ type ConfigurationSet struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-suppressionoptions
 	SuppressionOptions *ConfigurationSet_SuppressionOptions `json:"SuppressionOptions,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html#cfn-ses-configurationset-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// TrackingOptions AWS CloudFormation Property
 	// Required: false

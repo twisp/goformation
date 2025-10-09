@@ -14,9 +14,9 @@ import (
 type DBProxy struct {
 
 	// Auth AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-auth
-	Auth []DBProxy_AuthFormat `json:"Auth"`
+	Auth []DBProxy_AuthFormat `json:"Auth,omitempty"`
 
 	// DBProxyName AWS CloudFormation Property
 	// Required: true
@@ -27,6 +27,16 @@ type DBProxy struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-debuglogging
 	DebugLogging *bool `json:"DebugLogging,omitempty"`
+
+	// DefaultAuthScheme AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-defaultauthscheme
+	DefaultAuthScheme *string `json:"DefaultAuthScheme,omitempty"`
+
+	// EndpointNetworkType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-endpointnetworktype
+	EndpointNetworkType *string `json:"EndpointNetworkType,omitempty"`
 
 	// EngineFamily AWS CloudFormation Property
 	// Required: true
@@ -52,6 +62,11 @@ type DBProxy struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-tags
 	Tags []DBProxy_TagFormat `json:"Tags,omitempty"`
+
+	// TargetConnectionNetworkType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-targetconnectionnetworktype
+	TargetConnectionNetworkType *string `json:"TargetConnectionNetworkType,omitempty"`
 
 	// VpcSecurityGroupIds AWS CloudFormation Property
 	// Required: false

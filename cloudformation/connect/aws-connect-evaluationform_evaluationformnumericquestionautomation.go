@@ -11,9 +11,9 @@ import (
 type EvaluationForm_EvaluationFormNumericQuestionAutomation struct {
 
 	// PropertyValue AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionautomation.html#cfn-connect-evaluationform-evaluationformnumericquestionautomation-propertyvalue
-	PropertyValue *EvaluationForm_NumericQuestionPropertyValueAutomation `json:"PropertyValue"`
+	PropertyValue *EvaluationForm_NumericQuestionPropertyValueAutomation `json:"PropertyValue,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

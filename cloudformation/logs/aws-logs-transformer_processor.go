@@ -80,6 +80,11 @@ type Transformer_Processor struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-transformer-processor.html#cfn-logs-transformer-processor-parseroute53
 	ParseRoute53 *Transformer_ParseRoute53 `json:"ParseRoute53,omitempty"`
 
+	// ParseToOCSF AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-transformer-processor.html#cfn-logs-transformer-processor-parsetoocsf
+	ParseToOCSF *Transformer_ParseToOCSF `json:"ParseToOCSF,omitempty"`
+
 	// ParseVPC AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-transformer-processor.html#cfn-logs-transformer-processor-parsevpc

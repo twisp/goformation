@@ -11,9 +11,9 @@ import (
 type ContainerFleet_LocationCapacity struct {
 
 	// DesiredEC2Instances AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-locationcapacity.html#cfn-gamelift-containerfleet-locationcapacity-desiredec2instances
-	DesiredEC2Instances int `json:"DesiredEC2Instances"`
+	DesiredEC2Instances *int `json:"DesiredEC2Instances,omitempty"`
 
 	// MaxSize AWS CloudFormation Property
 	// Required: true

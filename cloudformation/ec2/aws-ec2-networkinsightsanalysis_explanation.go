@@ -245,6 +245,11 @@ type NetworkInsightsAnalysis_Explanation struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-explanation.html#cfn-ec2-networkinsightsanalysis-explanation-vpc
 	Vpc *NetworkInsightsAnalysis_AnalysisComponent `json:"Vpc,omitempty"`
 
+	// VpcEndpoint AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-explanation.html#cfn-ec2-networkinsightsanalysis-explanation-vpcendpoint
+	VpcEndpoint *NetworkInsightsAnalysis_AnalysisComponent `json:"VpcEndpoint,omitempty"`
+
 	// VpcPeeringConnection AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-explanation.html#cfn-ec2-networkinsightsanalysis-explanation-vpcpeeringconnection
@@ -259,11 +264,6 @@ type NetworkInsightsAnalysis_Explanation struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-explanation.html#cfn-ec2-networkinsightsanalysis-explanation-vpngateway
 	VpnGateway *NetworkInsightsAnalysis_AnalysisComponent `json:"VpnGateway,omitempty"`
-
-	// vpcEndpoint AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-explanation.html#cfn-ec2-networkinsightsanalysis-explanation-vpcendpoint
-	vpcEndpoint *NetworkInsightsAnalysis_AnalysisComponent `json:"vpcEndpoint,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

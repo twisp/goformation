@@ -25,6 +25,11 @@ type MatchingWorkflow_ResolutionTechniques struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-resolutiontechniques.html#cfn-entityresolution-matchingworkflow-resolutiontechniques-rulebasedproperties
 	RuleBasedProperties *MatchingWorkflow_RuleBasedProperties `json:"RuleBasedProperties,omitempty"`
 
+	// RuleConditionProperties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-resolutiontechniques.html#cfn-entityresolution-matchingworkflow-resolutiontechniques-ruleconditionproperties
+	RuleConditionProperties *MatchingWorkflow_RuleConditionProperties `json:"RuleConditionProperties,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

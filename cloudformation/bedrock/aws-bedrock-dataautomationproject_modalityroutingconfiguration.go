@@ -10,25 +10,25 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-modalityroutingconfiguration.html
 type DataAutomationProject_ModalityRoutingConfiguration struct {
 
-	// jpeg AWS CloudFormation Property
+	// Jpeg AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-modalityroutingconfiguration.html#cfn-bedrock-dataautomationproject-modalityroutingconfiguration-jpeg
-	jpeg *string `json:"jpeg,omitempty"`
+	Jpeg *string `json:"Jpeg,omitempty"`
 
-	// mov AWS CloudFormation Property
+	// Mov AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-modalityroutingconfiguration.html#cfn-bedrock-dataautomationproject-modalityroutingconfiguration-mov
-	mov *string `json:"mov,omitempty"`
+	Mov *string `json:"Mov,omitempty"`
 
-	// mp4 AWS CloudFormation Property
+	// Mp4 AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-modalityroutingconfiguration.html#cfn-bedrock-dataautomationproject-modalityroutingconfiguration-mp4
-	mp4 *string `json:"mp4,omitempty"`
+	Mp4 *string `json:"Mp4,omitempty"`
 
-	// png AWS CloudFormation Property
+	// Png AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-modalityroutingconfiguration.html#cfn-bedrock-dataautomationproject-modalityroutingconfiguration-png
-	png *string `json:"png,omitempty"`
+	Png *string `json:"Png,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

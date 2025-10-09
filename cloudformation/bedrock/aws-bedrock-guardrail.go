@@ -14,6 +14,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html
 type Guardrail struct {
 
+	// AutomatedReasoningPolicyConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-automatedreasoningpolicyconfig
+	AutomatedReasoningPolicyConfig *Guardrail_AutomatedReasoningPolicyConfig `json:"AutomatedReasoningPolicyConfig,omitempty"`
+
 	// BlockedInputMessaging AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-blockedinputmessaging
@@ -33,6 +38,11 @@ type Guardrail struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-contextualgroundingpolicyconfig
 	ContextualGroundingPolicyConfig *Guardrail_ContextualGroundingPolicyConfig `json:"ContextualGroundingPolicyConfig,omitempty"`
+
+	// CrossRegionConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-guardrail.html#cfn-bedrock-guardrail-crossregionconfig
+	CrossRegionConfig *Guardrail_GuardrailCrossRegionConfig `json:"CrossRegionConfig,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false

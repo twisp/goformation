@@ -34,6 +34,11 @@ type Scraper struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-scrapeconfiguration
 	ScrapeConfiguration *Scraper_ScrapeConfiguration `json:"ScrapeConfiguration"`
 
+	// ScraperLoggingConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-scraperloggingconfiguration
+	ScraperLoggingConfiguration *Scraper_ScraperLoggingConfiguration `json:"ScraperLoggingConfiguration,omitempty"`
+
 	// Source AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-scraper.html#cfn-aps-scraper-source
