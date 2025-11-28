@@ -49,6 +49,11 @@ type RestApi struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-disableexecuteapiendpoint
 	DisableExecuteApiEndpoint *bool `json:"DisableExecuteApiEndpoint,omitempty"`
 
+	// EndpointAccessMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointaccessmode
+	EndpointAccessMode *string `json:"EndpointAccessMode,omitempty"`
+
 	// EndpointConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration
@@ -83,6 +88,11 @@ type RestApi struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-policy
 	Policy interface{} `json:"Policy,omitempty"`
+
+	// SecurityPolicy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-securitypolicy
+	SecurityPolicy *string `json:"SecurityPolicy,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

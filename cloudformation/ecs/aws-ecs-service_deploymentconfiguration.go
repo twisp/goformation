@@ -20,6 +20,11 @@ type Service_DeploymentConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-baketimeinminutes
 	BakeTimeInMinutes *int `json:"BakeTimeInMinutes,omitempty"`
 
+	// CanaryConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-canaryconfiguration
+	CanaryConfiguration *Service_CanaryConfiguration `json:"CanaryConfiguration,omitempty"`
+
 	// DeploymentCircuitBreaker AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker
@@ -29,6 +34,11 @@ type Service_DeploymentConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-lifecyclehooks
 	LifecycleHooks []Service_DeploymentLifecycleHook `json:"LifecycleHooks,omitempty"`
+
+	// LinearConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-linearconfiguration
+	LinearConfiguration *Service_LinearConfiguration `json:"LinearConfiguration,omitempty"`
 
 	// MaximumPercent AWS CloudFormation Property
 	// Required: false

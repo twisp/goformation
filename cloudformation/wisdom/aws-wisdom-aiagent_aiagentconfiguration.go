@@ -15,6 +15,21 @@ type AIAgent_AIAgentConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-answerrecommendationaiagentconfiguration
 	AnswerRecommendationAIAgentConfiguration *AIAgent_AnswerRecommendationAIAgentConfiguration `json:"AnswerRecommendationAIAgentConfiguration,omitempty"`
 
+	// EmailGenerativeAnswerAIAgentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-emailgenerativeansweraiagentconfiguration
+	EmailGenerativeAnswerAIAgentConfiguration *AIAgent_EmailGenerativeAnswerAIAgentConfiguration `json:"EmailGenerativeAnswerAIAgentConfiguration,omitempty"`
+
+	// EmailOverviewAIAgentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-emailoverviewaiagentconfiguration
+	EmailOverviewAIAgentConfiguration *AIAgent_EmailOverviewAIAgentConfiguration `json:"EmailOverviewAIAgentConfiguration,omitempty"`
+
+	// EmailResponseAIAgentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-emailresponseaiagentconfiguration
+	EmailResponseAIAgentConfiguration *AIAgent_EmailResponseAIAgentConfiguration `json:"EmailResponseAIAgentConfiguration,omitempty"`
+
 	// ManualSearchAIAgentConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-manualsearchaiagentconfiguration

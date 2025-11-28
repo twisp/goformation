@@ -18,7 +18,7 @@ type Task_Options struct {
 	// BytesPerSecond AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-bytespersecond
-	BytesPerSecond *int `json:"BytesPerSecond,omitempty"`
+	BytesPerSecond *int64 `json:"BytesPerSecond,omitempty"`
 
 	// Gid AWS CloudFormation Property
 	// Required: false

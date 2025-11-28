@@ -11,9 +11,9 @@ import (
 type DataSet_CustomSql struct {
 
 	// Columns AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-customsql.html#cfn-quicksight-dataset-customsql-columns
-	Columns []DataSet_InputColumn `json:"Columns,omitempty"`
+	Columns []DataSet_InputColumn `json:"Columns"`
 
 	// DataSourceArn AWS CloudFormation Property
 	// Required: true

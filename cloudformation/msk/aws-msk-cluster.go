@@ -33,11 +33,6 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-configurationinfo
 	ConfigurationInfo *Cluster_ConfigurationInfo `json:"ConfigurationInfo,omitempty"`
 
-	// CurrentVersion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-currentversion
-	CurrentVersion *string `json:"CurrentVersion,omitempty"`
-
 	// EncryptionInfo AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-encryptioninfo
@@ -67,6 +62,11 @@ type Cluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-openmonitoring
 	OpenMonitoring *Cluster_OpenMonitoring `json:"OpenMonitoring,omitempty"`
+
+	// Rebalancing AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-rebalancing
+	Rebalancing *Cluster_Rebalancing `json:"Rebalancing,omitempty"`
 
 	// StorageMode AWS CloudFormation Property
 	// Required: false

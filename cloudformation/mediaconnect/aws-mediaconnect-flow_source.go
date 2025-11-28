@@ -75,6 +75,16 @@ type Flow_Source struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-protocol
 	Protocol *string `json:"Protocol,omitempty"`
 
+	// RouterIntegrationState AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-routerintegrationstate
+	RouterIntegrationState *string `json:"RouterIntegrationState,omitempty"`
+
+	// RouterIntegrationTransitDecryption AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-routerintegrationtransitdecryption
+	RouterIntegrationTransitDecryption *Flow_FlowTransitEncryption `json:"RouterIntegrationTransitDecryption,omitempty"`
+
 	// SenderControlPort AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-sendercontrolport

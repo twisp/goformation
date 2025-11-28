@@ -18,7 +18,7 @@ type WorkGroup_WorkGroupConfiguration struct {
 	// BytesScannedCutoffPerQuery AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery
-	BytesScannedCutoffPerQuery *int `json:"BytesScannedCutoffPerQuery,omitempty"`
+	BytesScannedCutoffPerQuery *int64 `json:"BytesScannedCutoffPerQuery,omitempty"`
 
 	// CustomerContentEncryptionConfiguration AWS CloudFormation Property
 	// Required: false
@@ -29,6 +29,11 @@ type WorkGroup_WorkGroupConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration
 	EnforceWorkGroupConfiguration *bool `json:"EnforceWorkGroupConfiguration,omitempty"`
+
+	// EngineConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-engineconfiguration
+	EngineConfiguration *WorkGroup_EngineConfiguration `json:"EngineConfiguration,omitempty"`
 
 	// EngineVersion AWS CloudFormation Property
 	// Required: false
@@ -44,6 +49,11 @@ type WorkGroup_WorkGroupConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-managedqueryresultsconfiguration
 	ManagedQueryResultsConfiguration *WorkGroup_ManagedQueryResultsConfiguration `json:"ManagedQueryResultsConfiguration,omitempty"`
+
+	// MonitoringConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-monitoringconfiguration
+	MonitoringConfiguration *WorkGroup_MonitoringConfiguration `json:"MonitoringConfiguration,omitempty"`
 
 	// PublishCloudWatchMetricsEnabled AWS CloudFormation Property
 	// Required: false

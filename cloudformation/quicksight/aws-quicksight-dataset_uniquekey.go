@@ -11,9 +11,9 @@ import (
 type DataSet_UniqueKey struct {
 
 	// ColumnNames AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-uniquekey.html#cfn-quicksight-dataset-uniquekey-columnnames
-	ColumnNames []string `json:"ColumnNames,omitempty"`
+	ColumnNames []string `json:"ColumnNames"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

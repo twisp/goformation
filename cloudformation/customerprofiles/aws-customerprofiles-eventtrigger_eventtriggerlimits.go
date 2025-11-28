@@ -13,7 +13,7 @@ type EventTrigger_EventTriggerLimits struct {
 	// EventExpiration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-eventtrigger-eventtriggerlimits.html#cfn-customerprofiles-eventtrigger-eventtriggerlimits-eventexpiration
-	EventExpiration *int `json:"EventExpiration,omitempty"`
+	EventExpiration *int64 `json:"EventExpiration,omitempty"`
 
 	// Periods AWS CloudFormation Property
 	// Required: false

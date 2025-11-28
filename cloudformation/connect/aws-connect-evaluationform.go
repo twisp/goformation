@@ -34,6 +34,11 @@ type EvaluationForm struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-items
 	Items []EvaluationForm_EvaluationFormBaseItem `json:"Items"`
 
+	// LanguageConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-languageconfiguration
+	LanguageConfiguration *EvaluationForm_EvaluationFormLanguageConfiguration `json:"LanguageConfiguration,omitempty"`
+
 	// ScoringStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-scoringstrategy
@@ -48,6 +53,11 @@ type EvaluationForm struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// TargetConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-targetconfiguration
+	TargetConfiguration *EvaluationForm_EvaluationFormTargetConfiguration `json:"TargetConfiguration,omitempty"`
 
 	// Title AWS CloudFormation Property
 	// Required: true

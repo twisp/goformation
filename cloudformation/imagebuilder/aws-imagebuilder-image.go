@@ -18,6 +18,11 @@ type Image struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-containerrecipearn
 	ContainerRecipeArn *string `json:"ContainerRecipeArn,omitempty"`
 
+	// DeletionSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-deletionsettings
+	DeletionSettings *Image_DeletionSettings `json:"DeletionSettings,omitempty"`
+
 	// DistributionConfigurationArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-distributionconfigurationarn
@@ -32,6 +37,11 @@ type Image struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-executionrole
 	ExecutionRole *string `json:"ExecutionRole,omitempty"`
+
+	// ImagePipelineExecutionSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagepipelineexecutionsettings
+	ImagePipelineExecutionSettings *Image_ImagePipelineExecutionSettings `json:"ImagePipelineExecutionSettings,omitempty"`
 
 	// ImageRecipeArn AWS CloudFormation Property
 	// Required: false

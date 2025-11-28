@@ -17,7 +17,7 @@ type VPNGateway struct {
 	// AmazonSideAsn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngateway.html#cfn-ec2-vpngateway-amazonsideasn
-	AmazonSideAsn *int `json:"AmazonSideAsn,omitempty"`
+	AmazonSideAsn *int64 `json:"AmazonSideAsn,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

@@ -54,6 +54,11 @@ type OriginEndpoint struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifests
 	LowLatencyHlsManifests []OriginEndpoint_LowLatencyHlsManifestConfiguration `json:"LowLatencyHlsManifests,omitempty"`
 
+	// MssManifests AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-mssmanifests
+	MssManifests []OriginEndpoint_MssManifestConfiguration `json:"MssManifests,omitempty"`
+
 	// OriginEndpointName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-originendpointname

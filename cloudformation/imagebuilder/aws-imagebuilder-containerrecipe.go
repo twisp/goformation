@@ -14,9 +14,9 @@ import (
 type ContainerRecipe struct {
 
 	// Components AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html#cfn-imagebuilder-containerrecipe-components
-	Components []ContainerRecipe_ComponentConfiguration `json:"Components"`
+	Components []ContainerRecipe_ComponentConfiguration `json:"Components,omitempty"`
 
 	// ContainerType AWS CloudFormation Property
 	// Required: true

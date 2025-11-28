@@ -45,10 +45,10 @@ type ProjectProfile_EnvironmentConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-projectprofile-environmentconfiguration.html#cfn-datazone-projectprofile-environmentconfiguration-environmentblueprintid
 	EnvironmentBlueprintId string `json:"EnvironmentBlueprintId"`
 
-	// Id AWS CloudFormation Property
+	// EnvironmentConfigurationId AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-projectprofile-environmentconfiguration.html#cfn-datazone-projectprofile-environmentconfiguration-id
-	Id *string `json:"Id,omitempty"`
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-projectprofile-environmentconfiguration.html#cfn-datazone-projectprofile-environmentconfiguration-environmentconfigurationid
+	EnvironmentConfigurationId *string `json:"EnvironmentConfigurationId,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

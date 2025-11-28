@@ -10,6 +10,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html
 type Connection_ConnectionPropertiesInput struct {
 
+	// AmazonQProperties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-amazonqproperties
+	AmazonQProperties *Connection_AmazonQPropertiesInput `json:"AmazonQProperties,omitempty"`
+
 	// AthenaProperties AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-athenaproperties
@@ -34,6 +39,11 @@ type Connection_ConnectionPropertiesInput struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-redshiftproperties
 	RedshiftProperties *Connection_RedshiftPropertiesInput `json:"RedshiftProperties,omitempty"`
+
+	// S3Properties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-s3properties
+	S3Properties *Connection_S3PropertiesInput `json:"S3Properties,omitempty"`
 
 	// SparkEmrProperties AWS CloudFormation Property
 	// Required: false

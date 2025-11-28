@@ -29,6 +29,11 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig
 	ComputeConfig *Cluster_ComputeConfig `json:"ComputeConfig,omitempty"`
 
+	// ControlPlaneScalingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-controlplanescalingconfig
+	ControlPlaneScalingConfig *Cluster_ControlPlaneScalingConfig `json:"ControlPlaneScalingConfig,omitempty"`
+
 	// DeletionProtection AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-deletionprotection

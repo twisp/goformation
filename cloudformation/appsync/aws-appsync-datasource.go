@@ -28,11 +28,6 @@ type DataSource struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-dynamodbconfig
 	DynamoDBConfig *DataSource_DynamoDBConfig `json:"DynamoDBConfig,omitempty"`
 
-	// ElasticsearchConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig
-	ElasticsearchConfig *DataSource_ElasticsearchConfig `json:"ElasticsearchConfig,omitempty"`
-
 	// EventBridgeConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-eventbridgeconfig

@@ -29,6 +29,11 @@ type DataSet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-columnlevelpermissionrules
 	ColumnLevelPermissionRules []DataSet_ColumnLevelPermissionRule `json:"ColumnLevelPermissionRules,omitempty"`
 
+	// DataPrepConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-dataprepconfiguration
+	DataPrepConfiguration *DataSet_DataPrepConfiguration `json:"DataPrepConfiguration,omitempty"`
+
 	// DataSetId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-datasetid
@@ -69,11 +74,6 @@ type DataSet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-ingestionwaitpolicy
 	IngestionWaitPolicy *DataSet_IngestionWaitPolicy `json:"IngestionWaitPolicy,omitempty"`
 
-	// LogicalTableMap AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-logicaltablemap
-	LogicalTableMap map[string]DataSet_LogicalTable `json:"LogicalTableMap,omitempty"`
-
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-name
@@ -94,15 +94,10 @@ type DataSet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-physicaltablemap
 	PhysicalTableMap map[string]DataSet_PhysicalTable `json:"PhysicalTableMap,omitempty"`
 
-	// RowLevelPermissionDataSet AWS CloudFormation Property
+	// SemanticModelConfiguration AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-rowlevelpermissiondataset
-	RowLevelPermissionDataSet *DataSet_RowLevelPermissionDataSet `json:"RowLevelPermissionDataSet,omitempty"`
-
-	// RowLevelPermissionTagConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-rowlevelpermissiontagconfiguration
-	RowLevelPermissionTagConfiguration *DataSet_RowLevelPermissionTagConfiguration `json:"RowLevelPermissionTagConfiguration,omitempty"`
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dataset.html#cfn-quicksight-dataset-semanticmodelconfiguration
+	SemanticModelConfiguration *DataSet_SemanticModelConfiguration `json:"SemanticModelConfiguration,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

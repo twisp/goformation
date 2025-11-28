@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Table AWS CloudFormation Resource (AWS::S3Tables::Table)
@@ -47,6 +48,11 @@ type Table struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-table.html#cfn-s3tables-table-tablename
 	TableName string `json:"TableName"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-table.html#cfn-s3tables-table-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// WithoutMetadata AWS CloudFormation Property
 	// Required: false

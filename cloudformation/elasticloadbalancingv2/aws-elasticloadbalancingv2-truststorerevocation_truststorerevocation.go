@@ -13,7 +13,7 @@ type TrustStoreRevocation_TrustStoreRevocation struct {
 	// NumberOfRevokedEntries AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-truststorerevocation-truststorerevocation.html#cfn-elasticloadbalancingv2-truststorerevocation-truststorerevocation-numberofrevokedentries
-	NumberOfRevokedEntries *int `json:"NumberOfRevokedEntries,omitempty"`
+	NumberOfRevokedEntries *int64 `json:"NumberOfRevokedEntries,omitempty"`
 
 	// RevocationId AWS CloudFormation Property
 	// Required: false

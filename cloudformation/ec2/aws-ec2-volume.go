@@ -20,9 +20,14 @@ type Volume struct {
 	AutoEnableIO *bool `json:"AutoEnableIO,omitempty"`
 
 	// AvailabilityZone AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html#cfn-ec2-volume-availabilityzone
-	AvailabilityZone string `json:"AvailabilityZone"`
+	AvailabilityZone *string `json:"AvailabilityZone,omitempty"`
+
+	// AvailabilityZoneId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html#cfn-ec2-volume-availabilityzoneid
+	AvailabilityZoneId *string `json:"AvailabilityZoneId,omitempty"`
 
 	// Encrypted AWS CloudFormation Property
 	// Required: false
@@ -58,6 +63,11 @@ type Volume struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html#cfn-ec2-volume-snapshotid
 	SnapshotId *string `json:"SnapshotId,omitempty"`
+
+	// SourceVolumeId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html#cfn-ec2-volume-sourcevolumeid
+	SourceVolumeId *string `json:"SourceVolumeId,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

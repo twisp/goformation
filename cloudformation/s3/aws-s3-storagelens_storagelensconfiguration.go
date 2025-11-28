@@ -30,6 +30,11 @@ type StorageLens_StorageLensConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensconfiguration.html#cfn-s3-storagelens-storagelensconfiguration-exclude
 	Exclude *StorageLens_BucketsAndRegions `json:"Exclude,omitempty"`
 
+	// ExpandedPrefixesDataExport AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensconfiguration.html#cfn-s3-storagelens-storagelensconfiguration-expandedprefixesdataexport
+	ExpandedPrefixesDataExport *StorageLens_StorageLensExpandedPrefixesDataExport `json:"ExpandedPrefixesDataExport,omitempty"`
+
 	// Id AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensconfiguration.html#cfn-s3-storagelens-storagelensconfiguration-id
@@ -44,6 +49,11 @@ type StorageLens_StorageLensConfiguration struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensconfiguration.html#cfn-s3-storagelens-storagelensconfiguration-isenabled
 	IsEnabled bool `json:"IsEnabled"`
+
+	// PrefixDelimiter AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensconfiguration.html#cfn-s3-storagelens-storagelensconfiguration-prefixdelimiter
+	PrefixDelimiter *string `json:"PrefixDelimiter,omitempty"`
 
 	// StorageLensArn AWS CloudFormation Property
 	// Required: false

@@ -19,6 +19,11 @@ type Function struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-architectures
 	Architectures []string `json:"Architectures,omitempty"`
 
+	// CapacityProviderConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-capacityproviderconfig
+	CapacityProviderConfig *Function_CapacityProviderConfig `json:"CapacityProviderConfig,omitempty"`
+
 	// Code AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code
@@ -39,6 +44,11 @@ type Function struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-description
 	Description *string `json:"Description,omitempty"`
 
+	// DurableConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-durableconfig
+	DurableConfig *Function_DurableConfig `json:"DurableConfig,omitempty"`
+
 	// Environment AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment
@@ -58,6 +68,11 @@ type Function struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-functionname
 	FunctionName *string `json:"FunctionName,omitempty"`
+
+	// FunctionScalingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-functionscalingconfig
+	FunctionScalingConfig *Function_FunctionScalingConfig `json:"FunctionScalingConfig,omitempty"`
 
 	// Handler AWS CloudFormation Property
 	// Required: false
@@ -94,6 +109,11 @@ type Function struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-packagetype
 	PackageType *string `json:"PackageType,omitempty"`
 
+	// PublishToLatestPublished AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-publishtolatestpublished
+	PublishToLatestPublished *bool `json:"PublishToLatestPublished,omitempty"`
+
 	// RecursiveLoop AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-recursiveloop
@@ -128,6 +148,11 @@ type Function struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// TenancyConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tenancyconfig
+	TenancyConfig *Function_TenancyConfig `json:"TenancyConfig,omitempty"`
 
 	// Timeout AWS CloudFormation Property
 	// Required: false

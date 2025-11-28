@@ -21,9 +21,9 @@ type DataSet_RelationalTable struct {
 	DataSourceArn string `json:"DataSourceArn"`
 
 	// InputColumns AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-relationaltable.html#cfn-quicksight-dataset-relationaltable-inputcolumns
-	InputColumns []DataSet_InputColumn `json:"InputColumns,omitempty"`
+	InputColumns []DataSet_InputColumn `json:"InputColumns"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

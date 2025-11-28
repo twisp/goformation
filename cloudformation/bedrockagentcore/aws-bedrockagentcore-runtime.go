@@ -38,6 +38,11 @@ type Runtime struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-environmentvariables
 	EnvironmentVariables map[string]string `json:"EnvironmentVariables,omitempty"`
 
+	// LifecycleConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-lifecycleconfiguration
+	LifecycleConfiguration *Runtime_LifecycleConfiguration `json:"LifecycleConfiguration,omitempty"`
+
 	// NetworkConfiguration AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-networkconfiguration
@@ -47,6 +52,11 @@ type Runtime struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-protocolconfiguration
 	ProtocolConfiguration *string `json:"ProtocolConfiguration,omitempty"`
+
+	// RequestHeaderConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-requestheaderconfiguration
+	RequestHeaderConfiguration *Runtime_RequestHeaderConfiguration `json:"RequestHeaderConfiguration,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: true

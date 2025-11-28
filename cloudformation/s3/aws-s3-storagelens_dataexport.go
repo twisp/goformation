@@ -20,6 +20,11 @@ type StorageLens_DataExport struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-s3bucketdestination
 	S3BucketDestination *StorageLens_S3BucketDestination `json:"S3BucketDestination,omitempty"`
 
+	// StorageLensTableDestination AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-dataexport.html#cfn-s3-storagelens-dataexport-storagelenstabledestination
+	StorageLensTableDestination *StorageLens_StorageLensTableDestination `json:"StorageLensTableDestination,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

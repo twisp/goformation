@@ -20,6 +20,16 @@ type VPCEndpoint_DnsOptionsSpecification struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpcendpoint-dnsoptionsspecification.html#cfn-ec2-vpcendpoint-dnsoptionsspecification-privatednsonlyforinboundresolverendpoint
 	PrivateDnsOnlyForInboundResolverEndpoint *string `json:"PrivateDnsOnlyForInboundResolverEndpoint,omitempty"`
 
+	// PrivateDnsPreference AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpcendpoint-dnsoptionsspecification.html#cfn-ec2-vpcendpoint-dnsoptionsspecification-privatednspreference
+	PrivateDnsPreference *string `json:"PrivateDnsPreference,omitempty"`
+
+	// PrivateDnsSpecifiedDomains AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpcendpoint-dnsoptionsspecification.html#cfn-ec2-vpcendpoint-dnsoptionsspecification-privatednsspecifieddomains
+	PrivateDnsSpecifiedDomains []string `json:"PrivateDnsSpecifiedDomains,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

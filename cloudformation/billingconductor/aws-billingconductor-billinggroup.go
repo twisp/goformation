@@ -35,9 +35,9 @@ type BillingGroup struct {
 	Name string `json:"Name"`
 
 	// PrimaryAccountId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-billinggroup.html#cfn-billingconductor-billinggroup-primaryaccountid
-	PrimaryAccountId string `json:"PrimaryAccountId"`
+	PrimaryAccountId *string `json:"PrimaryAccountId,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

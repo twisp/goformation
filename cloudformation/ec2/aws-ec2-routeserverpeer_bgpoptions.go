@@ -13,7 +13,7 @@ type RouteServerPeer_BgpOptions struct {
 	// PeerAsn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-routeserverpeer-bgpoptions.html#cfn-ec2-routeserverpeer-bgpoptions-peerasn
-	PeerAsn *int `json:"PeerAsn,omitempty"`
+	PeerAsn *int64 `json:"PeerAsn,omitempty"`
 
 	// PeerLivenessDetection AWS CloudFormation Property
 	// Required: false

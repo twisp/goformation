@@ -13,7 +13,7 @@ type Application_CheckpointConfiguration struct {
 	// CheckpointInterval AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointinterval
-	CheckpointInterval *int `json:"CheckpointInterval,omitempty"`
+	CheckpointInterval *int64 `json:"CheckpointInterval,omitempty"`
 
 	// CheckpointingEnabled AWS CloudFormation Property
 	// Required: false
@@ -28,7 +28,7 @@ type Application_CheckpointConfiguration struct {
 	// MinPauseBetweenCheckpoints AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html#cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints
-	MinPauseBetweenCheckpoints *int `json:"MinPauseBetweenCheckpoints,omitempty"`
+	MinPauseBetweenCheckpoints *int64 `json:"MinPauseBetweenCheckpoints,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

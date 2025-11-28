@@ -30,10 +30,20 @@ type Function_SQSEvent struct {
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
 	MaximumBatchingWindowInSeconds *int `json:"MaximumBatchingWindowInSeconds,omitempty"`
 
+	// ProvisionedPollerConfig AWS CloudFormation Property
+	// Required: false
+	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
+	ProvisionedPollerConfig *Function_ProvisionedPollerConfig `json:"ProvisionedPollerConfig,omitempty"`
+
 	// Queue AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
 	Queue string `json:"Queue"`
+
+	// ScalingConfig AWS CloudFormation Property
+	// Required: false
+	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
+	ScalingConfig *Function_ScalingConfig `json:"ScalingConfig,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

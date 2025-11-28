@@ -1011,6 +1011,18 @@
           "Required": false,
           "PrimitiveType": "Integer",
           "UpdateType": "Immutable"
+        },
+        "ProvisionedPollerConfig": {
+          "Documentation": "https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs",
+          "Required": false,
+          "Type": "ProvisionedPollerConfig",
+          "UpdateType": "Immutable"
+        },
+        "ScalingConfig": {
+          "Documentation": "https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs",
+          "Required": false,
+          "Type": "ScalingConfig",
+          "UpdateType": "Immutable"
         }
       }
     },
@@ -1432,6 +1444,40 @@
           "Documentation": "https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#alexaskill",
           "Required": false,
           "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Serverless::Function.ProvisionedPollerConfig": {
+      "Documentation": "https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md",
+      "Properties": {
+        "MaximumPollers": {
+          "Documentation": "https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md",
+          "Required": false,
+          "PrimitiveType": "Integer",
+          "UpdateType": "Immutable"
+        },
+        "MinimumPollers": {
+          "Documentation": "https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md",
+          "Required": false,
+          "PrimitiveType": "Integer",
+          "UpdateType": "Immutable"
+        },
+        "PollerGroupName": {
+          "Documentation": "https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md",
+          "Required": false,
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        }
+      }
+    },
+    "AWS::Serverless::Function.ScalingConfig": {
+      "Documentation": "https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md",
+      "Properties": {
+        "MaximumConcurrency": {
+          "Documentation": "https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md",
+          "Required": false,
+          "PrimitiveType": "Integer",
           "UpdateType": "Immutable"
         }
       }
