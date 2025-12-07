@@ -28,6 +28,11 @@ type LogicallyAirGappedBackupVault struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-backupvaulttags
 	BackupVaultTags map[string]string `json:"BackupVaultTags,omitempty"`
 
+	// EncryptionKeyArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-encryptionkeyarn
+	EncryptionKeyArn *string `json:"EncryptionKeyArn,omitempty"`
+
 	// MaxRetentionDays AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-maxretentiondays
@@ -37,6 +42,11 @@ type LogicallyAirGappedBackupVault struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-minretentiondays
 	MinRetentionDays int `json:"MinRetentionDays"`
+
+	// MpaApprovalTeamArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-logicallyairgappedbackupvault.html#cfn-backup-logicallyairgappedbackupvault-mpaapprovalteamarn
+	MpaApprovalTeamArn *string `json:"MpaApprovalTeamArn,omitempty"`
 
 	// Notifications AWS CloudFormation Property
 	// Required: false

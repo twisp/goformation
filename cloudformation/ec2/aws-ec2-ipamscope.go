@@ -19,6 +19,11 @@ type IPAMScope struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamscope.html#cfn-ec2-ipamscope-description
 	Description *string `json:"Description,omitempty"`
 
+	// ExternalAuthorityConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamscope.html#cfn-ec2-ipamscope-externalauthorityconfiguration
+	ExternalAuthorityConfiguration *IPAMScope_IpamScopeExternalAuthorityConfiguration `json:"ExternalAuthorityConfiguration,omitempty"`
+
 	// IpamId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamscope.html#cfn-ec2-ipamscope-ipamid

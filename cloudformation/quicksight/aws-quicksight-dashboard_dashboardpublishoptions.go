@@ -55,6 +55,11 @@ type Dashboard_DashboardPublishOptions struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-exportwithhiddenfieldsoption
 	ExportWithHiddenFieldsOption *Dashboard_ExportWithHiddenFieldsOption `json:"ExportWithHiddenFieldsOption,omitempty"`
 
+	// QuickSuiteActionsOption AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-quicksuiteactionsoption
+	QuickSuiteActionsOption *Dashboard_QuickSuiteActionsOption `json:"QuickSuiteActionsOption,omitempty"`
+
 	// SheetControlsOption AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html#cfn-quicksight-dashboard-dashboardpublishoptions-sheetcontrolsoption

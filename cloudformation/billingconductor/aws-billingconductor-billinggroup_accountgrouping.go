@@ -16,9 +16,14 @@ type BillingGroup_AccountGrouping struct {
 	AutoAssociate *bool `json:"AutoAssociate,omitempty"`
 
 	// LinkedAccountIds AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-billinggroup-accountgrouping.html#cfn-billingconductor-billinggroup-accountgrouping-linkedaccountids
-	LinkedAccountIds []string `json:"LinkedAccountIds"`
+	LinkedAccountIds []string `json:"LinkedAccountIds,omitempty"`
+
+	// ResponsibilityTransferArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-billinggroup-accountgrouping.html#cfn-billingconductor-billinggroup-accountgrouping-responsibilitytransferarn
+	ResponsibilityTransferArn *string `json:"ResponsibilityTransferArn,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

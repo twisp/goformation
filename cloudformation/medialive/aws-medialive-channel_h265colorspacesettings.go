@@ -25,6 +25,11 @@ type Channel_H265ColorSpaceSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265colorspacesettings.html#cfn-medialive-channel-h265colorspacesettings-hdr10settings
 	Hdr10Settings *Channel_Hdr10Settings `json:"Hdr10Settings,omitempty"`
 
+	// Hlg2020Settings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265colorspacesettings.html#cfn-medialive-channel-h265colorspacesettings-hlg2020settings
+	Hlg2020Settings *Channel_Hlg2020Settings `json:"Hlg2020Settings,omitempty"`
+
 	// Rec601Settings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265colorspacesettings.html#cfn-medialive-channel-h265colorspacesettings-rec601settings

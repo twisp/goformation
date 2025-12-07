@@ -31,7 +31,7 @@ type ConsumableResource struct {
 	// TotalQuantity AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-consumableresource.html#cfn-batch-consumableresource-totalquantity
-	TotalQuantity int `json:"TotalQuantity"`
+	TotalQuantity int64 `json:"TotalQuantity"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

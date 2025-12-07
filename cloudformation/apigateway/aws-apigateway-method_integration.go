@@ -50,6 +50,11 @@ type Method_Integration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integration.html#cfn-apigateway-method-integration-integrationresponses
 	IntegrationResponses []Method_IntegrationResponse `json:"IntegrationResponses,omitempty"`
 
+	// IntegrationTarget AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integration.html#cfn-apigateway-method-integration-integrationtarget
+	IntegrationTarget *string `json:"IntegrationTarget,omitempty"`
+
 	// PassthroughBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integration.html#cfn-apigateway-method-integration-passthroughbehavior
@@ -64,6 +69,11 @@ type Method_Integration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integration.html#cfn-apigateway-method-integration-requesttemplates
 	RequestTemplates map[string]string `json:"RequestTemplates,omitempty"`
+
+	// ResponseTransferMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integration.html#cfn-apigateway-method-integration-responsetransfermode
+	ResponseTransferMode *string `json:"ResponseTransferMode,omitempty"`
 
 	// TimeoutInMillis AWS CloudFormation Property
 	// Required: false

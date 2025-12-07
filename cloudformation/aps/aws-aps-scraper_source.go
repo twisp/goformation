@@ -11,9 +11,14 @@ import (
 type Scraper_Source struct {
 
 	// EksConfiguration AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-source.html#cfn-aps-scraper-source-eksconfiguration
-	EksConfiguration *Scraper_EksConfiguration `json:"EksConfiguration"`
+	EksConfiguration *Scraper_EksConfiguration `json:"EksConfiguration,omitempty"`
+
+	// VpcConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-source.html#cfn-aps-scraper-source-vpcconfiguration
+	VpcConfiguration *Scraper_VpcConfiguration `json:"VpcConfiguration,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

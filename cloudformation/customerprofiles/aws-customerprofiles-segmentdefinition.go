@@ -35,9 +35,14 @@ type SegmentDefinition struct {
 	SegmentDefinitionName string `json:"SegmentDefinitionName"`
 
 	// SegmentGroups AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-segmentdefinition.html#cfn-customerprofiles-segmentdefinition-segmentgroups
-	SegmentGroups *SegmentDefinition_SegmentGroup `json:"SegmentGroups"`
+	SegmentGroups *SegmentDefinition_SegmentGroup `json:"SegmentGroups,omitempty"`
+
+	// SegmentSqlQuery AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-segmentdefinition.html#cfn-customerprofiles-segmentdefinition-segmentsqlquery
+	SegmentSqlQuery *string `json:"SegmentSqlQuery,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

@@ -19,6 +19,11 @@ type DeliveryDestination struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-deliverydestinationpolicy
 	DeliveryDestinationPolicy *DeliveryDestination_DestinationPolicy `json:"DeliveryDestinationPolicy,omitempty"`
 
+	// DeliveryDestinationType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-deliverydestinationtype
+	DeliveryDestinationType *string `json:"DeliveryDestinationType,omitempty"`
+
 	// DestinationResourceArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-destinationresourcearn

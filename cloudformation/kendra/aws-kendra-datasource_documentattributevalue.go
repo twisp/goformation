@@ -18,7 +18,7 @@ type DataSource_DocumentAttributeValue struct {
 	// LongValue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-documentattributevalue.html#cfn-kendra-datasource-documentattributevalue-longvalue
-	LongValue *int `json:"LongValue,omitempty"`
+	LongValue *int64 `json:"LongValue,omitempty"`
 
 	// StringListValue AWS CloudFormation Property
 	// Required: false

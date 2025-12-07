@@ -79,14 +79,24 @@ type FlowOutput struct {
 	Port *int `json:"Port,omitempty"`
 
 	// Protocol AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-protocol
-	Protocol string `json:"Protocol"`
+	Protocol *string `json:"Protocol,omitempty"`
 
 	// RemoteId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-remoteid
 	RemoteId *string `json:"RemoteId,omitempty"`
+
+	// RouterIntegrationState AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-routerintegrationstate
+	RouterIntegrationState *string `json:"RouterIntegrationState,omitempty"`
+
+	// RouterIntegrationTransitEncryption AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-routerintegrationtransitencryption
+	RouterIntegrationTransitEncryption *FlowOutput_FlowTransitEncryption `json:"RouterIntegrationTransitEncryption,omitempty"`
 
 	// SmoothingLatency AWS CloudFormation Property
 	// Required: false

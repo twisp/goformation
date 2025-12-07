@@ -27,7 +27,7 @@ type LocationHDFS struct {
 	// BlockSize AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-blocksize
-	BlockSize *int `json:"BlockSize,omitempty"`
+	BlockSize *int64 `json:"BlockSize,omitempty"`
 
 	// KerberosKeytab AWS CloudFormation Property
 	// Required: false
@@ -62,7 +62,7 @@ type LocationHDFS struct {
 	// ReplicationFactor AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-replicationfactor
-	ReplicationFactor *int `json:"ReplicationFactor,omitempty"`
+	ReplicationFactor *int64 `json:"ReplicationFactor,omitempty"`
 
 	// SimpleUser AWS CloudFormation Property
 	// Required: false

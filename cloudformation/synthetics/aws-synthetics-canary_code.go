@@ -10,15 +10,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html
 type Canary_Code struct {
 
+	// BlueprintTypes AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-blueprinttypes
+	BlueprintTypes []string `json:"BlueprintTypes,omitempty"`
+
 	// Dependencies AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-dependencies
 	Dependencies []Canary_Dependency `json:"Dependencies,omitempty"`
 
 	// Handler AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html#cfn-synthetics-canary-code-handler
-	Handler string `json:"Handler"`
+	Handler *string `json:"Handler,omitempty"`
 
 	// S3Bucket AWS CloudFormation Property
 	// Required: false

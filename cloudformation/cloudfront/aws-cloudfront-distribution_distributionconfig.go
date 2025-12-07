@@ -35,6 +35,11 @@ type Distribution_DistributionConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-comment
 	Comment *string `json:"Comment,omitempty"`
 
+	// ConnectionFunctionAssociation AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-connectionfunctionassociation
+	ConnectionFunctionAssociation *Distribution_ConnectionFunctionAssociation `json:"ConnectionFunctionAssociation,omitempty"`
+
 	// ConnectionMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-connectionmode
@@ -124,6 +129,11 @@ type Distribution_DistributionConfig struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-viewercertificate
 	ViewerCertificate *Distribution_ViewerCertificate `json:"ViewerCertificate,omitempty"`
+
+	// ViewerMtlsConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-viewermtlsconfig
+	ViewerMtlsConfig *Distribution_ViewerMtlsConfig `json:"ViewerMtlsConfig,omitempty"`
 
 	// WebACLId AWS CloudFormation Property
 	// Required: false

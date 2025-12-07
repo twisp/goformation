@@ -17,7 +17,7 @@ type TransitGateway struct {
 	// AmazonSideAsn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-amazonsideasn
-	AmazonSideAsn *int `json:"AmazonSideAsn,omitempty"`
+	AmazonSideAsn *int64 `json:"AmazonSideAsn,omitempty"`
 
 	// AssociationDefaultRouteTableId AWS CloudFormation Property
 	// Required: false
@@ -48,6 +48,11 @@ type TransitGateway struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-dnssupport
 	DnsSupport *string `json:"DnsSupport,omitempty"`
+
+	// EncryptionSupport AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-encryptionsupport
+	EncryptionSupport *string `json:"EncryptionSupport,omitempty"`
 
 	// MulticastSupport AWS CloudFormation Property
 	// Required: false

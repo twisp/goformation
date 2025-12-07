@@ -58,6 +58,11 @@ type DataLakeSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-parameters
 	Parameters interface{} `json:"Parameters,omitempty"`
 
+	// ReadOnlyAdmins AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-readonlyadmins
+	ReadOnlyAdmins *DataLakeSettings_ReadOnlyAdmins `json:"ReadOnlyAdmins,omitempty"`
+
 	// TrustedResourceOwners AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-trustedresourceowners

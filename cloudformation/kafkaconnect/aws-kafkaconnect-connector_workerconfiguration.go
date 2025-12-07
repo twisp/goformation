@@ -13,7 +13,7 @@ type Connector_WorkerConfiguration struct {
 	// Revision AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html#cfn-kafkaconnect-connector-workerconfiguration-revision
-	Revision int `json:"Revision"`
+	Revision int64 `json:"Revision"`
 
 	// WorkerConfigurationArn AWS CloudFormation Property
 	// Required: true

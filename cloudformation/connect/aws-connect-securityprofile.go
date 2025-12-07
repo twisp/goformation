@@ -34,6 +34,11 @@ type SecurityProfile struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-description
 	Description *string `json:"Description,omitempty"`
 
+	// GranularAccessControlConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-granularaccesscontrolconfiguration
+	GranularAccessControlConfiguration *SecurityProfile_GranularAccessControlConfiguration `json:"GranularAccessControlConfiguration,omitempty"`
+
 	// HierarchyRestrictedResources AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-hierarchyrestrictedresources

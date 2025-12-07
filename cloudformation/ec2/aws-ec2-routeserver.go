@@ -17,7 +17,7 @@ type RouteServer struct {
 	// AmazonSideAsn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routeserver.html#cfn-ec2-routeserver-amazonsideasn
-	AmazonSideAsn int `json:"AmazonSideAsn"`
+	AmazonSideAsn int64 `json:"AmazonSideAsn"`
 
 	// PersistRoutes AWS CloudFormation Property
 	// Required: false
@@ -27,7 +27,7 @@ type RouteServer struct {
 	// PersistRoutesDuration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routeserver.html#cfn-ec2-routeserver-persistroutesduration
-	PersistRoutesDuration *int `json:"PersistRoutesDuration,omitempty"`
+	PersistRoutesDuration *int64 `json:"PersistRoutesDuration,omitempty"`
 
 	// SnsNotificationsEnabled AWS CloudFormation Property
 	// Required: false

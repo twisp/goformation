@@ -74,6 +74,11 @@ type VPNConnection struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-transporttransitgatewayattachmentid
 	TransportTransitGatewayAttachmentId *string `json:"TransportTransitGatewayAttachmentId,omitempty"`
 
+	// TunnelBandwidth AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-tunnelbandwidth
+	TunnelBandwidth *string `json:"TunnelBandwidth,omitempty"`
+
 	// TunnelInsideIpVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-tunnelinsideipversion
@@ -83,6 +88,11 @@ type VPNConnection struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-type
 	Type string `json:"Type"`
+
+	// VpnConcentratorId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html#cfn-ec2-vpnconnection-vpnconcentratorid
+	VpnConcentratorId *string `json:"VpnConcentratorId,omitempty"`
 
 	// VpnGatewayId AWS CloudFormation Property
 	// Required: false

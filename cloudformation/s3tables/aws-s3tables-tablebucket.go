@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // TableBucket AWS CloudFormation Resource (AWS::S3Tables::TableBucket)
@@ -18,10 +19,20 @@ type TableBucket struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-encryptionconfiguration
 	EncryptionConfiguration *TableBucket_EncryptionConfiguration `json:"EncryptionConfiguration,omitempty"`
 
+	// MetricsConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-metricsconfiguration
+	MetricsConfiguration *TableBucket_MetricsConfiguration `json:"MetricsConfiguration,omitempty"`
+
 	// TableBucketName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-tablebucketname
 	TableBucketName string `json:"TableBucketName"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// UnreferencedFileRemoval AWS CloudFormation Property
 	// Required: false

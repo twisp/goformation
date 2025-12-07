@@ -42,7 +42,7 @@ type LocalGatewayVirtualInterface struct {
 	// PeerBgpAsnExtended AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayvirtualinterface.html#cfn-ec2-localgatewayvirtualinterface-peerbgpasnextended
-	PeerBgpAsnExtended *int `json:"PeerBgpAsnExtended,omitempty"`
+	PeerBgpAsnExtended *int64 `json:"PeerBgpAsnExtended,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

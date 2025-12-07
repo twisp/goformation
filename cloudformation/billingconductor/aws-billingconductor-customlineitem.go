@@ -29,6 +29,11 @@ type CustomLineItem struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-customlineitem.html#cfn-billingconductor-customlineitem-billingperiodrange
 	BillingPeriodRange *CustomLineItem_BillingPeriodRange `json:"BillingPeriodRange,omitempty"`
 
+	// ComputationRule AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-customlineitem.html#cfn-billingconductor-customlineitem-computationrule
+	ComputationRule *string `json:"ComputationRule,omitempty"`
+
 	// CustomLineItemChargeDetails AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-customlineitem.html#cfn-billingconductor-customlineitem-customlineitemchargedetails
@@ -43,6 +48,11 @@ type CustomLineItem struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-customlineitem.html#cfn-billingconductor-customlineitem-name
 	Name string `json:"Name"`
+
+	// PresentationDetails AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-customlineitem.html#cfn-billingconductor-customlineitem-presentationdetails
+	PresentationDetails *CustomLineItem_PresentationDetails `json:"PresentationDetails,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

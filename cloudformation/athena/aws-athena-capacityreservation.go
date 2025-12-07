@@ -32,7 +32,7 @@ type CapacityReservation struct {
 	// TargetDpus AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-capacityreservation.html#cfn-athena-capacityreservation-targetdpus
-	TargetDpus int `json:"TargetDpus"`
+	TargetDpus int64 `json:"TargetDpus"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

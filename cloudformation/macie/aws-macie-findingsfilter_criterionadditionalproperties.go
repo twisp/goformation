@@ -18,22 +18,22 @@ type FindingsFilter_CriterionAdditionalProperties struct {
 	// Gt AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-gt
-	Gt *int `json:"Gt,omitempty"`
+	Gt *int64 `json:"Gt,omitempty"`
 
 	// Gte AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-gte
-	Gte *int `json:"Gte,omitempty"`
+	Gte *int64 `json:"Gte,omitempty"`
 
 	// Lt AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-lt
-	Lt *int `json:"Lt,omitempty"`
+	Lt *int64 `json:"Lt,omitempty"`
 
 	// Lte AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-criterionadditionalproperties.html#cfn-macie-findingsfilter-criterionadditionalproperties-lte
-	Lte *int `json:"Lte,omitempty"`
+	Lte *int64 `json:"Lte,omitempty"`
 
 	// Neq AWS CloudFormation Property
 	// Required: false

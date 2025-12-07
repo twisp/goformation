@@ -15,6 +15,21 @@ type DataSet_FilterOperation struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-filteroperation.html#cfn-quicksight-dataset-filteroperation-conditionexpression
 	ConditionExpression *string `json:"ConditionExpression,omitempty"`
 
+	// DateFilterCondition AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-filteroperation.html#cfn-quicksight-dataset-filteroperation-datefiltercondition
+	DateFilterCondition *DataSet_DataSetDateFilterCondition `json:"DateFilterCondition,omitempty"`
+
+	// NumericFilterCondition AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-filteroperation.html#cfn-quicksight-dataset-filteroperation-numericfiltercondition
+	NumericFilterCondition *DataSet_DataSetNumericFilterCondition `json:"NumericFilterCondition,omitempty"`
+
+	// StringFilterCondition AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-filteroperation.html#cfn-quicksight-dataset-filteroperation-stringfiltercondition
+	StringFilterCondition *DataSet_DataSetStringFilterCondition `json:"StringFilterCondition,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

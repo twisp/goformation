@@ -29,9 +29,9 @@ type ImageRecipe struct {
 	BlockDeviceMappings []ImageRecipe_InstanceBlockDeviceMapping `json:"BlockDeviceMappings,omitempty"`
 
 	// Components AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html#cfn-imagebuilder-imagerecipe-components
-	Components []ImageRecipe_ComponentConfiguration `json:"Components"`
+	Components []ImageRecipe_ComponentConfiguration `json:"Components,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false

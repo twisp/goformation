@@ -18,6 +18,16 @@ type MetricFilter struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-applyontransformedlogs
 	ApplyOnTransformedLogs *bool `json:"ApplyOnTransformedLogs,omitempty"`
 
+	// EmitSystemFieldDimensions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-emitsystemfielddimensions
+	EmitSystemFieldDimensions []string `json:"EmitSystemFieldDimensions,omitempty"`
+
+	// FieldSelectionCriteria AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-fieldselectioncriteria
+	FieldSelectionCriteria *string `json:"FieldSelectionCriteria,omitempty"`
+
 	// FilterName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-logs-metricfilter-filtername

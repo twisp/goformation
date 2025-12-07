@@ -13,12 +13,12 @@ type StorageLensGroup_MatchObjectSize struct {
 	// BytesGreaterThan AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelensgroup-matchobjectsize.html#cfn-s3-storagelensgroup-matchobjectsize-bytesgreaterthan
-	BytesGreaterThan *int `json:"BytesGreaterThan,omitempty"`
+	BytesGreaterThan *int64 `json:"BytesGreaterThan,omitempty"`
 
 	// BytesLessThan AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelensgroup-matchobjectsize.html#cfn-s3-storagelensgroup-matchobjectsize-byteslessthan
-	BytesLessThan *int `json:"BytesLessThan,omitempty"`
+	BytesLessThan *int64 `json:"BytesLessThan,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

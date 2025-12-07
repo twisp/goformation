@@ -13,7 +13,7 @@ type DeploymentConfig_ZonalConfig struct {
 	// FirstZoneMonitorDurationInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-zonalconfig.html#cfn-codedeploy-deploymentconfig-zonalconfig-firstzonemonitordurationinseconds
-	FirstZoneMonitorDurationInSeconds *int `json:"FirstZoneMonitorDurationInSeconds,omitempty"`
+	FirstZoneMonitorDurationInSeconds *int64 `json:"FirstZoneMonitorDurationInSeconds,omitempty"`
 
 	// MinimumHealthyHostsPerZone AWS CloudFormation Property
 	// Required: false
@@ -23,7 +23,7 @@ type DeploymentConfig_ZonalConfig struct {
 	// MonitorDurationInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-zonalconfig.html#cfn-codedeploy-deploymentconfig-zonalconfig-monitordurationinseconds
-	MonitorDurationInSeconds *int `json:"MonitorDurationInSeconds,omitempty"`
+	MonitorDurationInSeconds *int64 `json:"MonitorDurationInSeconds,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -23,12 +23,12 @@ type Filter_Condition struct {
 	// GreaterThan AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-greaterthan
-	GreaterThan *int `json:"GreaterThan,omitempty"`
+	GreaterThan *int64 `json:"GreaterThan,omitempty"`
 
 	// GreaterThanOrEqual AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-greaterthanorequal
-	GreaterThanOrEqual *int `json:"GreaterThanOrEqual,omitempty"`
+	GreaterThanOrEqual *int64 `json:"GreaterThanOrEqual,omitempty"`
 
 	// Gt AWS CloudFormation Property
 	// Required: false
@@ -43,12 +43,12 @@ type Filter_Condition struct {
 	// LessThan AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-lessthan
-	LessThan *int `json:"LessThan,omitempty"`
+	LessThan *int64 `json:"LessThan,omitempty"`
 
 	// LessThanOrEqual AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-lessthanorequal
-	LessThanOrEqual *int `json:"LessThanOrEqual,omitempty"`
+	LessThanOrEqual *int64 `json:"LessThanOrEqual,omitempty"`
 
 	// Lt AWS CloudFormation Property
 	// Required: false

@@ -22,7 +22,7 @@ type LocalGatewayVirtualInterfaceGroup struct {
 	// LocalBgpAsnExtended AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayvirtualinterfacegroup.html#cfn-ec2-localgatewayvirtualinterfacegroup-localbgpasnextended
-	LocalBgpAsnExtended *int `json:"LocalBgpAsnExtended,omitempty"`
+	LocalBgpAsnExtended *int64 `json:"LocalBgpAsnExtended,omitempty"`
 
 	// LocalGatewayId AWS CloudFormation Property
 	// Required: true

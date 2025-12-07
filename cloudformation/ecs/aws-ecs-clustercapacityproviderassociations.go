@@ -14,9 +14,9 @@ import (
 type ClusterCapacityProviderAssociations struct {
 
 	// CapacityProviders AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-clustercapacityproviderassociations.html#cfn-ecs-clustercapacityproviderassociations-capacityproviders
-	CapacityProviders []string `json:"CapacityProviders"`
+	CapacityProviders []string `json:"CapacityProviders,omitempty"`
 
 	// Cluster AWS CloudFormation Property
 	// Required: true

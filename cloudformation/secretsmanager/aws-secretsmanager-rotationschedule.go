@@ -13,6 +13,16 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html
 type RotationSchedule struct {
 
+	// ExternalSecretRotationMetadata AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-externalsecretrotationmetadata
+	ExternalSecretRotationMetadata []RotationSchedule_ExternalSecretRotationMetadataItem `json:"ExternalSecretRotationMetadata,omitempty"`
+
+	// ExternalSecretRotationRoleArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-externalsecretrotationrolearn
+	ExternalSecretRotationRoleArn *string `json:"ExternalSecretRotationRoleArn,omitempty"`
+
 	// HostedRotationLambda AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda
