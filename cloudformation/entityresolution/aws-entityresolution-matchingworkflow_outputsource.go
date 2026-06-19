@@ -15,6 +15,11 @@ type MatchingWorkflow_OutputSource struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputsource.html#cfn-entityresolution-matchingworkflow-outputsource-applynormalization
 	ApplyNormalization *bool `json:"ApplyNormalization,omitempty"`
 
+	// CustomerProfilesIntegrationConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputsource.html#cfn-entityresolution-matchingworkflow-outputsource-customerprofilesintegrationconfig
+	CustomerProfilesIntegrationConfig *MatchingWorkflow_CustomerProfilesIntegrationConfig `json:"CustomerProfilesIntegrationConfig,omitempty"`
+
 	// KMSArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputsource.html#cfn-entityresolution-matchingworkflow-outputsource-kmsarn
@@ -26,9 +31,9 @@ type MatchingWorkflow_OutputSource struct {
 	Output []MatchingWorkflow_OutputAttribute `json:"Output"`
 
 	// OutputS3Path AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-outputsource.html#cfn-entityresolution-matchingworkflow-outputsource-outputs3path
-	OutputS3Path string `json:"OutputS3Path"`
+	OutputS3Path *string `json:"OutputS3Path,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

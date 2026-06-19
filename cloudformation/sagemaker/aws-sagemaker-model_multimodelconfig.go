@@ -7,12 +7,12 @@ import (
 )
 
 // Model_MultiModelConfig AWS CloudFormation Resource (AWS::SageMaker::Model.MultiModelConfig)
-// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-multimodelconfig.html
+// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html
 type Model_MultiModelConfig struct {
 
 	// ModelCacheSetting AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-multimodelconfig.html#cfn-sagemaker-model-containerdefinition-multimodelconfig-modelcachesetting
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html#cfn-sagemaker-model-multimodelconfig-modelcachesetting
 	ModelCacheSetting *string `json:"ModelCacheSetting,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy

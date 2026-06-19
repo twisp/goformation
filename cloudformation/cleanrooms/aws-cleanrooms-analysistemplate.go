@@ -59,6 +59,11 @@ type AnalysisTemplate struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-sourcemetadata
 	SourceMetadata *AnalysisTemplate_AnalysisSourceMetadata `json:"SourceMetadata,omitempty"`
 
+	// SyntheticDataParameters AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-syntheticdataparameters
+	SyntheticDataParameters *AnalysisTemplate_SyntheticDataParameters `json:"SyntheticDataParameters,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-analysistemplate.html#cfn-cleanrooms-analysistemplate-tags

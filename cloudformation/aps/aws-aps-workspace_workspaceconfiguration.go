@@ -15,10 +15,20 @@ type Workspace_WorkspaceConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-workspace-workspaceconfiguration.html#cfn-aps-workspace-workspaceconfiguration-limitsperlabelsets
 	LimitsPerLabelSets []Workspace_LimitsPerLabelSet `json:"LimitsPerLabelSets,omitempty"`
 
+	// OutOfOrderTimeWindowInSeconds AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-workspace-workspaceconfiguration.html#cfn-aps-workspace-workspaceconfiguration-outofordertimewindowinseconds
+	OutOfOrderTimeWindowInSeconds *int `json:"OutOfOrderTimeWindowInSeconds,omitempty"`
+
 	// RetentionPeriodInDays AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-workspace-workspaceconfiguration.html#cfn-aps-workspace-workspaceconfiguration-retentionperiodindays
 	RetentionPeriodInDays *int `json:"RetentionPeriodInDays,omitempty"`
+
+	// RuleQueryOffsetInSeconds AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-workspace-workspaceconfiguration.html#cfn-aps-workspace-workspaceconfiguration-rulequeryoffsetinseconds
+	RuleQueryOffsetInSeconds *int `json:"RuleQueryOffsetInSeconds,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -14,6 +14,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html
 type HoursOfOperation struct {
 
+	// ChildHoursOfOperations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-childhoursofoperations
+	ChildHoursOfOperations []HoursOfOperation_HoursOfOperationsIdentifier `json:"ChildHoursOfOperations,omitempty"`
+
 	// Config AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-config
@@ -38,6 +43,11 @@ type HoursOfOperation struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-name
 	Name string `json:"Name"`
+
+	// ParentHoursOfOperations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-parenthoursofoperations
+	ParentHoursOfOperations []HoursOfOperation_HoursOfOperationsIdentifier `json:"ParentHoursOfOperations,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

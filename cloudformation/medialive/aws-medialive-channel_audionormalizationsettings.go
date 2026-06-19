@@ -20,6 +20,16 @@ type Channel_AudioNormalizationSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html#cfn-medialive-channel-audionormalizationsettings-algorithmcontrol
 	AlgorithmControl *string `json:"AlgorithmControl,omitempty"`
 
+	// PeakCalculation AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html#cfn-medialive-channel-audionormalizationsettings-peakcalculation
+	PeakCalculation *string `json:"PeakCalculation,omitempty"`
+
+	// PeakLimiterThreshold AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html#cfn-medialive-channel-audionormalizationsettings-peaklimiterthreshold
+	PeakLimiterThreshold *float64 `json:"PeakLimiterThreshold,omitempty"`
+
 	// TargetLkfs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html#cfn-medialive-channel-audionormalizationsettings-targetlkfs

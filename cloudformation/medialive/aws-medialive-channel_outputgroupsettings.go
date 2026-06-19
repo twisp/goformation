@@ -30,6 +30,11 @@ type Channel_OutputGroupSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-hlsgroupsettings
 	HlsGroupSettings *Channel_HlsGroupSettings `json:"HlsGroupSettings,omitempty"`
 
+	// MediaConnectRouterGroupSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-mediaconnectroutergroupsettings
+	MediaConnectRouterGroupSettings *Channel_MediaConnectRouterGroupSettings `json:"MediaConnectRouterGroupSettings,omitempty"`
+
 	// MediaPackageGroupSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-mediapackagegroupsettings

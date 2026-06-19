@@ -35,6 +35,16 @@ type Connection_ConnectionPropertiesInput struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-iamproperties
 	IamProperties *Connection_IamPropertiesInput `json:"IamProperties,omitempty"`
 
+	// LakehouseProperties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-lakehouseproperties
+	LakehouseProperties *Connection_LakehousePropertiesInput `json:"LakehouseProperties,omitempty"`
+
+	// MlflowProperties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-mlflowproperties
+	MlflowProperties *Connection_MlflowPropertiesInput `json:"MlflowProperties,omitempty"`
+
 	// RedshiftProperties AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-redshiftproperties
@@ -54,6 +64,16 @@ type Connection_ConnectionPropertiesInput struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-sparkglueproperties
 	SparkGlueProperties *Connection_SparkGluePropertiesInput `json:"SparkGlueProperties,omitempty"`
+
+	// WorkflowsMwaaProperties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-workflowsmwaaproperties
+	WorkflowsMwaaProperties *Connection_WorkflowsMwaaPropertiesInput `json:"WorkflowsMwaaProperties,omitempty"`
+
+	// WorkflowsServerlessProperties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-connection-connectionpropertiesinput.html#cfn-datazone-connection-connectionpropertiesinput-workflowsserverlessproperties
+	WorkflowsServerlessProperties interface{} `json:"WorkflowsServerlessProperties,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

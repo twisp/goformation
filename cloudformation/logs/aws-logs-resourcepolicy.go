@@ -16,7 +16,7 @@ type ResourcePolicy struct {
 	// PolicyDocument AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-resourcepolicy.html#cfn-logs-resourcepolicy-policydocument
-	PolicyDocument string `json:"PolicyDocument"`
+	PolicyDocument interface{} `json:"PolicyDocument"`
 
 	// PolicyName AWS CloudFormation Property
 	// Required: true

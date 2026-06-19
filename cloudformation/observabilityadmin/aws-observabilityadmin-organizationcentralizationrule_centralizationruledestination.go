@@ -20,6 +20,11 @@ type OrganizationCentralizationRule_CentralizationRuleDestination struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationcentralizationrule-centralizationruledestination.html#cfn-observabilityadmin-organizationcentralizationrule-centralizationruledestination-destinationlogsconfiguration
 	DestinationLogsConfiguration *OrganizationCentralizationRule_DestinationLogsConfiguration `json:"DestinationLogsConfiguration,omitempty"`
 
+	// DestinationMetricsConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationcentralizationrule-centralizationruledestination.html#cfn-observabilityadmin-organizationcentralizationrule-centralizationruledestination-destinationmetricsconfiguration
+	DestinationMetricsConfiguration *OrganizationCentralizationRule_DestinationMetricsConfiguration `json:"DestinationMetricsConfiguration,omitempty"`
+
 	// Region AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationcentralizationrule-centralizationruledestination.html#cfn-observabilityadmin-organizationcentralizationrule-centralizationruledestination-region

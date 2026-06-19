@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // License AWS CloudFormation Resource (AWS::LicenseManager::License)
@@ -14,9 +15,9 @@ import (
 type License struct {
 
 	// Beneficiary AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-beneficiary
-	Beneficiary *string `json:"Beneficiary,omitempty"`
+	Beneficiary string `json:"Beneficiary"`
 
 	// ConsumptionConfiguration AWS CloudFormation Property
 	// Required: true
@@ -54,14 +55,19 @@ type License struct {
 	ProductName string `json:"ProductName"`
 
 	// ProductSKU AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-productsku
-	ProductSKU *string `json:"ProductSKU,omitempty"`
+	ProductSKU string `json:"ProductSKU"`
 
 	// Status AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-status
 	Status *string `json:"Status,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html#cfn-licensemanager-license-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// Validity AWS CloudFormation Property
 	// Required: true

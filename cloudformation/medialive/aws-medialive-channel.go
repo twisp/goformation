@@ -33,6 +33,11 @@ type Channel struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-channelengineversion
 	ChannelEngineVersion *Channel_ChannelEngineVersionRequest `json:"ChannelEngineVersion,omitempty"`
 
+	// ChannelSecurityGroups AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-channelsecuritygroups
+	ChannelSecurityGroups []string `json:"ChannelSecurityGroups,omitempty"`
+
 	// Destinations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-destinations
@@ -48,6 +53,11 @@ type Channel struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-encodersettings
 	EncoderSettings *Channel_EncoderSettings `json:"EncoderSettings,omitempty"`
 
+	// InferenceSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-inferencesettings
+	InferenceSettings *Channel_InferenceSettings `json:"InferenceSettings,omitempty"`
+
 	// InputAttachments AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-inputattachments
@@ -57,6 +67,11 @@ type Channel struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-inputspecification
 	InputSpecification *Channel_InputSpecification `json:"InputSpecification,omitempty"`
+
+	// LinkedChannelSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-linkedchannelsettings
+	LinkedChannelSettings *Channel_LinkedChannelSettings `json:"LinkedChannelSettings,omitempty"`
 
 	// LogLevel AWS CloudFormation Property
 	// Required: false

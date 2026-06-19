@@ -29,6 +29,16 @@ type LocationHDFS struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-blocksize
 	BlockSize *int64 `json:"BlockSize,omitempty"`
 
+	// CmkSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-cmksecretconfig
+	CmkSecretConfig *LocationHDFS_CmkSecretConfig `json:"CmkSecretConfig,omitempty"`
+
+	// CustomSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-customsecretconfig
+	CustomSecretConfig *LocationHDFS_CustomSecretConfig `json:"CustomSecretConfig,omitempty"`
+
 	// KerberosKeytab AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kerberoskeytab

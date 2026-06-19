@@ -11,9 +11,9 @@ import (
 type CapacityProvider_ManagedInstancesNetworkConfiguration struct {
 
 	// SecurityGroups AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedinstancesnetworkconfiguration.html#cfn-ecs-capacityprovider-managedinstancesnetworkconfiguration-securitygroups
-	SecurityGroups []string `json:"SecurityGroups,omitempty"`
+	SecurityGroups []string `json:"SecurityGroups"`
 
 	// Subnets AWS CloudFormation Property
 	// Required: true

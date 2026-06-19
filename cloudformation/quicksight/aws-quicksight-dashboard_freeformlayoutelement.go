@@ -15,6 +15,11 @@ type Dashboard_FreeFormLayoutElement struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-freeformlayoutelement.html#cfn-quicksight-dashboard-freeformlayoutelement-backgroundstyle
 	BackgroundStyle *Dashboard_FreeFormLayoutElementBackgroundStyle `json:"BackgroundStyle,omitempty"`
 
+	// BorderRadius AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-freeformlayoutelement.html#cfn-quicksight-dashboard-freeformlayoutelement-borderradius
+	BorderRadius *string `json:"BorderRadius,omitempty"`
+
 	// BorderStyle AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-freeformlayoutelement.html#cfn-quicksight-dashboard-freeformlayoutelement-borderstyle
@@ -39,6 +44,11 @@ type Dashboard_FreeFormLayoutElement struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-freeformlayoutelement.html#cfn-quicksight-dashboard-freeformlayoutelement-loadinganimation
 	LoadingAnimation *Dashboard_LoadingAnimation `json:"LoadingAnimation,omitempty"`
+
+	// Padding AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-freeformlayoutelement.html#cfn-quicksight-dashboard-freeformlayoutelement-padding
+	Padding *string `json:"Padding,omitempty"`
 
 	// RenderingRules AWS CloudFormation Property
 	// Required: false

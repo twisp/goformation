@@ -20,6 +20,11 @@ type DataAutomationProject_AudioOverrideConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-audiooverrideconfiguration.html#cfn-bedrock-dataautomationproject-audiooverrideconfiguration-modalityprocessing
 	ModalityProcessing *DataAutomationProject_ModalityProcessingConfiguration `json:"ModalityProcessing,omitempty"`
 
+	// SensitiveDataConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-audiooverrideconfiguration.html#cfn-bedrock-dataautomationproject-audiooverrideconfiguration-sensitivedataconfiguration
+	SensitiveDataConfiguration *DataAutomationProject_SensitiveDataConfiguration `json:"SensitiveDataConfiguration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

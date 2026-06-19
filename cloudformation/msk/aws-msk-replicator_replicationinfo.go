@@ -16,9 +16,14 @@ type Replicator_ReplicationInfo struct {
 	ConsumerGroupReplication *Replicator_ConsumerGroupReplication `json:"ConsumerGroupReplication"`
 
 	// SourceKafkaClusterArn AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-sourcekafkaclusterarn
-	SourceKafkaClusterArn string `json:"SourceKafkaClusterArn"`
+	SourceKafkaClusterArn *string `json:"SourceKafkaClusterArn,omitempty"`
+
+	// SourceKafkaClusterId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-sourcekafkaclusterid
+	SourceKafkaClusterId *string `json:"SourceKafkaClusterId,omitempty"`
 
 	// TargetCompressionType AWS CloudFormation Property
 	// Required: true
@@ -26,9 +31,14 @@ type Replicator_ReplicationInfo struct {
 	TargetCompressionType string `json:"TargetCompressionType"`
 
 	// TargetKafkaClusterArn AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-targetkafkaclusterarn
-	TargetKafkaClusterArn string `json:"TargetKafkaClusterArn"`
+	TargetKafkaClusterArn *string `json:"TargetKafkaClusterArn,omitempty"`
+
+	// TargetKafkaClusterId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationinfo.html#cfn-msk-replicator-replicationinfo-targetkafkaclusterid
+	TargetKafkaClusterId *string `json:"TargetKafkaClusterId,omitempty"`
 
 	// TopicReplication AWS CloudFormation Property
 	// Required: true

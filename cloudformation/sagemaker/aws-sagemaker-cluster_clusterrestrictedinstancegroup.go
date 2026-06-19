@@ -16,9 +16,9 @@ type Cluster_ClusterRestrictedInstanceGroup struct {
 	CurrentCount *int `json:"CurrentCount,omitempty"`
 
 	// EnvironmentConfig AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterrestrictedinstancegroup.html#cfn-sagemaker-cluster-clusterrestrictedinstancegroup-environmentconfig
-	EnvironmentConfig *Cluster_EnvironmentConfig `json:"EnvironmentConfig"`
+	EnvironmentConfig *Cluster_EnvironmentConfig `json:"EnvironmentConfig,omitempty"`
 
 	// ExecutionRole AWS CloudFormation Property
 	// Required: true

@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // SimpleAD AWS CloudFormation Resource (AWS::DirectoryService::SimpleAD)
@@ -47,6 +48,11 @@ type SimpleAD struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-size
 	Size string `json:"Size"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html#cfn-directoryservice-simplead-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VpcSettings AWS CloudFormation Property
 	// Required: true

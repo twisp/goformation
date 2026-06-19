@@ -13,7 +13,7 @@ type Template_AxisDisplayOptions struct {
 	// AxisLineVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-axisdisplayoptions.html#cfn-quicksight-template-axisdisplayoptions-axislinevisibility
-	AxisLineVisibility interface{} `json:"AxisLineVisibility,omitempty"`
+	AxisLineVisibility *string `json:"AxisLineVisibility,omitempty"`
 
 	// AxisOffset AWS CloudFormation Property
 	// Required: false
@@ -28,7 +28,7 @@ type Template_AxisDisplayOptions struct {
 	// GridLineVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-axisdisplayoptions.html#cfn-quicksight-template-axisdisplayoptions-gridlinevisibility
-	GridLineVisibility interface{} `json:"GridLineVisibility,omitempty"`
+	GridLineVisibility *string `json:"GridLineVisibility,omitempty"`
 
 	// ScrollbarOptions AWS CloudFormation Property
 	// Required: false

@@ -89,6 +89,11 @@ type ContainerFleet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containerfleet.html#cfn-gamelift-containerfleet-perinstancecontainergroupdefinitionname
 	PerInstanceContainerGroupDefinitionName *string `json:"PerInstanceContainerGroupDefinitionName,omitempty"`
 
+	// PlayerGatewayMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containerfleet.html#cfn-gamelift-containerfleet-playergatewaymode
+	PlayerGatewayMode *string `json:"PlayerGatewayMode,omitempty"`
+
 	// ScalingPolicies AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containerfleet.html#cfn-gamelift-containerfleet-scalingpolicies

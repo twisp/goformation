@@ -49,6 +49,11 @@ type Domain struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-domainsettings
 	DomainSettings *Domain_DomainSettings `json:"DomainSettings,omitempty"`
 
+	// HomeEfsFileSystemCreation AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-homeefsfilesystemcreation
+	HomeEfsFileSystemCreation *string `json:"HomeEfsFileSystemCreation,omitempty"`
+
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-kmskeyid

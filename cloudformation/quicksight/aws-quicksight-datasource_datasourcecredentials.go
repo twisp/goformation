@@ -20,6 +20,11 @@ type DataSource_DataSourceCredentials struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-credentialpair
 	CredentialPair *DataSource_CredentialPair `json:"CredentialPair,omitempty"`
 
+	// KeyPairCredentials AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-keypaircredentials
+	KeyPairCredentials *DataSource_KeyPairCredentials `json:"KeyPairCredentials,omitempty"`
+
 	// SecretArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-secretarn

@@ -7,17 +7,17 @@ import (
 )
 
 // Model_ImageConfig AWS CloudFormation Resource (AWS::SageMaker::Model.ImageConfig)
-// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-imageconfig.html
+// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-imageconfig.html
 type Model_ImageConfig struct {
 
 	// RepositoryAccessMode AWS CloudFormation Property
 	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-imageconfig.html#cfn-sagemaker-model-containerdefinition-imageconfig-repositoryaccessmode
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-imageconfig.html#cfn-sagemaker-model-imageconfig-repositoryaccessmode
 	RepositoryAccessMode string `json:"RepositoryAccessMode"`
 
 	// RepositoryAuthConfig AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-imageconfig.html#cfn-sagemaker-model-containerdefinition-imageconfig-repositoryauthconfig
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-imageconfig.html#cfn-sagemaker-model-imageconfig-repositoryauthconfig
 	RepositoryAuthConfig *Model_RepositoryAuthConfig `json:"RepositoryAuthConfig,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy

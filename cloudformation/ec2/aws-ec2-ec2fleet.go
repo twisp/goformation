@@ -38,6 +38,11 @@ type EC2Fleet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-replaceunhealthyinstances
 	ReplaceUnhealthyInstances *bool `json:"ReplaceUnhealthyInstances,omitempty"`
 
+	// ReservedCapacityOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-reservedcapacityoptions
+	ReservedCapacityOptions *EC2Fleet_ReservedCapacityOptionsRequest `json:"ReservedCapacityOptions,omitempty"`
+
 	// SpotOptions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html#cfn-ec2-ec2fleet-spotoptions

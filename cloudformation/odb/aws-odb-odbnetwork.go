@@ -34,6 +34,11 @@ type OdbNetwork struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-clientsubnetcidr
 	ClientSubnetCidr *string `json:"ClientSubnetCidr,omitempty"`
 
+	// CrossRegionS3RestoreSources AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-crossregions3restoresources
+	CrossRegionS3RestoreSources []string `json:"CrossRegionS3RestoreSources,omitempty"`
+
 	// CustomDomainName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-customdomainname
@@ -54,6 +59,16 @@ type OdbNetwork struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-displayname
 	DisplayName *string `json:"DisplayName,omitempty"`
 
+	// KmsAccess AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-kmsaccess
+	KmsAccess *string `json:"KmsAccess,omitempty"`
+
+	// KmsPolicyDocument AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-kmspolicydocument
+	KmsPolicyDocument *string `json:"KmsPolicyDocument,omitempty"`
+
 	// S3Access AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-s3access
@@ -63,6 +78,16 @@ type OdbNetwork struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-s3policydocument
 	S3PolicyDocument *string `json:"S3PolicyDocument,omitempty"`
+
+	// StsAccess AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-stsaccess
+	StsAccess *string `json:"StsAccess,omitempty"`
+
+	// StsPolicyDocument AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbnetwork.html#cfn-odb-odbnetwork-stspolicydocument
+	StsPolicyDocument *string `json:"StsPolicyDocument,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

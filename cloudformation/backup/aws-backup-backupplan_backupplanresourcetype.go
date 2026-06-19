@@ -25,6 +25,11 @@ type BackupPlan_BackupPlanResourceType struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html#cfn-backup-backupplan-backupplanresourcetype-backupplanrule
 	BackupPlanRule []BackupPlan_BackupRuleResourceType `json:"BackupPlanRule"`
 
+	// ScanSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html#cfn-backup-backupplan-backupplanresourcetype-scansettings
+	ScanSettings []BackupPlan_ScanSettingResourceType `json:"ScanSettings,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

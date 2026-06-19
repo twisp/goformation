@@ -10,6 +10,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html
 type Fleet_ServiceManagedEc2FleetConfiguration struct {
 
+	// AutoScalingConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html#cfn-deadline-fleet-servicemanagedec2fleetconfiguration-autoscalingconfiguration
+	AutoScalingConfiguration *Fleet_ServiceManagedEc2AutoScalingConfiguration `json:"AutoScalingConfiguration,omitempty"`
+
 	// InstanceCapabilities AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html#cfn-deadline-fleet-servicemanagedec2fleetconfiguration-instancecapabilities
@@ -19,6 +24,11 @@ type Fleet_ServiceManagedEc2FleetConfiguration struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html#cfn-deadline-fleet-servicemanagedec2fleetconfiguration-instancemarketoptions
 	InstanceMarketOptions *Fleet_ServiceManagedEc2InstanceMarketOptions `json:"InstanceMarketOptions"`
+
+	// PersistentVolumeConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2fleetconfiguration.html#cfn-deadline-fleet-servicemanagedec2fleetconfiguration-persistentvolumeconfiguration
+	PersistentVolumeConfiguration *Fleet_PersistentVolumeConfiguration `json:"PersistentVolumeConfiguration,omitempty"`
 
 	// StorageProfileId AWS CloudFormation Property
 	// Required: false

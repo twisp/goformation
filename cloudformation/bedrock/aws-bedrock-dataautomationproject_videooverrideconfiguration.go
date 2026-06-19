@@ -15,6 +15,11 @@ type DataAutomationProject_VideoOverrideConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-videooverrideconfiguration.html#cfn-bedrock-dataautomationproject-videooverrideconfiguration-modalityprocessing
 	ModalityProcessing *DataAutomationProject_ModalityProcessingConfiguration `json:"ModalityProcessing,omitempty"`
 
+	// SensitiveDataConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-videooverrideconfiguration.html#cfn-bedrock-dataautomationproject-videooverrideconfiguration-sensitivedataconfiguration
+	SensitiveDataConfiguration *DataAutomationProject_SensitiveDataConfiguration `json:"SensitiveDataConfiguration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

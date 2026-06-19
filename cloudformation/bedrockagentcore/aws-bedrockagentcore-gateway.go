@@ -33,6 +33,11 @@ type Gateway struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-exceptionlevel
 	ExceptionLevel *string `json:"ExceptionLevel,omitempty"`
 
+	// InterceptorConfigurations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-interceptorconfigurations
+	InterceptorConfigurations []Gateway_GatewayInterceptorConfiguration `json:"InterceptorConfigurations,omitempty"`
+
 	// KmsKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-kmskeyarn
@@ -43,15 +48,20 @@ type Gateway struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-name
 	Name string `json:"Name"`
 
+	// PolicyEngineConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-policyengineconfiguration
+	PolicyEngineConfiguration *Gateway_GatewayPolicyEngineConfiguration `json:"PolicyEngineConfiguration,omitempty"`
+
 	// ProtocolConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-protocolconfiguration
 	ProtocolConfiguration *Gateway_GatewayProtocolConfiguration `json:"ProtocolConfiguration,omitempty"`
 
 	// ProtocolType AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gateway.html#cfn-bedrockagentcore-gateway-protocoltype
-	ProtocolType string `json:"ProtocolType"`
+	ProtocolType interface{} `json:"ProtocolType,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: true

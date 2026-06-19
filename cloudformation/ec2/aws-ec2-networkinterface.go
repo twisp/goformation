@@ -74,6 +74,11 @@ type NetworkInterface struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddresses
 	PrivateIpAddresses []NetworkInterface_PrivateIpAddressSpecification `json:"PrivateIpAddresses,omitempty"`
 
+	// PublicIpDnsHostnameTypeSpecification AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-publicipdnshostnametypespecification
+	PublicIpDnsHostnameTypeSpecification *string `json:"PublicIpDnsHostnameTypeSpecification,omitempty"`
+
 	// SecondaryPrivateIpAddressCount AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-secondaryprivateipaddresscount

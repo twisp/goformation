@@ -10,6 +10,16 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-odb-odbnetwork-managedservices.html
 type OdbNetwork_ManagedServices struct {
 
+	// CrossRegionS3RestoreSourcesAccess AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-odb-odbnetwork-managedservices.html#cfn-odb-odbnetwork-managedservices-crossregions3restoresourcesaccess
+	CrossRegionS3RestoreSourcesAccess []OdbNetwork_CrossRegionS3RestoreSourcesAccess `json:"CrossRegionS3RestoreSourcesAccess,omitempty"`
+
+	// KmsAccess AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-odb-odbnetwork-managedservices.html#cfn-odb-odbnetwork-managedservices-kmsaccess
+	KmsAccess *OdbNetwork_KmsAccess `json:"KmsAccess,omitempty"`
+
 	// ManagedS3BackupAccess AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-odb-odbnetwork-managedservices.html#cfn-odb-odbnetwork-managedservices-manageds3backupaccess
@@ -39,6 +49,11 @@ type OdbNetwork_ManagedServices struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-odb-odbnetwork-managedservices.html#cfn-odb-odbnetwork-managedservices-servicenetworkendpoint
 	ServiceNetworkEndpoint *OdbNetwork_ServiceNetworkEndpoint `json:"ServiceNetworkEndpoint,omitempty"`
+
+	// StsAccess AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-odb-odbnetwork-managedservices.html#cfn-odb-odbnetwork-managedservices-stsaccess
+	StsAccess *OdbNetwork_StsAccess `json:"StsAccess,omitempty"`
 
 	// ZeroEtlAccess AWS CloudFormation Property
 	// Required: false

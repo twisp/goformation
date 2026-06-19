@@ -44,6 +44,16 @@ type Bucket struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-bucketname
 	BucketName *string `json:"BucketName,omitempty"`
 
+	// BucketNamePrefix AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-bucketnameprefix
+	BucketNamePrefix *string `json:"BucketNamePrefix,omitempty"`
+
+	// BucketNamespace AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-bucketnamespace
+	BucketNamespace *string `json:"BucketNamespace,omitempty"`
+
 	// CorsConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html#cfn-s3-bucket-corsconfiguration

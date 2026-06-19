@@ -15,6 +15,11 @@ type Domain_AIMLOptions struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-aimloptions.html#cfn-opensearchservice-domain-aimloptions-s3vectorsengine
 	S3VectorsEngine *Domain_S3VectorsEngine `json:"S3VectorsEngine,omitempty"`
 
+	// ServerlessVectorAcceleration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-aimloptions.html#cfn-opensearchservice-domain-aimloptions-serverlessvectoracceleration
+	ServerlessVectorAcceleration *Domain_ServerlessVectorAcceleration `json:"ServerlessVectorAcceleration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

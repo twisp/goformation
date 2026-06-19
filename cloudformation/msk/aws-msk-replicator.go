@@ -24,6 +24,11 @@ type Replicator struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-kafkaclusters
 	KafkaClusters []Replicator_KafkaCluster `json:"KafkaClusters"`
 
+	// LogDelivery AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-logdelivery
+	LogDelivery *Replicator_LogDelivery `json:"LogDelivery,omitempty"`
+
 	// ReplicationInfoList AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-replicator.html#cfn-msk-replicator-replicationinfolist

@@ -11,9 +11,14 @@ import (
 type Cluster_Orchestrator struct {
 
 	// Eks AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-orchestrator.html#cfn-sagemaker-cluster-orchestrator-eks
-	Eks *Cluster_ClusterOrchestratorEksConfig `json:"Eks"`
+	Eks *Cluster_ClusterOrchestratorEksConfig `json:"Eks,omitempty"`
+
+	// Slurm AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-orchestrator.html#cfn-sagemaker-cluster-orchestrator-slurm
+	Slurm *Cluster_ClusterOrchestratorSlurmConfig `json:"Slurm,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

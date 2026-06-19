@@ -4,6 +4,7 @@ package mediaconnect
 
 import (
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Flow_Source AWS CloudFormation Resource (AWS::MediaConnect::Flow.Source)
@@ -70,6 +71,11 @@ type Flow_Source struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-name
 	Name *string `json:"Name,omitempty"`
 
+	// NdiSourceSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-ndisourcesettings
+	NdiSourceSettings *Flow_NdiSourceSettings `json:"NdiSourceSettings,omitempty"`
+
 	// Protocol AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-protocol
@@ -84,16 +90,6 @@ type Flow_Source struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-routerintegrationtransitdecryption
 	RouterIntegrationTransitDecryption *Flow_FlowTransitEncryption `json:"RouterIntegrationTransitDecryption,omitempty"`
-
-	// SenderControlPort AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-sendercontrolport
-	SenderControlPort *int `json:"SenderControlPort,omitempty"`
-
-	// SenderIpAddress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-senderipaddress
-	SenderIpAddress *string `json:"SenderIpAddress,omitempty"`
 
 	// SourceArn AWS CloudFormation Property
 	// Required: false
@@ -119,6 +115,11 @@ type Flow_Source struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-streamid
 	StreamId *string `json:"StreamId,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VpcInterfaceName AWS CloudFormation Property
 	// Required: false

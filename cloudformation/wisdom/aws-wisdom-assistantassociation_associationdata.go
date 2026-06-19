@@ -10,10 +10,15 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-assistantassociation-associationdata.html
 type AssistantAssociation_AssociationData struct {
 
+	// ExternalBedrockKnowledgeBaseConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-assistantassociation-associationdata.html#cfn-wisdom-assistantassociation-associationdata-externalbedrockknowledgebaseconfig
+	ExternalBedrockKnowledgeBaseConfig *AssistantAssociation_ExternalBedrockKnowledgeBaseConfig `json:"ExternalBedrockKnowledgeBaseConfig,omitempty"`
+
 	// KnowledgeBaseId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-assistantassociation-associationdata.html#cfn-wisdom-assistantassociation-associationdata-knowledgebaseid
-	KnowledgeBaseId string `json:"KnowledgeBaseId"`
+	KnowledgeBaseId *string `json:"KnowledgeBaseId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

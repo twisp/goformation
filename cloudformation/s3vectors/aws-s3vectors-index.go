@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Index AWS CloudFormation Resource (AWS::S3Vectors::Index)
@@ -28,6 +29,11 @@ type Index struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3vectors-index.html#cfn-s3vectors-index-distancemetric
 	DistanceMetric string `json:"DistanceMetric"`
 
+	// EncryptionConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3vectors-index.html#cfn-s3vectors-index-encryptionconfiguration
+	EncryptionConfiguration *Index_EncryptionConfiguration `json:"EncryptionConfiguration,omitempty"`
+
 	// IndexName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3vectors-index.html#cfn-s3vectors-index-indexname
@@ -37,6 +43,11 @@ type Index struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3vectors-index.html#cfn-s3vectors-index-metadataconfiguration
 	MetadataConfiguration *Index_MetadataConfiguration `json:"MetadataConfiguration,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3vectors-index.html#cfn-s3vectors-index-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VectorBucketArn AWS CloudFormation Property
 	// Required: false

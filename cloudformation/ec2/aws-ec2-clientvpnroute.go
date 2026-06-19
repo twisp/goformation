@@ -29,9 +29,9 @@ type ClientVpnRoute struct {
 	DestinationCidrBlock string `json:"DestinationCidrBlock"`
 
 	// TargetVpcSubnetId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html#cfn-ec2-clientvpnroute-targetvpcsubnetid
-	TargetVpcSubnetId string `json:"TargetVpcSubnetId"`
+	TargetVpcSubnetId *string `json:"TargetVpcSubnetId,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

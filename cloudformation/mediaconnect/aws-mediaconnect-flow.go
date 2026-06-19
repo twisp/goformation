@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Flow AWS CloudFormation Resource (AWS::MediaConnect::Flow)
@@ -17,6 +18,11 @@ type Flow struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-availabilityzone
 	AvailabilityZone *string `json:"AvailabilityZone,omitempty"`
+
+	// EncodingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-encodingconfig
+	EncodingConfig *Flow_EncodingConfig `json:"EncodingConfig,omitempty"`
 
 	// FlowSize AWS CloudFormation Property
 	// Required: false
@@ -57,6 +63,11 @@ type Flow struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-sourcemonitoringconfig
 	SourceMonitoringConfig *Flow_SourceMonitoringConfig `json:"SourceMonitoringConfig,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html#cfn-mediaconnect-flow-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VpcInterfaces AWS CloudFormation Property
 	// Required: false

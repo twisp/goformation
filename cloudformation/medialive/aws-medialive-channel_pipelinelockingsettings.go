@@ -10,6 +10,16 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-pipelinelockingsettings.html
 type Channel_PipelineLockingSettings struct {
 
+	// CustomEpoch AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-pipelinelockingsettings.html#cfn-medialive-channel-pipelinelockingsettings-customepoch
+	CustomEpoch *string `json:"CustomEpoch,omitempty"`
+
+	// PipelineLockingMethod AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-pipelinelockingsettings.html#cfn-medialive-channel-pipelinelockingsettings-pipelinelockingmethod
+	PipelineLockingMethod *string `json:"PipelineLockingMethod,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

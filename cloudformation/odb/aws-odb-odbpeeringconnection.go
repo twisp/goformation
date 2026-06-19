@@ -14,6 +14,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbpeeringconnection.html
 type OdbPeeringConnection struct {
 
+	// AdditionalPeerNetworkCidrs AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbpeeringconnection.html#cfn-odb-odbpeeringconnection-additionalpeernetworkcidrs
+	AdditionalPeerNetworkCidrs []string `json:"AdditionalPeerNetworkCidrs,omitempty"`
+
 	// DisplayName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbpeeringconnection.html#cfn-odb-odbpeeringconnection-displayname
@@ -28,6 +33,11 @@ type OdbPeeringConnection struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbpeeringconnection.html#cfn-odb-odbpeeringconnection-peernetworkid
 	PeerNetworkId *string `json:"PeerNetworkId,omitempty"`
+
+	// PeerNetworkRouteTableIds AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-odb-odbpeeringconnection.html#cfn-odb-odbpeeringconnection-peernetworkroutetableids
+	PeerNetworkRouteTableIds []string `json:"PeerNetworkRouteTableIds,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

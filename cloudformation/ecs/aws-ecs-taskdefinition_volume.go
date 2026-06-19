@@ -40,6 +40,11 @@ type TaskDefinition_Volume struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volume.html#cfn-ecs-taskdefinition-volume-name
 	Name *string `json:"Name,omitempty"`
 
+	// S3FilesVolumeConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volume.html#cfn-ecs-taskdefinition-volume-s3filesvolumeconfiguration
+	S3FilesVolumeConfiguration *TaskDefinition_S3FilesVolumeConfiguration `json:"S3FilesVolumeConfiguration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

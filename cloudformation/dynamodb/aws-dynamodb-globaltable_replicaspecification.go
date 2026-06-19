@@ -26,6 +26,11 @@ type GlobalTable_ReplicaSpecification struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-globalsecondaryindexes
 	GlobalSecondaryIndexes []GlobalTable_ReplicaGlobalSecondaryIndexSpecification `json:"GlobalSecondaryIndexes,omitempty"`
 
+	// GlobalTableSettingsReplicationMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-globaltablesettingsreplicationmode
+	GlobalTableSettingsReplicationMode *string `json:"GlobalTableSettingsReplicationMode,omitempty"`
+
 	// KinesisStreamSpecification AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-kinesisstreamspecification

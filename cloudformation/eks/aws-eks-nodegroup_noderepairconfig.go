@@ -15,6 +15,31 @@ type Nodegroup_NodeRepairConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-enabled
 	Enabled *bool `json:"Enabled,omitempty"`
 
+	// MaxParallelNodesRepairedCount AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-maxparallelnodesrepairedcount
+	MaxParallelNodesRepairedCount *int `json:"MaxParallelNodesRepairedCount,omitempty"`
+
+	// MaxParallelNodesRepairedPercentage AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-maxparallelnodesrepairedpercentage
+	MaxParallelNodesRepairedPercentage *int `json:"MaxParallelNodesRepairedPercentage,omitempty"`
+
+	// MaxUnhealthyNodeThresholdCount AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-maxunhealthynodethresholdcount
+	MaxUnhealthyNodeThresholdCount *int `json:"MaxUnhealthyNodeThresholdCount,omitempty"`
+
+	// MaxUnhealthyNodeThresholdPercentage AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-maxunhealthynodethresholdpercentage
+	MaxUnhealthyNodeThresholdPercentage *int `json:"MaxUnhealthyNodeThresholdPercentage,omitempty"`
+
+	// NodeRepairConfigOverrides AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-noderepairconfigoverrides
+	NodeRepairConfigOverrides []Nodegroup_NodeRepairConfigOverrides `json:"NodeRepairConfigOverrides,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

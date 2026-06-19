@@ -15,6 +15,11 @@ type Association_ServiceConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-aws
 	Aws *Association_AWSConfiguration `json:"Aws,omitempty"`
 
+	// Azure AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-azure
+	Azure *Association_AzureConfiguration `json:"Azure,omitempty"`
+
 	// Dynatrace AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-dynatrace
@@ -45,15 +50,30 @@ type Association_ServiceConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-mcpserverdatadog
 	MCPServerDatadog *Association_MCPServerDatadogConfiguration `json:"MCPServerDatadog,omitempty"`
 
+	// MCPServerGrafana AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-mcpservergrafana
+	MCPServerGrafana *Association_MCPServerGrafanaConfiguration `json:"MCPServerGrafana,omitempty"`
+
 	// MCPServerNewRelic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-mcpservernewrelic
 	MCPServerNewRelic *Association_MCPServerNewRelicConfiguration `json:"MCPServerNewRelic,omitempty"`
 
+	// MCPServerSigV4 AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-mcpserversigv4
+	MCPServerSigV4 *Association_MCPServerSigV4Configuration `json:"MCPServerSigV4,omitempty"`
+
 	// MCPServerSplunk AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-mcpserversplunk
 	MCPServerSplunk *Association_MCPServerSplunkConfiguration `json:"MCPServerSplunk,omitempty"`
+
+	// PagerDuty AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-serviceconfiguration.html#cfn-devopsagent-association-serviceconfiguration-pagerduty
+	PagerDuty *Association_PagerDutyConfiguration `json:"PagerDuty,omitempty"`
 
 	// ServiceNow AWS CloudFormation Property
 	// Required: false

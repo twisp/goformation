@@ -29,6 +29,11 @@ type Stack struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-attributestodelete
 	AttributesToDelete []string `json:"AttributesToDelete,omitempty"`
 
+	// ContentRedirection AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-contentredirection
+	ContentRedirection *Stack_ContentRedirection `json:"ContentRedirection,omitempty"`
+
 	// DeleteStorageConnectors AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-deletestorageconnectors

@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // VectorBucket AWS CloudFormation Resource (AWS::S3Vectors::VectorBucket)
@@ -17,6 +18,11 @@ type VectorBucket struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3vectors-vectorbucket.html#cfn-s3vectors-vectorbucket-encryptionconfiguration
 	EncryptionConfiguration *VectorBucket_EncryptionConfiguration `json:"EncryptionConfiguration,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3vectors-vectorbucket.html#cfn-s3vectors-vectorbucket-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VectorBucketName AWS CloudFormation Property
 	// Required: false

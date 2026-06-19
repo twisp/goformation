@@ -21,14 +21,14 @@ type Association_MCPServerConfiguration struct {
 	EnableWebhookUpdates *bool `json:"EnableWebhookUpdates,omitempty"`
 
 	// Endpoint AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-mcpserverconfiguration.html#cfn-devopsagent-association-mcpserverconfiguration-endpoint
-	Endpoint string `json:"Endpoint"`
+	Endpoint *string `json:"Endpoint,omitempty"`
 
 	// Name AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-association-mcpserverconfiguration.html#cfn-devopsagent-association-mcpserverconfiguration-name
-	Name string `json:"Name"`
+	Name *string `json:"Name,omitempty"`
 
 	// Tools AWS CloudFormation Property
 	// Required: true

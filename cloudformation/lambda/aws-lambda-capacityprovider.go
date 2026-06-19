@@ -39,10 +39,20 @@ type CapacityProvider struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-capacityprovider.html#cfn-lambda-capacityprovider-permissionsconfig
 	PermissionsConfig *CapacityProvider_CapacityProviderPermissionsConfig `json:"PermissionsConfig"`
 
+	// PropagateTags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-capacityprovider.html#cfn-lambda-capacityprovider-propagatetags
+	PropagateTags *CapacityProvider_PropagateTagsConfig `json:"PropagateTags,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-capacityprovider.html#cfn-lambda-capacityprovider-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// TelemetryConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-capacityprovider.html#cfn-lambda-capacityprovider-telemetryconfig
+	TelemetryConfig *CapacityProvider_CapacityProviderTelemetryConfig `json:"TelemetryConfig,omitempty"`
 
 	// VpcConfig AWS CloudFormation Property
 	// Required: true

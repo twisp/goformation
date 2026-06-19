@@ -14,6 +14,16 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html
 type User struct {
 
+	// AfterContactWorkConfigs AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-aftercontactworkconfigs
+	AfterContactWorkConfigs []User_AfterContactWorkConfigPerChannel `json:"AfterContactWorkConfigs,omitempty"`
+
+	// AutoAcceptConfigs AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-autoacceptconfigs
+	AutoAcceptConfigs []User_AutoAcceptConfig `json:"AutoAcceptConfigs,omitempty"`
+
 	// DirectoryUserId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-directoryuserid
@@ -39,10 +49,20 @@ type User struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-password
 	Password *string `json:"Password,omitempty"`
 
+	// PersistentConnectionConfigs AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-persistentconnectionconfigs
+	PersistentConnectionConfigs []User_PersistentConnectionConfig `json:"PersistentConnectionConfigs,omitempty"`
+
 	// PhoneConfig AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-phoneconfig
-	PhoneConfig *User_UserPhoneConfig `json:"PhoneConfig"`
+	PhoneConfig *User_UserPhoneConfig `json:"PhoneConfig,omitempty"`
+
+	// PhoneNumberConfigs AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-phonenumberconfigs
+	PhoneNumberConfigs []User_PhoneNumberConfig `json:"PhoneNumberConfigs,omitempty"`
 
 	// RoutingProfileArn AWS CloudFormation Property
 	// Required: true
@@ -68,6 +88,11 @@ type User struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-username
 	Username string `json:"Username"`
+
+	// VoiceEnhancementConfigs AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html#cfn-connect-user-voiceenhancementconfigs
+	VoiceEnhancementConfigs []User_VoiceEnhancementConfig `json:"VoiceEnhancementConfigs,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

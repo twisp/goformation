@@ -18,10 +18,20 @@ type BrowserCustom struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-browsercustom.html#cfn-bedrockagentcore-browsercustom-browsersigning
 	BrowserSigning *BrowserCustom_BrowserSigning `json:"BrowserSigning,omitempty"`
 
+	// Certificates AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-browsercustom.html#cfn-bedrockagentcore-browsercustom-certificates
+	Certificates []BrowserCustom_Certificate `json:"Certificates,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-browsercustom.html#cfn-bedrockagentcore-browsercustom-description
 	Description *string `json:"Description,omitempty"`
+
+	// EnterprisePolicies AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-browsercustom.html#cfn-bedrockagentcore-browsercustom-enterprisepolicies
+	EnterprisePolicies []BrowserCustom_BrowserEnterprisePolicy `json:"EnterprisePolicies,omitempty"`
 
 	// ExecutionRoleArn AWS CloudFormation Property
 	// Required: false

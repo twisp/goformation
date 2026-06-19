@@ -10,10 +10,30 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3tables-table-icebergmetadata.html
 type Table_IcebergMetadata struct {
 
+	// IcebergPartitionSpec AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3tables-table-icebergmetadata.html#cfn-s3tables-table-icebergmetadata-icebergpartitionspec
+	IcebergPartitionSpec *Table_IcebergPartitionSpec `json:"IcebergPartitionSpec,omitempty"`
+
 	// IcebergSchema AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3tables-table-icebergmetadata.html#cfn-s3tables-table-icebergmetadata-icebergschema
-	IcebergSchema *Table_IcebergSchema `json:"IcebergSchema"`
+	IcebergSchema *Table_IcebergSchema `json:"IcebergSchema,omitempty"`
+
+	// IcebergSchemaV2 AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3tables-table-icebergmetadata.html#cfn-s3tables-table-icebergmetadata-icebergschemav2
+	IcebergSchemaV2 *Table_IcebergSchemaV2 `json:"IcebergSchemaV2,omitempty"`
+
+	// IcebergSortOrder AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3tables-table-icebergmetadata.html#cfn-s3tables-table-icebergmetadata-icebergsortorder
+	IcebergSortOrder *Table_IcebergSortOrder `json:"IcebergSortOrder,omitempty"`
+
+	// TableProperties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3tables-table-icebergmetadata.html#cfn-s3tables-table-icebergmetadata-tableproperties
+	TableProperties map[string]string `json:"TableProperties,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

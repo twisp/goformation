@@ -54,6 +54,11 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-restrictedinstancegroups
 	RestrictedInstanceGroups []Cluster_ClusterRestrictedInstanceGroup `json:"RestrictedInstanceGroups,omitempty"`
 
+	// RestrictedInstanceGroupsConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-restrictedinstancegroupsconfig
+	RestrictedInstanceGroupsConfig *Cluster_RestrictedInstanceGroupsConfig `json:"RestrictedInstanceGroupsConfig,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-cluster.html#cfn-sagemaker-cluster-tags

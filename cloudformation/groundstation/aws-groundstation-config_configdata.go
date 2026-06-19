@@ -35,6 +35,11 @@ type Config_ConfigData struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-s3recordingconfig
 	S3RecordingConfig *Config_S3RecordingConfig `json:"S3RecordingConfig,omitempty"`
 
+	// TelemetrySinkConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-telemetrysinkconfig
+	TelemetrySinkConfig *Config_TelemetrySinkConfig `json:"TelemetrySinkConfig,omitempty"`
+
 	// TrackingConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-trackingconfig

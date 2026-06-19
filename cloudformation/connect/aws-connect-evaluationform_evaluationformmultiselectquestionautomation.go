@@ -21,9 +21,9 @@ type EvaluationForm_EvaluationFormMultiSelectQuestionAutomation struct {
 	DefaultOptionRefIds []string `json:"DefaultOptionRefIds,omitempty"`
 
 	// Options AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformmultiselectquestionautomation.html#cfn-connect-evaluationform-evaluationformmultiselectquestionautomation-options
-	Options []EvaluationForm_EvaluationFormMultiSelectQuestionAutomationOption `json:"Options"`
+	Options []EvaluationForm_EvaluationFormMultiSelectQuestionAutomationOption `json:"Options,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

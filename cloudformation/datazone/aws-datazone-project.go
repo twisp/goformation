@@ -33,10 +33,25 @@ type Project struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-glossaryterms
 	GlossaryTerms []string `json:"GlossaryTerms,omitempty"`
 
+	// MembershipAssignments AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-membershipassignments
+	MembershipAssignments []Project_ProjectMembershipAssignment `json:"MembershipAssignments,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-name
 	Name string `json:"Name"`
+
+	// ProjectCategory AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-projectcategory
+	ProjectCategory *string `json:"ProjectCategory,omitempty"`
+
+	// ProjectExecutionRole AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-projectexecutionrole
+	ProjectExecutionRole *string `json:"ProjectExecutionRole,omitempty"`
 
 	// ProjectProfileId AWS CloudFormation Property
 	// Required: false
@@ -47,6 +62,11 @@ type Project struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-projectprofileversion
 	ProjectProfileVersion *string `json:"ProjectProfileVersion,omitempty"`
+
+	// ResourceTags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-project.html#cfn-datazone-project-resourcetags
+	ResourceTags []Project_ResourceTag `json:"ResourceTags,omitempty"`
 
 	// UserParameters AWS CloudFormation Property
 	// Required: false

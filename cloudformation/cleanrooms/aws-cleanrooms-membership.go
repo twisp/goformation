@@ -29,6 +29,11 @@ type Membership struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-defaultresultconfiguration
 	DefaultResultConfiguration *Membership_MembershipProtectedQueryResultConfiguration `json:"DefaultResultConfiguration,omitempty"`
 
+	// IsMetricsEnabled AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-ismetricsenabled
+	IsMetricsEnabled *bool `json:"IsMetricsEnabled,omitempty"`
+
 	// JobLogStatus AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-membership.html#cfn-cleanrooms-membership-joblogstatus

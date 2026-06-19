@@ -54,6 +54,11 @@ type MissionProfile struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
+	// TelemetrySinkConfigArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-telemetrysinkconfigarn
+	TelemetrySinkConfigArn *string `json:"TelemetrySinkConfigArn,omitempty"`
+
 	// TrackingConfigArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html#cfn-groundstation-missionprofile-trackingconfigarn

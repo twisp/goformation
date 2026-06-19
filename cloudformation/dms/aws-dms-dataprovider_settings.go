@@ -60,6 +60,11 @@ type DataProvider_Settings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-redshiftsettings
 	RedshiftSettings *DataProvider_RedshiftSettings `json:"RedshiftSettings,omitempty"`
 
+	// SybaseAseSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-sybaseasesettings
+	SybaseAseSettings *DataProvider_SybaseAseSettings `json:"SybaseAseSettings,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

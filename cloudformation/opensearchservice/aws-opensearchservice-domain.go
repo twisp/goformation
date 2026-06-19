@@ -34,6 +34,11 @@ type Domain struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-advancedsecurityoptions
 	AdvancedSecurityOptions *Domain_AdvancedSecurityOptionsInput `json:"AdvancedSecurityOptions,omitempty"`
 
+	// AutomatedSnapshotPauseOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-automatedsnapshotpauseoptions
+	AutomatedSnapshotPauseOptions *Domain_AutomatedSnapshotPauseOptions `json:"AutomatedSnapshotPauseOptions,omitempty"`
+
 	// ClusterConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-clusterconfig
@@ -43,6 +48,11 @@ type Domain struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-cognitooptions
 	CognitoOptions *Domain_CognitoOptions `json:"CognitoOptions,omitempty"`
+
+	// DeploymentStrategyOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-deploymentstrategyoptions
+	DeploymentStrategyOptions *Domain_DeploymentStrategyOptions `json:"DeploymentStrategyOptions,omitempty"`
 
 	// DomainEndpointOptions AWS CloudFormation Property
 	// Required: false

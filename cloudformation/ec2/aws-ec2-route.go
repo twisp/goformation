@@ -68,6 +68,11 @@ type Route struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-networkinterfaceid
 	NetworkInterfaceId *string `json:"NetworkInterfaceId,omitempty"`
 
+	// OdbNetworkArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-odbnetworkarn
+	OdbNetworkArn *string `json:"OdbNetworkArn,omitempty"`
+
 	// RouteTableId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-routetableid

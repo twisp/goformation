@@ -20,6 +20,11 @@ type RouterInput_RouterInputConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-routerinput-routerinputconfiguration.html#cfn-mediaconnect-routerinput-routerinputconfiguration-mediaconnectflow
 	MediaConnectFlow *RouterInput_MediaConnectFlowRouterInputConfiguration `json:"MediaConnectFlow,omitempty"`
 
+	// MediaLiveChannel AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-routerinput-routerinputconfiguration.html#cfn-mediaconnect-routerinput-routerinputconfiguration-medialivechannel
+	MediaLiveChannel *RouterInput_MediaLiveChannelRouterInputConfiguration `json:"MediaLiveChannel,omitempty"`
+
 	// Merge AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-routerinput-routerinputconfiguration.html#cfn-mediaconnect-routerinput-routerinputconfiguration-merge

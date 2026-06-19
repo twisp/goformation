@@ -18,7 +18,7 @@ type Template_PanelConfiguration struct {
 	// BackgroundVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-panelconfiguration.html#cfn-quicksight-template-panelconfiguration-backgroundvisibility
-	BackgroundVisibility interface{} `json:"BackgroundVisibility,omitempty"`
+	BackgroundVisibility *string `json:"BackgroundVisibility,omitempty"`
 
 	// BorderColor AWS CloudFormation Property
 	// Required: false
@@ -38,7 +38,7 @@ type Template_PanelConfiguration struct {
 	// BorderVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-panelconfiguration.html#cfn-quicksight-template-panelconfiguration-bordervisibility
-	BorderVisibility interface{} `json:"BorderVisibility,omitempty"`
+	BorderVisibility *string `json:"BorderVisibility,omitempty"`
 
 	// GutterSpacing AWS CloudFormation Property
 	// Required: false
@@ -48,7 +48,7 @@ type Template_PanelConfiguration struct {
 	// GutterVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-panelconfiguration.html#cfn-quicksight-template-panelconfiguration-guttervisibility
-	GutterVisibility interface{} `json:"GutterVisibility,omitempty"`
+	GutterVisibility *string `json:"GutterVisibility,omitempty"`
 
 	// Title AWS CloudFormation Property
 	// Required: false

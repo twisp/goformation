@@ -55,6 +55,11 @@ type FirewallRuleGroup_FirewallRule struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainredirectionaction
 	FirewallDomainRedirectionAction *string `json:"FirewallDomainRedirectionAction,omitempty"`
 
+	// FirewallRuleType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewallruletype
+	FirewallRuleType *FirewallRuleGroup_FirewallRuleType `json:"FirewallRuleType,omitempty"`
+
 	// FirewallThreatProtectionId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewallthreatprotectionid

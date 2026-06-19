@@ -14,6 +14,16 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html
 type LocationFSxWindows struct {
 
+	// CmkSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-cmksecretconfig
+	CmkSecretConfig *LocationFSxWindows_CmkSecretConfig `json:"CmkSecretConfig,omitempty"`
+
+	// CustomSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-customsecretconfig
+	CustomSecretConfig *LocationFSxWindows_CustomSecretConfig `json:"CustomSecretConfig,omitempty"`
+
 	// Domain AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-domain

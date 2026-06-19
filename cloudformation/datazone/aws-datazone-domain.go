@@ -20,9 +20,9 @@ type Domain struct {
 	Description *string `json:"Description,omitempty"`
 
 	// DomainExecutionRole AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-domain.html#cfn-datazone-domain-domainexecutionrole
-	DomainExecutionRole string `json:"DomainExecutionRole"`
+	DomainExecutionRole *string `json:"DomainExecutionRole,omitempty"`
 
 	// DomainVersion AWS CloudFormation Property
 	// Required: false

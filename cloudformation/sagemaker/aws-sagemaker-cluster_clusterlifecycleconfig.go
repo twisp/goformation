@@ -11,14 +11,19 @@ import (
 type Cluster_ClusterLifeCycleConfig struct {
 
 	// OnCreate AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterlifecycleconfig.html#cfn-sagemaker-cluster-clusterlifecycleconfig-oncreate
-	OnCreate string `json:"OnCreate"`
+	OnCreate *string `json:"OnCreate,omitempty"`
+
+	// OnInitComplete AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterlifecycleconfig.html#cfn-sagemaker-cluster-clusterlifecycleconfig-oninitcomplete
+	OnInitComplete *string `json:"OnInitComplete,omitempty"`
 
 	// SourceS3Uri AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterlifecycleconfig.html#cfn-sagemaker-cluster-clusterlifecycleconfig-sources3uri
-	SourceS3Uri string `json:"SourceS3Uri"`
+	SourceS3Uri *string `json:"SourceS3Uri,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

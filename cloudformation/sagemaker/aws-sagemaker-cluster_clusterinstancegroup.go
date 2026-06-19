@@ -40,15 +40,20 @@ type Cluster_ClusterInstanceGroup struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-instancegroupname
 	InstanceGroupName string `json:"InstanceGroupName"`
 
+	// InstanceRequirements AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-instancerequirements
+	InstanceRequirements *Cluster_InstanceRequirements `json:"InstanceRequirements,omitempty"`
+
 	// InstanceStorageConfigs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-instancestorageconfigs
 	InstanceStorageConfigs []Cluster_ClusterInstanceStorageConfig `json:"InstanceStorageConfigs,omitempty"`
 
 	// InstanceType AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-instancetype
-	InstanceType string `json:"InstanceType"`
+	InstanceType *string `json:"InstanceType,omitempty"`
 
 	// KubernetesConfig AWS CloudFormation Property
 	// Required: false
@@ -56,9 +61,19 @@ type Cluster_ClusterInstanceGroup struct {
 	KubernetesConfig *Cluster_ClusterKubernetesConfig `json:"KubernetesConfig,omitempty"`
 
 	// LifeCycleConfig AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-lifecycleconfig
-	LifeCycleConfig *Cluster_ClusterLifeCycleConfig `json:"LifeCycleConfig"`
+	LifeCycleConfig *Cluster_ClusterLifeCycleConfig `json:"LifeCycleConfig,omitempty"`
+
+	// MinInstanceCount AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-mininstancecount
+	MinInstanceCount *int `json:"MinInstanceCount,omitempty"`
+
+	// NetworkInterface AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-networkinterface
+	NetworkInterface *Cluster_ClusterNetworkInterface `json:"NetworkInterface,omitempty"`
 
 	// OnStartDeepHealthChecks AWS CloudFormation Property
 	// Required: false
@@ -74,6 +89,11 @@ type Cluster_ClusterInstanceGroup struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-scheduledupdateconfig
 	ScheduledUpdateConfig *Cluster_ScheduledUpdateConfig `json:"ScheduledUpdateConfig,omitempty"`
+
+	// SlurmConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-slurmconfig
+	SlurmConfig *Cluster_ClusterSlurmConfig `json:"SlurmConfig,omitempty"`
 
 	// ThreadsPerCore AWS CloudFormation Property
 	// Required: false

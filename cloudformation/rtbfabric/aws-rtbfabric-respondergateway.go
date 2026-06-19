@@ -14,6 +14,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rtbfabric-respondergateway.html
 type ResponderGateway struct {
 
+	// AcmCertificateArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rtbfabric-respondergateway.html#cfn-rtbfabric-respondergateway-acmcertificatearn
+	AcmCertificateArn *string `json:"AcmCertificateArn,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rtbfabric-respondergateway.html#cfn-rtbfabric-respondergateway-description
@@ -23,6 +28,16 @@ type ResponderGateway struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rtbfabric-respondergateway.html#cfn-rtbfabric-respondergateway-domainname
 	DomainName *string `json:"DomainName,omitempty"`
+
+	// GatewayType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rtbfabric-respondergateway.html#cfn-rtbfabric-respondergateway-gatewaytype
+	GatewayType *string `json:"GatewayType,omitempty"`
+
+	// ListenerConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rtbfabric-respondergateway.html#cfn-rtbfabric-respondergateway-listenerconfig
+	ListenerConfig *ResponderGateway_ListenerConfig `json:"ListenerConfig,omitempty"`
 
 	// ManagedEndpointConfiguration AWS CloudFormation Property
 	// Required: false

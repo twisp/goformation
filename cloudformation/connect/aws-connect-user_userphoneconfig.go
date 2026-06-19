@@ -31,9 +31,9 @@ type User_UserPhoneConfig struct {
 	PersistentConnection *bool `json:"PersistentConnection,omitempty"`
 
 	// PhoneType AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-userphoneconfig.html#cfn-connect-user-userphoneconfig-phonetype
-	PhoneType string `json:"PhoneType"`
+	PhoneType *string `json:"PhoneType,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

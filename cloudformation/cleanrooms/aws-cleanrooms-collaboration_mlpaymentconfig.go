@@ -20,6 +20,11 @@ type Collaboration_MLPaymentConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-mlpaymentconfig.html#cfn-cleanrooms-collaboration-mlpaymentconfig-modeltraining
 	ModelTraining *Collaboration_ModelTrainingPaymentConfig `json:"ModelTraining,omitempty"`
 
+	// SyntheticDataGeneration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-collaboration-mlpaymentconfig.html#cfn-cleanrooms-collaboration-mlpaymentconfig-syntheticdatageneration
+	SyntheticDataGeneration *Collaboration_SyntheticDataGenerationPaymentConfig `json:"SyntheticDataGeneration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

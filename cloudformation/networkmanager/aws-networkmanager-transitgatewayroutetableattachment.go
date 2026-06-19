@@ -34,6 +34,11 @@ type TransitGatewayRouteTableAttachment struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposedsegmentchange
 	ProposedSegmentChange *TransitGatewayRouteTableAttachment_ProposedSegmentChange `json:"ProposedSegmentChange,omitempty"`
 
+	// RoutingPolicyLabel AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-routingpolicylabel
+	RoutingPolicyLabel *string `json:"RoutingPolicyLabel,omitempty"`
+
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-tags

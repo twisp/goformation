@@ -24,6 +24,11 @@ type SecurityProfile struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-allowedaccesscontroltags
 	AllowedAccessControlTags []tags.Tag `json:"AllowedAccessControlTags,omitempty"`
 
+	// AllowedFlowModules AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-allowedflowmodules
+	AllowedFlowModules []SecurityProfile_FlowModule `json:"AllowedFlowModules,omitempty"`
+
 	// Applications AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-applications

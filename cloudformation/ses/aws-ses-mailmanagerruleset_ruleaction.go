@@ -20,6 +20,11 @@ type MailManagerRuleSet_RuleAction struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-archive
 	Archive *MailManagerRuleSet_ArchiveAction `json:"Archive,omitempty"`
 
+	// Bounce AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-bounce
+	Bounce *MailManagerRuleSet_BounceAction `json:"Bounce,omitempty"`
+
 	// DeliverToMailbox AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-delivertomailbox
@@ -34,6 +39,11 @@ type MailManagerRuleSet_RuleAction struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-drop
 	Drop interface{} `json:"Drop,omitempty"`
+
+	// InvokeLambda AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-ruleaction.html#cfn-ses-mailmanagerruleset-ruleaction-invokelambda
+	InvokeLambda *MailManagerRuleSet_InvokeLambdaAction `json:"InvokeLambda,omitempty"`
 
 	// PublishToSns AWS CloudFormation Property
 	// Required: false

@@ -16,9 +16,14 @@ type Bot_SubSlotTypeComposition struct {
 	Name string `json:"Name"`
 
 	// SlotTypeId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslottypecomposition.html#cfn-lex-bot-subslottypecomposition-slottypeid
-	SlotTypeId string `json:"SlotTypeId"`
+	SlotTypeId *string `json:"SlotTypeId,omitempty"`
+
+	// SlotTypeName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-subslottypecomposition.html#cfn-lex-bot-subslottypecomposition-slottypename
+	SlotTypeName *string `json:"SlotTypeName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

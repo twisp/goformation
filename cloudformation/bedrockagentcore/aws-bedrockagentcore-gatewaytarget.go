@@ -14,9 +14,9 @@ import (
 type GatewayTarget struct {
 
 	// CredentialProviderConfigurations AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gatewaytarget.html#cfn-bedrockagentcore-gatewaytarget-credentialproviderconfigurations
-	CredentialProviderConfigurations []GatewayTarget_CredentialProviderConfiguration `json:"CredentialProviderConfigurations"`
+	CredentialProviderConfigurations []GatewayTarget_CredentialProviderConfiguration `json:"CredentialProviderConfigurations,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
@@ -28,10 +28,20 @@ type GatewayTarget struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gatewaytarget.html#cfn-bedrockagentcore-gatewaytarget-gatewayidentifier
 	GatewayIdentifier *string `json:"GatewayIdentifier,omitempty"`
 
+	// MetadataConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gatewaytarget.html#cfn-bedrockagentcore-gatewaytarget-metadataconfiguration
+	MetadataConfiguration *GatewayTarget_MetadataConfiguration `json:"MetadataConfiguration,omitempty"`
+
 	// Name AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gatewaytarget.html#cfn-bedrockagentcore-gatewaytarget-name
-	Name string `json:"Name"`
+	Name *string `json:"Name,omitempty"`
+
+	// PrivateEndpoint AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-gatewaytarget.html#cfn-bedrockagentcore-gatewaytarget-privateendpoint
+	PrivateEndpoint *GatewayTarget_PrivateEndpoint `json:"PrivateEndpoint,omitempty"`
 
 	// TargetConfiguration AWS CloudFormation Property
 	// Required: true

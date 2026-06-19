@@ -11,14 +11,29 @@ import (
 type Replicator_KafkaCluster struct {
 
 	// AmazonMskCluster AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-amazonmskcluster
-	AmazonMskCluster *Replicator_AmazonMskCluster `json:"AmazonMskCluster"`
+	AmazonMskCluster *Replicator_AmazonMskCluster `json:"AmazonMskCluster,omitempty"`
+
+	// ApacheKafkaCluster AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-apachekafkacluster
+	ApacheKafkaCluster *Replicator_ApacheKafkaCluster `json:"ApacheKafkaCluster,omitempty"`
+
+	// ClientAuthentication AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-clientauthentication
+	ClientAuthentication *Replicator_KafkaClusterClientAuthentication `json:"ClientAuthentication,omitempty"`
+
+	// EncryptionInTransit AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-encryptionintransit
+	EncryptionInTransit *Replicator_KafkaClusterEncryptionInTransit `json:"EncryptionInTransit,omitempty"`
 
 	// VpcConfig AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkacluster.html#cfn-msk-replicator-kafkacluster-vpcconfig
-	VpcConfig *Replicator_KafkaClusterClientVpcConfig `json:"VpcConfig"`
+	VpcConfig *Replicator_KafkaClusterClientVpcConfig `json:"VpcConfig,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

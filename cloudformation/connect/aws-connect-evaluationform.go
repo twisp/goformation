@@ -39,6 +39,11 @@ type EvaluationForm struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-languageconfiguration
 	LanguageConfiguration *EvaluationForm_EvaluationFormLanguageConfiguration `json:"LanguageConfiguration,omitempty"`
 
+	// ReviewConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-reviewconfiguration
+	ReviewConfiguration *EvaluationForm_EvaluationReviewConfiguration `json:"ReviewConfiguration,omitempty"`
+
 	// ScoringStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html#cfn-connect-evaluationform-scoringstrategy

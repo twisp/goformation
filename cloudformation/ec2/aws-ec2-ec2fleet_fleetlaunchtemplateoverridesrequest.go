@@ -15,10 +15,20 @@ type EC2Fleet_FleetLaunchTemplateOverridesRequest struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-availabilityzone
 	AvailabilityZone *string `json:"AvailabilityZone,omitempty"`
 
+	// AvailabilityZoneId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-availabilityzoneid
+	AvailabilityZoneId *string `json:"AvailabilityZoneId,omitempty"`
+
 	// BlockDeviceMappings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-blockdevicemappings
 	BlockDeviceMappings []EC2Fleet_BlockDeviceMapping `json:"BlockDeviceMappings,omitempty"`
+
+	// IamInstanceProfile AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-iaminstanceprofile
+	IamInstanceProfile *EC2Fleet_IamInstanceProfileSpecification `json:"IamInstanceProfile,omitempty"`
 
 	// InstanceRequirements AWS CloudFormation Property
 	// Required: false
@@ -30,10 +40,25 @@ type EC2Fleet_FleetLaunchTemplateOverridesRequest struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-instancetype
 	InstanceType *string `json:"InstanceType,omitempty"`
 
+	// KeyName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-keyname
+	KeyName *string `json:"KeyName,omitempty"`
+
 	// MaxPrice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-maxprice
 	MaxPrice *string `json:"MaxPrice,omitempty"`
+
+	// MetadataOptions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-metadataoptions
+	MetadataOptions *EC2Fleet_InstanceMetadataOptionsRequest `json:"MetadataOptions,omitempty"`
+
+	// NetworkInterfaces AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.html#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-networkinterfaces
+	NetworkInterfaces []EC2Fleet_NetworkInterfaceSpecificationRequest `json:"NetworkInterfaces,omitempty"`
 
 	// Placement AWS CloudFormation Property
 	// Required: false

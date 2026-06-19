@@ -15,14 +15,14 @@ import (
 type AccessGrantsLocation struct {
 
 	// IamRoleArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantslocation.html#cfn-s3-accessgrantslocation-iamrolearn
-	IamRoleArn *string `json:"IamRoleArn,omitempty"`
+	IamRoleArn string `json:"IamRoleArn"`
 
 	// LocationScope AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accessgrantslocation.html#cfn-s3-accessgrantslocation-locationscope
-	LocationScope *string `json:"LocationScope,omitempty"`
+	LocationScope string `json:"LocationScope"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

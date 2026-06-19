@@ -20,10 +20,20 @@ type Memory_UserPreferenceMemoryStrategy struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-userpreferencememorystrategy.html#cfn-bedrockagentcore-memory-userpreferencememorystrategy-description
 	Description *string `json:"Description,omitempty"`
 
+	// MemoryRecordSchema AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-userpreferencememorystrategy.html#cfn-bedrockagentcore-memory-userpreferencememorystrategy-memoryrecordschema
+	MemoryRecordSchema *Memory_MemoryRecordSchema `json:"MemoryRecordSchema,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-userpreferencememorystrategy.html#cfn-bedrockagentcore-memory-userpreferencememorystrategy-name
 	Name string `json:"Name"`
+
+	// NamespaceTemplates AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-userpreferencememorystrategy.html#cfn-bedrockagentcore-memory-userpreferencememorystrategy-namespacetemplates
+	NamespaceTemplates []string `json:"NamespaceTemplates,omitempty"`
 
 	// Namespaces AWS CloudFormation Property
 	// Required: false
