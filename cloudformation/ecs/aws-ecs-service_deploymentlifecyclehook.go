@@ -16,9 +16,9 @@ type Service_DeploymentLifecycleHook struct {
 	HookDetails interface{} `json:"HookDetails,omitempty"`
 
 	// HookTargetArn AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-hooktargetarn
-	HookTargetArn string `json:"HookTargetArn"`
+	HookTargetArn *string `json:"HookTargetArn,omitempty"`
 
 	// LifecycleStages AWS CloudFormation Property
 	// Required: true
@@ -26,9 +26,19 @@ type Service_DeploymentLifecycleHook struct {
 	LifecycleStages []string `json:"LifecycleStages"`
 
 	// RoleArn AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-rolearn
-	RoleArn string `json:"RoleArn"`
+	RoleArn *string `json:"RoleArn,omitempty"`
+
+	// TargetType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-targettype
+	TargetType *string `json:"TargetType,omitempty"`
+
+	// TimeoutConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentlifecyclehook.html#cfn-ecs-service-deploymentlifecyclehook-timeoutconfiguration
+	TimeoutConfiguration *Service_HookTimeoutConfig `json:"TimeoutConfiguration,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

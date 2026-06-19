@@ -35,9 +35,9 @@ type Alarm struct {
 	AlarmName *string `json:"AlarmName,omitempty"`
 
 	// ComparisonOperator AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-comparisonoperator
-	ComparisonOperator string `json:"ComparisonOperator"`
+	ComparisonOperator *string `json:"ComparisonOperator,omitempty"`
 
 	// DatapointsToAlarm AWS CloudFormation Property
 	// Required: false
@@ -54,10 +54,20 @@ type Alarm struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-evaluatelowsamplecountpercentile
 	EvaluateLowSampleCountPercentile *string `json:"EvaluateLowSampleCountPercentile,omitempty"`
 
+	// EvaluationCriteria AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-evaluationcriteria
+	EvaluationCriteria *Alarm_EvaluationCriteria `json:"EvaluationCriteria,omitempty"`
+
+	// EvaluationInterval AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-evaluationinterval
+	EvaluationInterval *int `json:"EvaluationInterval,omitempty"`
+
 	// EvaluationPeriods AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-evaluationperiods
-	EvaluationPeriods int `json:"EvaluationPeriods"`
+	EvaluationPeriods *int `json:"EvaluationPeriods,omitempty"`
 
 	// ExtendedStatistic AWS CloudFormation Property
 	// Required: false

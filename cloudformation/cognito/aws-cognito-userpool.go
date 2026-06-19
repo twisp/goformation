@@ -148,6 +148,11 @@ type UserPool struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-verificationmessagetemplate
 	VerificationMessageTemplate *UserPool_VerificationMessageTemplate `json:"VerificationMessageTemplate,omitempty"`
 
+	// WebAuthnFactorConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-webauthnfactorconfiguration
+	WebAuthnFactorConfiguration *string `json:"WebAuthnFactorConfiguration,omitempty"`
+
 	// WebAuthnRelyingPartyID AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-webauthnrelyingpartyid

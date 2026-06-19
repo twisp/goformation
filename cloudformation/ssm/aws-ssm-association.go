@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Association AWS CloudFormation Resource (AWS::SSM::Association)
@@ -17,6 +18,11 @@ type Association struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-applyonlyatcroninterval
 	ApplyOnlyAtCronInterval *bool `json:"ApplyOnlyAtCronInterval,omitempty"`
+
+	// AssociationDispatchAssumeRole AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-associationdispatchassumerole
+	AssociationDispatchAssumeRole *string `json:"AssociationDispatchAssumeRole,omitempty"`
 
 	// AssociationName AWS CloudFormation Property
 	// Required: false
@@ -87,6 +93,11 @@ type Association struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-synccompliance
 	SyncCompliance *string `json:"SyncCompliance,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// Targets AWS CloudFormation Property
 	// Required: false

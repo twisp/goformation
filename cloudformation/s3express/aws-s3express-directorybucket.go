@@ -29,6 +29,11 @@ type DirectoryBucket struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-dataredundancy
 	DataRedundancy string `json:"DataRedundancy"`
 
+	// InventoryConfigurations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-inventoryconfigurations
+	InventoryConfigurations []DirectoryBucket_InventoryConfiguration `json:"InventoryConfigurations,omitempty"`
+
 	// LifecycleConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-lifecycleconfiguration
@@ -38,6 +43,11 @@ type DirectoryBucket struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-locationname
 	LocationName string `json:"LocationName"`
+
+	// MetricsConfigurations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-directorybucket.html#cfn-s3express-directorybucket-metricsconfigurations
+	MetricsConfigurations []DirectoryBucket_MetricsConfiguration `json:"MetricsConfigurations,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

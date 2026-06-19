@@ -15,6 +15,11 @@ type AIAgent_AIAgentConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-answerrecommendationaiagentconfiguration
 	AnswerRecommendationAIAgentConfiguration *AIAgent_AnswerRecommendationAIAgentConfiguration `json:"AnswerRecommendationAIAgentConfiguration,omitempty"`
 
+	// CaseSummarizationAIAgentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-casesummarizationaiagentconfiguration
+	CaseSummarizationAIAgentConfiguration *AIAgent_CaseSummarizationAIAgentConfiguration `json:"CaseSummarizationAIAgentConfiguration,omitempty"`
+
 	// EmailGenerativeAnswerAIAgentConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-emailgenerativeansweraiagentconfiguration
@@ -34,6 +39,16 @@ type AIAgent_AIAgentConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-manualsearchaiagentconfiguration
 	ManualSearchAIAgentConfiguration *AIAgent_ManualSearchAIAgentConfiguration `json:"ManualSearchAIAgentConfiguration,omitempty"`
+
+	// NoteTakingAIAgentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-notetakingaiagentconfiguration
+	NoteTakingAIAgentConfiguration *AIAgent_NoteTakingAIAgentConfiguration `json:"NoteTakingAIAgentConfiguration,omitempty"`
+
+	// OrchestrationAIAgentConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-aiagent-aiagentconfiguration.html#cfn-wisdom-aiagent-aiagentconfiguration-orchestrationaiagentconfiguration
+	OrchestrationAIAgentConfiguration *AIAgent_OrchestrationAIAgentConfiguration `json:"OrchestrationAIAgentConfiguration,omitempty"`
 
 	// SelfServiceAIAgentConfiguration AWS CloudFormation Property
 	// Required: false

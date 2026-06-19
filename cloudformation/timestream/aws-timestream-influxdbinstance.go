@@ -49,6 +49,11 @@ type InfluxDBInstance struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-logdeliveryconfiguration
 	LogDeliveryConfiguration *InfluxDBInstance_LogDeliveryConfiguration `json:"LogDeliveryConfiguration,omitempty"`
 
+	// MaintenanceSchedule AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-maintenanceschedule
+	MaintenanceSchedule *InfluxDBInstance_MaintenanceSchedule `json:"MaintenanceSchedule,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-name

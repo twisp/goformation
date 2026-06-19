@@ -15,6 +15,16 @@ type Cluster_ClusterInstanceStorageConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancestorageconfig.html#cfn-sagemaker-cluster-clusterinstancestorageconfig-ebsvolumeconfig
 	EbsVolumeConfig *Cluster_ClusterEbsVolumeConfig `json:"EbsVolumeConfig,omitempty"`
 
+	// FsxLustreConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancestorageconfig.html#cfn-sagemaker-cluster-clusterinstancestorageconfig-fsxlustreconfig
+	FsxLustreConfig *Cluster_ClusterFsxLustreConfig `json:"FsxLustreConfig,omitempty"`
+
+	// FsxOpenZfsConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancestorageconfig.html#cfn-sagemaker-cluster-clusterinstancestorageconfig-fsxopenzfsconfig
+	FsxOpenZfsConfig *Cluster_ClusterFsxOpenZfsConfig `json:"FsxOpenZfsConfig,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

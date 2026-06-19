@@ -13,7 +13,7 @@ type Template_DataLabelOptions struct {
 	// CategoryLabelVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datalabeloptions.html#cfn-quicksight-template-datalabeloptions-categorylabelvisibility
-	CategoryLabelVisibility interface{} `json:"CategoryLabelVisibility,omitempty"`
+	CategoryLabelVisibility *string `json:"CategoryLabelVisibility,omitempty"`
 
 	// DataLabelTypes AWS CloudFormation Property
 	// Required: false
@@ -38,7 +38,7 @@ type Template_DataLabelOptions struct {
 	// MeasureLabelVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datalabeloptions.html#cfn-quicksight-template-datalabeloptions-measurelabelvisibility
-	MeasureLabelVisibility interface{} `json:"MeasureLabelVisibility,omitempty"`
+	MeasureLabelVisibility *string `json:"MeasureLabelVisibility,omitempty"`
 
 	// Overlap AWS CloudFormation Property
 	// Required: false
@@ -53,12 +53,12 @@ type Template_DataLabelOptions struct {
 	// TotalsVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datalabeloptions.html#cfn-quicksight-template-datalabeloptions-totalsvisibility
-	TotalsVisibility interface{} `json:"TotalsVisibility,omitempty"`
+	TotalsVisibility *string `json:"TotalsVisibility,omitempty"`
 
 	// Visibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datalabeloptions.html#cfn-quicksight-template-datalabeloptions-visibility
-	Visibility interface{} `json:"Visibility,omitempty"`
+	Visibility *string `json:"Visibility,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

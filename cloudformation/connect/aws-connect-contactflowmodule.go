@@ -24,6 +24,11 @@ type ContactFlowModule struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-contactflowmodule.html#cfn-connect-contactflowmodule-description
 	Description *string `json:"Description,omitempty"`
 
+	// ExternalInvocationConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-contactflowmodule.html#cfn-connect-contactflowmodule-externalinvocationconfiguration
+	ExternalInvocationConfiguration *ContactFlowModule_ExternalInvocationConfiguration `json:"ExternalInvocationConfiguration,omitempty"`
+
 	// InstanceArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-contactflowmodule.html#cfn-connect-contactflowmodule-instancearn
@@ -33,6 +38,11 @@ type ContactFlowModule struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-contactflowmodule.html#cfn-connect-contactflowmodule-name
 	Name string `json:"Name"`
+
+	// Settings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-contactflowmodule.html#cfn-connect-contactflowmodule-settings
+	Settings *string `json:"Settings,omitempty"`
 
 	// State AWS CloudFormation Property
 	// Required: false

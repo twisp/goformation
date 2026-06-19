@@ -20,6 +20,11 @@ type Channel_OutputDestination struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-logicalinterfacenames
 	LogicalInterfaceNames []string `json:"LogicalInterfaceNames,omitempty"`
 
+	// MediaConnectRouterSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-mediaconnectroutersettings
+	MediaConnectRouterSettings []Channel_MediaConnectRouterOutputDestinationSettings `json:"MediaConnectRouterSettings,omitempty"`
+
 	// MediaPackageSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-mediapackagesettings

@@ -14,14 +14,14 @@ import (
 type ServicePrincipalName struct {
 
 	// ConnectorArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-serviceprincipalname.html#cfn-pcaconnectorad-serviceprincipalname-connectorarn
-	ConnectorArn *string `json:"ConnectorArn,omitempty"`
+	ConnectorArn string `json:"ConnectorArn"`
 
 	// DirectoryRegistrationArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcaconnectorad-serviceprincipalname.html#cfn-pcaconnectorad-serviceprincipalname-directoryregistrationarn
-	DirectoryRegistrationArn *string `json:"DirectoryRegistrationArn,omitempty"`
+	DirectoryRegistrationArn string `json:"DirectoryRegistrationArn"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

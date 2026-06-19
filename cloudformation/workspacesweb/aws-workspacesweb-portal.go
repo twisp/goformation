@@ -64,6 +64,11 @@ type Portal struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-networksettingsarn
 	NetworkSettingsArn *string `json:"NetworkSettingsArn,omitempty"`
 
+	// PortalCustomDomain AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-portalcustomdomain
+	PortalCustomDomain *string `json:"PortalCustomDomain,omitempty"`
+
 	// SessionLoggerArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-sessionloggerarn

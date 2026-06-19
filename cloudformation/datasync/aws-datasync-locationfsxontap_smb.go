@@ -10,10 +10,25 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html
 type LocationFSxONTAP_SMB struct {
 
+	// CmkSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html#cfn-datasync-locationfsxontap-smb-cmksecretconfig
+	CmkSecretConfig *LocationFSxONTAP_CmkSecretConfig `json:"CmkSecretConfig,omitempty"`
+
+	// CustomSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html#cfn-datasync-locationfsxontap-smb-customsecretconfig
+	CustomSecretConfig *LocationFSxONTAP_CustomSecretConfig `json:"CustomSecretConfig,omitempty"`
+
 	// Domain AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html#cfn-datasync-locationfsxontap-smb-domain
 	Domain *string `json:"Domain,omitempty"`
+
+	// ManagedSecretConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html#cfn-datasync-locationfsxontap-smb-managedsecretconfig
+	ManagedSecretConfig *LocationFSxONTAP_ManagedSecretConfig `json:"ManagedSecretConfig,omitempty"`
 
 	// MountOptions AWS CloudFormation Property
 	// Required: true
@@ -21,9 +36,9 @@ type LocationFSxONTAP_SMB struct {
 	MountOptions *LocationFSxONTAP_SmbMountOptions `json:"MountOptions"`
 
 	// Password AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html#cfn-datasync-locationfsxontap-smb-password
-	Password string `json:"Password"`
+	Password *string `json:"Password,omitempty"`
 
 	// User AWS CloudFormation Property
 	// Required: true

@@ -10,10 +10,25 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationtelemetryrule-telemetryrule.html
 type OrganizationTelemetryRule_TelemetryRule struct {
 
+	// AllRegions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationtelemetryrule-telemetryrule.html#cfn-observabilityadmin-organizationtelemetryrule-telemetryrule-allregions
+	AllRegions *bool `json:"AllRegions,omitempty"`
+
+	// AllowFieldUpdates AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationtelemetryrule-telemetryrule.html#cfn-observabilityadmin-organizationtelemetryrule-telemetryrule-allowfieldupdates
+	AllowFieldUpdates *bool `json:"AllowFieldUpdates,omitempty"`
+
 	// DestinationConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationtelemetryrule-telemetryrule.html#cfn-observabilityadmin-organizationtelemetryrule-telemetryrule-destinationconfiguration
 	DestinationConfiguration *OrganizationTelemetryRule_TelemetryDestinationConfiguration `json:"DestinationConfiguration,omitempty"`
+
+	// Regions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationtelemetryrule-telemetryrule.html#cfn-observabilityadmin-organizationtelemetryrule-telemetryrule-regions
+	Regions []string `json:"Regions,omitempty"`
 
 	// ResourceType AWS CloudFormation Property
 	// Required: true
@@ -29,6 +44,11 @@ type OrganizationTelemetryRule_TelemetryRule struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationtelemetryrule-telemetryrule.html#cfn-observabilityadmin-organizationtelemetryrule-telemetryrule-selectioncriteria
 	SelectionCriteria *string `json:"SelectionCriteria,omitempty"`
+
+	// TelemetrySourceTypes AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationtelemetryrule-telemetryrule.html#cfn-observabilityadmin-organizationtelemetryrule-telemetryrule-telemetrysourcetypes
+	TelemetrySourceTypes []string `json:"TelemetrySourceTypes,omitempty"`
 
 	// TelemetryType AWS CloudFormation Property
 	// Required: true

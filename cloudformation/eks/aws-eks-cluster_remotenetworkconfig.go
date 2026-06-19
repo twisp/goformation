@@ -11,9 +11,9 @@ import (
 type Cluster_RemoteNetworkConfig struct {
 
 	// RemoteNodeNetworks AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotenodenetworks
-	RemoteNodeNetworks []Cluster_RemoteNodeNetwork `json:"RemoteNodeNetworks"`
+	RemoteNodeNetworks []Cluster_RemoteNodeNetwork `json:"RemoteNodeNetworks,omitempty"`
 
 	// RemotePodNetworks AWS CloudFormation Property
 	// Required: false

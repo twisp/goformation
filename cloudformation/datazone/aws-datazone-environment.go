@@ -13,6 +13,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html
 type Environment struct {
 
+	// DeploymentOrder AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-deploymentorder
+	DeploymentOrder *int `json:"DeploymentOrder,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-description
@@ -32,6 +37,16 @@ type Environment struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentaccountregion
 	EnvironmentAccountRegion *string `json:"EnvironmentAccountRegion,omitempty"`
+
+	// EnvironmentBlueprintIdentifier AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentblueprintidentifier
+	EnvironmentBlueprintIdentifier *string `json:"EnvironmentBlueprintIdentifier,omitempty"`
+
+	// EnvironmentConfigurationId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-environment.html#cfn-datazone-environment-environmentconfigurationid
+	EnvironmentConfigurationId *string `json:"EnvironmentConfigurationId,omitempty"`
 
 	// EnvironmentProfileIdentifier AWS CloudFormation Property
 	// Required: false

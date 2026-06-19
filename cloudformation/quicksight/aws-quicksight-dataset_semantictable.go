@@ -25,6 +25,11 @@ type DataSet_SemanticTable struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-semantictable.html#cfn-quicksight-dataset-semantictable-rowlevelpermissionconfiguration
 	RowLevelPermissionConfiguration *DataSet_RowLevelPermissionConfiguration `json:"RowLevelPermissionConfiguration,omitempty"`
 
+	// SemanticMetadata AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-semantictable.html#cfn-quicksight-dataset-semantictable-semanticmetadata
+	SemanticMetadata *DataSet_TableSemanticMetadata `json:"SemanticMetadata,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

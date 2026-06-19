@@ -10,15 +10,40 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html
 type CapacityProvider_InstanceLaunchTemplate struct {
 
+	// CapacityOptionType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-capacityoptiontype
+	CapacityOptionType *string `json:"CapacityOptionType,omitempty"`
+
+	// CapacityReservations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-capacityreservations
+	CapacityReservations *CapacityProvider_CapacityReservationRequest `json:"CapacityReservations,omitempty"`
+
 	// Ec2InstanceProfileArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-ec2instanceprofilearn
 	Ec2InstanceProfileArn string `json:"Ec2InstanceProfileArn"`
 
+	// FipsEnabled AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-fipsenabled
+	FipsEnabled *bool `json:"FipsEnabled,omitempty"`
+
+	// InstanceMetadataTagsPropagation AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-instancemetadatatagspropagation
+	InstanceMetadataTagsPropagation *bool `json:"InstanceMetadataTagsPropagation,omitempty"`
+
 	// InstanceRequirements AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-instancerequirements
 	InstanceRequirements *CapacityProvider_InstanceRequirementsRequest `json:"InstanceRequirements,omitempty"`
+
+	// LocalStorageConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-instancelaunchtemplate.html#cfn-ecs-capacityprovider-instancelaunchtemplate-localstorageconfiguration
+	LocalStorageConfiguration *CapacityProvider_ManagedInstancesLocalStorageConfiguration `json:"LocalStorageConfiguration,omitempty"`
 
 	// Monitoring AWS CloudFormation Property
 	// Required: false

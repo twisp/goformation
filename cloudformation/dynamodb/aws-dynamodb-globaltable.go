@@ -14,9 +14,9 @@ import (
 type GlobalTable struct {
 
 	// AttributeDefinitions AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-attributedefinitions
-	AttributeDefinitions []GlobalTable_AttributeDefinition `json:"AttributeDefinitions"`
+	AttributeDefinitions []GlobalTable_AttributeDefinition `json:"AttributeDefinitions,omitempty"`
 
 	// BillingMode AWS CloudFormation Property
 	// Required: false
@@ -28,15 +28,20 @@ type GlobalTable struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globalsecondaryindexes
 	GlobalSecondaryIndexes []GlobalTable_GlobalSecondaryIndex `json:"GlobalSecondaryIndexes,omitempty"`
 
+	// GlobalTableSourceArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablesourcearn
+	GlobalTableSourceArn *string `json:"GlobalTableSourceArn,omitempty"`
+
 	// GlobalTableWitnesses AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-globaltablewitnesses
 	GlobalTableWitnesses []GlobalTable_GlobalTableWitness `json:"GlobalTableWitnesses,omitempty"`
 
 	// KeySchema AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-keyschema
-	KeySchema []GlobalTable_KeySchema `json:"KeySchema"`
+	KeySchema []GlobalTable_KeySchema `json:"KeySchema,omitempty"`
 
 	// LocalSecondaryIndexes AWS CloudFormation Property
 	// Required: false
@@ -47,6 +52,16 @@ type GlobalTable struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-multiregionconsistency
 	MultiRegionConsistency *string `json:"MultiRegionConsistency,omitempty"`
+
+	// ReadOnDemandThroughputSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-readondemandthroughputsettings
+	ReadOnDemandThroughputSettings *GlobalTable_ReadOnDemandThroughputSettings `json:"ReadOnDemandThroughputSettings,omitempty"`
+
+	// ReadProvisionedThroughputSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-readprovisionedthroughputsettings
+	ReadProvisionedThroughputSettings *GlobalTable_GlobalReadProvisionedThroughputSettings `json:"ReadProvisionedThroughputSettings,omitempty"`
 
 	// Replicas AWS CloudFormation Property
 	// Required: true

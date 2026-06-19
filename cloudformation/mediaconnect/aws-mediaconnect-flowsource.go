@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // FlowSource AWS CloudFormation Resource (AWS::MediaConnect::FlowSource)
@@ -23,15 +24,10 @@ type FlowSource struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-description
 	Description string `json:"Description"`
 
-	// EntitlementArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-entitlementarn
-	EntitlementArn *string `json:"EntitlementArn,omitempty"`
-
 	// FlowArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-flowarn
-	FlowArn *string `json:"FlowArn,omitempty"`
+	FlowArn string `json:"FlowArn"`
 
 	// GatewayBridgeSource AWS CloudFormation Property
 	// Required: false
@@ -68,16 +64,6 @@ type FlowSource struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-protocol
 	Protocol *string `json:"Protocol,omitempty"`
 
-	// SenderControlPort AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-sendercontrolport
-	SenderControlPort *int `json:"SenderControlPort,omitempty"`
-
-	// SenderIpAddress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-senderipaddress
-	SenderIpAddress *string `json:"SenderIpAddress,omitempty"`
-
 	// SourceListenerAddress AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-sourcelisteneraddress
@@ -92,6 +78,11 @@ type FlowSource struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-streamid
 	StreamId *string `json:"StreamId,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VpcInterfaceName AWS CloudFormation Property
 	// Required: false

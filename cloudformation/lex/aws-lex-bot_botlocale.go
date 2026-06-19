@@ -10,6 +10,11 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html
 type Bot_BotLocale struct {
 
+	// AudioFillerSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-audiofillersettings
+	AudioFillerSettings *Bot_AudioFillerSettings `json:"AudioFillerSettings,omitempty"`
+
 	// CustomVocabulary AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-customvocabulary
@@ -44,6 +49,21 @@ type Bot_BotLocale struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-slottypes
 	SlotTypes []Bot_SlotType `json:"SlotTypes,omitempty"`
+
+	// SpeechDetectionSensitivity AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-speechdetectionsensitivity
+	SpeechDetectionSensitivity *string `json:"SpeechDetectionSensitivity,omitempty"`
+
+	// SpeechRecognitionSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-speechrecognitionsettings
+	SpeechRecognitionSettings *Bot_SpeechRecognitionSettings `json:"SpeechRecognitionSettings,omitempty"`
+
+	// UnifiedSpeechSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html#cfn-lex-bot-botlocale-unifiedspeechsettings
+	UnifiedSpeechSettings *Bot_UnifiedSpeechSettings `json:"UnifiedSpeechSettings,omitempty"`
 
 	// VoiceSettings AWS CloudFormation Property
 	// Required: false

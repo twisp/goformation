@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Webhook AWS CloudFormation Resource (AWS::CodePipeline::Webhook)
@@ -37,6 +38,11 @@ type Webhook struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-registerwiththirdparty
 	RegisterWithThirdParty *bool `json:"RegisterWithThirdParty,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// TargetAction AWS CloudFormation Property
 	// Required: true

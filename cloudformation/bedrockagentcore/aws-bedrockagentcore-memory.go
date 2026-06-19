@@ -28,6 +28,11 @@ type Memory struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-memory.html#cfn-bedrockagentcore-memory-eventexpiryduration
 	EventExpiryDuration int `json:"EventExpiryDuration"`
 
+	// IndexedKeys AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-memory.html#cfn-bedrockagentcore-memory-indexedkeys
+	IndexedKeys []Memory_IndexedKey `json:"IndexedKeys,omitempty"`
+
 	// MemoryExecutionRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-memory.html#cfn-bedrockagentcore-memory-memoryexecutionrolearn
@@ -42,6 +47,11 @@ type Memory struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-memory.html#cfn-bedrockagentcore-memory-name
 	Name string `json:"Name"`
+
+	// StreamDeliveryResources AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-memory.html#cfn-bedrockagentcore-memory-streamdeliveryresources
+	StreamDeliveryResources *Memory_StreamDeliveryResources `json:"StreamDeliveryResources,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

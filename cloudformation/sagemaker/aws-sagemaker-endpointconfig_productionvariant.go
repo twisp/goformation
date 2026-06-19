@@ -40,6 +40,11 @@ type EndpointConfig_ProductionVariant struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight
 	InitialVariantWeight *float64 `json:"InitialVariantWeight,omitempty"`
 
+	// InstancePools AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-instancepools
+	InstancePools []EndpointConfig_InstancePools `json:"InstancePools,omitempty"`
+
 	// InstanceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-instancetype
@@ -69,6 +74,11 @@ type EndpointConfig_ProductionVariant struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig
 	ServerlessConfig *EndpointConfig_ServerlessConfig `json:"ServerlessConfig,omitempty"`
+
+	// VariantInstanceProvisionTimeoutInSeconds AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html#cfn-sagemaker-endpointconfig-productionvariant-variantinstanceprovisiontimeoutinseconds
+	VariantInstanceProvisionTimeoutInSeconds *int `json:"VariantInstanceProvisionTimeoutInSeconds,omitempty"`
 
 	// VariantName AWS CloudFormation Property
 	// Required: true

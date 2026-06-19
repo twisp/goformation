@@ -99,6 +99,16 @@ type Fleet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid
 	PeerVpcId *string `json:"PeerVpcId,omitempty"`
 
+	// PlayerGatewayConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-playergatewayconfiguration
+	PlayerGatewayConfiguration *Fleet_PlayerGatewayConfiguration `json:"PlayerGatewayConfiguration,omitempty"`
+
+	// PlayerGatewayMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-playergatewaymode
+	PlayerGatewayMode *string `json:"PlayerGatewayMode,omitempty"`
+
 	// ResourceCreationLimitPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-resourcecreationlimitpolicy

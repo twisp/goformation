@@ -19,9 +19,19 @@ type GroupProfile struct {
 	DomainIdentifier string `json:"DomainIdentifier"`
 
 	// GroupIdentifier AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-groupprofile.html#cfn-datazone-groupprofile-groupidentifier
-	GroupIdentifier string `json:"GroupIdentifier"`
+	GroupIdentifier *string `json:"GroupIdentifier,omitempty"`
+
+	// GroupType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-groupprofile.html#cfn-datazone-groupprofile-grouptype
+	GroupType *string `json:"GroupType,omitempty"`
+
+	// RolePrincipalArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datazone-groupprofile.html#cfn-datazone-groupprofile-roleprincipalarn
+	RolePrincipalArn *string `json:"RolePrincipalArn,omitempty"`
 
 	// Status AWS CloudFormation Property
 	// Required: false

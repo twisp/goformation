@@ -15,11 +15,6 @@ type TopicRule_Action struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-cloudwatchalarm
 	CloudwatchAlarm *TopicRule_CloudwatchAlarmAction `json:"CloudwatchAlarm,omitempty"`
 
-	// CloudwatchLogs AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-cloudwatchlogs
-	CloudwatchLogs *TopicRule_CloudwatchLogsAction `json:"CloudwatchLogs,omitempty"`
-
 	// CloudwatchMetric AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-cloudwatchmetric
@@ -65,11 +60,6 @@ type TopicRule_Action struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-iotsitewise
 	IotSiteWise *TopicRule_IotSiteWiseAction `json:"IotSiteWise,omitempty"`
 
-	// Kafka AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-kafka
-	Kafka *TopicRule_KafkaAction `json:"Kafka,omitempty"`
-
 	// Kinesis AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-kinesis
@@ -79,16 +69,6 @@ type TopicRule_Action struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-lambda
 	Lambda *TopicRule_LambdaAction `json:"Lambda,omitempty"`
-
-	// Location AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-location
-	Location *TopicRule_LocationAction `json:"Location,omitempty"`
-
-	// OpenSearch AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-opensearch
-	OpenSearch *TopicRule_OpenSearchAction `json:"OpenSearch,omitempty"`
 
 	// Republish AWS CloudFormation Property
 	// Required: false
@@ -114,11 +94,6 @@ type TopicRule_Action struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-stepfunctions
 	StepFunctions *TopicRule_StepFunctionsAction `json:"StepFunctions,omitempty"`
-
-	// Timestream AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-action.html#cfn-iot-topicrule-action-timestream
-	Timestream *TopicRule_TimestreamAction `json:"Timestream,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

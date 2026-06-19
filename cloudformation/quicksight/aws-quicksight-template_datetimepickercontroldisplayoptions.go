@@ -13,7 +13,7 @@ type Template_DateTimePickerControlDisplayOptions struct {
 	// DateIconVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datetimepickercontroldisplayoptions.html#cfn-quicksight-template-datetimepickercontroldisplayoptions-dateiconvisibility
-	DateIconVisibility interface{} `json:"DateIconVisibility,omitempty"`
+	DateIconVisibility *string `json:"DateIconVisibility,omitempty"`
 
 	// DateTimeFormat AWS CloudFormation Property
 	// Required: false
@@ -23,7 +23,7 @@ type Template_DateTimePickerControlDisplayOptions struct {
 	// HelperTextVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datetimepickercontroldisplayoptions.html#cfn-quicksight-template-datetimepickercontroldisplayoptions-helpertextvisibility
-	HelperTextVisibility interface{} `json:"HelperTextVisibility,omitempty"`
+	HelperTextVisibility *string `json:"HelperTextVisibility,omitempty"`
 
 	// InfoIconLabelOptions AWS CloudFormation Property
 	// Required: false

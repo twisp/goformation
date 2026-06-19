@@ -58,6 +58,11 @@ type ClientVpnEndpoint struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-dnsservers
 	DnsServers []string `json:"DnsServers,omitempty"`
 
+	// EndpointIpAddressType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-endpointipaddresstype
+	EndpointIpAddressType *string `json:"EndpointIpAddressType,omitempty"`
+
 	// SecurityGroupIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-securitygroupids
@@ -87,6 +92,16 @@ type ClientVpnEndpoint struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-tagspecifications
 	TagSpecifications []ClientVpnEndpoint_TagSpecification `json:"TagSpecifications,omitempty"`
+
+	// TrafficIpAddressType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-trafficipaddresstype
+	TrafficIpAddressType *string `json:"TrafficIpAddressType,omitempty"`
+
+	// TransitGatewayConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-transitgatewayconfiguration
+	TransitGatewayConfiguration *ClientVpnEndpoint_TransitGatewayConfiguration `json:"TransitGatewayConfiguration,omitempty"`
 
 	// TransportProtocol AWS CloudFormation Property
 	// Required: false

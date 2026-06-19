@@ -19,6 +19,11 @@ type PlaybackConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adconditioningconfiguration
 	AdConditioningConfiguration *PlaybackConfiguration_AdConditioningConfiguration `json:"AdConditioningConfiguration,omitempty"`
 
+	// AdDecisionServerConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-addecisionserverconfiguration
+	AdDecisionServerConfiguration *PlaybackConfiguration_AdDecisionServerConfiguration `json:"AdDecisionServerConfiguration,omitempty"`
+
 	// AdDecisionServerUrl AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-addecisionserverurl
@@ -48,6 +53,11 @@ type PlaybackConfiguration struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-dashconfiguration
 	DashConfiguration *PlaybackConfiguration_DashConfiguration `json:"DashConfiguration,omitempty"`
+
+	// FunctionMapping AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-functionmapping
+	FunctionMapping map[string]string `json:"FunctionMapping,omitempty"`
 
 	// HlsConfiguration AWS CloudFormation Property
 	// Required: false

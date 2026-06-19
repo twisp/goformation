@@ -18,6 +18,11 @@ type Step struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-emr-step-actiononfailure
 	ActionOnFailure string `json:"ActionOnFailure"`
 
+	// EncryptionKeyArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-emr-step-encryptionkeyarn
+	EncryptionKeyArn *string `json:"EncryptionKeyArn,omitempty"`
+
 	// HadoopJarStep AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-emr-step-hadoopjarstep
@@ -27,6 +32,11 @@ type Step struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-emr-step-jobflowid
 	JobFlowId string `json:"JobFlowId"`
+
+	// LogUri AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-emr-step-loguri
+	LogUri *string `json:"LogUri,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

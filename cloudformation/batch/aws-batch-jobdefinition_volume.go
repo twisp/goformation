@@ -25,6 +25,11 @@ type JobDefinition_Volume struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volume.html#cfn-batch-jobdefinition-volume-name
 	Name *string `json:"Name,omitempty"`
 
+	// S3FilesVolumeConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volume.html#cfn-batch-jobdefinition-volume-s3filesvolumeconfiguration
+	S3FilesVolumeConfiguration *JobDefinition_S3FilesVolumeConfiguration `json:"S3FilesVolumeConfiguration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

@@ -13,12 +13,12 @@ type ConnectorV2_Provider struct {
 	// JiraCloud AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-connectorv2-provider.html#cfn-securityhub-connectorv2-provider-jiracloud
-	JiraCloud *ConnectorV2_JiraCloud `json:"JiraCloud,omitempty"`
+	JiraCloud *ConnectorV2_JiraCloudProviderConfiguration `json:"JiraCloud,omitempty"`
 
 	// ServiceNow AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-connectorv2-provider.html#cfn-securityhub-connectorv2-provider-servicenow
-	ServiceNow *ConnectorV2_ServiceNow `json:"ServiceNow,omitempty"`
+	ServiceNow *ConnectorV2_ServiceNowProviderConfiguration `json:"ServiceNow,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

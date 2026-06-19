@@ -24,6 +24,16 @@ type TableBucket struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-metricsconfiguration
 	MetricsConfiguration *TableBucket_MetricsConfiguration `json:"MetricsConfiguration,omitempty"`
 
+	// ReplicationConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-replicationconfiguration
+	ReplicationConfiguration *TableBucket_ReplicationConfiguration `json:"ReplicationConfiguration,omitempty"`
+
+	// StorageClassConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-storageclassconfiguration
+	StorageClassConfiguration *TableBucket_StorageClassConfiguration `json:"StorageClassConfiguration,omitempty"`
+
 	// TableBucketName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3tables-tablebucket.html#cfn-s3tables-tablebucket-tablebucketname

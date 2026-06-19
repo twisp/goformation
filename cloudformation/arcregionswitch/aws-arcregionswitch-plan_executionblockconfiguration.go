@@ -15,10 +15,25 @@ type Plan_ExecutionBlockConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-arcroutingcontrolconfig
 	ArcRoutingControlConfig *Plan_ArcRoutingControlConfiguration `json:"ArcRoutingControlConfig,omitempty"`
 
+	// AuroraProvisionedScalingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-auroraprovisionedscalingconfig
+	AuroraProvisionedScalingConfig *Plan_AuroraProvisionedScalingConfiguration `json:"AuroraProvisionedScalingConfig,omitempty"`
+
+	// AuroraServerlessScalingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-auroraserverlessscalingconfig
+	AuroraServerlessScalingConfig *Plan_AuroraServerlessScalingConfiguration `json:"AuroraServerlessScalingConfig,omitempty"`
+
 	// CustomActionLambdaConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-customactionlambdaconfig
 	CustomActionLambdaConfig *Plan_CustomActionLambdaConfiguration `json:"CustomActionLambdaConfig,omitempty"`
+
+	// DocumentDbConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-documentdbconfig
+	DocumentDbConfig *Plan_DocumentDbConfiguration `json:"DocumentDbConfig,omitempty"`
 
 	// Ec2AsgCapacityIncreaseConfig AWS CloudFormation Property
 	// Required: false
@@ -45,10 +60,30 @@ type Plan_ExecutionBlockConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-globalauroraconfig
 	GlobalAuroraConfig *Plan_GlobalAuroraConfiguration `json:"GlobalAuroraConfig,omitempty"`
 
+	// LambdaEventSourceMappingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-lambdaeventsourcemappingconfig
+	LambdaEventSourceMappingConfig *Plan_LambdaEventSourceMappingConfiguration `json:"LambdaEventSourceMappingConfig,omitempty"`
+
+	// NeptuneGlobalDatabaseConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-neptuneglobaldatabaseconfig
+	NeptuneGlobalDatabaseConfig *Plan_NeptuneGlobalDatabaseConfiguration `json:"NeptuneGlobalDatabaseConfig,omitempty"`
+
 	// ParallelConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-parallelconfig
 	ParallelConfig *Plan_ParallelExecutionBlockConfiguration `json:"ParallelConfig,omitempty"`
+
+	// RdsCreateCrossRegionReadReplicaConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-rdscreatecrossregionreadreplicaconfig
+	RdsCreateCrossRegionReadReplicaConfig *Plan_RdsCreateCrossRegionReplicaConfiguration `json:"RdsCreateCrossRegionReadReplicaConfig,omitempty"`
+
+	// RdsPromoteReadReplicaConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-rdspromotereadreplicaconfig
+	RdsPromoteReadReplicaConfig *Plan_RdsPromoteReadReplicaConfiguration `json:"RdsPromoteReadReplicaConfig,omitempty"`
 
 	// RegionSwitchPlanConfig AWS CloudFormation Property
 	// Required: false

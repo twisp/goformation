@@ -15,6 +15,11 @@ type GatewayTarget_CredentialProvider struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gatewaytarget-credentialprovider.html#cfn-bedrockagentcore-gatewaytarget-credentialprovider-apikeycredentialprovider
 	ApiKeyCredentialProvider *GatewayTarget_ApiKeyCredentialProvider `json:"ApiKeyCredentialProvider,omitempty"`
 
+	// IamCredentialProvider AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gatewaytarget-credentialprovider.html#cfn-bedrockagentcore-gatewaytarget-credentialprovider-iamcredentialprovider
+	IamCredentialProvider *GatewayTarget_IamCredentialProvider `json:"IamCredentialProvider,omitempty"`
+
 	// OauthCredentialProvider AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gatewaytarget-credentialprovider.html#cfn-bedrockagentcore-gatewaytarget-credentialprovider-oauthcredentialprovider

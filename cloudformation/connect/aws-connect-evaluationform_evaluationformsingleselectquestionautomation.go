@@ -21,9 +21,9 @@ type EvaluationForm_EvaluationFormSingleSelectQuestionAutomation struct {
 	DefaultOptionRefId *string `json:"DefaultOptionRefId,omitempty"`
 
 	// Options AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html#cfn-connect-evaluationform-evaluationformsingleselectquestionautomation-options
-	Options []EvaluationForm_EvaluationFormSingleSelectQuestionAutomationOption `json:"Options"`
+	Options []EvaluationForm_EvaluationFormSingleSelectQuestionAutomationOption `json:"Options,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

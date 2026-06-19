@@ -24,6 +24,11 @@ type Fleet struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-description
 	Description *string `json:"Description,omitempty"`
 
+	// DisableIMDSV1 AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-disableimdsv1
+	DisableIMDSV1 *bool `json:"DisableIMDSV1,omitempty"`
+
 	// DisconnectTimeoutInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-disconnecttimeoutinseconds
@@ -98,6 +103,11 @@ type Fleet struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-platform
 	Platform *string `json:"Platform,omitempty"`
+
+	// RootVolumeConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html#cfn-appstream-fleet-rootvolumeconfig
+	RootVolumeConfig *Fleet_VolumeConfig `json:"RootVolumeConfig,omitempty"`
 
 	// SessionScriptS3Location AWS CloudFormation Property
 	// Required: false

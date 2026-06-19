@@ -23,7 +23,7 @@ type Template_LineChartLineStyleSettings struct {
 	// LineVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-linechartlinestylesettings.html#cfn-quicksight-template-linechartlinestylesettings-linevisibility
-	LineVisibility interface{} `json:"LineVisibility,omitempty"`
+	LineVisibility *string `json:"LineVisibility,omitempty"`
 
 	// LineWidth AWS CloudFormation Property
 	// Required: false

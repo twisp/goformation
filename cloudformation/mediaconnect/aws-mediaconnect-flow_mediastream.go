@@ -4,6 +4,7 @@ package mediaconnect
 
 import (
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // Flow_MediaStream AWS CloudFormation Resource (AWS::MediaConnect::Flow.MediaStream)
@@ -44,6 +45,11 @@ type Flow_MediaStream struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-mediastream.html#cfn-mediaconnect-flow-mediastream-mediastreamtype
 	MediaStreamType string `json:"MediaStreamType"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-mediastream.html#cfn-mediaconnect-flow-mediastream-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// VideoFormat AWS CloudFormation Property
 	// Required: false

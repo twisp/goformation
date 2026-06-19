@@ -11,9 +11,14 @@ import (
 type Bot_Specifications struct {
 
 	// SlotTypeId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-specifications.html#cfn-lex-bot-specifications-slottypeid
-	SlotTypeId string `json:"SlotTypeId"`
+	SlotTypeId *string `json:"SlotTypeId,omitempty"`
+
+	// SlotTypeName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-specifications.html#cfn-lex-bot-specifications-slottypename
+	SlotTypeName *string `json:"SlotTypeName,omitempty"`
 
 	// ValueElicitationSetting AWS CloudFormation Property
 	// Required: true

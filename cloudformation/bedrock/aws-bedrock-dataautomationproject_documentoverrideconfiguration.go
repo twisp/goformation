@@ -15,6 +15,11 @@ type DataAutomationProject_DocumentOverrideConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-documentoverrideconfiguration.html#cfn-bedrock-dataautomationproject-documentoverrideconfiguration-modalityprocessing
 	ModalityProcessing *DataAutomationProject_ModalityProcessingConfiguration `json:"ModalityProcessing,omitempty"`
 
+	// SensitiveDataConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-documentoverrideconfiguration.html#cfn-bedrock-dataautomationproject-documentoverrideconfiguration-sensitivedataconfiguration
+	SensitiveDataConfiguration *DataAutomationProject_SensitiveDataConfiguration `json:"SensitiveDataConfiguration,omitempty"`
+
 	// Splitter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-dataautomationproject-documentoverrideconfiguration.html#cfn-bedrock-dataautomationproject-documentoverrideconfiguration-splitter

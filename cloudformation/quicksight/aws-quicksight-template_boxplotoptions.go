@@ -13,12 +13,12 @@ type Template_BoxPlotOptions struct {
 	// AllDataPointsVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-boxplotoptions.html#cfn-quicksight-template-boxplotoptions-alldatapointsvisibility
-	AllDataPointsVisibility interface{} `json:"AllDataPointsVisibility,omitempty"`
+	AllDataPointsVisibility *string `json:"AllDataPointsVisibility,omitempty"`
 
 	// OutlierVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-boxplotoptions.html#cfn-quicksight-template-boxplotoptions-outliervisibility
-	OutlierVisibility interface{} `json:"OutlierVisibility,omitempty"`
+	OutlierVisibility *string `json:"OutlierVisibility,omitempty"`
 
 	// StyleOptions AWS CloudFormation Property
 	// Required: false

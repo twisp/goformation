@@ -18,6 +18,11 @@ type HostedZone struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzoneconfig
 	HostedZoneConfig *HostedZone_HostedZoneConfig `json:"HostedZoneConfig,omitempty"`
 
+	// HostedZoneFeatures AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonefeatures
+	HostedZoneFeatures *HostedZone_HostedZoneFeatures `json:"HostedZoneFeatures,omitempty"`
+
 	// HostedZoneTags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags

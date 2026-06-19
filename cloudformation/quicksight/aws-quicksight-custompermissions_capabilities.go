@@ -10,15 +10,165 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html
 type CustomPermissions_Capabilities struct {
 
+	// AccessAppsNativeDataStore AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-accessappsnativedatastore
+	AccessAppsNativeDataStore *string `json:"AccessAppsNativeDataStore,omitempty"`
+
+	// Action AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-action
+	Action *string `json:"Action,omitempty"`
+
 	// AddOrRunAnomalyDetectionForAnalyses AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-addorrunanomalydetectionforanalyses
 	AddOrRunAnomalyDetectionForAnalyses *string `json:"AddOrRunAnomalyDetectionForAnalyses,omitempty"`
 
+	// AmazonBedrockARSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-amazonbedrockarsaction
+	AmazonBedrockARSAction *string `json:"AmazonBedrockARSAction,omitempty"`
+
+	// AmazonBedrockFSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-amazonbedrockfsaction
+	AmazonBedrockFSAction *string `json:"AmazonBedrockFSAction,omitempty"`
+
+	// AmazonBedrockKRSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-amazonbedrockkrsaction
+	AmazonBedrockKRSAction *string `json:"AmazonBedrockKRSAction,omitempty"`
+
+	// AmazonSThreeAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-amazonsthreeaction
+	AmazonSThreeAction *string `json:"AmazonSThreeAction,omitempty"`
+
 	// Analysis AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-analysis
 	Analysis *string `json:"Analysis,omitempty"`
+
+	// ApproveFlowShareRequests AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-approveflowsharerequests
+	ApproveFlowShareRequests *string `json:"ApproveFlowShareRequests,omitempty"`
+
+	// Apps AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-apps
+	Apps *string `json:"Apps,omitempty"`
+
+	// AsanaAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-asanaaction
+	AsanaAction *string `json:"AsanaAction,omitempty"`
+
+	// Automate AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-automate
+	Automate *string `json:"Automate,omitempty"`
+
+	// BambooHRAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-bamboohraction
+	BambooHRAction *string `json:"BambooHRAction,omitempty"`
+
+	// BoxAgentAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-boxagentaction
+	BoxAgentAction *string `json:"BoxAgentAction,omitempty"`
+
+	// BuildCalculatedFieldWithQ AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-buildcalculatedfieldwithq
+	BuildCalculatedFieldWithQ *string `json:"BuildCalculatedFieldWithQ,omitempty"`
+
+	// CanvaAgentAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-canvaagentaction
+	CanvaAgentAction *string `json:"CanvaAgentAction,omitempty"`
+
+	// ChatAgent AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-chatagent
+	ChatAgent *string `json:"ChatAgent,omitempty"`
+
+	// ComprehendAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-comprehendaction
+	ComprehendAction *string `json:"ComprehendAction,omitempty"`
+
+	// ComprehendMedicalAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-comprehendmedicalaction
+	ComprehendMedicalAction *string `json:"ComprehendMedicalAction,omitempty"`
+
+	// ConfluenceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-confluenceaction
+	ConfluenceAction *string `json:"ConfluenceAction,omitempty"`
+
+	// CreateAndUpdateAmazonBedrockARSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateamazonbedrockarsaction
+	CreateAndUpdateAmazonBedrockARSAction *string `json:"CreateAndUpdateAmazonBedrockARSAction,omitempty"`
+
+	// CreateAndUpdateAmazonBedrockFSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateamazonbedrockfsaction
+	CreateAndUpdateAmazonBedrockFSAction *string `json:"CreateAndUpdateAmazonBedrockFSAction,omitempty"`
+
+	// CreateAndUpdateAmazonBedrockKRSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateamazonbedrockkrsaction
+	CreateAndUpdateAmazonBedrockKRSAction *string `json:"CreateAndUpdateAmazonBedrockKRSAction,omitempty"`
+
+	// CreateAndUpdateAmazonSThreeAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateamazonsthreeaction
+	CreateAndUpdateAmazonSThreeAction *string `json:"CreateAndUpdateAmazonSThreeAction,omitempty"`
+
+	// CreateAndUpdateApps AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateapps
+	CreateAndUpdateApps *string `json:"CreateAndUpdateApps,omitempty"`
+
+	// CreateAndUpdateAsanaAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateasanaaction
+	CreateAndUpdateAsanaAction *string `json:"CreateAndUpdateAsanaAction,omitempty"`
+
+	// CreateAndUpdateBambooHRAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatebamboohraction
+	CreateAndUpdateBambooHRAction *string `json:"CreateAndUpdateBambooHRAction,omitempty"`
+
+	// CreateAndUpdateBoxAgentAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateboxagentaction
+	CreateAndUpdateBoxAgentAction *string `json:"CreateAndUpdateBoxAgentAction,omitempty"`
+
+	// CreateAndUpdateCanvaAgentAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatecanvaagentaction
+	CreateAndUpdateCanvaAgentAction *string `json:"CreateAndUpdateCanvaAgentAction,omitempty"`
+
+	// CreateAndUpdateComprehendAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatecomprehendaction
+	CreateAndUpdateComprehendAction *string `json:"CreateAndUpdateComprehendAction,omitempty"`
+
+	// CreateAndUpdateComprehendMedicalAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatecomprehendmedicalaction
+	CreateAndUpdateComprehendMedicalAction *string `json:"CreateAndUpdateComprehendMedicalAction,omitempty"`
+
+	// CreateAndUpdateConfluenceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateconfluenceaction
+	CreateAndUpdateConfluenceAction *string `json:"CreateAndUpdateConfluenceAction,omitempty"`
 
 	// CreateAndUpdateDashboardEmailReports AWS CloudFormation Property
 	// Required: false
@@ -35,6 +185,166 @@ type CustomPermissions_Capabilities struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatedatasets
 	CreateAndUpdateDatasets *string `json:"CreateAndUpdateDatasets,omitempty"`
 
+	// CreateAndUpdateFactSetAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatefactsetaction
+	CreateAndUpdateFactSetAction *string `json:"CreateAndUpdateFactSetAction,omitempty"`
+
+	// CreateAndUpdateGenericHTTPAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdategenerichttpaction
+	CreateAndUpdateGenericHTTPAction *string `json:"CreateAndUpdateGenericHTTPAction,omitempty"`
+
+	// CreateAndUpdateGithubAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdategithubaction
+	CreateAndUpdateGithubAction *string `json:"CreateAndUpdateGithubAction,omitempty"`
+
+	// CreateAndUpdateGoogleCalendarAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdategooglecalendaraction
+	CreateAndUpdateGoogleCalendarAction *string `json:"CreateAndUpdateGoogleCalendarAction,omitempty"`
+
+	// CreateAndUpdateHubspotAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatehubspotaction
+	CreateAndUpdateHubspotAction *string `json:"CreateAndUpdateHubspotAction,omitempty"`
+
+	// CreateAndUpdateHuggingFaceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatehuggingfaceaction
+	CreateAndUpdateHuggingFaceAction *string `json:"CreateAndUpdateHuggingFaceAction,omitempty"`
+
+	// CreateAndUpdateIntercomAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateintercomaction
+	CreateAndUpdateIntercomAction *string `json:"CreateAndUpdateIntercomAction,omitempty"`
+
+	// CreateAndUpdateJiraAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatejiraaction
+	CreateAndUpdateJiraAction *string `json:"CreateAndUpdateJiraAction,omitempty"`
+
+	// CreateAndUpdateKnowledgeBases AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateknowledgebases
+	CreateAndUpdateKnowledgeBases *string `json:"CreateAndUpdateKnowledgeBases,omitempty"`
+
+	// CreateAndUpdateLinearAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatelinearaction
+	CreateAndUpdateLinearAction *string `json:"CreateAndUpdateLinearAction,omitempty"`
+
+	// CreateAndUpdateMCPAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatemcpaction
+	CreateAndUpdateMCPAction *string `json:"CreateAndUpdateMCPAction,omitempty"`
+
+	// CreateAndUpdateMSExchangeAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatemsexchangeaction
+	CreateAndUpdateMSExchangeAction *string `json:"CreateAndUpdateMSExchangeAction,omitempty"`
+
+	// CreateAndUpdateMSTeamsAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatemsteamsaction
+	CreateAndUpdateMSTeamsAction *string `json:"CreateAndUpdateMSTeamsAction,omitempty"`
+
+	// CreateAndUpdateMondayAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatemondayaction
+	CreateAndUpdateMondayAction *string `json:"CreateAndUpdateMondayAction,omitempty"`
+
+	// CreateAndUpdateNewRelicAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatenewrelicaction
+	CreateAndUpdateNewRelicAction *string `json:"CreateAndUpdateNewRelicAction,omitempty"`
+
+	// CreateAndUpdateNotionAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatenotionaction
+	CreateAndUpdateNotionAction *string `json:"CreateAndUpdateNotionAction,omitempty"`
+
+	// CreateAndUpdateOneDriveAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateonedriveaction
+	CreateAndUpdateOneDriveAction *string `json:"CreateAndUpdateOneDriveAction,omitempty"`
+
+	// CreateAndUpdateOpenAPIAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateopenapiaction
+	CreateAndUpdateOpenAPIAction *string `json:"CreateAndUpdateOpenAPIAction,omitempty"`
+
+	// CreateAndUpdatePagerDutyAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatepagerdutyaction
+	CreateAndUpdatePagerDutyAction *string `json:"CreateAndUpdatePagerDutyAction,omitempty"`
+
+	// CreateAndUpdateSAPBillOfMaterialAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesapbillofmaterialaction
+	CreateAndUpdateSAPBillOfMaterialAction *string `json:"CreateAndUpdateSAPBillOfMaterialAction,omitempty"`
+
+	// CreateAndUpdateSAPBusinessPartnerAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesapbusinesspartneraction
+	CreateAndUpdateSAPBusinessPartnerAction *string `json:"CreateAndUpdateSAPBusinessPartnerAction,omitempty"`
+
+	// CreateAndUpdateSAPMaterialStockAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesapmaterialstockaction
+	CreateAndUpdateSAPMaterialStockAction *string `json:"CreateAndUpdateSAPMaterialStockAction,omitempty"`
+
+	// CreateAndUpdateSAPPhysicalInventoryAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesapphysicalinventoryaction
+	CreateAndUpdateSAPPhysicalInventoryAction *string `json:"CreateAndUpdateSAPPhysicalInventoryAction,omitempty"`
+
+	// CreateAndUpdateSAPProductMasterDataAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesapproductmasterdataaction
+	CreateAndUpdateSAPProductMasterDataAction *string `json:"CreateAndUpdateSAPProductMasterDataAction,omitempty"`
+
+	// CreateAndUpdateSalesforceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesalesforceaction
+	CreateAndUpdateSalesforceAction *string `json:"CreateAndUpdateSalesforceAction,omitempty"`
+
+	// CreateAndUpdateSandPGMIAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesandpgmiaction
+	CreateAndUpdateSandPGMIAction *string `json:"CreateAndUpdateSandPGMIAction,omitempty"`
+
+	// CreateAndUpdateSandPGlobalEnergyAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesandpglobalenergyaction
+	CreateAndUpdateSandPGlobalEnergyAction *string `json:"CreateAndUpdateSandPGlobalEnergyAction,omitempty"`
+
+	// CreateAndUpdateServiceNowAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateservicenowaction
+	CreateAndUpdateServiceNowAction *string `json:"CreateAndUpdateServiceNowAction,omitempty"`
+
+	// CreateAndUpdateSharePointAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesharepointaction
+	CreateAndUpdateSharePointAction *string `json:"CreateAndUpdateSharePointAction,omitempty"`
+
+	// CreateAndUpdateSlackAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdateslackaction
+	CreateAndUpdateSlackAction *string `json:"CreateAndUpdateSlackAction,omitempty"`
+
+	// CreateAndUpdateSmartsheetAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatesmartsheetaction
+	CreateAndUpdateSmartsheetAction *string `json:"CreateAndUpdateSmartsheetAction,omitempty"`
+
+	// CreateAndUpdateTextractAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatetextractaction
+	CreateAndUpdateTextractAction *string `json:"CreateAndUpdateTextractAction,omitempty"`
+
 	// CreateAndUpdateThemes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatethemes
@@ -44,6 +354,21 @@ type CustomPermissions_Capabilities struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatethresholdalerts
 	CreateAndUpdateThresholdAlerts *string `json:"CreateAndUpdateThresholdAlerts,omitempty"`
+
+	// CreateAndUpdateZendeskAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createandupdatezendeskaction
+	CreateAndUpdateZendeskAction *string `json:"CreateAndUpdateZendeskAction,omitempty"`
+
+	// CreateChatAgents AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createchatagents
+	CreateChatAgents *string `json:"CreateChatAgents,omitempty"`
+
+	// CreateDashboardExecutiveSummaryWithQ AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createdashboardexecutivesummarywithq
+	CreateDashboardExecutiveSummaryWithQ *string `json:"CreateDashboardExecutiveSummaryWithQ,omitempty"`
 
 	// CreateSPICEDataset AWS CloudFormation Property
 	// Required: false
@@ -55,10 +380,20 @@ type CustomPermissions_Capabilities struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createsharedfolders
 	CreateSharedFolders *string `json:"CreateSharedFolders,omitempty"`
 
+	// CreateSpaces AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-createspaces
+	CreateSpaces *string `json:"CreateSpaces,omitempty"`
+
 	// Dashboard AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-dashboard
 	Dashboard *string `json:"Dashboard,omitempty"`
+
+	// EditVisualWithQ AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-editvisualwithq
+	EditVisualWithQ *string `json:"EditVisualWithQ,omitempty"`
 
 	// ExportToCsv AWS CloudFormation Property
 	// Required: false
@@ -90,25 +425,265 @@ type CustomPermissions_Capabilities struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-exporttopdfinscheduledreports
 	ExportToPdfInScheduledReports *string `json:"ExportToPdfInScheduledReports,omitempty"`
 
+	// Extension AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-extension
+	Extension *string `json:"Extension,omitempty"`
+
+	// FactSetAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-factsetaction
+	FactSetAction *string `json:"FactSetAction,omitempty"`
+
+	// Flow AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-flow
+	Flow *string `json:"Flow,omitempty"`
+
+	// GenericHTTPAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-generichttpaction
+	GenericHTTPAction *string `json:"GenericHTTPAction,omitempty"`
+
+	// GithubAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-githubaction
+	GithubAction *string `json:"GithubAction,omitempty"`
+
+	// GoogleCalendarAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-googlecalendaraction
+	GoogleCalendarAction *string `json:"GoogleCalendarAction,omitempty"`
+
+	// HubspotAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-hubspotaction
+	HubspotAction *string `json:"HubspotAction,omitempty"`
+
+	// HuggingFaceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-huggingfaceaction
+	HuggingFaceAction *string `json:"HuggingFaceAction,omitempty"`
+
 	// IncludeContentInScheduledReportsEmail AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-includecontentinscheduledreportsemail
 	IncludeContentInScheduledReportsEmail *string `json:"IncludeContentInScheduledReportsEmail,omitempty"`
+
+	// IntercomAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-intercomaction
+	IntercomAction *string `json:"IntercomAction,omitempty"`
+
+	// InvokeAppsAIInference AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-invokeappsaiinference
+	InvokeAppsAIInference *string `json:"InvokeAppsAIInference,omitempty"`
+
+	// JiraAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-jiraaction
+	JiraAction *string `json:"JiraAction,omitempty"`
+
+	// KnowledgeBase AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-knowledgebase
+	KnowledgeBase *string `json:"KnowledgeBase,omitempty"`
+
+	// LinearAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-linearaction
+	LinearAction *string `json:"LinearAction,omitempty"`
+
+	// MCPAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-mcpaction
+	MCPAction *string `json:"MCPAction,omitempty"`
+
+	// MSExchangeAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-msexchangeaction
+	MSExchangeAction *string `json:"MSExchangeAction,omitempty"`
+
+	// MSTeamsAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-msteamsaction
+	MSTeamsAction *string `json:"MSTeamsAction,omitempty"`
+
+	// ManageSharedFolders AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-managesharedfolders
+	ManageSharedFolders *string `json:"ManageSharedFolders,omitempty"`
+
+	// MondayAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-mondayaction
+	MondayAction *string `json:"MondayAction,omitempty"`
+
+	// NewRelicAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-newrelicaction
+	NewRelicAction *string `json:"NewRelicAction,omitempty"`
+
+	// NotionAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-notionaction
+	NotionAction *string `json:"NotionAction,omitempty"`
+
+	// OneDriveAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-onedriveaction
+	OneDriveAction *string `json:"OneDriveAction,omitempty"`
+
+	// OpenAPIAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-openapiaction
+	OpenAPIAction *string `json:"OpenAPIAction,omitempty"`
+
+	// PagerDutyAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-pagerdutyaction
+	PagerDutyAction *string `json:"PagerDutyAction,omitempty"`
+
+	// PerformFlowUiTask AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-performflowuitask
+	PerformFlowUiTask *string `json:"PerformFlowUiTask,omitempty"`
 
 	// PrintReports AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-printreports
 	PrintReports *string `json:"PrintReports,omitempty"`
 
+	// PublishWithoutApproval AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-publishwithoutapproval
+	PublishWithoutApproval *string `json:"PublishWithoutApproval,omitempty"`
+
 	// RenameSharedFolders AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-renamesharedfolders
 	RenameSharedFolders *string `json:"RenameSharedFolders,omitempty"`
 
+	// Research AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-research
+	Research *string `json:"Research,omitempty"`
+
+	// SAPBillOfMaterialAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sapbillofmaterialaction
+	SAPBillOfMaterialAction *string `json:"SAPBillOfMaterialAction,omitempty"`
+
+	// SAPBusinessPartnerAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sapbusinesspartneraction
+	SAPBusinessPartnerAction *string `json:"SAPBusinessPartnerAction,omitempty"`
+
+	// SAPMaterialStockAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sapmaterialstockaction
+	SAPMaterialStockAction *string `json:"SAPMaterialStockAction,omitempty"`
+
+	// SAPPhysicalInventoryAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sapphysicalinventoryaction
+	SAPPhysicalInventoryAction *string `json:"SAPPhysicalInventoryAction,omitempty"`
+
+	// SAPProductMasterDataAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sapproductmasterdataaction
+	SAPProductMasterDataAction *string `json:"SAPProductMasterDataAction,omitempty"`
+
+	// SalesforceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-salesforceaction
+	SalesforceAction *string `json:"SalesforceAction,omitempty"`
+
+	// SandPGMIAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sandpgmiaction
+	SandPGMIAction *string `json:"SandPGMIAction,omitempty"`
+
+	// SandPGlobalEnergyAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sandpglobalenergyaction
+	SandPGlobalEnergyAction *string `json:"SandPGlobalEnergyAction,omitempty"`
+
+	// ServiceNowAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-servicenowaction
+	ServiceNowAction *string `json:"ServiceNowAction,omitempty"`
+
+	// ShareAmazonBedrockARSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareamazonbedrockarsaction
+	ShareAmazonBedrockARSAction *string `json:"ShareAmazonBedrockARSAction,omitempty"`
+
+	// ShareAmazonBedrockFSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareamazonbedrockfsaction
+	ShareAmazonBedrockFSAction *string `json:"ShareAmazonBedrockFSAction,omitempty"`
+
+	// ShareAmazonBedrockKRSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareamazonbedrockkrsaction
+	ShareAmazonBedrockKRSAction *string `json:"ShareAmazonBedrockKRSAction,omitempty"`
+
+	// ShareAmazonSThreeAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareamazonsthreeaction
+	ShareAmazonSThreeAction *string `json:"ShareAmazonSThreeAction,omitempty"`
+
 	// ShareAnalyses AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareanalyses
 	ShareAnalyses *string `json:"ShareAnalyses,omitempty"`
+
+	// ShareApps AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareapps
+	ShareApps *string `json:"ShareApps,omitempty"`
+
+	// ShareAsanaAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareasanaaction
+	ShareAsanaAction *string `json:"ShareAsanaAction,omitempty"`
+
+	// ShareBambooHRAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharebamboohraction
+	ShareBambooHRAction *string `json:"ShareBambooHRAction,omitempty"`
+
+	// ShareBoxAgentAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareboxagentaction
+	ShareBoxAgentAction *string `json:"ShareBoxAgentAction,omitempty"`
+
+	// ShareCanvaAgentAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharecanvaagentaction
+	ShareCanvaAgentAction *string `json:"ShareCanvaAgentAction,omitempty"`
+
+	// ShareChatAgents AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharechatagents
+	ShareChatAgents *string `json:"ShareChatAgents,omitempty"`
+
+	// ShareComprehendAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharecomprehendaction
+	ShareComprehendAction *string `json:"ShareComprehendAction,omitempty"`
+
+	// ShareComprehendMedicalAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharecomprehendmedicalaction
+	ShareComprehendMedicalAction *string `json:"ShareComprehendMedicalAction,omitempty"`
+
+	// ShareConfluenceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareconfluenceaction
+	ShareConfluenceAction *string `json:"ShareConfluenceAction,omitempty"`
 
 	// ShareDashboards AWS CloudFormation Property
 	// Required: false
@@ -125,15 +700,445 @@ type CustomPermissions_Capabilities struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharedatasets
 	ShareDatasets *string `json:"ShareDatasets,omitempty"`
 
+	// ShareFactSetAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharefactsetaction
+	ShareFactSetAction *string `json:"ShareFactSetAction,omitempty"`
+
+	// ShareGenericHTTPAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharegenerichttpaction
+	ShareGenericHTTPAction *string `json:"ShareGenericHTTPAction,omitempty"`
+
+	// ShareGithubAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharegithubaction
+	ShareGithubAction *string `json:"ShareGithubAction,omitempty"`
+
+	// ShareGoogleCalendarAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharegooglecalendaraction
+	ShareGoogleCalendarAction *string `json:"ShareGoogleCalendarAction,omitempty"`
+
+	// ShareHubspotAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharehubspotaction
+	ShareHubspotAction *string `json:"ShareHubspotAction,omitempty"`
+
+	// ShareHuggingFaceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharehuggingfaceaction
+	ShareHuggingFaceAction *string `json:"ShareHuggingFaceAction,omitempty"`
+
+	// ShareIntercomAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareintercomaction
+	ShareIntercomAction *string `json:"ShareIntercomAction,omitempty"`
+
+	// ShareJiraAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharejiraaction
+	ShareJiraAction *string `json:"ShareJiraAction,omitempty"`
+
+	// ShareKnowledgeBases AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareknowledgebases
+	ShareKnowledgeBases *string `json:"ShareKnowledgeBases,omitempty"`
+
+	// ShareLinearAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharelinearaction
+	ShareLinearAction *string `json:"ShareLinearAction,omitempty"`
+
+	// ShareMCPAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharemcpaction
+	ShareMCPAction *string `json:"ShareMCPAction,omitempty"`
+
+	// ShareMSExchangeAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharemsexchangeaction
+	ShareMSExchangeAction *string `json:"ShareMSExchangeAction,omitempty"`
+
+	// ShareMSTeamsAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharemsteamsaction
+	ShareMSTeamsAction *string `json:"ShareMSTeamsAction,omitempty"`
+
+	// ShareMondayAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharemondayaction
+	ShareMondayAction *string `json:"ShareMondayAction,omitempty"`
+
+	// ShareNewRelicAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharenewrelicaction
+	ShareNewRelicAction *string `json:"ShareNewRelicAction,omitempty"`
+
+	// ShareNotionAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharenotionaction
+	ShareNotionAction *string `json:"ShareNotionAction,omitempty"`
+
+	// ShareOneDriveAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareonedriveaction
+	ShareOneDriveAction *string `json:"ShareOneDriveAction,omitempty"`
+
+	// ShareOpenAPIAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareopenapiaction
+	ShareOpenAPIAction *string `json:"ShareOpenAPIAction,omitempty"`
+
+	// SharePagerDutyAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharepagerdutyaction
+	SharePagerDutyAction *string `json:"SharePagerDutyAction,omitempty"`
+
+	// SharePointAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharepointaction
+	SharePointAction *string `json:"SharePointAction,omitempty"`
+
+	// ShareSAPBillOfMaterialAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesapbillofmaterialaction
+	ShareSAPBillOfMaterialAction *string `json:"ShareSAPBillOfMaterialAction,omitempty"`
+
+	// ShareSAPBusinessPartnerAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesapbusinesspartneraction
+	ShareSAPBusinessPartnerAction *string `json:"ShareSAPBusinessPartnerAction,omitempty"`
+
+	// ShareSAPMaterialStockAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesapmaterialstockaction
+	ShareSAPMaterialStockAction *string `json:"ShareSAPMaterialStockAction,omitempty"`
+
+	// ShareSAPPhysicalInventoryAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesapphysicalinventoryaction
+	ShareSAPPhysicalInventoryAction *string `json:"ShareSAPPhysicalInventoryAction,omitempty"`
+
+	// ShareSAPProductMasterDataAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesapproductmasterdataaction
+	ShareSAPProductMasterDataAction *string `json:"ShareSAPProductMasterDataAction,omitempty"`
+
+	// ShareSalesforceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesalesforceaction
+	ShareSalesforceAction *string `json:"ShareSalesforceAction,omitempty"`
+
+	// ShareSandPGMIAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesandpgmiaction
+	ShareSandPGMIAction *string `json:"ShareSandPGMIAction,omitempty"`
+
+	// ShareSandPGlobalEnergyAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesandpglobalenergyaction
+	ShareSandPGlobalEnergyAction *string `json:"ShareSandPGlobalEnergyAction,omitempty"`
+
+	// ShareServiceNowAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareservicenowaction
+	ShareServiceNowAction *string `json:"ShareServiceNowAction,omitempty"`
+
+	// ShareSharePointAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesharepointaction
+	ShareSharePointAction *string `json:"ShareSharePointAction,omitempty"`
+
+	// ShareSlackAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-shareslackaction
+	ShareSlackAction *string `json:"ShareSlackAction,omitempty"`
+
+	// ShareSmartsheetAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharesmartsheetaction
+	ShareSmartsheetAction *string `json:"ShareSmartsheetAction,omitempty"`
+
+	// ShareSpaces AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharespaces
+	ShareSpaces *string `json:"ShareSpaces,omitempty"`
+
+	// ShareTextractAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharetextractaction
+	ShareTextractAction *string `json:"ShareTextractAction,omitempty"`
+
+	// ShareZendeskAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-sharezendeskaction
+	ShareZendeskAction *string `json:"ShareZendeskAction,omitempty"`
+
+	// SlackAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-slackaction
+	SlackAction *string `json:"SlackAction,omitempty"`
+
+	// SmartsheetAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-smartsheetaction
+	SmartsheetAction *string `json:"SmartsheetAction,omitempty"`
+
+	// Space AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-space
+	Space *string `json:"Space,omitempty"`
+
 	// SubscribeDashboardEmailReports AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-subscribedashboardemailreports
 	SubscribeDashboardEmailReports *string `json:"SubscribeDashboardEmailReports,omitempty"`
 
+	// TextractAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-textractaction
+	TextractAction *string `json:"TextractAction,omitempty"`
+
+	// Topic AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-topic
+	Topic *string `json:"Topic,omitempty"`
+
+	// UseAgentWebSearch AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useagentwebsearch
+	UseAgentWebSearch *string `json:"UseAgentWebSearch,omitempty"`
+
+	// UseAmazonBedrockARSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useamazonbedrockarsaction
+	UseAmazonBedrockARSAction *string `json:"UseAmazonBedrockARSAction,omitempty"`
+
+	// UseAmazonBedrockFSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useamazonbedrockfsaction
+	UseAmazonBedrockFSAction *string `json:"UseAmazonBedrockFSAction,omitempty"`
+
+	// UseAmazonBedrockKRSAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useamazonbedrockkrsaction
+	UseAmazonBedrockKRSAction *string `json:"UseAmazonBedrockKRSAction,omitempty"`
+
+	// UseAmazonSThreeAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useamazonsthreeaction
+	UseAmazonSThreeAction *string `json:"UseAmazonSThreeAction,omitempty"`
+
+	// UseAsanaAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useasanaaction
+	UseAsanaAction *string `json:"UseAsanaAction,omitempty"`
+
+	// UseBambooHRAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usebamboohraction
+	UseBambooHRAction *string `json:"UseBambooHRAction,omitempty"`
+
+	// UseBedrockModels AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usebedrockmodels
+	UseBedrockModels *string `json:"UseBedrockModels,omitempty"`
+
+	// UseBoxAgentAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useboxagentaction
+	UseBoxAgentAction *string `json:"UseBoxAgentAction,omitempty"`
+
+	// UseCanvaAgentAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usecanvaagentaction
+	UseCanvaAgentAction *string `json:"UseCanvaAgentAction,omitempty"`
+
+	// UseComprehendAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usecomprehendaction
+	UseComprehendAction *string `json:"UseComprehendAction,omitempty"`
+
+	// UseComprehendMedicalAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usecomprehendmedicalaction
+	UseComprehendMedicalAction *string `json:"UseComprehendMedicalAction,omitempty"`
+
+	// UseConfluenceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useconfluenceaction
+	UseConfluenceAction *string `json:"UseConfluenceAction,omitempty"`
+
+	// UseFactSetAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usefactsetaction
+	UseFactSetAction *string `json:"UseFactSetAction,omitempty"`
+
+	// UseGenericHTTPAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usegenerichttpaction
+	UseGenericHTTPAction *string `json:"UseGenericHTTPAction,omitempty"`
+
+	// UseGithubAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usegithubaction
+	UseGithubAction *string `json:"UseGithubAction,omitempty"`
+
+	// UseGoogleCalendarAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usegooglecalendaraction
+	UseGoogleCalendarAction *string `json:"UseGoogleCalendarAction,omitempty"`
+
+	// UseHubspotAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usehubspotaction
+	UseHubspotAction *string `json:"UseHubspotAction,omitempty"`
+
+	// UseHuggingFaceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usehuggingfaceaction
+	UseHuggingFaceAction *string `json:"UseHuggingFaceAction,omitempty"`
+
+	// UseIntercomAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useintercomaction
+	UseIntercomAction *string `json:"UseIntercomAction,omitempty"`
+
+	// UseJiraAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usejiraaction
+	UseJiraAction *string `json:"UseJiraAction,omitempty"`
+
+	// UseLinearAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-uselinearaction
+	UseLinearAction *string `json:"UseLinearAction,omitempty"`
+
+	// UseMCPAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usemcpaction
+	UseMCPAction *string `json:"UseMCPAction,omitempty"`
+
+	// UseMSExchangeAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usemsexchangeaction
+	UseMSExchangeAction *string `json:"UseMSExchangeAction,omitempty"`
+
+	// UseMSTeamsAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usemsteamsaction
+	UseMSTeamsAction *string `json:"UseMSTeamsAction,omitempty"`
+
+	// UseMondayAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usemondayaction
+	UseMondayAction *string `json:"UseMondayAction,omitempty"`
+
+	// UseNewRelicAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usenewrelicaction
+	UseNewRelicAction *string `json:"UseNewRelicAction,omitempty"`
+
+	// UseNotionAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usenotionaction
+	UseNotionAction *string `json:"UseNotionAction,omitempty"`
+
+	// UseOneDriveAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useonedriveaction
+	UseOneDriveAction *string `json:"UseOneDriveAction,omitempty"`
+
+	// UseOpenAPIAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useopenapiaction
+	UseOpenAPIAction *string `json:"UseOpenAPIAction,omitempty"`
+
+	// UsePagerDutyAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usepagerdutyaction
+	UsePagerDutyAction *string `json:"UsePagerDutyAction,omitempty"`
+
+	// UseSAPBillOfMaterialAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesapbillofmaterialaction
+	UseSAPBillOfMaterialAction *string `json:"UseSAPBillOfMaterialAction,omitempty"`
+
+	// UseSAPBusinessPartnerAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesapbusinesspartneraction
+	UseSAPBusinessPartnerAction *string `json:"UseSAPBusinessPartnerAction,omitempty"`
+
+	// UseSAPMaterialStockAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesapmaterialstockaction
+	UseSAPMaterialStockAction *string `json:"UseSAPMaterialStockAction,omitempty"`
+
+	// UseSAPPhysicalInventoryAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesapphysicalinventoryaction
+	UseSAPPhysicalInventoryAction *string `json:"UseSAPPhysicalInventoryAction,omitempty"`
+
+	// UseSAPProductMasterDataAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesapproductmasterdataaction
+	UseSAPProductMasterDataAction *string `json:"UseSAPProductMasterDataAction,omitempty"`
+
+	// UseSalesforceAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesalesforceaction
+	UseSalesforceAction *string `json:"UseSalesforceAction,omitempty"`
+
+	// UseSandPGMIAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesandpgmiaction
+	UseSandPGMIAction *string `json:"UseSandPGMIAction,omitempty"`
+
+	// UseSandPGlobalEnergyAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesandpglobalenergyaction
+	UseSandPGlobalEnergyAction *string `json:"UseSandPGlobalEnergyAction,omitempty"`
+
+	// UseServiceNowAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useservicenowaction
+	UseServiceNowAction *string `json:"UseServiceNowAction,omitempty"`
+
+	// UseSharePointAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesharepointaction
+	UseSharePointAction *string `json:"UseSharePointAction,omitempty"`
+
+	// UseSlackAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-useslackaction
+	UseSlackAction *string `json:"UseSlackAction,omitempty"`
+
+	// UseSmartsheetAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usesmartsheetaction
+	UseSmartsheetAction *string `json:"UseSmartsheetAction,omitempty"`
+
+	// UseTextractAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usetextractaction
+	UseTextractAction *string `json:"UseTextractAction,omitempty"`
+
+	// UseZendeskAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-usezendeskaction
+	UseZendeskAction *string `json:"UseZendeskAction,omitempty"`
+
 	// ViewAccountSPICECapacity AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-viewaccountspicecapacity
 	ViewAccountSPICECapacity *string `json:"ViewAccountSPICECapacity,omitempty"`
+
+	// ZendeskAction AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-custompermissions-capabilities.html#cfn-quicksight-custompermissions-capabilities-zendeskaction
+	ZendeskAction *string `json:"ZendeskAction,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

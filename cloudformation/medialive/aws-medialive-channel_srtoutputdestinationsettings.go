@@ -10,10 +10,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html
 type Channel_SrtOutputDestinationSettings struct {
 
+	// ConnectionMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-connectionmode
+	ConnectionMode *string `json:"ConnectionMode,omitempty"`
+
 	// EncryptionPassphraseSecretArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-encryptionpassphrasesecretarn
 	EncryptionPassphraseSecretArn *string `json:"EncryptionPassphraseSecretArn,omitempty"`
+
+	// ListenerPort AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-listenerport
+	ListenerPort *int `json:"ListenerPort,omitempty"`
 
 	// StreamId AWS CloudFormation Property
 	// Required: false

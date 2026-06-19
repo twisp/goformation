@@ -15,9 +15,9 @@ import (
 type Campaign struct {
 
 	// ChannelSubtypeConfig AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaignsv2-campaign.html#cfn-connectcampaignsv2-campaign-channelsubtypeconfig
-	ChannelSubtypeConfig *Campaign_ChannelSubtypeConfig `json:"ChannelSubtypeConfig"`
+	ChannelSubtypeConfig *Campaign_ChannelSubtypeConfig `json:"ChannelSubtypeConfig,omitempty"`
 
 	// CommunicationLimitsOverride AWS CloudFormation Property
 	// Required: false
@@ -39,6 +39,11 @@ type Campaign struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaignsv2-campaign.html#cfn-connectcampaignsv2-campaign-connectinstanceid
 	ConnectInstanceId string `json:"ConnectInstanceId"`
 
+	// EntryLimitsConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaignsv2-campaign.html#cfn-connectcampaignsv2-campaign-entrylimitsconfig
+	EntryLimitsConfig *Campaign_EntryLimitsConfig `json:"EntryLimitsConfig,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaignsv2-campaign.html#cfn-connectcampaignsv2-campaign-name
@@ -58,6 +63,11 @@ type Campaign struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaignsv2-campaign.html#cfn-connectcampaignsv2-campaign-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// Type AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaignsv2-campaign.html#cfn-connectcampaignsv2-campaign-type
+	Type *string `json:"Type,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

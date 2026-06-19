@@ -34,6 +34,11 @@ type VpcAttachment struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-proposedsegmentchange
 	ProposedSegmentChange *VpcAttachment_ProposedSegmentChange `json:"ProposedSegmentChange,omitempty"`
 
+	// RoutingPolicyLabel AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-routingpolicylabel
+	RoutingPolicyLabel *string `json:"RoutingPolicyLabel,omitempty"`
+
 	// SubnetArns AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html#cfn-networkmanager-vpcattachment-subnetarns

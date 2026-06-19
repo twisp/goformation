@@ -20,6 +20,11 @@ type Membership_MembershipMLPaymentConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmlpaymentconfig.html#cfn-cleanrooms-membership-membershipmlpaymentconfig-modeltraining
 	ModelTraining *Membership_MembershipModelTrainingPaymentConfig `json:"ModelTraining,omitempty"`
 
+	// SyntheticDataGeneration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-membershipmlpaymentconfig.html#cfn-cleanrooms-membership-membershipmlpaymentconfig-syntheticdatageneration
+	SyntheticDataGeneration *Membership_MembershipSyntheticDataGenerationPaymentConfig `json:"SyntheticDataGeneration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

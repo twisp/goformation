@@ -43,7 +43,7 @@ type Template_PivotTotalOptions struct {
 	// TotalsVisibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottotaloptions.html#cfn-quicksight-template-pivottotaloptions-totalsvisibility
-	TotalsVisibility interface{} `json:"TotalsVisibility,omitempty"`
+	TotalsVisibility *string `json:"TotalsVisibility,omitempty"`
 
 	// ValueCellStyle AWS CloudFormation Property
 	// Required: false

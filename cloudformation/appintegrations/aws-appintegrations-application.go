@@ -24,10 +24,15 @@ type Application struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-application.html#cfn-appintegrations-application-applicationsourceconfig
 	ApplicationSourceConfig *Application_ApplicationSourceConfig `json:"ApplicationSourceConfig"`
 
+	// ApplicationType AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-application.html#cfn-appintegrations-application-applicationtype
+	ApplicationType *string `json:"ApplicationType,omitempty"`
+
 	// Description AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-application.html#cfn-appintegrations-application-description
-	Description string `json:"Description"`
+	Description *string `json:"Description,omitempty"`
 
 	// IframeConfig AWS CloudFormation Property
 	// Required: false

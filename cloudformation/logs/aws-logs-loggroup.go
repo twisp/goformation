@@ -14,10 +14,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html
 type LogGroup struct {
 
+	// BearerTokenAuthenticationEnabled AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html#cfn-logs-loggroup-bearertokenauthenticationenabled
+	BearerTokenAuthenticationEnabled *bool `json:"BearerTokenAuthenticationEnabled,omitempty"`
+
 	// DataProtectionPolicy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html#cfn-logs-loggroup-dataprotectionpolicy
 	DataProtectionPolicy interface{} `json:"DataProtectionPolicy,omitempty"`
+
+	// DeletionProtectionEnabled AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html#cfn-logs-loggroup-deletionprotectionenabled
+	DeletionProtectionEnabled *bool `json:"DeletionProtectionEnabled,omitempty"`
 
 	// FieldIndexPolicies AWS CloudFormation Property
 	// Required: false

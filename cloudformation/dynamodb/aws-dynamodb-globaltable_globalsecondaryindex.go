@@ -25,6 +25,16 @@ type GlobalTable_GlobalSecondaryIndex struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-projection
 	Projection *GlobalTable_Projection `json:"Projection"`
 
+	// ReadOnDemandThroughputSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-readondemandthroughputsettings
+	ReadOnDemandThroughputSettings *GlobalTable_ReadOnDemandThroughputSettings `json:"ReadOnDemandThroughputSettings,omitempty"`
+
+	// ReadProvisionedThroughputSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-readprovisionedthroughputsettings
+	ReadProvisionedThroughputSettings *GlobalTable_GlobalReadProvisionedThroughputSettings `json:"ReadProvisionedThroughputSettings,omitempty"`
+
 	// WarmThroughput AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-warmthroughput

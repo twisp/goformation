@@ -15,6 +15,11 @@ type Memory_MemoryStrategy struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-memorystrategy.html#cfn-bedrockagentcore-memory-memorystrategy-custommemorystrategy
 	CustomMemoryStrategy *Memory_CustomMemoryStrategy `json:"CustomMemoryStrategy,omitempty"`
 
+	// EpisodicMemoryStrategy AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-memorystrategy.html#cfn-bedrockagentcore-memory-memorystrategy-episodicmemorystrategy
+	EpisodicMemoryStrategy *Memory_EpisodicMemoryStrategy `json:"EpisodicMemoryStrategy,omitempty"`
+
 	// SemanticMemoryStrategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-memorystrategy.html#cfn-bedrockagentcore-memory-memorystrategy-semanticmemorystrategy

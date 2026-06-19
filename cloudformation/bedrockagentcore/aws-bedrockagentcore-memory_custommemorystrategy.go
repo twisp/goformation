@@ -25,10 +25,20 @@ type Memory_CustomMemoryStrategy struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-custommemorystrategy.html#cfn-bedrockagentcore-memory-custommemorystrategy-description
 	Description *string `json:"Description,omitempty"`
 
+	// MemoryRecordSchema AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-custommemorystrategy.html#cfn-bedrockagentcore-memory-custommemorystrategy-memoryrecordschema
+	MemoryRecordSchema *Memory_MemoryRecordSchema `json:"MemoryRecordSchema,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-custommemorystrategy.html#cfn-bedrockagentcore-memory-custommemorystrategy-name
 	Name string `json:"Name"`
+
+	// NamespaceTemplates AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-memory-custommemorystrategy.html#cfn-bedrockagentcore-memory-custommemorystrategy-namespacetemplates
+	NamespaceTemplates []string `json:"NamespaceTemplates,omitempty"`
 
 	// Namespaces AWS CloudFormation Property
 	// Required: false

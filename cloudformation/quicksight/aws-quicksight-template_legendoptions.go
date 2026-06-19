@@ -33,7 +33,7 @@ type Template_LegendOptions struct {
 	// Visibility AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-legendoptions.html#cfn-quicksight-template-legendoptions-visibility
-	Visibility interface{} `json:"Visibility,omitempty"`
+	Visibility *string `json:"Visibility,omitempty"`
 
 	// Width AWS CloudFormation Property
 	// Required: false

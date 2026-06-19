@@ -59,10 +59,20 @@ type Command struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-command.html#cfn-iot-command-payload
 	Payload *Command_CommandPayload `json:"Payload,omitempty"`
 
+	// PayloadTemplate AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-command.html#cfn-iot-command-payloadtemplate
+	PayloadTemplate *string `json:"PayloadTemplate,omitempty"`
+
 	// PendingDeletion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-command.html#cfn-iot-command-pendingdeletion
 	PendingDeletion *bool `json:"PendingDeletion,omitempty"`
+
+	// Preprocessor AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-command.html#cfn-iot-command-preprocessor
+	Preprocessor *Command_CommandPreprocessor `json:"Preprocessor,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: false

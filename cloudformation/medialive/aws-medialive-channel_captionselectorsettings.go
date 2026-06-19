@@ -40,6 +40,11 @@ type Channel_CaptionSelectorSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionselectorsettings.html#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings
 	Scte27SourceSettings *Channel_Scte27SourceSettings `json:"Scte27SourceSettings,omitempty"`
 
+	// SmartSubtitleSourceSettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionselectorsettings.html#cfn-medialive-channel-captionselectorsettings-smartsubtitlesourcesettings
+	SmartSubtitleSourceSettings *Channel_SmartSubtitleSourceSettings `json:"SmartSubtitleSourceSettings,omitempty"`
+
 	// TeletextSourceSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionselectorsettings.html#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings
