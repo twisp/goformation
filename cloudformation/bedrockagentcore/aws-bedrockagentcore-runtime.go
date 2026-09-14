@@ -28,6 +28,11 @@ type Runtime struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-authorizerconfiguration
 	AuthorizerConfiguration *Runtime_AuthorizerConfiguration `json:"AuthorizerConfiguration,omitempty"`
 
+	// CapacityProviderConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-capacityproviderconfiguration
+	CapacityProviderConfiguration *Runtime_CapacityProviderConfiguration `json:"CapacityProviderConfiguration,omitempty"`
+
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-description
@@ -49,9 +54,9 @@ type Runtime struct {
 	LifecycleConfiguration *Runtime_LifecycleConfiguration `json:"LifecycleConfiguration,omitempty"`
 
 	// NetworkConfiguration AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-runtime.html#cfn-bedrockagentcore-runtime-networkconfiguration
-	NetworkConfiguration *Runtime_NetworkConfiguration `json:"NetworkConfiguration"`
+	NetworkConfiguration *Runtime_NetworkConfiguration `json:"NetworkConfiguration,omitempty"`
 
 	// ProtocolConfiguration AWS CloudFormation Property
 	// Required: false

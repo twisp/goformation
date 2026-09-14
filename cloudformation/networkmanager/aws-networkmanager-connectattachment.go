@@ -34,16 +34,6 @@ type ConnectAttachment struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-options
 	Options *ConnectAttachment_ConnectAttachmentOptions `json:"Options"`
 
-	// ProposedNetworkFunctionGroupChange AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-proposednetworkfunctiongroupchange
-	ProposedNetworkFunctionGroupChange *ConnectAttachment_ProposedNetworkFunctionGroupChange `json:"ProposedNetworkFunctionGroupChange,omitempty"`
-
-	// ProposedSegmentChange AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-proposedsegmentchange
-	ProposedSegmentChange *ConnectAttachment_ProposedSegmentChange `json:"ProposedSegmentChange,omitempty"`
-
 	// RoutingPolicyLabel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html#cfn-networkmanager-connectattachment-routingpolicylabel

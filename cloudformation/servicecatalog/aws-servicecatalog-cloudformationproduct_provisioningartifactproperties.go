@@ -23,7 +23,7 @@ type CloudFormationProduct_ProvisioningArtifactProperties struct {
 	// Info AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html#cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info
-	Info interface{} `json:"Info"`
+	Info *CloudFormationProduct_Info `json:"Info"`
 
 	// Name AWS CloudFormation Property
 	// Required: false

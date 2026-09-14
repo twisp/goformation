@@ -20,6 +20,11 @@ type FirewallRuleGroup_FirewallRuleType struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallruletype.html#cfn-route53resolver-firewallrulegroup-firewallruletype-firewalladvancedthreatcategory
 	FirewallAdvancedThreatCategory *FirewallRuleGroup_FirewallAdvancedThreatCategoryConfig `json:"FirewallAdvancedThreatCategory,omitempty"`
 
+	// PartnerThreatProtection AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallruletype.html#cfn-route53resolver-firewallrulegroup-firewallruletype-partnerthreatprotection
+	PartnerThreatProtection *FirewallRuleGroup_PartnerThreatProtectionConfig `json:"PartnerThreatProtection,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

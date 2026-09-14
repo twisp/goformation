@@ -11,9 +11,9 @@ import (
 type Certificate_DomainValidationOption struct {
 
 	// DomainName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoptions-domainname
-	DomainName string `json:"DomainName"`
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html#cfn-certificatemanager-certificate-domainvalidationoption-domainname
+	DomainName *string `json:"DomainName,omitempty"`
 
 	// HostedZoneId AWS CloudFormation Property
 	// Required: false

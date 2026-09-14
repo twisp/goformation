@@ -18,6 +18,11 @@ type LambdaHook struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-alias
 	Alias string `json:"Alias"`
 
+	// AutoUpdate AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-autoupdate
+	AutoUpdate *bool `json:"AutoUpdate,omitempty"`
+
 	// ExecutionRole AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-executionrole
@@ -37,6 +42,11 @@ type LambdaHook struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-lambdafunction
 	LambdaFunction string `json:"LambdaFunction"`
+
+	// LoggingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-lambdahook.html#cfn-cloudformation-lambdahook-loggingconfig
+	LoggingConfig *LambdaHook_LoggingConfig `json:"LoggingConfig,omitempty"`
 
 	// StackFilters AWS CloudFormation Property
 	// Required: false

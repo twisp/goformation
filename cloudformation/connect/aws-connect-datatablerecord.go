@@ -14,19 +14,19 @@ import (
 type DataTableRecord struct {
 
 	// DataTableArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatablerecord.html#cfn-connect-datatablerecord-datatablearn
-	DataTableArn *string `json:"DataTableArn,omitempty"`
+	DataTableArn string `json:"DataTableArn"`
 
 	// DataTableRecord AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatablerecord.html#cfn-connect-datatablerecord-datatablerecord
-	DataTableRecord *DataTableRecord_DataTableRecord `json:"DataTableRecord,omitempty"`
+	DataTableRecord *DataTableRecord_DataTableRecord `json:"DataTableRecord"`
 
 	// InstanceArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatablerecord.html#cfn-connect-datatablerecord-instancearn
-	InstanceArn *string `json:"InstanceArn,omitempty"`
+	InstanceArn string `json:"InstanceArn"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

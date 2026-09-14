@@ -15,6 +15,11 @@ type DataSource_DataSourceConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-datasourceconfiguration.html#cfn-bedrock-datasource-datasourceconfiguration-confluenceconfiguration
 	ConfluenceConfiguration *DataSource_ConfluenceDataSourceConfiguration `json:"ConfluenceConfiguration,omitempty"`
 
+	// ManagedKnowledgeBaseConnectorConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-datasourceconfiguration.html#cfn-bedrock-datasource-datasourceconfiguration-managedknowledgebaseconnectorconfiguration
+	ManagedKnowledgeBaseConnectorConfiguration *DataSource_ManagedKnowledgeBaseConnectorConfiguration `json:"ManagedKnowledgeBaseConnectorConfiguration,omitempty"`
+
 	// S3Configuration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-datasourceconfiguration.html#cfn-bedrock-datasource-datasourceconfiguration-s3configuration

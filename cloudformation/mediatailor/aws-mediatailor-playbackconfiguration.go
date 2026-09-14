@@ -29,6 +29,16 @@ type PlaybackConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-addecisionserverurl
 	AdDecisionServerUrl string `json:"AdDecisionServerUrl"`
 
+	// AdsPersonalizationConcurrency AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adspersonalizationconcurrency
+	AdsPersonalizationConcurrency *PlaybackConfiguration_AdsPersonalizationConcurrency `json:"AdsPersonalizationConcurrency,omitempty"`
+
+	// AdsPersonalizationTimeouts AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-adspersonalizationtimeouts
+	AdsPersonalizationTimeouts *PlaybackConfiguration_AdsPersonalizationTimeouts `json:"AdsPersonalizationTimeouts,omitempty"`
+
 	// AvailSuppression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html#cfn-mediatailor-playbackconfiguration-availsuppression

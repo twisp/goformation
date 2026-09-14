@@ -18,6 +18,11 @@ type TopicRuleDestination struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html#cfn-iot-topicruledestination-httpurlproperties
 	HttpUrlProperties *TopicRuleDestination_HttpUrlDestinationSummary `json:"HttpUrlProperties,omitempty"`
 
+	// InfluxDBProperties AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html#cfn-iot-topicruledestination-influxdbproperties
+	InfluxDBProperties *TopicRuleDestination_InfluxDBDestinationProperties `json:"InfluxDBProperties,omitempty"`
+
 	// Status AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html#cfn-iot-topicruledestination-status

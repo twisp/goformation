@@ -14,9 +14,9 @@ import (
 type DataTableAttribute struct {
 
 	// DataTableArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatableattribute.html#cfn-connect-datatableattribute-datatablearn
-	DataTableArn *string `json:"DataTableArn,omitempty"`
+	DataTableArn string `json:"DataTableArn"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
@@ -24,14 +24,14 @@ type DataTableAttribute struct {
 	Description *string `json:"Description,omitempty"`
 
 	// InstanceArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatableattribute.html#cfn-connect-datatableattribute-instancearn
-	InstanceArn *string `json:"InstanceArn,omitempty"`
+	InstanceArn string `json:"InstanceArn"`
 
 	// Name AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatableattribute.html#cfn-connect-datatableattribute-name
-	Name *string `json:"Name,omitempty"`
+	Name string `json:"Name"`
 
 	// Primary AWS CloudFormation Property
 	// Required: false
@@ -44,9 +44,9 @@ type DataTableAttribute struct {
 	Validation *DataTableAttribute_Validation `json:"Validation,omitempty"`
 
 	// ValueType AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatableattribute.html#cfn-connect-datatableattribute-valuetype
-	ValueType *string `json:"ValueType,omitempty"`
+	ValueType string `json:"ValueType"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -20,6 +20,11 @@ type ComputeEnvironment_ComputeResources struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-bidpercentage
 	BidPercentage *int `json:"BidPercentage,omitempty"`
 
+	// CapacityTags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-capacitytags
+	CapacityTags map[string]string `json:"CapacityTags,omitempty"`
+
 	// DesiredvCpus AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-desiredvcpus
@@ -55,6 +60,11 @@ type ComputeEnvironment_ComputeResources struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-launchtemplate
 	LaunchTemplate *ComputeEnvironment_LaunchTemplateSpecification `json:"LaunchTemplate,omitempty"`
 
+	// ManagedInstancesProvider AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-managedinstancesprovider
+	ManagedInstancesProvider *ComputeEnvironment_ManagedInstancesProvider `json:"ManagedInstancesProvider,omitempty"`
+
 	// MaxvCpus AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-maxvcpus
@@ -86,9 +96,9 @@ type ComputeEnvironment_ComputeResources struct {
 	SpotIamFleetRole *string `json:"SpotIamFleetRole,omitempty"`
 
 	// Subnets AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-subnets
-	Subnets []string `json:"Subnets"`
+	Subnets []string `json:"Subnets,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

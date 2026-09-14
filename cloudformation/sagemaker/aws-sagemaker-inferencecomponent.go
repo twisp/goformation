@@ -40,9 +40,14 @@ type InferenceComponent struct {
 	RuntimeConfig *InferenceComponent_InferenceComponentRuntimeConfig `json:"RuntimeConfig,omitempty"`
 
 	// Specification AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-specification
-	Specification *InferenceComponent_InferenceComponentSpecification `json:"Specification"`
+	Specification *InferenceComponent_InferenceComponentSpecification `json:"Specification,omitempty"`
+
+	// Specifications AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-specifications
+	Specifications []InferenceComponent_InferenceComponentSpecificationForInstanceType `json:"Specifications,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

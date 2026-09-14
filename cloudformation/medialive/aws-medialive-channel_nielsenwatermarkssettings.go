@@ -25,6 +25,11 @@ type Channel_NielsenWatermarksSettings struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsenwatermarkssettings.html#cfn-medialive-channel-nielsenwatermarkssettings-nielsennaesiinwsettings
 	NielsenNaesIiNwSettings *Channel_NielsenNaesIiNw `json:"NielsenNaesIiNwSettings,omitempty"`
 
+	// NielsenNwOnlySettings AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsenwatermarkssettings.html#cfn-medialive-channel-nielsenwatermarkssettings-nielsennwonlysettings
+	NielsenNwOnlySettings *Channel_NielsenNwOnly `json:"NielsenNwOnlySettings,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

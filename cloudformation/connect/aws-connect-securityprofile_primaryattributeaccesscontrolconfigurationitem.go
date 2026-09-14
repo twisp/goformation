@@ -11,9 +11,9 @@ import (
 type SecurityProfile_PrimaryAttributeAccessControlConfigurationItem struct {
 
 	// PrimaryAttributeValues AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-securityprofile-primaryattributeaccesscontrolconfigurationitem.html#cfn-connect-securityprofile-primaryattributeaccesscontrolconfigurationitem-primaryattributevalues
-	PrimaryAttributeValues []SecurityProfile_PrimaryAttributeValue `json:"PrimaryAttributeValues"`
+	PrimaryAttributeValues []SecurityProfile_PrimaryAttributeValue `json:"PrimaryAttributeValues,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

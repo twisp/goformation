@@ -24,9 +24,9 @@ type DataQualityRuleset struct {
 	Description *string `json:"Description,omitempty"`
 
 	// Name AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html#cfn-glue-dataqualityruleset-name
-	Name *string `json:"Name,omitempty"`
+	Name string `json:"Name"`
 
 	// Ruleset AWS CloudFormation Property
 	// Required: false
@@ -36,7 +36,7 @@ type DataQualityRuleset struct {
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html#cfn-glue-dataqualityruleset-tags
-	Tags interface{} `json:"Tags,omitempty"`
+	Tags map[string]string `json:"Tags,omitempty"`
 
 	// TargetTable AWS CloudFormation Property
 	// Required: false

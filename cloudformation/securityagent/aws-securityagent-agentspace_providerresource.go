@@ -10,15 +10,45 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html
 type AgentSpace_ProviderResource struct {
 
+	// BitbucketCapabilities AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html#cfn-securityagent-agentspace-providerresource-bitbucketcapabilities
+	BitbucketCapabilities *AgentSpace_BitbucketCapabilitiesResource `json:"BitbucketCapabilities,omitempty"`
+
+	// BitbucketRepository AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html#cfn-securityagent-agentspace-providerresource-bitbucketrepository
+	BitbucketRepository *AgentSpace_BitbucketRepositoryResource `json:"BitbucketRepository,omitempty"`
+
+	// ConfluenceCapabilities AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html#cfn-securityagent-agentspace-providerresource-confluencecapabilities
+	ConfluenceCapabilities *AgentSpace_ConfluenceCapabilitiesResource `json:"ConfluenceCapabilities,omitempty"`
+
+	// ConfluenceDocument AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html#cfn-securityagent-agentspace-providerresource-confluencedocument
+	ConfluenceDocument *AgentSpace_ConfluenceDocumentResource `json:"ConfluenceDocument,omitempty"`
+
 	// GitHubCapabilities AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html#cfn-securityagent-agentspace-providerresource-githubcapabilities
-	GitHubCapabilities *AgentSpace_GitHubCapabilitiesResource `json:"GitHubCapabilities"`
+	GitHubCapabilities *AgentSpace_GitHubCapabilitiesResource `json:"GitHubCapabilities,omitempty"`
 
 	// GitHubRepository AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html#cfn-securityagent-agentspace-providerresource-githubrepository
-	GitHubRepository *AgentSpace_GitHubRepositoryResource `json:"GitHubRepository"`
+	GitHubRepository *AgentSpace_GitHubRepositoryResource `json:"GitHubRepository,omitempty"`
+
+	// GitLabCapabilities AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html#cfn-securityagent-agentspace-providerresource-gitlabcapabilities
+	GitLabCapabilities *AgentSpace_GitLabCapabilitiesResource `json:"GitLabCapabilities,omitempty"`
+
+	// GitLabRepository AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityagent-agentspace-providerresource.html#cfn-securityagent-agentspace-providerresource-gitlabrepository
+	GitLabRepository *AgentSpace_GitLabRepositoryResource `json:"GitLabRepository,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

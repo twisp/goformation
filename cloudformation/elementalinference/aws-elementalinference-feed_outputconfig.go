@@ -18,7 +18,7 @@ type Feed_OutputConfig struct {
 	// Cropping AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elementalinference-feed-outputconfig.html#cfn-elementalinference-feed-outputconfig-cropping
-	Cropping interface{} `json:"Cropping,omitempty"`
+	Cropping *Feed_CroppingConfig `json:"Cropping,omitempty"`
 
 	// Subtitling AWS CloudFormation Property
 	// Required: false

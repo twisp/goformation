@@ -24,16 +24,6 @@ type SiteToSiteVpnAttachment struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-networkfunctiongroupname
 	NetworkFunctionGroupName *string `json:"NetworkFunctionGroupName,omitempty"`
 
-	// ProposedNetworkFunctionGroupChange AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposednetworkfunctiongroupchange
-	ProposedNetworkFunctionGroupChange *SiteToSiteVpnAttachment_ProposedNetworkFunctionGroupChange `json:"ProposedNetworkFunctionGroupChange,omitempty"`
-
-	// ProposedSegmentChange AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-proposedsegmentchange
-	ProposedSegmentChange *SiteToSiteVpnAttachment_ProposedSegmentChange `json:"ProposedSegmentChange,omitempty"`
-
 	// RoutingPolicyLabel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html#cfn-networkmanager-sitetositevpnattachment-routingpolicylabel

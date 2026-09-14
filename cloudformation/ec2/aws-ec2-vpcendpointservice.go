@@ -39,6 +39,16 @@ type VPCEndpointService struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-payerresponsibility
 	PayerResponsibility *string `json:"PayerResponsibility,omitempty"`
 
+	// PrivateDnsName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-privatednsname
+	PrivateDnsName *string `json:"PrivateDnsName,omitempty"`
+
+	// PrivateDnsNameConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-privatednsnameconfiguration
+	PrivateDnsNameConfiguration *VPCEndpointService_PrivateDnsNameConfiguration `json:"PrivateDnsNameConfiguration,omitempty"`
+
 	// SupportedIpAddressTypes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-supportedipaddresstypes

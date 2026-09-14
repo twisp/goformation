@@ -21,9 +21,9 @@ type ContainerFleet_ScalingPolicy struct {
 	EvaluationPeriods *int `json:"EvaluationPeriods,omitempty"`
 
 	// MetricName AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-containerfleet-scalingpolicy.html#cfn-gamelift-containerfleet-scalingpolicy-metricname
-	MetricName string `json:"MetricName"`
+	MetricName *string `json:"MetricName,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true

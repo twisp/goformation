@@ -18,6 +18,11 @@ type ManagedNotificationAdditionalChannelAssociation struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-notifications-managednotificationadditionalchannelassociation.html#cfn-notifications-managednotificationadditionalchannelassociation-channelarn
 	ChannelArn string `json:"ChannelArn"`
 
+	// IsSensitiveEventsSubscribed AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-notifications-managednotificationadditionalchannelassociation.html#cfn-notifications-managednotificationadditionalchannelassociation-issensitiveeventssubscribed
+	IsSensitiveEventsSubscribed *bool `json:"IsSensitiveEventsSubscribed,omitempty"`
+
 	// ManagedNotificationConfigurationArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-notifications-managednotificationadditionalchannelassociation.html#cfn-notifications-managednotificationadditionalchannelassociation-managednotificationconfigurationarn

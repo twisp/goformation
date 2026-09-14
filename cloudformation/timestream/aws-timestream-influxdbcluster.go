@@ -54,6 +54,11 @@ type InfluxDBCluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbcluster.html#cfn-timestream-influxdbcluster-logdeliveryconfiguration
 	LogDeliveryConfiguration *InfluxDBCluster_LogDeliveryConfiguration `json:"LogDeliveryConfiguration,omitempty"`
 
+	// MaintenanceSchedule AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbcluster.html#cfn-timestream-influxdbcluster-maintenanceschedule
+	MaintenanceSchedule *InfluxDBCluster_MaintenanceSchedule `json:"MaintenanceSchedule,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbcluster.html#cfn-timestream-influxdbcluster-name

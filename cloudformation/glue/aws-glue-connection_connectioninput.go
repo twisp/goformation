@@ -18,7 +18,7 @@ type Connection_ConnectionInput struct {
 	// AuthenticationConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-connectioninput.html#cfn-glue-connection-connectioninput-authenticationconfiguration
-	AuthenticationConfiguration *Connection_AuthenticationConfigurationInput `json:"AuthenticationConfiguration,omitempty"`
+	AuthenticationConfiguration *Connection_AuthenticationConfiguration `json:"AuthenticationConfiguration,omitempty"`
 
 	// ConnectionProperties AWS CloudFormation Property
 	// Required: false

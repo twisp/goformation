@@ -11,9 +11,14 @@ import (
 type Scraper_Destination struct {
 
 	// AmpConfiguration AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-destination.html#cfn-aps-scraper-destination-ampconfiguration
-	AmpConfiguration *Scraper_AmpConfiguration `json:"AmpConfiguration"`
+	AmpConfiguration *Scraper_AmpConfiguration `json:"AmpConfiguration,omitempty"`
+
+	// CloudWatchConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-scraper-destination.html#cfn-aps-scraper-destination-cloudwatchconfiguration
+	CloudWatchConfiguration *Scraper_CloudWatchConfiguration `json:"CloudWatchConfiguration,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

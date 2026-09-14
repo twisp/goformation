@@ -15,6 +15,11 @@ type Domain_SoftwareUpdateOptions struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html#cfn-opensearchservice-domain-softwareupdateoptions-autosoftwareupdateenabled
 	AutoSoftwareUpdateEnabled *bool `json:"AutoSoftwareUpdateEnabled,omitempty"`
 
+	// UseLatestServiceSoftwareForBlueGreen AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html#cfn-opensearchservice-domain-softwareupdateoptions-uselatestservicesoftwareforbluegreen
+	UseLatestServiceSoftwareForBlueGreen *bool `json:"UseLatestServiceSoftwareForBlueGreen,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

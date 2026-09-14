@@ -43,6 +43,11 @@ type ComputeNodeGroup struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcs-computenodegroup.html#cfn-pcs-computenodegroup-name
 	Name *string `json:"Name,omitempty"`
 
+	// NodeLifecycleActions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcs-computenodegroup.html#cfn-pcs-computenodegroup-nodelifecycleactions
+	NodeLifecycleActions *ComputeNodeGroup_NodeLifecycleActions `json:"NodeLifecycleActions,omitempty"`
+
 	// PurchaseOption AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pcs-computenodegroup.html#cfn-pcs-computenodegroup-purchaseoption

@@ -25,6 +25,11 @@ type OrganizationCentralizationRule_DestinationLogsConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationcentralizationrule-destinationlogsconfiguration.html#cfn-observabilityadmin-organizationcentralizationrule-destinationlogsconfiguration-logsencryptionconfiguration
 	LogsEncryptionConfiguration *OrganizationCentralizationRule_LogsEncryptionConfiguration `json:"LogsEncryptionConfiguration,omitempty"`
 
+	// TagPropagationConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-observabilityadmin-organizationcentralizationrule-destinationlogsconfiguration.html#cfn-observabilityadmin-organizationcentralizationrule-destinationlogsconfiguration-tagpropagationconfiguration
+	TagPropagationConfiguration *OrganizationCentralizationRule_TagPropagationConfiguration `json:"TagPropagationConfiguration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

@@ -35,9 +35,9 @@ type PrivateDnsNamespace struct {
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// Vpc AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-vpc
-	Vpc string `json:"Vpc"`
+	Vpc *string `json:"Vpc,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

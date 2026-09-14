@@ -4,6 +4,7 @@ package cloudwatch
 
 import (
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // LogAlarm_ScheduledQueryConfiguration AWS CloudFormation Resource (AWS::CloudWatch::LogAlarm.ScheduledQueryConfiguration)
@@ -16,9 +17,9 @@ type LogAlarm_ScheduledQueryConfiguration struct {
 	AggregationExpression string `json:"AggregationExpression"`
 
 	// LogGroupIdentifiers AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-logalarm-scheduledqueryconfiguration.html#cfn-cloudwatch-logalarm-scheduledqueryconfiguration-loggroupidentifiers
-	LogGroupIdentifiers []string `json:"LogGroupIdentifiers"`
+	LogGroupIdentifiers []string `json:"LogGroupIdentifiers,omitempty"`
 
 	// QueryString AWS CloudFormation Property
 	// Required: true
@@ -34,6 +35,11 @@ type LogAlarm_ScheduledQueryConfiguration struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-logalarm-scheduledqueryconfiguration.html#cfn-cloudwatch-logalarm-scheduledqueryconfiguration-scheduledqueryrolearn
 	ScheduledQueryRoleARN string `json:"ScheduledQueryRoleARN"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-logalarm-scheduledqueryconfiguration.html#cfn-cloudwatch-logalarm-scheduledqueryconfiguration-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

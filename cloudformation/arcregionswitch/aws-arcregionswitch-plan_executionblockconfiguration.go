@@ -85,6 +85,11 @@ type Plan_ExecutionBlockConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-rdspromotereadreplicaconfig
 	RdsPromoteReadReplicaConfig *Plan_RdsPromoteReadReplicaConfiguration `json:"RdsPromoteReadReplicaConfig,omitempty"`
 
+	// RdsSwitchoverReadReplicaConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-rdsswitchoverreadreplicaconfig
+	RdsSwitchoverReadReplicaConfig *Plan_RdsSwitchoverReadReplicaConfiguration `json:"RdsSwitchoverReadReplicaConfig,omitempty"`
+
 	// RegionSwitchPlanConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-arcregionswitch-plan-executionblockconfiguration.html#cfn-arcregionswitch-plan-executionblockconfiguration-regionswitchplanconfig

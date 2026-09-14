@@ -13,7 +13,7 @@ type Gateway_SessionConfiguration struct {
 	// SessionTimeoutInSeconds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gateway-sessionconfiguration.html#cfn-bedrockagentcore-gateway-sessionconfiguration-sessiontimeoutinseconds
-	SessionTimeoutInSeconds *int `json:"SessionTimeoutInSeconds,omitempty"`
+	SessionTimeoutInSeconds *float64 `json:"SessionTimeoutInSeconds,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

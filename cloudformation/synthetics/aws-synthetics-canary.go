@@ -49,6 +49,11 @@ type Canary struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-failureretentionperiod
 	FailureRetentionPeriod *int `json:"FailureRetentionPeriod,omitempty"`
 
+	// KmsKeyArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-kmskeyarn
+	KmsKeyArn *string `json:"KmsKeyArn,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-name
@@ -58,6 +63,11 @@ type Canary struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-provisionedresourcecleanup
 	ProvisionedResourceCleanup *string `json:"ProvisionedResourceCleanup,omitempty"`
+
+	// Replicas AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-replicas
+	Replicas []Canary_Replica `json:"Replicas,omitempty"`
 
 	// ResourcesToReplicateTags AWS CloudFormation Property
 	// Required: false

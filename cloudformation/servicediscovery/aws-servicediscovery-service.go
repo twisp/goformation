@@ -47,7 +47,7 @@ type Service struct {
 	// ServiceAttributes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes
-	ServiceAttributes interface{} `json:"ServiceAttributes,omitempty"`
+	ServiceAttributes map[string]string `json:"ServiceAttributes,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false

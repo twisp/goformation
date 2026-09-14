@@ -25,6 +25,16 @@ type DBInstance_AdditionalStorageVolume struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-additionalstoragevolume.html#cfn-rds-dbinstance-additionalstoragevolume-maxallocatedstorage
 	MaxAllocatedStorage *int `json:"MaxAllocatedStorage,omitempty"`
 
+	// StorageOperationPercentProgress AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-additionalstoragevolume.html#cfn-rds-dbinstance-additionalstoragevolume-storageoperationpercentprogress
+	StorageOperationPercentProgress *int `json:"StorageOperationPercentProgress,omitempty"`
+
+	// StorageOperationStatus AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-additionalstoragevolume.html#cfn-rds-dbinstance-additionalstoragevolume-storageoperationstatus
+	StorageOperationStatus *string `json:"StorageOperationStatus,omitempty"`
+
 	// StorageThroughput AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-additionalstoragevolume.html#cfn-rds-dbinstance-additionalstoragevolume-storagethroughput

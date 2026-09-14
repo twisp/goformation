@@ -24,9 +24,9 @@ type PaymentConnector struct {
 	ConnectorType string `json:"ConnectorType"`
 
 	// CredentialProviderConfigurations AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-paymentconnector.html#cfn-bedrockagentcore-paymentconnector-credentialproviderconfigurations
-	CredentialProviderConfigurations []PaymentConnector_CredentialsProviderConfiguration `json:"CredentialProviderConfigurations"`
+	CredentialProviderConfigurations []PaymentConnector_CredentialsProviderConfiguration `json:"CredentialProviderConfigurations,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
@@ -37,6 +37,11 @@ type PaymentConnector struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-paymentconnector.html#cfn-bedrockagentcore-paymentconnector-paymentmanagerid
 	PaymentManagerId string `json:"PaymentManagerId"`
+
+	// ProvisionMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrockagentcore-paymentconnector.html#cfn-bedrockagentcore-paymentconnector-provisionmode
+	ProvisionMode *string `json:"ProvisionMode,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

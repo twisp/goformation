@@ -11,14 +11,14 @@ import (
 type SecurityProfile_Application struct {
 
 	// ApplicationPermissions AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-securityprofile-application.html#cfn-connect-securityprofile-application-applicationpermissions
-	ApplicationPermissions []string `json:"ApplicationPermissions"`
+	ApplicationPermissions []string `json:"ApplicationPermissions,omitempty"`
 
 	// Namespace AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-securityprofile-application.html#cfn-connect-securityprofile-application-namespace
-	Namespace string `json:"Namespace"`
+	Namespace *string `json:"Namespace,omitempty"`
 
 	// Type AWS CloudFormation Property
 	// Required: false

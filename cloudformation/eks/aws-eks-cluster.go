@@ -19,10 +19,20 @@ type Cluster struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-accessconfig
 	AccessConfig *Cluster_AccessConfig `json:"AccessConfig,omitempty"`
 
+	// ActiveCertificateAuthorityId AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-activecertificateauthorityid
+	ActiveCertificateAuthorityId *string `json:"ActiveCertificateAuthorityId,omitempty"`
+
 	// BootstrapSelfManagedAddons AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-bootstrapselfmanagedaddons
 	BootstrapSelfManagedAddons *bool `json:"BootstrapSelfManagedAddons,omitempty"`
+
+	// CertificateAuthority AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-certificateauthority
+	CertificateAuthority *Cluster_CertificateAuthority `json:"CertificateAuthority,omitempty"`
 
 	// ComputeConfig AWS CloudFormation Property
 	// Required: false
@@ -48,6 +58,21 @@ type Cluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-force
 	Force *bool `json:"Force,omitempty"`
+
+	// KubeApiServerConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubeapiserverconfig
+	KubeApiServerConfig *Cluster_KubeApiServerConfig `json:"KubeApiServerConfig,omitempty"`
+
+	// KubeControllerManagerConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubecontrollermanagerconfig
+	KubeControllerManagerConfig *Cluster_KubeControllerManagerConfig `json:"KubeControllerManagerConfig,omitempty"`
+
+	// KubeSchedulerConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-kubeschedulerconfig
+	KubeSchedulerConfig *Cluster_KubeSchedulerConfig `json:"KubeSchedulerConfig,omitempty"`
 
 	// KubernetesNetworkConfig AWS CloudFormation Property
 	// Required: false
@@ -83,6 +108,11 @@ type Cluster struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn
 	RoleArn string `json:"RoleArn"`
+
+	// RollbackConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rollbackconfig
+	RollbackConfig *Cluster_RollbackConfig `json:"RollbackConfig,omitempty"`
 
 	// StorageConfig AWS CloudFormation Property
 	// Required: false

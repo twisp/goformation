@@ -15,6 +15,11 @@ type Rule_Actions struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-actions.html#cfn-connect-rule-actions-assigncontactcategoryactions
 	AssignContactCategoryActions []interface{} `json:"AssignContactCategoryActions,omitempty"`
 
+	// AssignSlaActions AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-actions.html#cfn-connect-rule-actions-assignslaactions
+	AssignSlaActions []Rule_AssignSlaAction `json:"AssignSlaActions,omitempty"`
+
 	// CreateCaseActions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-actions.html#cfn-connect-rule-actions-createcaseactions

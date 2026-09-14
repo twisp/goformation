@@ -23,7 +23,7 @@ type GatewayTarget_OAuthCredentialProvider struct {
 	// GrantType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gatewaytarget-oauthcredentialprovider.html#cfn-bedrockagentcore-gatewaytarget-oauthcredentialprovider-granttype
-	GrantType *string `json:"GrantType,omitempty"`
+	GrantType interface{} `json:"GrantType,omitempty"`
 
 	// ProviderArn AWS CloudFormation Property
 	// Required: true
