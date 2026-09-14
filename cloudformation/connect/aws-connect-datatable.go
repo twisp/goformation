@@ -20,19 +20,19 @@ type DataTable struct {
 	Description *string `json:"Description,omitempty"`
 
 	// InstanceArn AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatable.html#cfn-connect-datatable-instancearn
-	InstanceArn *string `json:"InstanceArn,omitempty"`
+	InstanceArn string `json:"InstanceArn"`
 
 	// Name AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatable.html#cfn-connect-datatable-name
-	Name *string `json:"Name,omitempty"`
+	Name string `json:"Name"`
 
 	// Status AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatable.html#cfn-connect-datatable-status
-	Status *string `json:"Status,omitempty"`
+	Status string `json:"Status"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -40,14 +40,14 @@ type DataTable struct {
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// TimeZone AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatable.html#cfn-connect-datatable-timezone
-	TimeZone *string `json:"TimeZone,omitempty"`
+	TimeZone string `json:"TimeZone"`
 
 	// ValueLockLevel AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-datatable.html#cfn-connect-datatable-valuelocklevel
-	ValueLockLevel *string `json:"ValueLockLevel,omitempty"`
+	ValueLockLevel string `json:"ValueLockLevel"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

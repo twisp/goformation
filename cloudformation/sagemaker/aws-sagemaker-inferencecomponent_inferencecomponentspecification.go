@@ -25,10 +25,25 @@ type InferenceComponent_InferenceComponentSpecification struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-container
 	Container *InferenceComponent_InferenceComponentContainerSpecification `json:"Container,omitempty"`
 
+	// CurrentDataCacheConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-currentdatacacheconfig
+	CurrentDataCacheConfig *InferenceComponent_InferenceComponentDataCacheConfig `json:"CurrentDataCacheConfig,omitempty"`
+
+	// DataCacheConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-datacacheconfig
+	DataCacheConfig *InferenceComponent_InferenceComponentDataCacheConfig `json:"DataCacheConfig,omitempty"`
+
 	// ModelName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-modelname
 	ModelName *string `json:"ModelName,omitempty"`
+
+	// SchedulingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-schedulingconfig
+	SchedulingConfig *InferenceComponent_InferenceComponentSchedulingConfig `json:"SchedulingConfig,omitempty"`
 
 	// StartupParameters AWS CloudFormation Property
 	// Required: false

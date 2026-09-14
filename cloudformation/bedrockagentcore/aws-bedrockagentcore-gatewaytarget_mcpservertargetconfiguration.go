@@ -28,7 +28,7 @@ type GatewayTarget_McpServerTargetConfiguration struct {
 	// ResourcePriority AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gatewaytarget-mcpservertargetconfiguration.html#cfn-bedrockagentcore-gatewaytarget-mcpservertargetconfiguration-resourcepriority
-	ResourcePriority *int `json:"ResourcePriority,omitempty"`
+	ResourcePriority *float64 `json:"ResourcePriority,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

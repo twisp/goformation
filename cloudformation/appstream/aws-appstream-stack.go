@@ -19,6 +19,11 @@ type Stack struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-accessendpoints
 	AccessEndpoints []Stack_AccessEndpoint `json:"AccessEndpoints,omitempty"`
 
+	// AgentAccessConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-agentaccessconfig
+	AgentAccessConfig *Stack_AgentAccessConfig `json:"AgentAccessConfig,omitempty"`
+
 	// ApplicationSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html#cfn-appstream-stack-applicationsettings

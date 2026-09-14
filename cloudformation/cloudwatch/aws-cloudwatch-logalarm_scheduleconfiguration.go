@@ -21,9 +21,9 @@ type LogAlarm_ScheduleConfiguration struct {
 	ScheduleExpression string `json:"ScheduleExpression"`
 
 	// StartTimeOffset AWS CloudFormation Property
-	// Required: false
+	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-logalarm-scheduleconfiguration.html#cfn-cloudwatch-logalarm-scheduleconfiguration-starttimeoffset
-	StartTimeOffset *int `json:"StartTimeOffset,omitempty"`
+	StartTimeOffset int `json:"StartTimeOffset"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

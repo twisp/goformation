@@ -24,16 +24,6 @@ type TransitGatewayRouteTableAttachment struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-peeringid
 	PeeringId string `json:"PeeringId"`
 
-	// ProposedNetworkFunctionGroupChange AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposednetworkfunctiongroupchange
-	ProposedNetworkFunctionGroupChange *TransitGatewayRouteTableAttachment_ProposedNetworkFunctionGroupChange `json:"ProposedNetworkFunctionGroupChange,omitempty"`
-
-	// ProposedSegmentChange AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-proposedsegmentchange
-	ProposedSegmentChange *TransitGatewayRouteTableAttachment_ProposedSegmentChange `json:"ProposedSegmentChange,omitempty"`
-
 	// RoutingPolicyLabel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html#cfn-networkmanager-transitgatewayroutetableattachment-routingpolicylabel

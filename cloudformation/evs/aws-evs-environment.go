@@ -15,9 +15,9 @@ import (
 type Environment struct {
 
 	// ConnectivityInfo AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evs-environment.html#cfn-evs-environment-connectivityinfo
-	ConnectivityInfo *Environment_ConnectivityInfo `json:"ConnectivityInfo"`
+	ConnectivityInfo *Environment_ConnectivityInfo `json:"ConnectivityInfo,omitempty"`
 
 	// EnvironmentName AWS CloudFormation Property
 	// Required: false
@@ -40,9 +40,9 @@ type Environment struct {
 	KmsKeyId *string `json:"KmsKeyId,omitempty"`
 
 	// LicenseInfo AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evs-environment.html#cfn-evs-environment-licenseinfo
-	LicenseInfo *Environment_LicenseInfo `json:"LicenseInfo"`
+	LicenseInfo *Environment_LicenseInfo `json:"LicenseInfo,omitempty"`
 
 	// ServiceAccessSecurityGroups AWS CloudFormation Property
 	// Required: false
@@ -55,9 +55,9 @@ type Environment struct {
 	ServiceAccessSubnetId string `json:"ServiceAccessSubnetId"`
 
 	// SiteId AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evs-environment.html#cfn-evs-environment-siteid
-	SiteId string `json:"SiteId"`
+	SiteId *string `json:"SiteId,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -70,9 +70,9 @@ type Environment struct {
 	TermsAccepted bool `json:"TermsAccepted"`
 
 	// VcfHostnames AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evs-environment.html#cfn-evs-environment-vcfhostnames
-	VcfHostnames *Environment_VcfHostnames `json:"VcfHostnames"`
+	VcfHostnames *Environment_VcfHostnames `json:"VcfHostnames,omitempty"`
 
 	// VcfVersion AWS CloudFormation Property
 	// Required: true

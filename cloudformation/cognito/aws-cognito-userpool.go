@@ -73,6 +73,16 @@ type UserPool struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-enabledmfas
 	EnabledMfas []string `json:"EnabledMfas,omitempty"`
 
+	// IssuerConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-issuerconfiguration
+	IssuerConfiguration *UserPool_IssuerConfiguration `json:"IssuerConfiguration,omitempty"`
+
+	// KeyConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-keyconfiguration
+	KeyConfiguration *UserPool_KeyConfiguration `json:"KeyConfiguration,omitempty"`
+
 	// LambdaConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-lambdaconfig

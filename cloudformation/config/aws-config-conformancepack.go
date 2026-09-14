@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // ConformancePack AWS CloudFormation Resource (AWS::Config::ConformancePack)
@@ -32,6 +33,11 @@ type ConformancePack struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3keyprefix
 	DeliveryS3KeyPrefix *string `json:"DeliveryS3KeyPrefix,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// TemplateBody AWS CloudFormation Property
 	// Required: false

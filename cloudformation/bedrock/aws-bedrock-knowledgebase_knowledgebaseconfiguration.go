@@ -15,6 +15,11 @@ type KnowledgeBase_KnowledgeBaseConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-kendraknowledgebaseconfiguration
 	KendraKnowledgeBaseConfiguration *KnowledgeBase_KendraKnowledgeBaseConfiguration `json:"KendraKnowledgeBaseConfiguration,omitempty"`
 
+	// ManagedKnowledgeBaseConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-managedknowledgebaseconfiguration
+	ManagedKnowledgeBaseConfiguration *KnowledgeBase_ManagedKnowledgeBaseConfiguration `json:"ManagedKnowledgeBaseConfiguration,omitempty"`
+
 	// SqlKnowledgeBaseConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-sqlknowledgebaseconfiguration

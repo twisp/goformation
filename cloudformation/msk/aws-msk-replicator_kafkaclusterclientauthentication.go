@@ -10,10 +10,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientauthentication.html
 type Replicator_KafkaClusterClientAuthentication struct {
 
+	// MTLS AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientauthentication.html#cfn-msk-replicator-kafkaclusterclientauthentication-mtls
+	MTLS *Replicator_KafkaClusterMtlsAuthentication `json:"MTLS,omitempty"`
+
+	// SaslOAuthBearer AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientauthentication.html#cfn-msk-replicator-kafkaclusterclientauthentication-sasloauthbearer
+	SaslOAuthBearer *Replicator_KafkaClusterSaslOAuthBearerAuthentication `json:"SaslOAuthBearer,omitempty"`
+
 	// SaslScram AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-kafkaclusterclientauthentication.html#cfn-msk-replicator-kafkaclusterclientauthentication-saslscram
-	SaslScram *Replicator_KafkaClusterSaslScramAuthentication `json:"SaslScram"`
+	SaslScram *Replicator_KafkaClusterSaslScramAuthentication `json:"SaslScram,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

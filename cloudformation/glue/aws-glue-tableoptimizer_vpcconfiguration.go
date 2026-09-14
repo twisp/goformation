@@ -7,12 +7,12 @@ import (
 )
 
 // TableOptimizer_VpcConfiguration AWS CloudFormation Resource (AWS::Glue::TableOptimizer.VpcConfiguration)
-// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-tableoptimizer-tableoptimizerconfiguration-vpcconfiguration.html
+// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-tableoptimizer-vpcconfiguration.html
 type TableOptimizer_VpcConfiguration struct {
 
 	// GlueConnectionName AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-tableoptimizer-tableoptimizerconfiguration-vpcconfiguration.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration-vpcconfiguration-glueconnectionname
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-tableoptimizer-vpcconfiguration.html#cfn-glue-tableoptimizer-vpcconfiguration-glueconnectionname
 	GlueConnectionName *string `json:"GlueConnectionName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy

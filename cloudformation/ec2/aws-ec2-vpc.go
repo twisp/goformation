@@ -49,6 +49,11 @@ type VPC struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-ec2-vpc-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
 
+	// VpcEncryptionControl AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-ec2-vpc-vpcencryptioncontrol
+	VpcEncryptionControl *VPC_VpcEncryptionControl `json:"VpcEncryptionControl,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

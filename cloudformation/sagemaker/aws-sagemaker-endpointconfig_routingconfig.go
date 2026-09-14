@@ -7,12 +7,17 @@ import (
 )
 
 // EndpointConfig_RoutingConfig AWS CloudFormation Resource (AWS::SageMaker::EndpointConfig.RoutingConfig)
-// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant-routingconfig.html
+// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-routingconfig.html
 type EndpointConfig_RoutingConfig struct {
+
+	// PrefixAwareRoutingConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-routingconfig.html#cfn-sagemaker-endpointconfig-routingconfig-prefixawareroutingconfig
+	PrefixAwareRoutingConfig *EndpointConfig_PrefixAwareRoutingConfig `json:"PrefixAwareRoutingConfig,omitempty"`
 
 	// RoutingStrategy AWS CloudFormation Property
 	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant-routingconfig.html#cfn-sagemaker-endpointconfig-productionvariant-routingconfig-routingstrategy
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-routingconfig.html#cfn-sagemaker-endpointconfig-routingconfig-routingstrategy
 	RoutingStrategy *string `json:"RoutingStrategy,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy

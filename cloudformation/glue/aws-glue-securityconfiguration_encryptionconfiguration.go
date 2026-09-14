@@ -23,7 +23,7 @@ type SecurityConfiguration_EncryptionConfiguration struct {
 	// S3Encryptions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-encryptionconfiguration.html#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions
-	S3Encryptions *SecurityConfiguration_S3Encryptions `json:"S3Encryptions,omitempty"`
+	S3Encryptions []SecurityConfiguration_S3Encryption `json:"S3Encryptions,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

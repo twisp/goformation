@@ -25,9 +25,9 @@ type ExpressGatewayService struct {
 	Cpu *string `json:"Cpu,omitempty"`
 
 	// ExecutionRoleArn AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-expressgatewayservice.html#cfn-ecs-expressgatewayservice-executionrolearn
-	ExecutionRoleArn string `json:"ExecutionRoleArn"`
+	ExecutionRoleArn *string `json:"ExecutionRoleArn,omitempty"`
 
 	// HealthCheckPath AWS CloudFormation Property
 	// Required: false
@@ -50,9 +50,9 @@ type ExpressGatewayService struct {
 	NetworkConfiguration *ExpressGatewayService_ExpressGatewayServiceNetworkConfiguration `json:"NetworkConfiguration,omitempty"`
 
 	// PrimaryContainer AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-expressgatewayservice.html#cfn-ecs-expressgatewayservice-primarycontainer
-	PrimaryContainer *ExpressGatewayService_ExpressGatewayContainer `json:"PrimaryContainer"`
+	PrimaryContainer *ExpressGatewayService_ExpressGatewayContainer `json:"PrimaryContainer,omitempty"`
 
 	// ScalingTarget AWS CloudFormation Property
 	// Required: false
@@ -68,6 +68,11 @@ type ExpressGatewayService struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-expressgatewayservice.html#cfn-ecs-expressgatewayservice-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// TaskDefinitionArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-expressgatewayservice.html#cfn-ecs-expressgatewayservice-taskdefinitionarn
+	TaskDefinitionArn *string `json:"TaskDefinitionArn,omitempty"`
 
 	// TaskRoleArn AWS CloudFormation Property
 	// Required: false

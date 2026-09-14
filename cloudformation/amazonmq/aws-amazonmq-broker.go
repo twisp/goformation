@@ -88,10 +88,20 @@ type Broker struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible
 	PubliclyAccessible bool `json:"PubliclyAccessible"`
 
+	// ResourceShareArns AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-resourcesharearns
+	ResourceShareArns []string `json:"ResourceShareArns,omitempty"`
+
 	// SecurityGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-securitygroups
 	SecurityGroups []string `json:"SecurityGroups,omitempty"`
+
+	// StorageSize AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-storagesize
+	StorageSize *int `json:"StorageSize,omitempty"`
 
 	// StorageType AWS CloudFormation Property
 	// Required: false

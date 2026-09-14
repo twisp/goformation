@@ -18,7 +18,7 @@ type GatewayTarget_StickinessConfiguration struct {
 	// Timeout AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-gatewaytarget-stickinessconfiguration.html#cfn-bedrockagentcore-gatewaytarget-stickinessconfiguration-timeout
-	Timeout *int `json:"Timeout,omitempty"`
+	Timeout *float64 `json:"Timeout,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

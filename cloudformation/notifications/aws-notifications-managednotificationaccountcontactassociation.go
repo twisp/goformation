@@ -18,6 +18,11 @@ type ManagedNotificationAccountContactAssociation struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-notifications-managednotificationaccountcontactassociation.html#cfn-notifications-managednotificationaccountcontactassociation-contactidentifier
 	ContactIdentifier string `json:"ContactIdentifier"`
 
+	// IsSensitiveEventsSubscribed AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-notifications-managednotificationaccountcontactassociation.html#cfn-notifications-managednotificationaccountcontactassociation-issensitiveeventssubscribed
+	IsSensitiveEventsSubscribed *bool `json:"IsSensitiveEventsSubscribed,omitempty"`
+
 	// ManagedNotificationConfigurationArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-notifications-managednotificationaccountcontactassociation.html#cfn-notifications-managednotificationaccountcontactassociation-managednotificationconfigurationarn

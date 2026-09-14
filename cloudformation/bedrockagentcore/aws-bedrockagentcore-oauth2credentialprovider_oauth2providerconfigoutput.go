@@ -30,6 +30,21 @@ type OAuth2CredentialProvider_Oauth2ProviderConfigOutput struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-oauth2credentialprovider-oauth2providerconfigoutput.html#cfn-bedrockagentcore-oauth2credentialprovider-oauth2providerconfigoutput-onbehalfoftokenexchangeconfig
 	OnBehalfOfTokenExchangeConfig *OAuth2CredentialProvider_OnBehalfOfTokenExchangeConfig `json:"OnBehalfOfTokenExchangeConfig,omitempty"`
 
+	// PrivateEndpoint AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-oauth2credentialprovider-oauth2providerconfigoutput.html#cfn-bedrockagentcore-oauth2credentialprovider-oauth2providerconfigoutput-privateendpoint
+	PrivateEndpoint *OAuth2CredentialProvider_PrivateEndpoint `json:"PrivateEndpoint,omitempty"`
+
+	// PrivateEndpointOverrides AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-oauth2credentialprovider-oauth2providerconfigoutput.html#cfn-bedrockagentcore-oauth2credentialprovider-oauth2providerconfigoutput-privateendpointoverrides
+	PrivateEndpointOverrides []OAuth2CredentialProvider_PrivateEndpointOverride `json:"PrivateEndpointOverrides,omitempty"`
+
+	// PrivateKeyJwtConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-oauth2credentialprovider-oauth2providerconfigoutput.html#cfn-bedrockagentcore-oauth2credentialprovider-oauth2providerconfigoutput-privatekeyjwtconfig
+	PrivateKeyJwtConfig *OAuth2CredentialProvider_PrivateKeyJwtConfig `json:"PrivateKeyJwtConfig,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

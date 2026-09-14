@@ -15,6 +15,11 @@ type EvaluationForm_EvaluationFormSection struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsection.html#cfn-connect-evaluationform-evaluationformsection-instructions
 	Instructions *string `json:"Instructions,omitempty"`
 
+	// IsExcludedFromScoring AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsection.html#cfn-connect-evaluationform-evaluationformsection-isexcludedfromscoring
+	IsExcludedFromScoring *bool `json:"IsExcludedFromScoring,omitempty"`
+
 	// Items AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsection.html#cfn-connect-evaluationform-evaluationformsection-items
@@ -24,6 +29,11 @@ type EvaluationForm_EvaluationFormSection struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsection.html#cfn-connect-evaluationform-evaluationformsection-refid
 	RefId string `json:"RefId"`
+
+	// ScoreThresholds AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsection.html#cfn-connect-evaluationform-evaluationformsection-scorethresholds
+	ScoreThresholds []EvaluationForm_EvaluationFormScoreThreshold `json:"ScoreThresholds,omitempty"`
 
 	// Title AWS CloudFormation Property
 	// Required: true

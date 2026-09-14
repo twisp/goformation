@@ -15,6 +15,11 @@ type ConfiguredTable_AnalysisRuleCustom struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-additionalanalyses
 	AdditionalAnalyses *string `json:"AdditionalAnalyses,omitempty"`
 
+	// AggregationThresholds AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-aggregationthresholds
+	AggregationThresholds []ConfiguredTable_AggregationThreshold `json:"AggregationThresholds,omitempty"`
+
 	// AllowedAnalyses AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-allowedanalyses
@@ -24,6 +29,11 @@ type ConfiguredTable_AnalysisRuleCustom struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-allowedanalysisproviders
 	AllowedAnalysisProviders []string `json:"AllowedAnalysisProviders,omitempty"`
+
+	// ComparisonControls AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-comparisoncontrols
+	ComparisonControls *ConfiguredTable_ComparisonControls `json:"ComparisonControls,omitempty"`
 
 	// DifferentialPrivacy AWS CloudFormation Property
 	// Required: false

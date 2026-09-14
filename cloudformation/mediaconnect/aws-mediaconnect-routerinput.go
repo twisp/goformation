@@ -24,6 +24,11 @@ type RouterInput struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-routerinput.html#cfn-mediaconnect-routerinput-configuration
 	Configuration *RouterInput_RouterInputConfiguration `json:"Configuration"`
 
+	// ContentQualityAnalysisConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-routerinput.html#cfn-mediaconnect-routerinput-contentqualityanalysisconfiguration
+	ContentQualityAnalysisConfiguration *RouterInput_RouterContentQualityAnalysisConfiguration `json:"ContentQualityAnalysisConfiguration,omitempty"`
+
 	// MaintenanceConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-routerinput.html#cfn-mediaconnect-routerinput-maintenanceconfiguration

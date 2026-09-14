@@ -4,6 +4,7 @@ package dlm
 
 import (
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // LifecyclePolicy_Exclusions AWS CloudFormation Resource (AWS::DLM::LifecyclePolicy.Exclusions)
@@ -18,12 +19,12 @@ type LifecyclePolicy_Exclusions struct {
 	// ExcludeTags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-exclusions.html#cfn-dlm-lifecyclepolicy-exclusions-excludetags
-	ExcludeTags *LifecyclePolicy_ExcludeTags `json:"ExcludeTags,omitempty"`
+	ExcludeTags []tags.Tag `json:"ExcludeTags,omitempty"`
 
 	// ExcludeVolumeTypes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-exclusions.html#cfn-dlm-lifecyclepolicy-exclusions-excludevolumetypes
-	ExcludeVolumeTypes *LifecyclePolicy_ExcludeVolumeTypesList `json:"ExcludeVolumeTypes,omitempty"`
+	ExcludeVolumeTypes []string `json:"ExcludeVolumeTypes,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

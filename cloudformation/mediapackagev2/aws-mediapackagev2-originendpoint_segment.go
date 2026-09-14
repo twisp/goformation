@@ -20,6 +20,11 @@ type OriginEndpoint_Segment struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-includeiframeonlystreams
 	IncludeIframeOnlyStreams *bool `json:"IncludeIframeOnlyStreams,omitempty"`
 
+	// OutputTimestampMode AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-outputtimestampmode
+	OutputTimestampMode *string `json:"OutputTimestampMode,omitempty"`
+
 	// Scte AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-segment.html#cfn-mediapackagev2-originendpoint-segment-scte

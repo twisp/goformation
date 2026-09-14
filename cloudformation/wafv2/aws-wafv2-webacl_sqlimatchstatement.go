@@ -15,6 +15,11 @@ type WebACL_SqliMatchStatement struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-sqlimatchstatement.html#cfn-wafv2-webacl-sqlimatchstatement-fieldtomatch
 	FieldToMatch *WebACL_FieldToMatch `json:"FieldToMatch"`
 
+	// PreParseTextTransformations AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-sqlimatchstatement.html#cfn-wafv2-webacl-sqlimatchstatement-preparsetexttransformations
+	PreParseTextTransformations []WebACL_PreParseTextTransformation `json:"PreParseTextTransformations,omitempty"`
+
 	// SensitivityLevel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-sqlimatchstatement.html#cfn-wafv2-webacl-sqlimatchstatement-sensitivitylevel

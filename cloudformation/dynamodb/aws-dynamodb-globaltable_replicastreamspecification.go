@@ -4,6 +4,7 @@ package dynamodb
 
 import (
 	"github.com/awslabs/goformation/v7/cloudformation/policies"
+	"github.com/awslabs/goformation/v7/cloudformation/tags"
 )
 
 // GlobalTable_ReplicaStreamSpecification AWS CloudFormation Resource (AWS::DynamoDB::GlobalTable.ReplicaStreamSpecification)
@@ -11,9 +12,14 @@ import (
 type GlobalTable_ReplicaStreamSpecification struct {
 
 	// ResourcePolicy AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicastreamspecification.html#cfn-dynamodb-globaltable-replicastreamspecification-resourcepolicy
-	ResourcePolicy *GlobalTable_ResourcePolicy `json:"ResourcePolicy"`
+	ResourcePolicy *GlobalTable_ResourcePolicy `json:"ResourcePolicy,omitempty"`
+
+	// Tags AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicastreamspecification.html#cfn-dynamodb-globaltable-replicastreamspecification-tags
+	Tags []tags.Tag `json:"Tags,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

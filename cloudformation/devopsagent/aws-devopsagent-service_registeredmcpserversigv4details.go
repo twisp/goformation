@@ -25,6 +25,11 @@ type Service_RegisteredMCPServerSigV4Details struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-service-registeredmcpserversigv4details.html#cfn-devopsagent-service-registeredmcpserversigv4details-endpoint
 	Endpoint string `json:"Endpoint"`
 
+	// McpRoleArn AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-service-registeredmcpserversigv4details.html#cfn-devopsagent-service-registeredmcpserversigv4details-mcprolearn
+	McpRoleArn *string `json:"McpRoleArn,omitempty"`
+
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-service-registeredmcpserversigv4details.html#cfn-devopsagent-service-registeredmcpserversigv4details-name

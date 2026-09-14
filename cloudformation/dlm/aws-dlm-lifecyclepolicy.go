@@ -27,7 +27,7 @@ type LifecyclePolicy struct {
 	// CrossRegionCopyTargets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dlm-lifecyclepolicy.html#cfn-dlm-lifecyclepolicy-crossregioncopytargets
-	CrossRegionCopyTargets *LifecyclePolicy_CrossRegionCopyTargets `json:"CrossRegionCopyTargets,omitempty"`
+	CrossRegionCopyTargets []LifecyclePolicy_CrossRegionCopyTarget `json:"CrossRegionCopyTargets,omitempty"`
 
 	// DefaultPolicy AWS CloudFormation Property
 	// Required: false

@@ -30,6 +30,11 @@ type EC2Fleet_EbsBlockDevice struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-kmskeyid
 	KmsKeyId *string `json:"KmsKeyId,omitempty"`
 
+	// MultiAvailabilityZoneConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-multiavailabilityzoneconfiguration
+	MultiAvailabilityZoneConfiguration *EC2Fleet_MultiAvailabilityZoneConfiguration `json:"MultiAvailabilityZoneConfiguration,omitempty"`
+
 	// SnapshotId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ebsblockdevice.html#cfn-ec2-ec2fleet-ebsblockdevice-snapshotid

@@ -15,6 +15,16 @@ type Harness_HarnessMemoryConfiguration struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-harness-harnessmemoryconfiguration.html#cfn-bedrockagentcore-harness-harnessmemoryconfiguration-agentcorememoryconfiguration
 	AgentCoreMemoryConfiguration *Harness_HarnessAgentCoreMemoryConfiguration `json:"AgentCoreMemoryConfiguration,omitempty"`
 
+	// Disabled AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-harness-harnessmemoryconfiguration.html#cfn-bedrockagentcore-harness-harnessmemoryconfiguration-disabled
+	Disabled interface{} `json:"Disabled,omitempty"`
+
+	// ManagedMemoryConfiguration AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-harness-harnessmemoryconfiguration.html#cfn-bedrockagentcore-harness-harnessmemoryconfiguration-managedmemoryconfiguration
+	ManagedMemoryConfiguration *Harness_HarnessManagedMemoryConfiguration `json:"ManagedMemoryConfiguration,omitempty"`
+
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`
 

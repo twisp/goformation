@@ -11,9 +11,14 @@ import (
 type Evaluator_EvaluatorModelConfig struct {
 
 	// BedrockEvaluatorModelConfig AWS CloudFormation Property
-	// Required: true
+	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-evaluator-evaluatormodelconfig.html#cfn-bedrockagentcore-evaluator-evaluatormodelconfig-bedrockevaluatormodelconfig
-	BedrockEvaluatorModelConfig *Evaluator_BedrockEvaluatorModelConfig `json:"BedrockEvaluatorModelConfig"`
+	BedrockEvaluatorModelConfig *Evaluator_BedrockEvaluatorModelConfig `json:"BedrockEvaluatorModelConfig,omitempty"`
+
+	// ResponsesEvaluatorModelConfig AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrockagentcore-evaluator-evaluatormodelconfig.html#cfn-bedrockagentcore-evaluator-evaluatormodelconfig-responsesevaluatormodelconfig
+	ResponsesEvaluatorModelConfig *Evaluator_OpenResponsesEvaluatorModelConfig `json:"ResponsesEvaluatorModelConfig,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

@@ -14,10 +14,20 @@ import (
 // See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsagent-service.html
 type Service struct {
 
+	// ExchangeUrlPrivateConnectionName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsagent-service.html#cfn-devopsagent-service-exchangeurlprivateconnectionname
+	ExchangeUrlPrivateConnectionName *string `json:"ExchangeUrlPrivateConnectionName,omitempty"`
+
 	// KmsKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsagent-service.html#cfn-devopsagent-service-kmskeyarn
 	KmsKeyArn *string `json:"KmsKeyArn,omitempty"`
+
+	// PrivateConnectionName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsagent-service.html#cfn-devopsagent-service-privateconnectionname
+	PrivateConnectionName *string `json:"PrivateConnectionName,omitempty"`
 
 	// ServiceDetails AWS CloudFormation Property
 	// Required: false
@@ -33,6 +43,11 @@ type Service struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsagent-service.html#cfn-devopsagent-service-tags
 	Tags []tags.Tag `json:"Tags,omitempty"`
+
+	// TargetUrlPrivateConnectionName AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsagent-service.html#cfn-devopsagent-service-targeturlprivateconnectionname
+	TargetUrlPrivateConnectionName *string `json:"TargetUrlPrivateConnectionName,omitempty"`
 
 	// AWSCloudFormationDeletionPolicy represents a CloudFormation DeletionPolicy
 	AWSCloudFormationDeletionPolicy policies.DeletionPolicy `json:"-"`

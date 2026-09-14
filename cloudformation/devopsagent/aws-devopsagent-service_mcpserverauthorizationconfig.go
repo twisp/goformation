@@ -15,6 +15,11 @@ type Service_MCPServerAuthorizationConfig struct {
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-service-mcpserverauthorizationconfig.html#cfn-devopsagent-service-mcpserverauthorizationconfig-apikey
 	ApiKey *Service_ApiKeyDetails `json:"ApiKey,omitempty"`
 
+	// BearerToken AWS CloudFormation Property
+	// Required: false
+	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-service-mcpserverauthorizationconfig.html#cfn-devopsagent-service-mcpserverauthorizationconfig-bearertoken
+	BearerToken *Service_BearerTokenDetails `json:"BearerToken,omitempty"`
+
 	// OAuthClientCredentials AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsagent-service-mcpserverauthorizationconfig.html#cfn-devopsagent-service-mcpserverauthorizationconfig-oauthclientcredentials
